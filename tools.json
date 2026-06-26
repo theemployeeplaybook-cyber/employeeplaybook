@@ -1,0 +1,877 @@
+[
+  {
+    "slug": "about-us",
+    "file": "about-us.html",
+    "title": "About Us",
+    "type": "content",
+    "protected": false
+  },
+  {
+    "slug": "assessment-burnout-and-capacity",
+    "file": "assessment-burnout-and-capacity.html",
+    "title": "Burnout Warning Assessment",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "assessment-career-landscape",
+    "file": "assessment-career-landscape.html",
+    "title": "Career Landscape Assessment",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "assessment-conflict-risk-radar",
+    "file": "assessment-conflict-risk-radar.html",
+    "title": "Conflict Risk Radar",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "assessment-presence-calibration",
+    "file": "assessment-presence-calibration.html",
+    "title": "Presence Calibration Assessment",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "assessment-skills-and-impact",
+    "file": "assessment-skills-and-impact.html",
+    "title": "Skills & Impact Assessment",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "auth-callback",
+    "file": "auth-callback.html",
+    "title": "Signing you in\u2026",
+    "type": "auth",
+    "protected": false
+  },
+  {
+    "slug": "calculator-multi-factor-risk",
+    "file": "calculator-multi-factor-risk.html",
+    "title": "Multi-Factor Risk Calculator",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "cancel",
+    "file": "cancel.html",
+    "title": "Cancelled \u2014 The Employee Playbook",
+    "type": "account",
+    "protected": false
+  },
+  {
+    "slug": "category-career-playbook",
+    "file": "category-career-playbook.html",
+    "title": "Career Playbook | Career Growth & Development",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "category-clarity-priorities-and-direction",
+    "file": "category-clarity-priorities-and-direction.html",
+    "title": "Clarity, Priorities & Direction",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "category-confidence-presence-influence",
+    "file": "category-confidence-presence-influence.html",
+    "title": "Confidence, Presence & Influence",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "category-expectation-burnout-and-capacity",
+    "file": "category-expectation-burnout-and-capacity.html",
+    "title": "Expectations, Burnout & Capacity",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "category-hr-insider",
+    "file": "category-hr-insider.html",
+    "title": "HR Insider",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "category-manager-relationship-and-leadership-style",
+    "file": "category-manager-relationship-and-leadership-style.html",
+    "title": "Manager Relationship & Leadership Style",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "category-sos",
+    "file": "category-sos.html",
+    "title": "Crisis Expert Support",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "category-workplace-dynamics-and-politics",
+    "file": "category-workplace-dynamics-and-politics.html",
+    "title": "Workplace Dynamics & Politics",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "checklist-boundary-strength",
+    "file": "checklist-boundary-strength.html",
+    "title": "Boundary Strength Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-burnout-detection",
+    "file": "checklist-burnout-detection.html",
+    "title": "Burnout Detection Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-capacity",
+    "file": "checklist-capacity.html",
+    "title": "Capacity Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-communication-style",
+    "file": "checklist-communication-style.html",
+    "title": "Communication Style Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-decision-clarity",
+    "file": "checklist-decision-clarity.html",
+    "title": "Decision Clarity Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-expectation-alignment",
+    "file": "checklist-expectation-alignment.html",
+    "title": "Expectations Alignment Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-hr-performance-review",
+    "file": "checklist-hr-performance-review.html",
+    "title": "Performance Review Preparation Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-hr-process",
+    "file": "checklist-hr-process.html",
+    "title": "HR Process Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-manager-communication",
+    "file": "checklist-manager-communication.html",
+    "title": "Communication Style Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-manager-pattern-identifier",
+    "file": "checklist-manager-pattern-identifier.html",
+    "title": "Manager Pattern Identifier Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-overcommitment-pattern",
+    "file": "checklist-overcommitment-pattern.html",
+    "title": "Overcommitment Pattern Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-performance-review-prep",
+    "file": "checklist-performance-review-prep.html",
+    "title": "Performance Review Prep Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-presence-upgrade",
+    "file": "checklist-presence-upgrade.html",
+    "title": "Presence Upgrade Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-priority-reset",
+    "file": "checklist-priority-reset.html",
+    "title": "Priority Reset Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-psychological-safety",
+    "file": "checklist-psychological-safety.html",
+    "title": "Psychological Safety Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-support-and-enablement",
+    "file": "checklist-support-and-enablement.html",
+    "title": "Support & Enablement Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-team-dysfunction",
+    "file": "checklist-team-dysfunction.html",
+    "title": "Team Dysfunction Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checklist-workload-clarity",
+    "file": "checklist-workload-clarity.html",
+    "title": "Workload Clarity Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "checkout",
+    "file": "checkout.html",
+    "title": "The Employee Playbook \u2014 Test Checkout",
+    "type": "account",
+    "protected": false
+  },
+  {
+    "slug": "create-account",
+    "file": "create-account.html",
+    "title": "Create Account",
+    "type": "auth",
+    "protected": false
+  },
+  {
+    "slug": "forgot-password",
+    "file": "forgot-password.html",
+    "title": "Reset Password",
+    "type": "auth",
+    "protected": false
+  },
+  {
+    "slug": "form-escalation-documentation",
+    "file": "form-escalation-documentation.html",
+    "title": "Escalation Documentation Form",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-career-anchoring",
+    "file": "framework-career-anchoring.html",
+    "title": "Career Anchoring Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-credibility-and-positioning",
+    "file": "framework-credibility-and-positioning.html",
+    "title": "Credibility and Positioning Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-decision-clarity",
+    "file": "framework-decision-clarity.html",
+    "title": "Decision Clarity Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-evidence-and-documentation",
+    "file": "framework-evidence-and-documentation.html",
+    "title": "Evidence & Documentation Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-micromanagement-to-autonomy",
+    "file": "framework-micromanagement-to-autonomy.html",
+    "title": "Micromanagement to Autonomy Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-micromanagement",
+    "file": "framework-micromanagement.html",
+    "title": "Micromanagement Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-negotiation",
+    "file": "framework-negotiation.html",
+    "title": "Negotiation Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-risk-and-safety",
+    "file": "framework-risk-and-safety.html",
+    "title": "Risk & Safety Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-situational-analysis",
+    "file": "framework-situational-analysis.html",
+    "title": "Situational Analysis Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-skills-development",
+    "file": "framework-skills-development.html",
+    "title": "Skills Development Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "framework-strategic-interpretation",
+    "file": "framework-strategic-interpretation.html",
+    "title": "Strategic Interpretation Framework",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-boundaries",
+    "file": "guide-boundaries.html",
+    "title": "Boundaries Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-emotional-preparation",
+    "file": "guide-emotional-preparation.html",
+    "title": "Emotional Preparation Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-formal-process",
+    "file": "guide-formal-process.html",
+    "title": "Formal Process Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-influence-reframes",
+    "file": "guide-influence-reframes.html",
+    "title": "Influence Reframes Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-observation-technique",
+    "file": "guide-observation-technique.html",
+    "title": "Observation Technique Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-recovery-and-resilience",
+    "file": "guide-recovery-and-resilience.html",
+    "title": "Recovery & Resilience Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-strategic-career-pivot",
+    "file": "guide-strategic-career-pivot.html",
+    "title": "Strategic Career Pivot Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-strategic-conversations",
+    "file": "guide-strategic-conversations.html",
+    "title": "Strategic Conversations Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "guide-toxic-behaviour-response",
+    "file": "guide-toxic-behaviour-response.html",
+    "title": "Toxic Behaviour Response Guide",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "help-centre",
+    "file": "help-centre.html",
+    "title": "Help Centre",
+    "type": "content",
+    "protected": false
+  },
+  {
+    "slug": "hr-contracts-policies-and-rights",
+    "file": "hr-contracts-policies-and-rights.html",
+    "title": "HR Insider | Contracts, Policies & Rights",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "hr-disciplinary-and-conduct",
+    "file": "hr-disciplinary-and-conduct.html",
+    "title": "HR Insider | Disciplinary & Conduct",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "hr-grievances-and-complaints",
+    "file": "hr-grievances-and-complaints.html",
+    "title": "HR Insider | Grievances & Complaints",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "hr-performance-and-capability",
+    "file": "hr-performance-and-capability.html",
+    "title": "HR Insider \u2014 Performance & Capability",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "hr-redundancy-restructures-and-exits",
+    "file": "hr-redundancy-restructures-and-exits.html",
+    "title": "HR Insider | Redundancy, Restructure & Exit",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "hr-sickness-absence-and-health",
+    "file": "hr-sickness-absence-and-health.html",
+    "title": "HR Insider | Sickness, Absence & Health",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "hr-word-builder",
+    "file": "hr-word-builder.html",
+    "title": "HR Wording Builder",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "index",
+    "file": "index.html",
+    "title": "The Employee Playbook | Strategic Clarity for Critical Moments",
+    "type": "home",
+    "protected": false
+  },
+  {
+    "slug": "map-control-vs-influence",
+    "file": "map-control-vs-influence.html",
+    "title": "Control vs Influence Map",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "map-crisis-clarity",
+    "file": "map-crisis-clarity.html",
+    "title": "Crisis Clarity Map",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "map-political-landscape",
+    "file": "map-political-landscape.html",
+    "title": "Political Landscape Map",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "map-stakeholder",
+    "file": "map-stakeholder.html",
+    "title": "Stakeholder Mapping Grid",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "map-team-tension",
+    "file": "map-team-tension.html",
+    "title": "Team Tension Heatmap",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "matrix-eisenhower",
+    "file": "matrix-eisenhower.html",
+    "title": "Eisenhower Matrix",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "my-playbook",
+    "file": "my-playbook.html",
+    "title": "My Playbook",
+    "type": "account",
+    "protected": true
+  },
+  {
+    "slug": "phase-2-checklist-manager-communication",
+    "file": "phase-2-checklist-manager-communication.html",
+    "title": "Communication Style Checklist",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "plan-burnout-prevention",
+    "file": "plan-burnout-prevention.html",
+    "title": "Burnout Prevention Plan",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "plan-exit-and-reputation",
+    "file": "plan-exit-and-reputation.html",
+    "title": "Exit & Reputation Plan",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "plan-formal-escalation",
+    "file": "plan-formal-escalation.html",
+    "title": "Formal Escalation Plan",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "plan-personal-action",
+    "file": "plan-personal-action.html",
+    "title": "Personal Action Plan",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "plan-priority-reset",
+    "file": "plan-priority-reset.html",
+    "title": "Priority Reset Plan",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "plan-reputation-management",
+    "file": "plan-reputation-management.html",
+    "title": "Reputation Management Plan",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "plan-sustainable-pace",
+    "file": "plan-sustainable-pace.html",
+    "title": "Sustainable Pace Plan",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "planner-pay-increase-negotiation",
+    "file": "planner-pay-increase-negotiation.html",
+    "title": "Pay Increase Negotiation Planner",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "planner-time-blocking",
+    "file": "planner-time-blocking.html",
+    "title": "Time Blocking Template",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "planner-weekly-priority",
+    "file": "planner-weekly-priority.html",
+    "title": "Weekly Priority Planner",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "playbook-career-advancement",
+    "file": "playbook-career-advancement.html",
+    "title": "Career Advancement Playbook",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "playbook-difficult-people",
+    "file": "playbook-difficult-people.html",
+    "title": "Difficult People Playbook",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "playbook-documentation",
+    "file": "playbook-documentation.html",
+    "title": "Documentation Playbook",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "playbook-influence-without-conflict",
+    "file": "playbook-influence-without-conflict.html",
+    "title": "Influence Without Conflict",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "playbook-priority-reset",
+    "file": "playbook-priority-reset.html",
+    "title": "Priority Reset Playbook",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "playbook-strategic-silence",
+    "file": "playbook-strategic-silence.html",
+    "title": "Strategic Silence Playbook",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "privacy-and-security",
+    "file": "privacy-and-security.html",
+    "title": "Privacy and Security",
+    "type": "content",
+    "protected": false
+  },
+  {
+    "slug": "profile",
+    "file": "profile.html",
+    "title": "Profile",
+    "type": "account",
+    "protected": true
+  },
+  {
+    "slug": "promotion-case-builder",
+    "file": "promotion-case-builder.html",
+    "title": "Promotion Case Builder",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "review-meeting-effectiveness",
+    "file": "review-meeting-effectiveness.html",
+    "title": "Meeting Effectiveness Review",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "review-quarterly-workload",
+    "file": "review-quarterly-workload.html",
+    "title": "Quarterly Workload Review",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "routine-presence-90-seconds-reset",
+    "file": "routine-presence-90-seconds-reset.html",
+    "title": "Presence 90 Second Reset Routine",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "script-library",
+    "file": "script-library.html",
+    "title": "Script Library",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "scripts-difficult-conversation",
+    "file": "scripts-difficult-conversation.html",
+    "title": "Script Library",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-boundary-strength",
+    "file": "shift-boundary-strength.html",
+    "title": "The Shift | Boundary Strength",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-burnout-and-capacity",
+    "file": "shift-burnout-and-capacity.html",
+    "title": "The Shift | Shift #1 \u2014 Silent Burnout Reset",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-burnout-reset",
+    "file": "shift-burnout-reset.html",
+    "title": "The Shift | Shift #1 \u2014 Silent Burnout Reset",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-capacity-reset",
+    "file": "shift-capacity-reset.html",
+    "title": "The Shift | The Capacity Reset",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-career-anchor",
+    "file": "shift-career-anchor.html",
+    "title": "The Shift | The Career Anchor",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-clarity-reset",
+    "file": "shift-clarity-reset.html",
+    "title": "The Shift | The Capacity Reset",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-composure-under-fire",
+    "file": "shift-composure-under-fire.html",
+    "title": "The Shift | Composure Under Fire",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-hr-reality",
+    "file": "shift-hr-reality.html",
+    "title": "The Shift | HR Reality Shift",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-manager-reframe",
+    "file": "shift-manager-reframe.html",
+    "title": "The Shift | Manager Reframe",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-politics-decoder",
+    "file": "shift-politics-decoder.html",
+    "title": "The Shift | Workplace Politics Decoder",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "shift-presence-upgrade",
+    "file": "shift-presence-upgrade.html",
+    "title": "The Shift | The Presence Upgrade",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "sign-in",
+    "file": "sign-in.html",
+    "title": "Sign In",
+    "type": "auth",
+    "protected": false
+  },
+  {
+    "slug": "success",
+    "file": "success.html",
+    "title": "Welcome \u2014 The Employee Playbook",
+    "type": "account",
+    "protected": false
+  },
+  {
+    "slug": "template-communication-planning",
+    "file": "template-communication-planning.html",
+    "title": "Communication Planning Template",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "template-decision-record",
+    "file": "template-decision-record.html",
+    "title": "Decision Record Template",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "template-manager-feedback",
+    "file": "template-manager-feedback.html",
+    "title": "Manager Feedback Template",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "terms-and-conditions",
+    "file": "terms-and-conditions.html",
+    "title": "Terms & Conditions",
+    "type": "content",
+    "protected": false
+  },
+  {
+    "slug": "the-coach-member",
+    "file": "the-coach-member.html",
+    "title": "The Coach",
+    "type": "tool",
+    "protected": true
+  },
+  {
+    "slug": "the-coach",
+    "file": "the-coach.html",
+    "title": "The Coach | Real-Time Strategic Guidance",
+    "type": "content",
+    "protected": false
+  },
+  {
+    "slug": "the-lens",
+    "file": "the-lens.html",
+    "title": "The Lens",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "the-pricing",
+    "file": "the-pricing.html",
+    "title": "The Pricing",
+    "type": "content",
+    "protected": false
+  },
+  {
+    "slug": "the-shift",
+    "file": "the-shift.html",
+    "title": "The Shift | From Reacting to Leading",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "the-toolkit",
+    "file": "the-toolkit.html",
+    "title": "The Toolkit",
+    "type": "library",
+    "protected": false
+  },
+  {
+    "slug": "update-password",
+    "file": "update-password.html",
+    "title": "Update Password",
+    "type": "auth",
+    "protected": false
+  },
+  {
+    "slug": "worksheet-priority-audit",
+    "file": "worksheet-priority-audit.html",
+    "title": "Priority Audit Worksheet",
+    "type": "tool",
+    "protected": true
+  }
+]
