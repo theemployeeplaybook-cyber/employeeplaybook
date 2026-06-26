@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Stakeholder Mapping Grid | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="map-stakeholder">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-workplace-dynamics-and-politics.html">Workplace Dynamics &amp; Politics</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Stakeholder Mapping Grid</span>
+</div>
+<span class="checklist-name">STAKEHOLDER MAPPING GRID</span>
+<h1 class="hero-main-heading" data-date="">Map power, interest and influence so you can move with precision</h1>
+<div class="hero-subheading">
+      Add stakeholders, score their influence and interest (1–5), and drag cards into the right quadrant. 
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill career" href="category-career-playbook.html">
+<i class="fas fa-briefcase category-icon"></i>
+<span>Career Playbook</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="page-wrap">
+<div class="input-card">
+<div class="input-grid">
+<div class="field">
+<div class="label">Stakeholder name</div>
+<input id="nameInput" placeholder="Name (or alias)" type="text"/>
+<div></div>
+<div class="label">Role / function</div>
+<input id="roleInput" placeholder="Role, team, function…" type="text"/>
+<div></div>
+<div class="label">Notes</div>
+<textarea id="notesInput" placeholder="What do they care about? What do they respond to? Any sensitivities?"></textarea>
+</div>
+<div class="field">
+<div class="label">Relationship</div>
+<select id="relationshipInput">
+<option selected="" value="neutral">Neutral / unknown</option>
+<option value="ally">Ally</option>
+<option value="risk">Risk</option>
+</select>
+<div></div>
+<div class="label">Influence</div>
+<div class="range-row">
+<span class="range-badge" id="influenceBadge">0</span>
+<input aria-label="Influence (0 to 5)" id="influenceInput" max="5" min="0" step="1" type="range" value="0"/>
+</div>
+<div></div>
+<div class="label">Interest</div>
+<div class="range-row">
+<span class="range-badge" id="interestBadge">0</span>
+<input aria-label="Interest (0 to 5)" id="interestInput" max="5" min="0" step="1" type="range" value="0"/>
+</div>
+</div>
+</div>
+<div class="tip-line">
+      Tip: Influence/Interest are 1–5. New stakeholders are auto-placed into the correct quadrant — you can still drag them anywhere.
+    </div>
+<div class="input-actions">
+<button class="btn primary" id="addBtn"><i class="fas fa-plus"></i> Add stakeholder</button>
+<button class="btn secondary" id="examplesBtn"><i class="fas fa-bolt"></i> Add examples</button>
+<button class="btn secondary" data-action="reset-tool" id="resetBtn"><i class="fas fa-rotate-left"></i> Reset fields</button>
+</div>
+</div>
+<div class="map-shell">
+<div class="map-head">
+<div class="map-title">
+<span class="icon-bubble"><i class="fas fa-map"></i></span>
+<span>Stakeholder Map</span>
+</div>
+<div class="map-controls">
+<div class="search">
+<i class="fas fa-search"></i>
+<input id="searchInput" placeholder="Search stakeholders (name, role, notes)…" type="text"/>
+</div>
+<div class="sort">
+<select aria-label="Sort stakeholders" id="sortSelect">
+<option selected="" value="recent">Sort: Recent first</option>
+<option value="name">Sort: Name A–Z</option>
+<option value="influence">Sort: Influence high–low</option>
+<option value="interest">Sort: Interest high–low</option>
+</select>
+</div>
+</div>
+</div>
+<div class="map-body">
+<div class="legend-row">
+<div class="legend-box">
+<div class="legend-ico"><i class="fas fa-crown"></i></div>
+<div class="legend-text">
+<strong>Influence:</strong> 1 minimal pull · 3 moderate sway · 5 can decide / block
+          </div>
+</div>
+<div class="legend-box">
+<div class="legend-ico"><i class="fas fa-heart"></i></div>
+<div class="legend-text">
+<strong>Interest:</strong> 1 low concern · 3 engaged sometimes · 5 very invested
+          </div>
+</div>
+</div>
+<div class="grid" id="grid">
+<div class="quad" data-quad="keep_satisfied">
+<div class="quad-head">
+<div class="quad-head-left">
+<div class="quad-bubble"><i class="fas fa-shield"></i></div>
+<div class="quad-title-wrap">
+<div class="quad-title" data-open="keep_satisfied">Keep satisfied</div>
+<div class="quad-sub">High influence · Low interest</div>
+</div>
+</div>
+<div class="quad-count" id="countKeepSatisfied">0</div>
+</div>
+<div class="quad-drop" id="dropKeepSatisfied"></div>
+</div>
+<div class="quad" data-quad="manage_closely">
+<div class="quad-head">
+<div class="quad-head-left">
+<div class="quad-bubble"><i class="fas fa-crown"></i></div>
+<div class="quad-title-wrap">
+<div class="quad-title" data-open="manage_closely">Manage closely</div>
+<div class="quad-sub">High influence · High interest</div>
+</div>
+</div>
+<div class="quad-count" id="countManageClosely">0</div>
+</div>
+<div class="quad-drop" id="dropManageClosely"></div>
+</div>
+<div class="quad" data-quad="monitor">
+<div class="quad-head">
+<div class="quad-head-left">
+<div class="quad-bubble"><i class="fas fa-binoculars"></i></div>
+<div class="quad-title-wrap">
+<div class="quad-title" data-open="monitor">Monitor</div>
+<div class="quad-sub">Low influence · Low interest</div>
+</div>
+</div>
+<div class="quad-count" id="countMonitor">0</div>
+</div>
+<div class="quad-drop" id="dropMonitor"></div>
+</div>
+<div class="quad" data-quad="keep_informed">
+<div class="quad-head">
+<div class="quad-head-left">
+<div class="quad-bubble"><i class="fas fa-comment-dots"></i></div>
+<div class="quad-title-wrap">
+<div class="quad-title" data-open="keep_informed">Keep informed</div>
+<div class="quad-sub">Low influence · High interest</div>
+</div>
+</div>
+<div class="quad-count" id="countKeepInformed">0</div>
+</div>
+<div class="quad-drop" id="dropKeepInformed"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="below-row">
+<div class="info-card">
+<div class="info-head">
+<div class="info-title">
+<span class="bubble"><i class="fas fa-bullseye"></i></span>
+<span>Stakeholder Plan</span>
+</div>
+</div>
+<div class="plan-body">
+<p><strong>Select a stakeholder card</strong> (click) to see the recommended approach.</p>
+<p>You can also drag cards across the map — this plan updates automatically.</p>
+<div class="plan-box" id="selectedPlanBox">
+<div class="plan-h">No stakeholder selected</div>
+<ul>
+<li>Click any stakeholder card to see a tight recommended approach here.</li>
+<li>To view quadrant strategy, click the <strong>quadrant heading</strong> (e.g. "Manage closely").</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="info-card">
+<div class="info-head">
+<div class="info-title">
+<span class="bubble"><i class="fas fa-chart-pie"></i></span>
+<span>Map Snapshot</span>
+</div>
+<div class="total-pill" id="totalPill">0 TOTAL</div>
+</div>
+<div class="snapshot-grid" id="snapshotList">
+<div class="snapshot-item" data-open="manage_closely">
+<div class="snap-left">
+<div class="snap-ico"><i class="fas fa-crown"></i></div>
+<div class="snap-txt">
+<div class="snap-name">Manage closely</div>
+<div class="snap-sub">High influence · High interest</div>
+</div>
+</div>
+<div class="snap-count" id="snapManageClosely">0</div>
+</div>
+<div class="snapshot-item" data-open="keep_satisfied">
+<div class="snap-left">
+<div class="snap-ico"><i class="fas fa-shield"></i></div>
+<div class="snap-txt">
+<div class="snap-name">Keep satisfied</div>
+<div class="snap-sub">High influence · Low interest</div>
+</div>
+</div>
+<div class="snap-count" id="snapKeepSatisfied">0</div>
+</div>
+<div class="snapshot-item" data-open="keep_informed">
+<div class="snap-left">
+<div class="snap-ico"><i class="fas fa-comment-dots"></i></div>
+<div class="snap-txt">
+<div class="snap-name">Keep informed</div>
+<div class="snap-sub">Low influence · High interest</div>
+</div>
+</div>
+<div class="snap-count" id="snapKeepInformed">0</div>
+</div>
+<div class="snapshot-item" data-open="monitor">
+<div class="snap-left">
+<div class="snap-ico"><i class="fas fa-binoculars"></i></div>
+<div class="snap-txt">
+<div class="snap-name">Monitor</div>
+<div class="snap-sub">Low influence · Low interest</div>
+</div>
+</div>
+<div class="snap-count" id="snapMonitor">0</div>
+</div>
+</div>
+</div>
+</div>
+<div class="info-card">
+<div class="info-head">
+<div class="info-title">
+<span class="bubble"><i class="fas fa-people-arrows"></i></span>
+<span>Influence moves and manager-safe tips</span>
+</div>
+</div>
+<div class="plan-box">
+<div class="plan-h">Practical notes</div>
+<ul>
+<li><strong>Find the "agenda owner":</strong> the person who decides what gets discussed often matters more than the loudest voice.</li>
+<li><strong>Pre-brief beats post-brief:</strong> if your manager is "Manage closely" or "Keep satisfied", avoid surprises — share the headline early.</li>
+<li><strong>Use "decision framing":</strong> define the decision, the criteria, and the trade-offs before the room starts freewheeling.</li>
+</ul>
+</div>
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+    </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+    </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div aria-hidden="true" class="modal-overlay" id="modalOverlay">
+<div aria-labelledby="modalTitle" aria-modal="true" class="modal" role="dialog">
+<div class="modal-head">
+<div class="modal-title" id="modalTitle">
+<span class="bubble"><i class="fas fa-layer-group"></i></span>
+<span id="modalTitleText">Quadrant</span>
+</div>
+<button aria-label="Close" class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+</div>
+<div class="modal-body">
+<div class="modal-card">
+<h4><i class="fas fa-bullseye"></i> Recommended approach</h4>
+<p id="modalApproach"></p>
+</div>
+<div class="modal-card">
+<h4><i class="fas fa-shield-alt"></i> What to avoid</h4>
+<p id="modalAvoid"></p>
+</div>
+<div class="modal-card modal-wide">
+<h4><i class="fas fa-list-check"></i> Fast moves</h4>
+<ul id="modalMoves"></ul>
+</div>
+<div class="modal-card modal-wide">
+<h4><i class="fas fa-users"></i> Stakeholders in this quadrant</h4>
+<p id="modalPeople"></p>
+<div id="modalPeopleList"></div>
+</div>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

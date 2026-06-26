@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Coach: Real-time strategic guidance for high-stakes workplace situations." />
+  <title>The Coach | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="the-coach-member">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="disclaimer-section">
+<strong>Important:</strong> I'm here to help you think clearly and act strategically. The decisions are always yours. If this situation involves legal risks, harassment, unfair treatment, discrimination, or formal HR action, please reach out to <a href="https://www.acas.org.uk/advice" rel="noopener noreferrer" target="_blank">ACAS (0300 123 1100)</a> or seek professional support. For immediate safety concerns, contact emergency services.
+  </div>
+<div class="coach-type-selector">
+<div class="coach-type-label">Choose your coaching style:</div>
+<div class="coach-type-tabs">
+<button class="coach-type-btn active" data-type="decisive" id="decisiveCoachBtn">
+<i class="fas fa-bolt"></i> Decisive Coach
+        <span class="coach-type-desc">Direct, concise, fast-paced</span>
+</button>
+<button class="coach-type-btn" data-type="reflective" id="reflectiveCoachBtn">
+<i class="fas fa-compass"></i> Reflective Coach
+        <span class="coach-type-desc">Step-by-step, structured, thoughtful</span>
+</button>
+</div>
+</div>
+<div class="coach-section">
+<div class="section-intro">
+<strong>How to use The Coach:</strong> Describe what is happening — who is involved, what has changed, what you are noticing. I will help you think it through and move forward with clarity.
+    </div>
+<div class="chat-container">
+<div class="chat-header">
+<div class="chat-header-left">
+<h2 class="chat-header-title">The Coach</h2>
+</div>
+<div class="chat-header-right">
+<div class="coach-badge" id="coachBadge">
+<span class="coach-badge-text">Decisive</span>
+</div>
+</div>
+</div>
+<div class="messages-area" id="messagesArea"></div>
+<div class="input-area">
+<div class="input-wrapper">
+<textarea aria-label="Message input" class="chat-input" id="chatInput" placeholder="Tell me what just happened…" rows="2"></textarea>
+</div>
+<button aria-label="Send message" class="send-btn" id="sendBtn">
+<i class="fas fa-paper-plane"></i> Send
+        </button>
+</div>
+</div>
+</div>
+<div class="resource-section">
+<div class="resource-intro">Further support</div>
+<div class="resource-buttons">
+<a class="resource-btn" href="the-lens.html">
+<div class="resource-btn-icon"><i class="fas fa-eye"></i></div>
+<div class="resource-btn-content">
+<div class="resource-btn-title">The Lens</div>
+<div class="resource-btn-desc">Intelligent triage tool to identify what's really happening and which tool you need.</div>
+</div>
+</a>
+<a class="resource-btn" href="the-toolkit.html">
+<div class="resource-btn-icon"><i class="fas fa-briefcase"></i></div>
+<div class="resource-btn-content">
+<div class="resource-btn-title">The Toolkit</div>
+<div class="resource-btn-desc">Strategic frameworks and interactive tools for workplace challenges and professional growth.</div>
+</div>
+</a>
+<a class="resource-btn" href="https://www.acas.org.uk/advice" rel="noopener noreferrer" target="_blank">
+<div class="resource-btn-icon"><i class="fas fa-shield-alt"></i></div>
+<div class="resource-btn-content">
+<div class="resource-btn-title">ACAS Support</div>
+<div class="resource-btn-desc">Advisory, Conciliation and Arbitration Service. UK workplace rights, legal guidance, and support.</div>
+</div>
+</a>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

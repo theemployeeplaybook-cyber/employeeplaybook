@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Control vs Influence Map | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="map-control-vs-influence">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-workplace-dynamics-and-politics.html">Workplace Dynamics &amp; Politics</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Control vs Influence Map</span>
+</div>
+<span class="checklist-name">CONTROL VS INFLUENCE MAP</span>
+<h1 class="hero-main-heading">Separate formal control from informal influence so you know where to push and where to persuade</h1>
+<div class="hero-subheading">
+        Add stakeholders, score their <strong>control</strong> and <strong>influence</strong> (1–5), and drag cards into the right quadrant.
+        Your plan updates automatically—without turning your map into a noisy mess.
+      </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-handshake category-icon"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="page-wrap">
+<div class="input-card">
+<div class="input-grid">
+<div class="field">
+<div class="label">Stakeholder name <span class="mini">e.g. “Programme sponsor”</span></div>
+<input id="nameInput" placeholder="Name (or alias)" type="text"/>
+<div></div>
+<div class="label">Role / function <span class="mini">optional</span></div>
+<input id="roleInput" placeholder="Role, team, function…" type="text"/>
+<div></div>
+<div class="label">Notes <span class="mini">What do they want? What do they protect? What persuades them?</span></div>
+<textarea id="notesInput" placeholder="What do they want? What do they protect? What persuades them?"></textarea>
+</div>
+<div class="field">
+<div class="label">Relationship</div>
+<select id="relationshipInput">
+<option selected="" value="neutral">Neutral / unknown</option>
+<option value="ally">Ally</option>
+<option value="risk">Risk</option>
+</select>
+<div></div>
+<div class="label">Control</div>
+<div class="range-row">
+<span class="range-badge" id="controlBadge">3</span>
+<input aria-label="Control (1 to 5)" id="controlInput" max="5" min="1" step="1" type="range" value="3"/>
+</div>
+<div class="scale-hint">
+<span><strong>1</strong> no authority</span>
+<span><strong>3</strong> can slow / shape</span>
+<span><strong>5</strong> decides / approves</span>
+</div>
+<div></div>
+<div class="label">Influence</div>
+<div class="range-row">
+<span class="range-badge" id="influenceBadge">3</span>
+<input aria-label="Influence (1 to 5)" id="influenceInput" max="5" min="1" step="1" type="range" value="3"/>
+</div>
+<div class="scale-hint">
+<span><strong>1</strong> rarely sways</span>
+<span><strong>3</strong> can tilt opinion</span>
+<span><strong>5</strong> shapes outcomes</span>
+</div>
+</div>
+</div>
+<div class="tip-line">
+        Tip: <strong>Control</strong> = formal decision rights / approvals. <strong>Influence</strong> = informal pull (credibility, networks, narrative). New stakeholders are auto-placed—then you can drag as needed.
+      </div>
+<div class="input-actions">
+<button class="btn secondary" id="examplesBtn"><i class="fas fa-bolt"></i> Add examples</button>
+<button class="btn secondary" data-action="reset-tool" id="resetBtn"><i class="fas fa-rotate-left"></i> Reset fields</button>
+<button class="btn primary" id="addBtn"><i class="fas fa-plus"></i> Add stakeholder</button>
+</div>
+</div>
+<div class="map-shell">
+<div class="map-head">
+<div class="map-title">
+<span class="icon-bubble"><i class="fas fa-sliders"></i></span>
+<span>Control vs Influence Map</span>
+</div>
+<div class="map-controls">
+<div class="search">
+<i class="fas fa-search"></i>
+<input id="searchInput" placeholder="Search stakeholders (name, role, notes)…" type="text"/>
+</div>
+<div class="sort">
+<select aria-label="Sort stakeholders" id="sortSelect">
+<option selected="" value="recent">Sort: Recent first</option>
+<option value="name">Sort: Name A–Z</option>
+<option value="control">Sort: Control high–low</option>
+<option value="influence">Sort: Influence high–low</option>
+</select>
+</div>
+<div class="map-actions">
+<button class="pill-btn" id="copyPlanBtn"><i class="far fa-copy"></i> Copy plan</button>
+<button class="pill-btn danger" id="clearAllBtn"><i class="fas fa-trash"></i> Clear all</button>
+</div>
+</div>
+</div>
+<div class="map-body">
+<div class="legend-row">
+<div class="legend-box">
+<div class="legend-ico"><i class="fas fa-gavel"></i></div>
+<div class="legend-text">
+<strong>Control:</strong> 1 no authority · 3 can slow/shape · 5 decides/approves
+            </div>
+</div>
+<div class="legend-box">
+<div class="legend-ico"><i class="fas fa-bullhorn"></i></div>
+<div class="legend-text">
+<strong>Influence:</strong> 1 rarely sways · 3 can tilt opinion · 5 shapes outcomes
+            </div>
+</div>
+</div>
+<div class="grid" id="grid">
+<div class="quad" data-quad="power_centre">
+<div class="quad-head">
+<div class="quad-head-left">
+<div class="quad-bubble"><i class="fas fa-crown"></i></div>
+<div class="quad-title-wrap">
+<div class="quad-title" data-open="power_centre">Power centre</div>
+<div class="quad-sub">High control · High influence</div>
+</div>
+</div>
+<div class="quad-count" id="countPowerCentre">0</div>
+</div>
+<div class="quad-drop" id="dropPowerCentre"></div>
+</div>
+<div class="quad" data-quad="formal_gatekeeper">
+<div class="quad-head">
+<div class="quad-head-left">
+<div class="quad-bubble"><i class="fas fa-shield"></i></div>
+<div class="quad-title-wrap">
+<div class="quad-title" data-open="formal_gatekeeper">Formal gatekeeper</div>
+<div class="quad-sub">High control · Low influence</div>
+</div>
+</div>
+<div class="quad-count" id="countFormalGatekeeper">0</div>
+</div>
+<div class="quad-drop" id="dropFormalGatekeeper"></div>
+</div>
+<div class="quad" data-quad="monitor">
+<div class="quad-head">
+<div class="quad-head-left">
+<div class="quad-bubble"><i class="fas fa-binoculars"></i></div>
+<div class="quad-title-wrap">
+<div class="quad-title" data-open="monitor">Monitor</div>
+<div class="quad-sub">Low control · Low influence</div>
+</div>
+</div>
+<div class="quad-count" id="countMonitor">0</div>
+</div>
+<div class="quad-drop" id="dropMonitor"></div>
+</div>
+<div class="quad" data-quad="opinion_shaper">
+<div class="quad-head">
+<div class="quad-head-left">
+<div class="quad-bubble"><i class="fas fa-comment-dots"></i></div>
+<div class="quad-title-wrap">
+<div class="quad-title" data-open="opinion_shaper">Opinion shaper</div>
+<div class="quad-sub">Low control · High influence</div>
+</div>
+</div>
+<div class="quad-count" id="countOpinionShaper">0</div>
+</div>
+<div class="quad-drop" id="dropOpinionShaper"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="below-row">
+<div class="info-card">
+<div class="info-head">
+<div class="info-title">
+<span class="bubble"><i class="fas fa-bullseye"></i></span>
+<span>Leverage Plan</span>
+</div>
+</div>
+<div class="plan-body">
+<p><strong>Select a stakeholder card</strong> (click) to see the recommended approach.</p>
+<p>Drag cards across the map if your reality differs — this plan updates automatically.</p>
+<div class="plan-box" id="selectedPlanBox">
+<div class="plan-h">No stakeholder selected</div>
+<ul>
+<li>Click any stakeholder card to see a tight recommended approach here.</li>
+<li>To view quadrant strategy, click the <strong>quadrant heading</strong> (e.g. “Power centre”).</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="info-card">
+<div class="info-head">
+<div class="info-title">
+<span class="bubble"><i class="fas fa-chart-pie"></i></span>
+<span>Map Snapshot</span>
+</div>
+<div class="total-pill" id="totalPill">0 TOTAL</div>
+</div>
+<div class="snapshot-list" id="snapshotList">
+<div class="snapshot-item" data-open="power_centre">
+<div class="snap-left">
+<div class="snap-ico"><i class="fas fa-crown"></i></div>
+<div class="snap-txt">
+<div class="snap-name">Power centre</div>
+<div class="snap-sub">High control · High influence</div>
+</div>
+</div>
+<div class="snap-count" id="snapPowerCentre">0</div>
+</div>
+<div class="snapshot-item" data-open="formal_gatekeeper">
+<div class="snap-left">
+<div class="snap-ico"><i class="fas fa-shield"></i></div>
+<div class="snap-txt">
+<div class="snap-name">Formal gatekeeper</div>
+<div class="snap-sub">High control · Low influence</div>
+</div>
+</div>
+<div class="snap-count" id="snapFormalGatekeeper">0</div>
+</div>
+<div class="snapshot-item" data-open="opinion_shaper">
+<div class="snap-left">
+<div class="snap-ico"><i class="fas fa-comment-dots"></i></div>
+<div class="snap-txt">
+<div class="snap-name">Opinion shaper</div>
+<div class="snap-sub">Low control · High influence</div>
+</div>
+</div>
+<div class="snap-count" id="snapOpinionShaper">0</div>
+</div>
+<div class="snapshot-item" data-open="monitor">
+<div class="snap-left">
+<div class="snap-ico"><i class="fas fa-binoculars"></i></div>
+<div class="snap-txt">
+<div class="snap-name">Monitor</div>
+<div class="snap-sub">Low control · Low influence</div>
+</div>
+</div>
+<div class="snap-count" id="snapMonitor">0</div>
+</div>
+</div>
+</div>
+</div>
+<div class="info-card">
+<div class="info-head">
+<div class="info-title">
+<span class="bubble"><i class="fas fa-chess"></i></span>
+<span>Control vs Influence: smart moves</span>
+</div>
+</div>
+<div class="plan-box">
+<div class="plan-h">Practical notes</div>
+<ul>
+<li><strong>Don’t confuse confidence with control:</strong> the loudest person often has influence, not authority.</li>
+<li><strong>Find the approval path:</strong> who signs, who reviews, who can pause—then map your “yes sequence”.</li>
+<li><strong>Pre-alignment beats persuasion in-room:</strong> influence works best <em>before</em> the meeting, not during it.</li>
+<li><strong>Use “constraint language” with control:</strong> “To approve this safely, we need…” makes decisions easier.</li>
+</ul>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal-overlay" id="modalOverlay">
+<div aria-labelledby="modalTitle" aria-modal="true" class="modal" role="dialog">
+<div class="modal-head">
+<div class="modal-title" id="modalTitle">
+<span class="bubble"><i class="fas fa-layer-group"></i></span>
+<span id="modalTitleText">Quadrant</span>
+</div>
+<button aria-label="Close" class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+</div>
+<div class="modal-body">
+<div class="modal-card">
+<h4><i class="fas fa-bullseye"></i> Recommended approach</h4>
+<p id="modalApproach"></p>
+</div>
+<div class="modal-card">
+<h4><i class="fas fa-shield-alt"></i> What to avoid</h4>
+<p id="modalAvoid"></p>
+</div>
+<div class="modal-card modal-wide">
+<h4><i class="fas fa-list-check"></i> Fast moves</h4>
+<ul id="modalMoves"></ul>
+</div>
+<div class="modal-card modal-wide">
+<h4><i class="fas fa-users"></i> Stakeholders in this quadrant</h4>
+<p id="modalPeople"></p>
+<div id="modalPeopleList"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Team Tension Heatmap — map tension hotspots, generate a report, and save progress securely to your account. Not legal advice." />
+  <title>Team Tension Heatmap | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="map-team-tension">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="far fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Team Tension Heatmap</span>
+</div>
+<span class="checklist-name">TEAM TENSION HEATMAP</span>
+<h1 class="hero-main-heading">Map the hotspots → reduce the blow-ups</h1>
+<div class="hero-subheading">
+          Use this heatmap to pinpoint where friction is building — across topics and stakeholders.
+          Click a cell to set tension level (None → Mild → Moderate → High). Generate a report with priority actions and
+          conversation scripts. Not legal advice.
+        </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Category</span>
+<div class="category-pills-grid">
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-people-arrows category-icon"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Heatmap</h3>
+<ul class="bullet-list">
+<li>When the team feels “off” but nobody can name why</li>
+<li>When small issues keep turning into big reactions</li>
+<li>Before a difficult conversation or reset meeting</li>
+<li>When you suspect tension is uneven (one relationship is the real issue)</li>
+<li>When you want an evidence-based approach — not “vibes”</li>
+<li>When you need to prioritise: what to tackle first</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Rate “impact + frequency”, not your mood on a bad day</li>
+<li>High tension + low clarity = fastest route to conflict</li>
+<li>Start with one hotspot. Fixing everything at once fails</li>
+<li>If a “High” cell is about respect or trust, go slower and gather examples</li>
+<li>Use the notes to capture facts: who, what, when, impact</li>
+<li>Re-score after 2 weeks — the goal is trend change</li>
+</ul>
+</div>
+</div>
+<div class="tool-body">
+<h2 class="tool-section-title">Your Heatmap</h2>
+<p class="tool-section-subtitle">
+        Click each cell to set a tension level. Focus on the relationships you interact with most.
+        If something is “High”, add a short fact-based note so your report is grounded.
+      </p>
+<div class="heatmap-wrap">
+<div class="card heatmap">
+<div class="panel-title"><i class="fas fa-fire-flame-curved"></i>Heatmap grid</div>
+<div class="mini">Levels cycle on click: <strong>None → Mild → Moderate → High</strong>. Keyboard: focus a cell and press Enter / Space.</div>
+<div class="heatmap-scroll">
+<table aria-label="Team tension heatmap" class="heatmap-table">
+<thead>
+<tr>
+<th class="heatmap-th">Topic</th>
+<th class="heatmap-th">Manager</th>
+<th class="heatmap-th">Key Peer</th>
+<th class="heatmap-th">Another Peer</th>
+<th class="heatmap-th">Cross-functional</th>
+<th class="heatmap-th">Team overall</th>
+</tr>
+</thead>
+<tbody id="heatmapBody">
+</tbody>
+</table>
+</div>
+<div aria-label="Heat legend" class="legend">
+<div class="legend-pill l0"><span class="legend-dot"></span> None (0)</div>
+<div class="legend-pill l1"><span class="legend-dot"></span> Mild (1)</div>
+<div class="legend-pill l2"><span class="legend-dot"></span> Moderate (2)</div>
+<div class="legend-pill l3"><span class="legend-dot"></span> High (3)</div>
+</div>
+</div>
+<div class="card">
+<div class="panel-title"><i class="fas fa-chart-simple"></i>Overview</div>
+<div class="mini">These metrics update live. Your top hotspots are the best “first fix”.</div>
+<div class="metrics">
+<div class="metric">
+<div class="k">Overall heat</div>
+<div class="v" id="overallHeat">0%</div>
+<div class="s" id="overallHeatHint">Start scoring cells</div>
+</div>
+<div class="metric">
+<div class="k">High cells</div>
+<div class="v" id="highCount">0</div>
+<div class="s" id="highHint">High means: act now</div>
+</div>
+<div class="metric">
+<div class="k">Moderate+</div>
+<div class="v" id="modPlusCount">0</div>
+<div class="s" id="modPlusHint">These drive friction</div>
+</div>
+<div class="metric">
+<div class="k">Priority</div>
+<div class="v" id="priorityLabel">Low</div>
+<div class="s" id="priorityHint">Based on hotspots</div>
+</div>
+</div>
+<div class="panel-title"><i class="fas fa-bullseye"></i>Top hotspots</div>
+<div class="mini">Highest tension pairs first (topic + stakeholder).</div>
+<div class="hotspots" id="hotspots">
+</div>
+</div>
+</div>
+<div class="card">
+<div class="panel-title"><i class="fas fa-pen"></i>Notes (optional but powerful)</div>
+<div class="mini">Keep it factual. Example: “In Monday’s stand-up, X cut me off twice; decisions were reversed later; delivery slipped by 1 day.”</div>
+<div class="notes-grid">
+<div class="field">
+<label for="contextInput">Situation context</label>
+<input id="contextInput" placeholder="What’s going on in the background? (re-org, deadline, role changes…)" type="text"/>
+<div class="hint">Short and neutral. This helps you avoid misattribution.</div>
+</div>
+<div class="field">
+<label for="patternInput">Pattern you’re noticing</label>
+<input id="patternInput" placeholder="What keeps repeating? (missed handovers, power plays, unclear decisions…)" type="text"/>
+<div class="hint">Patterns are more useful than one-off incidents.</div>
+</div>
+<div class="field">
+<label for="evidenceText">Evidence notes</label>
+<textarea id="evidenceText" placeholder="Bullet the facts: who / what / when / impact. Keep it short."></textarea>
+<div class="hint">If you plan a formal route later, evidence quality matters. Keep dates and impact.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar">
+<div class="action-wrap">
+<div class="summary-panel">
+<div class="summary-title-row">
+<div class="summary-title">Tension Risk Snapshot</div>
+<div class="risk-chip" id="riskChip">Low</div>
+</div>
+<div aria-label="Overall heat bar" class="progress-line">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="summary-text" id="snapshotText">
+            Score some cells to generate a report. Aim: reduce “High” cells first — then stabilise “Moderate” cells.
+          </div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+          </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+          </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+          </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+          </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="report" id="report">
+<div class="report-header">
+<h2 class="report-title">Your Team Tension Report</h2>
+<p class="report-subtitle">
+          Overall heat: <span id="rHeat">0%</span> • Priority: <span id="rPriority">Low</span> • High cells: <span id="rHigh">0</span>
+</p>
+<p class="report-insight" id="rInsight">
+          This report is designed to help you act in the right order: stabilise, clarify, then rebuild trust.
+        </p>
+</div>
+<h3 class="section-header"><i class="fas fa-triangle-exclamation"></i>What to tackle first</h3>
+<div class="grid-3" id="rHotspotCards"></div>
+<h3 class="section-header"><i class="fas fa-screwdriver-wrench"></i>Immediate actions (next 7 days)</h3>
+<div class="grid-3" id="rActions"></div>
+<h3 class="section-header"><i class="fas fa-comments"></i>Conversation scripts</h3>
+<div class="grid-3" id="rScripts"></div>
+<h3 class="section-header"><i class="fas fa-shield-heart"></i>Behaviour lens (optional)</h3>
+<div class="grid-3" id="rLens"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Evidence &amp; Documentation Framework | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="framework-evidence-and-documentation">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR Insider</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Evidence &amp; Documentation Template</span>
+</div>
+<span class="checklist-name">EVIDENCE &amp; DOCUMENTATION TEMPLATE</span>
+<h1 class="hero-main-heading">Build a Strong Clear Record That Protects You and Supports a Calm Confident Escalation</h1>
+<div class="hero-subheading">
+            A structured, copy-ready documentation system for workplace issues: what happened, when it happened, what you can evidence,
+            and how to write it so it stays factual, professional, and hard to dismiss.
+        </div>
+<div class="hero-disclaimer">
+<i class="fas fa-file-shield"></i>
+<div>
+                This tool helps you document clearly and safely. It isn’t legal advice.
+                If you feel unsafe or there’s immediate risk, prioritise safety and urgent support first.
+            </div>
+</div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html">
+<i class="fas fa-battery-half"></i>
+<span>Expectations, Burnout &amp; Capacity</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-users category-icon"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Template</h3>
+<ul class="bullet-list">
+<li>Before raising something with HR, ER, a wellbeing lead, or your manager’s manager.</li>
+<li>When you suspect you’re being managed out (shifting expectations, moving goalposts, pressure tactics).</li>
+<li>When you need to request adjustments, protect your performance standing, or rebut inaccurate claims.</li>
+<li>After an incident, difficult meeting, or message exchange that may later be reframed.</li>
+<li>When you want a calm, professional “paper trail” without sounding emotional or accusatory.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Write like a professional witness: <strong>who/what/when/where</strong>and avoid motives and labels.</li>
+<li>Keep each entry time-bounded: one event, one impact, one evidence reference.</li>
+<li>Use <strong>exact quotes</strong> sparingly and accurately, only where it matters.</li>
+<li>Assume everything could be forwarded. Every line should stand up to daylight.</li>
+<li>Evidence is not “what you feel”. Evidence is <strong>what you can show</strong>: messages, outputs, dates, decisions, patterns.</li>
+</ul>
+</div>
+</div>
+<div class="framework-shell" id="frameworkCanvas">
+<div class="framework-header">
+<h2>Documentation framework</h2>
+<p>Complete the section to generate: a one-paragraph summary, a defensible chronology, and copy-ready messages for follow-ups and formal submissions.</p>
+</div>
+<div class="canvas-grid">
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-id-card"></i> 1) Case Header</div>
+</div>
+<div class="panel-sub">Define what this is about in one clean frame. This stops the record becoming messy or emotional.</div>
+<div class="field-grid">
+<div class="field">
+<div class="label">Issue type</div>
+<select class="select ed-input" data-dimension="header" id="ed_type">
+<option selected="" value="">Select…</option>
+<option value="Bullying / intimidation">Bullying / intimidation</option>
+<option value="Harassment / discrimination">Harassment / discrimination</option>
+<option value="Performance management / PIP concerns">Performance management / PIP concerns</option>
+<option value="Retaliation / victimisation risk">Retaliation / victimisation risk</option>
+<option value="Workload / unreasonable demands">Workload / unreasonable demands</option>
+<option value="Process / fairness concern">Process / fairness concern</option>
+<option value="Unsafe working conditions">Unsafe working conditions</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Time window</div>
+<input class="input ed-input" data-dimension="header" id="ed_window" placeholder="E.g., Nov 2025 – Jan 2026"/>
+</div>
+<div class="field span-2">
+<div class="label">One-sentence case label</div>
+<input class="input ed-input" data-dimension="header" id="ed_label" placeholder="E.g., ‘Concerns about shifting performance expectations and retaliatory behaviour after raising workload risk.’"/>
+</div>
+<div class="field">
+<div class="label">People involved</div>
+<input class="input ed-input" data-dimension="people" id="ed_people" placeholder="E.g., Manager (role), HR contact, colleague (role)"/>
+</div>
+<div class="field">
+<div class="label">Location / channel</div>
+<input class="input ed-input" data-dimension="people" id="ed_channel" placeholder="E.g., Teams calls + email threads"/>
+</div>
+<div class="field span-2">
+<div class="label">What outcome you want</div>
+<select class="select ed-input" data-dimension="outcome" id="ed_outcome">
+<option selected="" value="">Select…</option>
+<option value="Clarified expectations and written plan">Clarified expectations and written plan</option>
+<option value="Reasonable adjustments / workload reset">Reasonable adjustments / workload reset</option>
+<option value="Neutral HR guidance and safe process owner">Neutral HR guidance and safe process owner</option>
+<option value="Investigation / formal process">Investigation / formal process</option>
+<option value="Stop behaviour and protect against retaliation">Stop behaviour and protect against retaliation</option>
+<option value="Exit planning (without reputation damage)">Exit planning (without reputation damage)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Core facts (2–5 bullets)</div>
+<textarea class="textarea ed-input" data-dimension="facts" id="ed_corefacts" placeholder="- Bullet points only
+- Each bullet should be factual, time-bounded, and specific"></textarea>
+</div>
+</div>
+<div class="micro-cards">
+<div class="micro">
+<h4><i class="fas fa-pen-nib"></i> The witness standard</h4>
+<p>Use this structure: <code>“On [date], in [context], [person] said/did [behaviour/quote]. Impact: [effect].”</code></p>
+</div>
+<div class="micro">
+<h4><i class="fas fa-layer-group"></i> Separate “facts” from “interpretation”</h4>
+<p>Facts go in the record. Interpretation goes in your private notes — only include interpretation if it’s necessary and you can tie it to evidence.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div>
+<div class="panel-title"><i class="fas fa-folder-open"></i> 2) Evidence Register</div>
+<div class="panel-sub">
+                        Create references you can point to. Think: “What can I show?” not “What do I feel?”.
+                    </div>
+</div>
+<div class="strength-badge" id="strengthBadge" title="Auto-calculated from your inputs">
+<span class="dot"></span>
+<span id="strengthBadgeText">Record: Not assessed</span>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label">Evidence you have</div>
+<select class="select ed-input" data-dimension="evidence" id="ed_ev_types">
+<option selected="" value="">Select…</option>
+<option value="Emails / messages">Emails / messages</option>
+<option value="Meeting notes / calendar invites">Meeting notes / calendar invites</option>
+<option value="Documents / attachments">Documents / attachments</option>
+<option value="System logs / tickets">System logs / tickets</option>
+<option value="Witnesses">Witnesses</option>
+<option value="Outputs / delivery evidence">Outputs / delivery evidence</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Where evidence is stored</div>
+<input class="input ed-input" data-dimension="evidence" id="ed_ev_location" placeholder="E.g., Personal folder, secure drive, email thread ref"/>
+</div>
+<div class="field span-2">
+<div class="label">Key evidence references</div>
+<textarea class="textarea ed-input" data-dimension="evidence" id="ed_ev_refs" placeholder="E.g.,
+- Email thread ‘Project X deadlines’ (05/12)
+- Teams message from [Name] (12/12, 14:03)
+- Calendar invite + notes (1:1 18/12)
+- Screenshot: KPI change request (20/12)"></textarea>
+</div>
+<div class="field span-2">
+<div class="label">What you’re missing (and how to get it)</div>
+<textarea class="textarea ed-input" data-dimension="gaps" id="ed_gaps" placeholder="E.g.,
+- Need written confirmation of revised expectations → send recap email after next 1:1
+- Need clarity on ownership of process → ask HR for point of contact"></textarea>
+</div>
+<div class="field span-2">
+<div class="label">Safe capture rules</div>
+<textarea class="textarea ed-input" data-dimension="gaps" id="ed_rules" placeholder="E.g.,
+- Don’t secretly record unless you’ve taken advice (policy/legal risk)
+- Keep originals intact; don’t edit screenshots
+- Store dates, times, and exact wording"></textarea>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Evidence statement (auto)</h4>
+<div>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="ed_evidence_out">Click “Build” to generate a concise evidence statement you can paste into an email or HR submission.</div>
+</div>
+<div class="tip-box">
+<h4><i class="fas fa-check-circle"></i> What makes a record “strong”</h4>
+<ul>
+<li><strong>Chronology:</strong> clear dates and sequence (no vague “for months”).</li>
+<li><strong>Proof points:</strong> messages/notes/outputs that anchor each key claim.</li>
+<li><strong>Neutral tone:</strong> behaviour + impact + process, not labels.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="canvas-grid">
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-timeline"></i> 3) Chronology Timeline</div>
+</div>
+<div class="panel-sub">This is your protective backbone. Each row should map: event → impact → evidence reference.</div>
+<table class="timeline-table" id="timelineTable">
+<thead>
+<tr>
+<th>Date</th>
+<th>What happened (fact)</th>
+<th>Impact (work/health/process)</th>
+<th>Evidence reference</th>
+</tr>
+</thead>
+<tbody id="timelineBody">
+<tr>
+<td><input class="input ed-input" data-dimension="timeline" name="framework-evidence-and-documentation_field_13" placeholder="DD/MM/YYYY"/></td>
+<td><input class="input ed-input" data-dimension="timeline" name="framework-evidence-and-documentation_field_14" placeholder="Instruction / incident / message / decision"/></td>
+<td><input class="input ed-input" data-dimension="timeline" name="framework-evidence-and-documentation_field_15" placeholder="Delay, stress, role risk, process concern"/></td>
+<td><input class="input ed-input" data-dimension="timeline" name="framework-evidence-and-documentation_field_16" placeholder="Email 05/12 / Msg 12/12 14:03"/></td>
+</tr>
+</tbody>
+</table>
+<div>
+<button class="mini-btn"><i class="fas fa-plus"></i> Add row</button>
+<button class="mini-btn"><i class="fas fa-minus"></i> Remove row</button>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build chronology</button>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Chronology (auto)</h4>
+</div>
+<div class="output-content" id="ed_chrono_out">Add a few rows, then click “Build chronology”.</div>
+</div>
+<div class="micro-cards">
+<div class="micro">
+<h4><i class="fas fa-bullseye"></i> One row = one claim</h4>
+<p>If the row is vague, it won’t hold. Anchor each row to <strong>something verifiable</strong>.</p>
+</div>
+<div class="micro">
+<h4><i class="fas fa-clipboard-check"></i> Pattern without drama</h4>
+<p>You don’t need “toxic” language. A clean pattern in dates + evidence does the work for you.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-message"></i> 4) Communication Frame</div>
+</div>
+<div class="panel-sub">This is how you keep it professional: what you’re raising, what you’re asking for, and what you want in writing.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label">Your neutral opener</div>
+<input class="input ed-input" data-dimension="comms" id="ed_opener" placeholder="E.g., ‘I’d like guidance on the appropriate process for raising a concern and ensuring it’s handled properly.’"/>
+</div>
+<div class="field span-2">
+<div class="label">Your specific request</div>
+<input class="input ed-input" data-dimension="comms" id="ed_request" placeholder="E.g., ‘A named point of contact, written next steps, and clarity on confidentiality and retaliation protections.’"/>
+</div>
+<div class="field">
+<div class="label">Preferred route</div>
+<select class="select ed-input" data-dimension="comms" id="ed_route">
+<option selected="" value="">Select…</option>
+<option value="HR (employee relations)">HR (employee relations)</option>
+<option value="Manager’s manager">Manager’s manager</option>
+<option value="Health &amp; Safety / wellbeing lead">Health &amp; Safety / wellbeing lead</option>
+<option value="Union rep / employee representative">Union rep / employee representative</option>
+<option value="Whistleblowing / ethics line">Whistleblowing / ethics line</option>
+<option value="Not sure yet (needs mapping)">Not sure yet (needs mapping)</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Tone setting</div>
+<select class="select ed-input" data-dimension="comms" id="ed_tone">
+<option selected="" value="">Select…</option>
+<option value="Neutral &amp; procedural">Neutral &amp; procedural</option>
+<option value="Concerned but calm">Concerned but calm</option>
+<option value="Firm &amp; boundary-led">Firm &amp; boundary-led</option>
+<option value="Seeking clarity &amp; fairness">Seeking clarity &amp; fairness</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Boundary / control move</div>
+<input class="input ed-input" data-dimension="comms" id="ed_boundary" placeholder="E.g., ‘I’ll keep updates in writing and send recaps after meetings.’"/>
+</div>
+<div class="field span-2">
+<div class="label">What you want to avoid</div>
+<textarea class="textarea ed-input" data-dimension="comms" id="ed_avoid" placeholder="E.g.,
+- No private pressure discussions
+- No verbal-only decisions
+- No reframing as ‘performance attitude’ without evidence"></textarea>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Follow-up recap email (auto)</h4>
+<div>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="ed_recap_out">Click “Build” to generate a neutral recap that locks the record.</div>
+</div>
+<div class="tip-box">
+<h4><i class="fas fa-check-circle"></i> Language that holds</h4>
+<ul>
+<li>“I want to ensure this is handled properly and safely.”</li>
+<li>“For clarity, here is my understanding and the next steps.”</li>
+<li>“Please confirm the process owner and next steps in writing.”</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-file-lines"></i> Executive Outputs</div>
+</div>
+<div class="panel-sub">Copy-ready blocks for HR submissions, manager’s manager briefings, or formal documentation.</div>
+<div class="output-box">
+<div class="output-title">
+<h4>One-paragraph summary</h4>
+</div>
+<div class="output-content" id="out_summary">Complete the canvas, then click “Generate outputs”.</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Key facts (bullet proof points)</h4>
+</div>
+<div class="output-content" id="out_facts">—</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Chronology (short)</h4>
+</div>
+<div class="output-content" id="out_chrono">—</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Formal submission framing</h4>
+</div>
+<div class="output-content" id="out_formal">—</div>
+</div>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title"><i class="fas fa-list-check"></i> Quick Coverage Checklist</h2>
+<div class="checklist-intro">
+        This is your audit before you hit send. It catches the mistakes that cause dismissal, exposure, or “he said / she said” outcomes.
+    </div>
+<div class="checklist-grid">
+<div class="checklist-item" data-category="header">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve defined the issue clearly (type, window, neutral case label).</div>
+</div>
+<div class="checklist-item" data-category="facts">
+<i class="far fa-square"></i>
+<div class="checklist-text">My facts are time-bounded and specific (who/what/when/where), not motives or labels.</div>
+</div>
+<div class="checklist-item" data-category="timeline">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have a chronology that links each event to impact and evidence reference.</div>
+</div>
+<div class="checklist-item" data-category="evidence">
+<i class="far fa-square"></i>
+<div class="checklist-text">I can point to at least 3–5 concrete proof points (messages/notes/outputs).</div>
+</div>
+<div class="checklist-item" data-category="gaps">
+<i class="far fa-square"></i>
+<div class="checklist-text">I know what I’m missing and how I will safely capture it (without policy risk).</div>
+</div>
+<div class="checklist-item" data-category="comms">
+<i class="far fa-square"></i>
+<div class="checklist-text">My message is procedural and outcome-led (process, clarity, next steps).</div>
+</div>
+<div class="checklist-item" data-category="outcome">
+<i class="far fa-square"></i>
+<div class="checklist-text">My requested outcome is specific, reasonable, and written down.</div>
+</div>
+<div class="checklist-item" data-category="people">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve captured who was involved and the channels used (useful for investigations).</div>
+</div>
+</div>
+</div>
+<div class="clarity-score-section">
+<div class="presence-snapshot-header">
+<h2>Your Documentation Readiness Snapshot</h2>
+<p>This score reflects whether your record is complete enough to use safely: factual, evidenced, and procedurally framed.</p>
+</div>
+<div class="clarity-score-bar">
+<div class="clarity-progress-container">
+<div class="clarity-header">
+<div class="clarity-title">Documentation Completion Score</div>
+<div class="clarity-percentage" id="clarityPercentage">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Loose</span><span>Reasonable</span><span>Defensible</span>
+</div>
+<div class="presence-dimensions">
+<div class="presence-dimension-pill"><span class="label">Header &amp; Facts</span><span class="score" id="scoreVoice">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Evidence</span><span class="score" id="scoreStructure">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Chronology</span><span class="score" id="scoreNonverbal">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Comms &amp; Ask</span><span class="score" id="scoreChallenge">0%</span></div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+            </button>
+<button class="action-btn secondary" data-action="save-tool" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+            </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+            </button>
+<button class="action-btn secondary" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+            </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> —</span>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Smart Documentation Summary</h2>
+<p class="summary-subtitle">Based on your completion score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">Highlights what’s missing, what weakens your record, and the cleanest next move to increase control.</p>
+</div>
+<h3 class="section-header red"><i class="fas fa-exclamation-triangle"></i> Gaps that Weaken the Record</h3>
+<div class="red-flags-grid" id="redFlagsGrid"></div>
+<h3 class="section-header purple"><i class="fas fa-forward"></i> Next Moves to Strengthen Your Position</h3>
+<div class="next-steps-grid" id="nextStepsGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-tools"></i> Recommended Tools to Support You</h3>
+<div class="resources-grid" id="resourcesGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

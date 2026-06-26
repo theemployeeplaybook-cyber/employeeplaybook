@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Career Anchoring Framework | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="framework-career-anchoring">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-career-playbook.html">Career Playbook</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Career Anchoring Framework</span>
+</div>
+<span class="checklist-name">CAREER ANCHORING FRAMEWORK</span>
+<h1 class="hero-main-heading">Anchor your career to what you actually want (and can defend)</h1>
+<div class="hero-subheading">
+          Turn vague "next steps" into a clear anchor: what you're building, what you won't trade away, and how to
+          choose roles that fit your strengths, energy and identity
+        </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-compass category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill confidence" href="category-confidence-presence-influence.html">
+<i class="fas fa-bolt category-icon"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="playbook-wrap">
+<div class="intro-grid">
+<div class="card">
+<div class="card-title"><i class="fas fa-bullseye"></i>How to use this framework</div>
+<p class="mini">
+<strong>What's an anchor?</strong> It's the principle or value system that guides your career choices. Not a
+            job title, a decision rule. It answers: "What kind of work, culture fit, and growth keeps me engaged?"
+
+            <br/>Once you know your anchor, use it to check roles, managers, and environments so you stop forcing fit and
+            start choosing work that suits you.
+            If autonomy is your anchor, micromanagement will drain you, whatever the title.
+          </p>
+<div></div>
+<div class="pill-grid">
+<div class="micro-pill"><span class="label">Time</span><span class="value">20–30 mins</span></div>
+<div class="micro-pill"><span class="label">Output</span><span class="value">1 anchor</span></div>
+<div class="micro-pill"><span class="label">Depth</span><span class="value">Strategic</span></div>
+<div class="micro-pill"><span class="label">Best use</span><span class="value">Before job moves</span></div>
+</div>
+</div>
+<div class="card">
+<div class="card-title"><i class="fas fa-gauge-high"></i>Live anchor score</div>
+<p class="mini">
+            This is not a "performance score". It's a completion signal so you leave with something usable, not
+            half-formed thoughts.
+          </p>
+<div></div>
+<div class="score-row">
+<span class="score-label">Completed</span>
+<span class="score-value" id="overallScore">0%</span>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="overallFill"></div>
+</div>
+<div class="pill-grid">
+<div class="micro-pill"><span class="label">Direction</span><span class="value" id="scoreDirection">0%</span></div>
+<div class="micro-pill"><span class="label">Fit</span><span class="value" id="scoreFit">0%</span></div>
+<div class="micro-pill"><span class="label">Boundaries</span><span class="value" id="scoreBoundaries">0%</span></div>
+<div class="micro-pill"><span class="label">Decision</span><span class="value" id="scoreDecision">0%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="anchor-profiles-insight">
+<div>
+<i class="fas fa-lightbulb"></i>
+          Anchor profiles
+        </div>
+<div class="anchor-profiles-grid">
+<div>
+<strong>Builder/Operator</strong>
+<div>You thrive on creating order from
+              chaos. Good processes, clear ownership, and tangible progress matter most.</div>
+</div>
+<div>
+<strong>Specialist/Expert</strong>
+<div>You're driven to go deep. Being
+              the person others turn to for mastery and credibility gives you meaning.</div>
+</div>
+<div>
+<strong>Leader/People Catalyst</strong>
+<div>You see potential in people.
+              Building capability, unlocking growth, and shaping culture fuels you.</div>
+</div>
+<div>
+<strong>Change/Turnaround</strong>
+<div>You're energised by ambiguity and
+              fixing broken things. Stagnation drains you; solving hard problems energises you.</div>
+</div>
+<div>
+<strong>Autonomy/Freedom</strong>
+<div>You need control over how and when
+              you work. Micromanagement kills your motivation faster than anything else.</div>
+</div>
+<div>
+<strong>Mission/Values</strong>
+<div>You won't stay where your values
+              don't align. Working toward something you believe in is non-negotiable.</div>
+</div>
+<div>
+<strong>Status/Progression</strong>
+<div>You want visible seniority and
+              influence. Titles, scope, and recognition signal progress and signal to others you've made it.</div>
+</div>
+<div>
+<strong>Security/Stability</strong>
+<div>You prefer predictability and low
+              volatility. Knowing what's expected lets you perform at your best without stress.</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="direction">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">1</div>
+<div class="section-title">
+<strong>Your anchor sentence</strong>
+<span>Make it simple, defensible, and specific enough to guide choices.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-direction">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-pen-nib"></i>
+<strong>Write the anchor (one sentence)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="direction" name="framework-career-anchoring_field_1" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_2" placeholder="Example: I build calm, high-credibility operations that reduce risk, create clarity, and scale teams without chaos."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-crosshairs"></i>
+<strong>What outcome do you want to be known for?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="direction" name="framework-career-anchoring_field_3" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_4" placeholder="The measurable outcomes your work reliably creates (not your job title)."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-mountain"></i>
+<strong>What problems are you willing to solve repeatedly?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="direction" name="framework-career-anchoring_field_5" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_6" placeholder="Problems you don't resent solving. The ones that feel like 'your lane'."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-ban"></i>
+<strong>What do you refuse to build your career on?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="direction" name="framework-career-anchoring_field_7" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_8" placeholder="e.g. constant fire-fighting, politics-first environments, low trust."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-leaf"></i>
+<div>
+<strong>Note:</strong> vague anchors create drift. If your anchor can fit any job, it will guide none.
+                Your anchor should <em>exclude</em> as much as it includes.
+              </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="fit">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">2</div>
+<div class="section-title">
+<strong>Strength + environment fit</strong>
+<span>What you do best, and the conditions you need for it to show up.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-fit">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-star"></i>
+<strong>Your unfair advantages (top 3)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="fit" name="framework-career-anchoring_field_9" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_10" placeholder="What you do better than most, with less effort."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-people-group"></i>
+<strong>People + leadership style you thrive under</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="fit" name="framework-career-anchoring_field_11" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_12" placeholder="What good leadership looks like for you (autonomy, clarity, feedback rhythm)."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-battery-three-quarters"></i>
+<strong>What gives you energy (at work)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="fit" name="framework-career-anchoring_field_13" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_14" placeholder="Work you'd do even on a tough week because it feels meaningful."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-battery-empty"></i>
+<strong>What drains you fast (red zone)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="fit" name="framework-career-anchoring_field_15" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_16" placeholder="Work patterns that make you resentful, foggy, or reactive."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-leaf"></i>
+<div>
+<strong>Personality / Behaviour lens:</strong> if you're high-conscientious, high-standards, low
+                tolerance for mess —
+                you'll suffer in chaos unless you have authority to build systems. Don't call it "resilience"; call it
+                fit.
+              </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="boundaries">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">3</div>
+<div class="section-title">
+<strong>Non-negotiables</strong>
+<span>Your guardrails: what must be true for a role to be worth it.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-boundaries">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-shield"></i>
+<strong>Non-negotiable #1 (work conditions)</strong>
+</div>
+<label class="q-done"><input class="done nn" data-dim="boundaries" name="framework-career-anchoring_field_17" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_18" placeholder="e.g. autonomy on delivery / realistic workload / clear success criteria."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-shield"></i>
+<strong>Non-negotiable #2 (values / ethics)</strong>
+</div>
+<label class="q-done"><input class="done nn" data-dim="boundaries" name="framework-career-anchoring_field_19" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_20" placeholder="What you will not compromise on, even for more money or status."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-shield"></i>
+<strong>Non-negotiable #3 (health / capacity)</strong>
+</div>
+<label class="q-done"><input class="done nn" data-dim="boundaries" name="framework-career-anchoring_field_21" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_22" placeholder="What must be true so you can sustain performance without burnout."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-shield"></i>
+<strong>Non-negotiable #4 (growth / trajectory)</strong>
+</div>
+<label class="q-done"><input class="done nn" data-dim="boundaries" name="framework-career-anchoring_field_23" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_24" placeholder="What must exist so the role compounds your career capital."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-leaf"></i>
+<div>
+<strong>Note:</strong> non-negotiables are not preferences. If you break them, you pay later — in
+                stress, reputation, or time.
+              </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="decision">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">4</div>
+<div class="section-title">
+<strong>Decision filter</strong>
+<span>A fast "yes/no/maybe" system for roles, projects, and promotions.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-decision">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-filter"></i>
+<strong>Top 3 "yes" signals</strong>
+</div>
+<label class="q-done"><input class="done filter" data-dim="decision" name="framework-career-anchoring_field_25" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_26" placeholder="Signals that the role fits your anchor and will compound your value."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-triangle-exclamation"></i>
+<strong>Top 3 "no" signals</strong>
+</div>
+<label class="q-done"><input class="done filter" data-dim="decision" name="framework-career-anchoring_field_27" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_28" placeholder="Signals that the role will drain you, dilute you, or damage credibility."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-scale-balanced"></i>
+<strong>Your trade-off rule</strong>
+</div>
+<label class="q-done"><input class="done filter" data-dim="decision" name="framework-career-anchoring_field_29" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_30" placeholder="If you take X, you must get Y (e.g. more scope requires more autonomy)."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-calendar-days"></i>
+<strong>Next 90 days: one move that proves the anchor</strong>
+</div>
+<label class="q-done"><input class="done filter" data-dim="decision" name="framework-career-anchoring_field_31" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-career-anchoring_field_32" placeholder="A concrete move: conversation, project, visibility play, or skill investment."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-leaf"></i>
+<div>
+<strong>Note:</strong> the market rewards coherence. The filter stops you becoming "useful in
+                everything" and recognised for nothing.
+              </div>
+</div>
+</div>
+</div>
+</div>
+<div class="anchor-output-card" id="anchorOutputCard">
+<div class="card">
+<div class="card-title"><i class="fas fa-sparkles"></i>Your Career Anchor Output</div>
+<div id="outputEmptyState">
+<p>
+              Fill in the sections above, then generate your structured career anchor summary.<br/>
+<span>The output will
+                summarise your anchor, infer your profile, and recommend next steps.</span>
+</p>
+</div>
+<div id="outputContent"></div>
+<div id="outputQualityCheck">
+</div>
+</div>
+</div>
+<div>
+<button class="mini-btn primary" id="generateOutputBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+        </button>
+<button class="mini-btn secondary" id="collapseAll"><i class="fas fa-compress"></i> Collapse all</button>
+<button class="mini-btn primary" id="expandAll"><i class="fas fa-expand"></i> Expand all</button>
+<button class="mini-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+        </button>
+<button class="mini-btn secondary" data-action="print-page" id="printBtn"><i class="fas fa-print"></i> Print / Save PDF</button>
+<button class="mini-btn secondary" disabled="" id="clearBtn"><i class="fas fa-eraser"></i> Clear All</button>
+</div>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

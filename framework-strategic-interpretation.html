@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Strategic Interpretation Framework | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="framework-strategic-interpretation">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="far fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-workplace-dynamics-and-politics.html">Workplace Dynamics &amp; Politics</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Strategic Interpretation Framework</span>
+</div>
+<span class="checklist-name">STRATEGIC INTERPRETATION FRAMEWORK</span>
+<h1 class="hero-main-heading">Turn messy signals into clear strategic meaning</h1>
+<div class="hero-subheading">
+      Translate signals, patterns, incentives and narrative pressure into grounded decisions — without reacting too early or escalating unnecessarily.
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-compass category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill confidence" href="category-confidence-presence-influence.html">
+<i class="fas fa-bolt category-icon"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="playbook-wrap">
+<div class="intro-grid">
+<div class="card">
+<div class="card-title"><i class="fas fa-bullseye"></i>How to use this framework</div>
+<p class="mini">
+<strong>What's an anchor?</strong> It's the principle or value system that guides your career choices. Not a job title, a decision rule. It answers: "What kind of work, culture fit, and growth keeps me engaged?"
+
+      <br/>Once you know your anchor, use it to check roles, managers, and environments so you stop forcing fit and start choosing work that suits you.
+       If autonomy is your anchor, micromanagement will drain you, whatever the title.
+      </p>
+<div></div>
+<div class="pill-grid">
+<div class="micro-pill"><span class="label">Time</span><span class="value">20–30 mins</span></div>
+<div class="micro-pill"><span class="label">Output</span><span class="value">1 anchor</span></div>
+<div class="micro-pill"><span class="label">Depth</span><span class="value">Strategic</span></div>
+<div class="micro-pill"><span class="label">Best use</span><span class="value">Before job moves</span></div>
+</div>
+</div>
+<div class="card">
+<div class="card-title"><i class="fas fa-gauge-high"></i>Live anchor score</div>
+<p class="mini">
+        This is not a "performance score". It's a completion signal so you leave with something usable, not half-formed thoughts.
+      </p>
+<div></div>
+<div class="score-row">
+<span class="score-label">Completed</span>
+<span class="score-value" id="overallScore">0%</span>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="overallFill"></div>
+</div>
+<div class="pill-grid">
+<div class="micro-pill"><span class="label">Direction</span><span class="value" id="scoreDirection">0%</span></div>
+<div class="micro-pill"><span class="label">Fit</span><span class="value" id="scoreFit">0%</span></div>
+<div class="micro-pill"><span class="label">Boundaries</span><span class="value" id="scoreBoundaries">0%</span></div>
+<div class="micro-pill"><span class="label">Decision</span><span class="value" id="scoreDecision">0%</span></div>
+</div>
+</div>
+</div>
+<div class="anchor-profiles-insight">
+<div>
+<i class="fas fa-lightbulb"></i>
+      Anchor profiles
+    </div>
+<div class="anchor-profiles-grid">
+<div><strong>Builder/Operator</strong><div>You thrive on creating order from chaos. Good processes, clear ownership, and tangible progress matter most.</div></div>
+<div><strong>Specialist/Expert</strong><div>You're driven to go deep. Being the person others turn to for mastery and credibility gives you meaning.</div></div>
+<div><strong>Leader/People Catalyst</strong><div>You see potential in people. Building capability, unlocking growth, and shaping culture fuels you.</div></div>
+<div><strong>Change/Turnaround</strong><div>You're energised by ambiguity and fixing broken things. Stagnation drains you; solving hard problems energises you.</div></div>
+<div><strong>Autonomy/Freedom</strong><div>You need control over how and when you work. Micromanagement kills your motivation faster than anything else.</div></div>
+<div><strong>Mission/Values</strong><div>You won't stay where your values don't align. Working toward something you believe in is non-negotiable.</div></div>
+<div><strong>Status/Progression</strong><div>You want visible seniority and influence. Titles, scope, and recognition signal progress and signal to others you've made it.</div></div>
+<div><strong>Security/Stability</strong><div>You prefer predictability and low volatility. Knowing what's expected lets you perform at your best without stress.</div></div>
+</div>
+</div>
+<div class="section" data-section="signal">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">1</div>
+<div class="section-title">
+<strong>Signal quality</strong>
+<span>What are you actually seeing — and how reliable is it?</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-signal">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-signal"></i>
+<strong>What are the key signals (facts only)?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="signal" name="framework-strategic-interpretation_field_1" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_2" placeholder="List observable signals: messages, meetings, changes in tone, decisions, delays, exclusions, etc."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-link"></i>
+<strong>How consistent are the signals?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="signal" name="framework-strategic-interpretation_field_3" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_4" placeholder="Where do signals align vs contradict? Note timing, frequency, and patterns."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-eye"></i>
+<strong>How direct vs implied is the message?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="signal" name="framework-strategic-interpretation_field_5" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_6" placeholder="What is said explicitly, what is implied, and what is being avoided?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-triangle-exclamation"></i>
+<strong>What could you be over-reading?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="signal" name="framework-strategic-interpretation_field_7" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_8" placeholder="Name the assumptions you might be adding (fear, hope, confirmation bias)."></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="power">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">2</div>
+<div class="section-title">
+<strong>Power and incentives</strong>
+<span>Who benefits, who loses, and what are the real constraints?</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-power">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-scale-balanced"></i>
+<strong>Who holds leverage right now?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="power" name="framework-strategic-interpretation_field_9" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_10" placeholder="Map who controls decisions, information, access, budget, reputation, and timelines."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-coins"></i>
+<strong>What incentives are driving behaviour?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="power" name="framework-strategic-interpretation_field_11" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_12" placeholder="What does each stakeholder get rewarded for? What do they avoid?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-shield-halved"></i>
+<strong>What are the constraints (real vs claimed)?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="power" name="framework-strategic-interpretation_field_13" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_14" placeholder="Separate genuine constraints from convenient excuses or vagueness."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-chess"></i>
+<strong>What move are you being nudged toward?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="power" name="framework-strategic-interpretation_field_15" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_16" placeholder="Identify the outcome others seem to want — and why."></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="narrative">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">3</div>
+<div class="section-title">
+<strong>Narrative control</strong>
+<span>What story is being built — and how is it shaping options?</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-narrative">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-bullhorn"></i>
+<strong>Who is defining the story?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="narrative" name="framework-strategic-interpretation_field_17" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_18" placeholder="Whose version becomes ‘truth’ in meetings, docs, or performance narratives?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-file-lines"></i>
+<strong>What is being documented (and what isn’t)?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="narrative" name="framework-strategic-interpretation_field_19" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_20" placeholder="What is written down, repeated, or referenced — and what remains verbal only?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-mask"></i>
+<strong>What is left unsaid or treated as taboo?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="narrative" name="framework-strategic-interpretation_field_21" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_22" placeholder="Name topics people avoid, euphemisms used, and ‘polite’ omissions."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-arrows-rotate"></i>
+<strong>What counter-narrative is available?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="narrative" name="framework-strategic-interpretation_field_23" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_24" placeholder="What is the clean, evidence-led alternative story you can stand behind?"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="optionality">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">4</div>
+<div class="section-title">
+<strong>Strategic optionality</strong>
+<span>How many viable paths do you actually have — and which preserve leverage?</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-optionality">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-route"></i>
+<strong>List your realistic options (not fantasy).</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="optionality" name="framework-strategic-interpretation_field_25" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_26" placeholder="Include internal moves, external search, negotiation, escalation, wait-and-watch, etc."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-handshake"></i>
+<strong>Which option preserves dignity and leverage?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="optionality" name="framework-strategic-interpretation_field_27" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_28" placeholder="What keeps you calm, credible, and hard to corner?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-ban"></i>
+<strong>What actions are premature right now?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="optionality" name="framework-strategic-interpretation_field_29" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_30" placeholder="What would burn goodwill, reduce options, or lock you into a weak position?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-calendar-check"></i>
+<strong>Your next 7–14 day plan</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="optionality" name="framework-strategic-interpretation_field_31" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-strategic-interpretation_field_32" placeholder="What will you gather, clarify, and do — with minimal exposure?"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="anchor-output-card" id="anchorOutputCard">
+<div class="card">
+<div class="card-title"><i class="fas fa-sparkles"></i>Your Strategic Interpretation Output</div>
+<div id="outputEmptyState">
+<p>
+          Fill in the sections above, then generate your structured career anchor summary.<br/>
+<span>The output will summarise your anchor, infer your profile, and recommend next steps.</span>
+</p>
+</div>
+<div id="outputContent"></div>
+<div id="outputQualityCheck"></div>
+</div>
+</div>
+<div>
+<button class="mini-btn primary" disabled="" id="generateOutputBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<div></div>
+<button class="mini-btn secondary" id="collapseAll"><i class="fas fa-compress"></i> Collapse all</button>
+<button class="mini-btn primary" id="expandAll"><i class="fas fa-expand"></i> Expand all</button>
+<button class="mini-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="mini-btn secondary" data-action="print-page" id="printBtn"><i class="fas fa-print"></i> Print / Save PDF</button>
+<button class="mini-btn secondary" disabled="" id="clearBtn"><i class="fas fa-eraser"></i> Clear All</button>
+</div>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

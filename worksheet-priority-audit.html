@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Priority Audit Worksheet | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="worksheet-priority-audit">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Bookmar</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Priority Audit Worksheet</span>
+</div>
+<span class="checklist-name">PRIORITY AUDIT WORKSHEET</span>
+<h1 class="hero-main-heading" data-date="">
+      Stop “everything is urgent” and rebuild a priority system that survives real life
+    </h1>
+<div class="hero-subheading">
+      This worksheet forces clarity under pressure: what you’re doing, what it costs, what’s actually due, and what deserves focus.
+      It gives you an evidence-led way to reset expectations with your manager without sounding dramatic — just organised.
+      <br/><br/>
+      Use it when your day is being eaten by reactive work, unclear requests, or “quiet scope creep” that never gets formally agreed.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html" title="Expectations, Burnout &amp; Capacity">
+<i class="fas fa-battery-half"></i>
+<span>Expectations, Burnout &amp; Capacity</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Worksheet</h3>
+<ul class="bullet-list">
+<li>When you’re doing too much, but can’t explain it cleanly.</li>
+<li>When priorities change daily and “trade-offs” never get agreed.</li>
+<li>When your workload is being shaped by the loudest request, not the highest value.</li>
+<li>When you need a calm reset conversation with your manager, grounded in reality.</li>
+<li>When you need a list that’s credible enough to survive scrutiny.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How It Works</h3>
+<ul class="bullet-list">
+<li>Capture your current work and score it with a simple model: urgency + impact, adjusted by effort and risk.</li>
+<li>Sort by score to reveal what is actually driving outcomes vs what is just noise.</li>
+<li>Identify <strong>3 focus moves</strong>: what to do, what to defer, what to delegate or stop.</li>
+<li>Generate a Priority Audit Pack you can paste into an email or use in a reset meeting.</li>
+<li>Keep it tight: the goal is a decision, not a debate.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Run your priority audit</h2>
+<p>
+        Step 1: set your context. Step 2: build a task inventory. Step 3: generate a reset pack (focus, trade-offs, and a clean ask).
+      </p>
+</div>
+</div>
+<div class="audit-grid" id="auditGrid">
+<div class="audit-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">1</div>
+<div class="card-title">
+<h3>Audit context</h3>
+<p>Anchor this to a real week, real constraints, real decision points.</p>
+</div>
+</div>
+</div>
+<div class="field">
+<label for="audit_week"><i class="fas fa-calendar"></i> Week / period</label>
+<input class="input" id="audit_week" placeholder="e.g., Week commencing 06 Jan 2026" type="text"/>
+</div>
+<div class="field">
+<label for="capacity"><i class="fas fa-hourglass-half"></i> Real capacity available</label>
+<input class="input" id="capacity" placeholder="e.g., 28 hours (meetings + BAU fixed)" type="text"/>
+</div>
+</div>
+<div class="audit-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">2</div>
+<div class="card-title">
+<h3>Pressure signals</h3>
+<p>These shape how strong your reset ask needs to be.</p>
+</div>
+</div>
+</div>
+<div class="field">
+<label for="pressure"><i class="fas fa-gauge-high"></i> Priority chaos index (0–10)</label>
+<input class="input" id="pressure" max="10" min="0" step="1" type="number" value="0"/>
+<div class="meta-row">
+<div class="mini-tag" id="pressureTag"><i class="fas fa-circle"></i> —</div>
+</div>
+</div>
+<div class="field">
+<label for="constraint"><i class="fas fa-ban"></i> Top constraint this week</label>
+<textarea class="textarea" id="constraint" placeholder="e.g., back-to-back meetings + reactive stakeholder demands + unclear decision rights"></textarea>
+</div>
+</div>
+</div>
+<section class="task-inventory" id="taskInventory">
+<div class="ti-header">
+<div class="ti-header-row">
+<div class="ti-title">
+<h3><i class="fas fa-list-check"></i> Task inventory (score and sort)</h3>
+<p>
+            This section is designed to be <strong>fully visible</strong>. It scrolls horizontally instead of clipping.
+            The first column stays sticky so you don’t lose context while you scroll.
+          </p>
+</div>
+<div class="ti-controls">
+<div aria-pressed="false" class="col-toggle" id="advancedToggle" role="button" tabindex="0">
+<div aria-hidden="true" class="dot"></div>
+<span>Show more columns</span>
+</div>
+<button class="btn secondary" id="addTaskRowBtn"><i class="fas fa-plus"></i> Add task</button>
+<button class="btn secondary" id="sortByScoreBtn"><i class="fas fa-arrow-down-wide-short"></i> Sort by score</button>
+</div>
+</div>
+</div>
+<div class="ti-table-wrap">
+<table aria-label="Task inventory table" class="ti-table">
+<thead>
+<tr>
+<th class="ti-sticky-col">
+<span class="th-sort" id="sortByName">
+                Task
+                <i class="fas fa-sort"></i>
+</span>
+</th>
+<th>
+<span class="th-sort active" id="sortByScore">
+                Priority score
+                <i class="fas fa-sort-down"></i>
+</span>
+</th>
+<th>Due</th>
+<th>Owner</th>
+<th>Urgency (0–5)</th>
+<th>Impact (0–5)</th>
+<th class="ti-advanced">Effort (0–5)</th>
+<th class="ti-advanced">Visibility risk (0–5)</th>
+<th class="ti-advanced">Delegatable?</th>
+<th class="ti-advanced">Notes</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="taskTbody"></tbody>
+</table>
+</div>
+<div aria-label="Task cards (mobile)" class="ti-mobile-cards" id="tiMobileCards"></div>
+</section>
+<div class="workspace-actions bottom">
+<button class="mini-btn primary" id="generatePackBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="mini-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn"><i class="fas fa-cloud-arrow-up"></i> Save Progress</button>
+<button class="mini-btn secondary" data-action="print-page" id="printBtn"><i class="fas fa-print"></i> Print / Save PDF</button>
+<button class="mini-btn secondary" disabled="" id="clearBtn"><i class="fas fa-eraser"></i> Clear All</button>
+</div>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Priority Audit Pack</h2>
+<p class="pack-subtitle">
+      A clean summary you can paste into an email or use in a reset meeting: top priorities, trade-offs, risks, and a calm ask.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Audit completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Clarity signal</div>
+<div class="metric-score" id="strengthSignal">—</div>
+</div>
+</div>
+<div class="pack-actions">
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page summary</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Risks + trade-offs</h3>
+<div class="pack-grid" id="riskGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (reset ask)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

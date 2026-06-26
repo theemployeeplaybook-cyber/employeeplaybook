@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Risk &amp; Safety Framework | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="framework-risk-and-safety">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR Insider</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Risk &amp; Safety Framework</span>
+</div>
+<span class="checklist-name">RISK &amp; SAFETY FRAMEWORK</span>
+<h1 class="hero-main-heading" data-date="">Assess risk without panic and take action without exposure</h1>
+<div class="hero-subheading">
+                A premium, practical framework for workplace risk: triage, severity, evidence, reporting routes,
+                and a calm protection plan you can execute in the next 72 hours.
+            </div>
+<div class="hero-disclaimer">
+<i class="fas fa-shield-halved"></i>
+<div>
+                    This tool supports structured thinking and documentation. It isn’t legal advice.
+                    If there’s immediate danger or you feel unsafe right now, prioritise getting to safety and contacting emergency/security support.
+                </div>
+</div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html">
+<i class="fas fa-heart-pulse"></i>
+<span>Expectations, Burnout &amp; Capacity</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-users"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Framework</h3>
+<ul class="bullet-list">
+<li>When something feels “off” and you need to separate risk from emotion, gossip, or assumptions.</li>
+<li>When behaviour is escalating (pressure, intimidation, retaliation risk) and you need a safe plan.</li>
+<li>Before you report a concern — so your report is tight, factual, and hard to dismiss.</li>
+<li>When you’re unsure whether to handle quietly, document, or escalate.</li>
+<li>When you need to protect your wellbeing, role security, and credibility at the same time.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Risk is not “how bad it feels”. Risk is <strong>impact × likelihood</strong>, plus exposure if mishandled.</li>
+<li>Write like a professional witness: <strong>who/what/when/where</strong>, not motives.</li>
+<li>Assume your message may be forwarded. Every line should stand up to daylight.</li>
+<li>Always have a “safe alternative”: a reversible next step that gathers evidence and reduces exposure.</li>
+<li>If you’re under pressure to keep it informal, that’s often a signal you should document.</li>
+</ul>
+</div>
+</div>
+<div class="framework-shell" id="frameworkCanvas">
+<div class="framework-header">
+<h2>Framework Canvas</h2>
+<p>Complete the canvas to generate: a risk rating, a defensible 72-hour protection plan, and copy-ready reporting language.</p>
+</div>
+<div class="canvas-grid">
+<div class="panel rs-panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-triangle-exclamation"></i> 1) Safety Triage</div>
+</div>
+<div class="panel-sub">Start here. If this is urgent, the right move is to reduce exposure first — then document.</div>
+<div class="field-grid">
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Immediate danger right now?</span></div>
+<select class="select rs-input" data-dimension="triage" id="rs_immediate">
+<option selected="" value="">Select…</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="Unsure">Unsure</option>
+</select>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Type of risk</span></div>
+<select class="select rs-input" data-dimension="triage" id="rs_type">
+<option selected="" value="">Select…</option>
+<option value="Bullying / intimidation">Bullying / intimidation</option>
+<option value="Harassment / discrimination">Harassment / discrimination</option>
+<option value="Retaliation risk (after speaking up)">Retaliation risk (after speaking up)</option>
+<option value="Unsafe working conditions">Unsafe working conditions</option>
+<option value="Workload / burnout risk">Workload / burnout risk</option>
+<option value="Data / compliance / conduct risk">Data / compliance / conduct risk</option>
+<option value="Conflict / volatility">Conflict / volatility</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">What happened (facts)</span> <span class="rs-label-hint">short, factual, time-bounded</span></div>
+<textarea class="textarea rs-input" data-dimension="facts" id="rs_event" placeholder="E.g., In a 1:1 on 12/12, my manager raised their voice, said 'you'll regret this', and demanded I withdraw my concern."></textarea>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Where / context</span></div>
+<input class="input rs-input" data-dimension="facts" id="rs_where" placeholder="E.g., Teams call / 1:1 room / open plan"/>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Who was involved</span></div>
+<input class="input rs-input" data-dimension="people" id="rs_who" placeholder="E.g., Manager (role), colleague (role)"/>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">What outcome must be protected</span> <span class="rs-label-hint">one priority</span></div>
+<select class="select rs-input" data-dimension="strategy" id="rs_protect">
+<option selected="" value="">Select…</option>
+<option value="Immediate personal safety">Immediate personal safety</option>
+<option value="Wellbeing / sustainable workload">Wellbeing / sustainable workload</option>
+<option value="Role security / performance standing">Role security / performance standing</option>
+<option value="Reputation / credibility">Reputation / credibility</option>
+<option value="Fair process / investigation integrity">Fair process / investigation integrity</option>
+<option value="Team stability / delivery">Team stability / delivery</option>
+</select>
+</div>
+</div>
+<div class="micro-cards">
+<div class="micro">
+<h4><i class="fas fa-shield"></i> Triage principle</h4>
+<p>When safety or retaliation risk exists, your first goal is <strong>exposure reduction</strong>: fewer private interactions, more written clarity, and a clean record.</p>
+</div>
+<div class="micro">
+<h4><i class="fas fa-pen-nib"></i> The witness sentence</h4>
+<p>Use this structure: <code>“On [date], in [context], [person] said/did [quote/behaviour]. Impact: [effect].”</code></p>
+</div>
+</div>
+</div>
+<div class="panel rs-panel">
+<div class="panel-title-row">
+<div>
+<div class="panel-title"><i class="fas fa-gauge-high"></i> 2) Risk Rating &amp; Decision Quality</div>
+<div class="panel-sub">
+                            Score severity with discipline: impact × likelihood, then add exposure factors (retaliation, isolation, repeat pattern).
+                        </div>
+</div>
+<div class="risk-badge" id="riskBadge" title="Auto-calculated from your inputs">
+<span class="dot"></span>
+<span id="riskBadgeText">Risk: Not rated</span>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Impact if it goes wrong</span> <span class="rs-label-hint">1–5</span></div>
+<select class="select rs-input" data-dimension="risks" id="rs_impact">
+<option selected="" value="">Select…</option>
+<option value="1">1 — Minor (annoying, recoverable)</option>
+<option value="2">2 — Moderate (stress, disruption)</option>
+<option value="3">3 — Serious (health, role, or process harm)</option>
+<option value="4">4 — Major (significant harm or exposure)</option>
+<option value="5">5 — Critical (severe harm / unsafe)</option>
+</select>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Likelihood of repeating / escalating</span> <span class="rs-label-hint">1–5</span></div>
+<select class="select rs-input" data-dimension="risks" id="rs_likelihood">
+<option selected="" value="">Select…</option>
+<option value="1">1 — Unlikely (one-off)</option>
+<option value="2">2 — Possible</option>
+<option value="3">3 — Likely (pattern emerging)</option>
+<option value="4">4 — Very likely (repeat signals)</option>
+<option value="5">5 — Almost certain</option>
+</select>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Retaliation risk</span></div>
+<select class="select rs-input" data-dimension="risks" id="rs_retaliation">
+<option selected="" value="">Select…</option>
+<option value="None apparent">None apparent</option>
+<option value="Possible">Possible</option>
+<option value="Likely">Likely</option>
+<option value="Already happening">Already happening</option>
+</select>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Isolation level</span></div>
+<select class="select rs-input" data-dimension="risks" id="rs_isolation">
+<option selected="" value="">Select…</option>
+<option value="Low (witnesses / open channels)">Low (witnesses / open channels)</option>
+<option value="Medium">Medium</option>
+<option value="High (private 1:1 pressure)">High (private 1:1 pressure)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">Strong evidence you can point to</span> <span class="rs-label-hint">messages, dates, outputs</span></div>
+<textarea class="textarea rs-input" data-dimension="evidence" id="rs_evidence" placeholder="Bullets are fine. Keep it concrete."></textarea>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">Unknowns that change the decision</span> <span class="rs-label-hint">what you need to know</span></div>
+<textarea class="textarea rs-input" data-dimension="signals" id="rs_unknowns" placeholder="E.g., Who owns the process? Are there prior complaints? Is there a safe reporting route?"></textarea>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">Calibrating questions</span> <span class="rs-label-hint">clean, non-accusatory</span></div>
+<textarea class="textarea rs-input" data-dimension="signals" id="rs_questions" placeholder="E.g., 'What is the appropriate process for raising this formally?' 'Who is the point of contact for safety concerns?'"></textarea>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Protection posture (auto)</h4>
+<div>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="rs_posture_out">Click “Build” to generate a calm, defensible posture: what to do, what to avoid, and what to document.</div>
+</div>
+<div class="tip-box">
+<h4><i class="fas fa-check-circle"></i> What works reliably</h4>
+<ul>
+<li><strong>Move from private to professional:</strong> written recaps, agenda-led meetings, fewer ambiguous side chats.</li>
+<li><strong>Neutral language:</strong> “risk / impact / process” beats “toxic / unfair / malicious”.</li>
+<li><strong>Reversibility first:</strong> if you’re unsure, choose a move that reduces exposure and gathers evidence.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="canvas-grid">
+<div class="panel rs-panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-sitemap"></i> 3) Reporting Route &amp; Stakeholders</div>
+</div>
+<div class="panel-sub">The point is not “escalate”. The point is: pick the route that reduces risk and protects process integrity.</div>
+<div class="field-grid">
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Line manager involved?</span></div>
+<select class="select rs-input" data-dimension="people" id="rs_mgr_involved">
+<option selected="" value="">Select…</option>
+<option value="Yes (directly involved)">Yes (directly involved)</option>
+<option value="No">No</option>
+<option value="Unclear / indirect">Unclear / indirect</option>
+</select>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Safe internal route</span></div>
+<select class="select rs-input" data-dimension="path" id="rs_route">
+<option selected="" value="">Select…</option>
+<option value="HR (employee relations)">HR (employee relations)</option>
+<option value="Manager's manager">Manager's manager</option>
+<option value="Health &amp; Safety / wellbeing lead">Health &amp; Safety / wellbeing lead</option>
+<option value="D&amp;I / safeguarding contact">D&amp;I / safeguarding contact</option>
+<option value="Union rep / employee representative">Union rep / employee representative</option>
+<option value="Whistleblowing / ethics line">Whistleblowing / ethics line</option>
+<option value="Not sure yet (needs mapping)">Not sure yet (needs mapping)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">Who can materially help (3–6)</span></div>
+<input class="input rs-input" data-dimension="people" id="rs_helpers" placeholder="E.g., HR BP, ER lead, H&amp;S lead, senior sponsor, union rep"/>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">What each party is optimising for</span> <span class="rs-label-hint">risk / optics / speed / cost</span></div>
+<textarea class="textarea rs-input" data-dimension="power" id="rs_opt" placeholder="E.g., HR: process compliance. Leadership: optics + risk containment. Manager: authority + face-saving."></textarea>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">Process guardrails you want</span> <span class="rs-label-hint">what "good" looks like</span></div>
+<textarea class="textarea rs-input" data-dimension="path" id="rs_guardrails" placeholder="E.g., single point of contact, written next steps, no retaliation, confidentiality boundaries explained, reasonable adjustments if needed."></textarea>
+</div>
+</div>
+<div class="micro-cards">
+<div class="micro">
+<h4><i class="fas fa-lock"></i> Process integrity lens</h4>
+<p>When risk is non-trivial, you’re protecting <strong>the process</strong> as much as yourself: clarity on who owns the case, what happens next, and how information is handled.</p>
+</div>
+<div class="micro">
+<h4><i class="fas fa-eye"></i> Optics control</h4>
+<p>Use language that signals maturity: <strong>“I want to handle this properly and safely.”</strong> It makes dismissal harder and escalation cleaner.</p>
+</div>
+</div>
+</div>
+<div class="panel rs-panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-route"></i> 4) Protection Plan &amp; Communication</div>
+</div>
+<div class="panel-sub">Build a defensible 72-hour plan: exposure reduction, documentation, and a neutral message that can’t be misread.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">Your boundary / control move</span> <span class="rs-label-hint">simple + enforceable</span></div>
+<input class="input rs-input" data-dimension="plan" id="rs_boundary" placeholder="E.g., 'I'll keep all updates in writing and use agendas for 1:1s.'"/>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Preferred interaction mode</span></div>
+<select class="select rs-input" data-dimension="plan" id="rs_mode">
+<option selected="" value="">Select…</option>
+<option value="Written first (email/Teams recap)">Written first (email/Teams recap)</option>
+<option value="Meeting with notes (agenda + recap)">Meeting with notes (agenda + recap)</option>
+<option value="Third party present (where appropriate)">Third party present (where appropriate)</option>
+<option value="Pause direct contact (if safety risk)">Pause direct contact (if safety risk)</option>
+</select>
+</div>
+<div class="field">
+<div class="label rs-label"><span class="rs-label-text">Time horizon</span></div>
+<select class="select rs-input" data-dimension="plan" id="rs_horizon">
+<option selected="" value="">Select…</option>
+<option value="Next 24–48 hours">Next 24–48 hours</option>
+<option value="Next 7 days">Next 7 days</option>
+<option value="Next 30 days">Next 30 days</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">Your one sentence (neutral + outcome-led)</span> <span class="rs-label-hint">copy-ready</span></div>
+<input class="input rs-input" data-dimension="plan" id="rs_oneliner" placeholder="E.g., 'I'm raising a safety/process concern and would like guidance on the appropriate route and next steps.'"/>
+</div>
+<div class="field span-2">
+<div class="label rs-label"><span class="rs-label-text">What you want next</span> <span class="rs-label-hint">specific request</span></div>
+<input class="input rs-input" data-dimension="plan" id="rs_request" placeholder="E.g., 'A named point of contact, written next steps, and clarity on confidentiality/retaliation protections.'"/>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>72-hour protection plan (auto)</h4>
+<div>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="rs_72h_out">Click “Build” to generate: today / next 48 hours / next 7 days.</div>
+</div>
+<div class="tip-box">
+<h4><i class="fas fa-check-circle"></i> What not to do</h4>
+<ul>
+<li><strong>Don’t litigate motives:</strong> it invites argument. Stick to behaviour + impact + process.</li>
+<li><strong>Don’t rely on verbal-only agreements:</strong> you lose control of the record.</li>
+<li><strong>Don’t over-disclose emotionally:</strong> it can be reframed as “performance” or “resilience”.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-timeline"></i> Evidence Timeline (optional, but protective)</div>
+</div>
+<div class="panel-sub">Use this if you need to report, request adjustments, or defend your position without sounding reactive.</div>
+<table class="timeline-table" id="timelineTable">
+<thead>
+<tr>
+<th>Date</th>
+<th>What happened (fact)</th>
+<th>Impact</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody id="timelineBody">
+<tr>
+<td><input class="input rs-input" data-dimension="facts" name="framework-risk-and-safety_field_24" placeholder="DD/MM/YYYY"/></td>
+<td><input class="input rs-input" data-dimension="facts" name="framework-risk-and-safety_field_25" placeholder="Instruction / incident / message / decision"/></td>
+<td><input class="input rs-input" data-dimension="risks" name="framework-risk-and-safety_field_26" placeholder="Safety / stress / workload / process risk"/></td>
+<td>
+<select class="select rs-input" data-dimension="evidence" name="framework-risk-and-safety_field_27">
+<option selected="" value="">Select…</option>
+<option value="Email / message">Email / message</option>
+<option value="Meeting notes">Meeting notes</option>
+<option value="Ticket / system log">Ticket / system log</option>
+<option value="Document / attachment">Document / attachment</option>
+<option value="Witness">Witness</option>
+<option value="Other">Other</option>
+</select>
+</td>
+</tr>
+</tbody>
+</table>
+<div>
+<button class="mini-btn"><i class="fas fa-plus"></i> Add row</button>
+<button class="mini-btn"><i class="fas fa-minus"></i> Remove row</button>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-file-lines"></i> Executive Outputs</div>
+</div>
+<div class="panel-sub">Copy-ready language you can use for HR, your manager’s manager, a wellbeing lead, or a formal report.</div>
+<div class="output-box">
+<div class="output-title">
+<h4>One-paragraph report summary</h4>
+<div>
+</div>
+</div>
+<div class="output-content" id="out_summary">Complete the canvas, then click “Generate outputs”.</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Risk snapshot (severity + exposure)</h4>
+<div>
+</div>
+</div>
+<div class="output-content" id="out_risk">—</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Message opener (neutral + procedural)</h4>
+<div>
+</div>
+</div>
+<div class="output-content" id="out_opener">—</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Follow-up recap (locks the record)</h4>
+<div>
+</div>
+</div>
+<div class="output-content" id="out_recap">—</div>
+</div>
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+            </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+            </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+            </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+            </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title"><i class="fas fa-list-check"></i> Quick Coverage Checklist</h2>
+<div class="checklist-intro">
+            The canvas above is the framework. This checklist is your final audit: it catches the common failure points that cause exposure, dismissal, or messy escalation.
+        </div>
+<div class="checklist-grid">
+<div class="checklist-item" data-category="triage">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve triaged immediate danger and prioritised safety/exposure reduction before “explaining” anything.</div>
+</div>
+<div class="checklist-item" data-category="facts">
+<i class="far fa-square"></i>
+<div class="checklist-text">My description is factual (who/what/when/where) and avoids motives, labels, or diagnoses.</div>
+</div>
+<div class="checklist-item" data-category="evidence">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve preserved evidence (messages, notes, dates) and started a timeline.</div>
+</div>
+<div class="checklist-item" data-category="risks">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve rated severity (impact × likelihood) and identified exposure multipliers (retaliation, isolation, pattern).</div>
+</div>
+<div class="checklist-item" data-category="path">
+<i class="far fa-square"></i>
+<div class="checklist-text">I know the safest reporting route (especially if the line manager is involved).</div>
+</div>
+<div class="checklist-item" data-category="people">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve mapped who can materially help (HR/ER, H&amp;S, senior, rep) and what each optimises for.</div>
+</div>
+<div class="checklist-item" data-category="plan">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have a short protection plan (72 hours) that reduces exposure and locks the record.</div>
+</div>
+<div class="checklist-item" data-category="strategy">
+<i class="far fa-square"></i>
+<div class="checklist-text">My language is procedural and outcome-led (risk/process/safety), not personal or accusatory.</div>
+</div>
+</div>
+</div>
+<div class="clarity-score-section">
+<div class="presence-snapshot-header">
+<h2>Your Risk Readiness Snapshot</h2>
+<p>This score reflects whether your risk assessment is complete enough to act safely (document, communicate, and escalate cleanly if needed).</p>
+</div>
+<div class="clarity-score-bar">
+<div class="clarity-progress-container">
+<div class="clarity-header">
+<div class="clarity-title">Framework Completion Score</div>
+<div class="clarity-percentage" id="clarityPercentage">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Loose</span><span>Reasonable</span><span>Defensible</span>
+</div>
+<div class="presence-dimensions">
+<div class="presence-dimension-pill"><span class="label">Triage &amp; Facts</span><span class="score" id="scoreVoice">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Risk Rating</span><span class="score" id="scoreStructure">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Evidence &amp; Route</span><span class="score" id="scoreNonverbal">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Protection Plan</span><span class="score" id="scoreChallenge">0%</span></div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn2">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+                </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn2">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+                </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn2">
+<i class="fas fa-print"></i> Print / Save PDF
+                </button>
+<button class="action-btn secondary" disabled="" id="clearBtn2">
+<i class="fas fa-eraser"></i> Clear All
+                </button>
+<div class="save-status" id="saveStatus2">
+<span id="unsavedText2"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedText2"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Smart Risk Summary</h2>
+<p class="summary-subtitle">Based on your completion score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">Highlights what’s missing, what’s most risky, and the cleanest next move that reduces exposure and increases control.</p>
+</div>
+<h3 class="section-header red"><i class="fas fa-exclamation-triangle"></i> Red Flags in Your Risk Read</h3>
+<div class="red-flags-grid" id="redFlagsGrid"></div>
+<h3 class="section-header purple"><i class="fas fa-forward"></i> Next Moves to Increase Safety &amp; Control</h3>
+<div class="next-steps-grid" id="nextStepsGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-tools"></i> Recommended Tools to Support You</h3>
+<div class="resources-grid" id="resourcesGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

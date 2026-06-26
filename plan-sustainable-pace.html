@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Sustainable Pace Plan | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="plan-sustainable-pace">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-expectation-burnout-and-capacity.html">Expectation, Burnout &amp; Capacity</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Sustainable Pace Plan</span>
+</div>
+<span class="checklist-name">SUSTAINABLE PACE PLAN</span>
+<h1 class="hero-main-heading">Build a pace you can maintain by controlling work design, pressure triggers, and expectation drift</h1>
+<div class="hero-subheading">
+      Diagnose your current delivery pattern, identify your pace archetype, and design guardrails to protect quality, health, and credibility.
+      Use the toggles to switch between <strong>Pace</strong> (steady-state design) and <strong>Pressure</strong> (when you're feeling close to overload), then generate a Sustainable Pace Pack: a one-page plan, pressure tripwires, and scripts to reset expectations.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html" title="Clarity, Priorities &amp; Direction">
+<i class="fas fa-bullseye category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-handshake category-icon"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html" title="Workplace Dynamics &amp; Politics">
+<i class="fas fa-chess category-icon"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Plan</h3>
+<ul class="bullet-list">
+<li>When “just this week” has become your permanent operating system.</li>
+<li>When you are delivering, but it’s powered by late nights, adrenaline, and constant catch-up.</li>
+<li>When you feel wired after work and your weekends are recovery, not life.</li>
+<li>When the job keeps expanding because you keep absorbing the gaps.</li>
+<li>When you need to protect both <strong>output</strong> and <strong>reputation</strong> — not collapse in private and perform in public.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Start with reality: map your week as it truly runs, not how it “should” run.</li>
+<li>Identify your pace archetype — it will explain why you keep drifting into overwork.</li>
+<li>Choose 3 guardrails that change <strong>expectations</strong> (not just your coping).</li>
+<li>Use <strong>Pressure Mode</strong> when you’re running hot: it gives you a 48-hour triage route that protects sleep and credibility.</li>
+<li>A sustainable pace is a <strong>design problem</strong> (priorities, capacity, boundaries) as much as a personal one.</li>
+</ul>
+</div>
+</div>
+<div aria-label="Mode toggles" class="toggle-panel">
+<div class="toggle-card">
+<div class="toggle-head">
+<div>
+<h3><i class="fas fa-sliders"></i>Make this plan match your reality</h3>
+<div class="toggle-sub">
+          Your answers and pack outputs adjust based on mode and context. You can design <strong>steady-state pace</strong>, or switch into <strong>Pressure Mode</strong> when you need a clean triage route without turning your life into the overflow tray.
+        </div>
+</div>
+<button class="btn danger" id="pressureOverlayBtn" title="Open Pressure Mode overlay">
+<i class="fas fa-triangle-exclamation"></i> Pressure Mode
+      </button>
+</div>
+<div class="toggle-grid">
+<div class="seg">
+<div class="seg-label"><i class="fas fa-gauge-high"></i>Plan mode</div>
+<div class="seg-options">
+<button class="chip-btn active" id="modePace"><i class="fas fa-feather"></i> Pace</button>
+<button class="chip-btn" id="modePressure"><i class="fas fa-fire"></i> Pressure</button>
+</div>
+</div>
+<div class="seg">
+<div class="seg-label"><i class="fas fa-users"></i>Operating context</div>
+<div class="seg-options">
+<button class="chip-btn active" id="ctxSolo"><i class="fas fa-user"></i> Solo</button>
+<button class="chip-btn" id="ctxTeam"><i class="fas fa-people-group"></i> Team</button>
+</div>
+</div>
+<div class="seg">
+<div class="seg-label"><i class="fas fa-lock"></i>Output format</div>
+<div class="seg-options">
+<button class="chip-btn active" id="outPrivate"><i class="fas fa-user-shield"></i> Private</button>
+<button class="chip-btn" id="outShare"><i class="fas fa-share-nodes"></i> Shareable</button>
+</div>
+</div>
+<div class="seg">
+<div class="seg-label"><i class="fas fa-wand-magic-sparkles"></i>Depth</div>
+<div class="seg-options">
+<button class="chip-btn active" id="depthStandard"><i class="fas fa-layer-group"></i> Standard</button>
+<button class="chip-btn" id="depthDeep"><i class="fas fa-magnifying-glass"></i> Deep</button>
+</div>
+</div>
+</div>
+<div aria-label="Dynamic microcopy" class="toggle-microcopy">
+<div class="micro-line" id="mcMode">
+<strong>Pace mode:</strong> design guardrails that make your week repeatable. You’re building a pace you can hold, not a hero sprint.
+      </div>
+<div class="micro-line" id="mcContext">
+<strong>Solo:</strong> focus on personal boundaries and scope control. You protect your time by controlling entry points and trade-offs.
+      </div>
+<div class="micro-line" id="mcOutput">
+<strong>Private:</strong> write the truth. The shareable pack will automatically convert to cleaner language if you switch.
+      </div>
+<div class="micro-line" id="mcDepth">
+<strong>Standard:</strong> a tight plan you can execute. Deep mode pushes for root causes and the exact levers you’ll pull.
+      </div>
+</div>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Draft your sustainable pace plan</h2>
+<p id="workspaceSubtitle">
+        Eight modules to map your current week, identify your pace archetype, and design constraints that protect quality, health, and credibility. Switch modes to update prompts.
+      </p>
+</div>
+</div>
+<div class="modules-grid" id="modulesGrid">
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Sustainable Pace Pack</h2>
+<p class="pack-subtitle" id="packSubtitle">
+      A structured output you can use immediately: a one-page pace plan, pressure tripwires (so you catch drift early), and scripts that protect delivery without drama.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Pace stability signal</div>
+<div class="metric-score" id="paceSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page pace plan</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Pressure tripwires (catch drift early)</h3>
+<div class="pack-grid" id="riskGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (clear, calm, UK-friendly)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+<div aria-hidden="true" class="overlay" id="pressureOverlay">
+<div class="overlay-backdrop" id="pressureBackdrop"></div>
+<div aria-label="Pressure Mode overlay" aria-modal="true" class="overlay-panel" role="dialog">
+<div class="overlay-head">
+<div class="overlay-title">
+<h3><i class="fas fa-fire"></i> Pressure Mode: 48-hour triage (without a reputation dent)</h3>
+<p>
+          Use this when you’re running hot: overload, exhaustion, constant urgency, or you need sustainable pace and recovery built into delivery.
+          This overlay helps you stop the slide, reduce load fast, and convert urgency into clear trade-offs.
+        </p>
+</div>
+<button aria-label="Close Pressure Mode" class="overlay-close" id="pressureCloseBtn">
+<i class="fas fa-times"></i>
+</button>
+</div>
+<div class="overlay-body">
+<div class="overlay-card">
+<h4><i class="fas fa-stopwatch"></i> 48-hour triage steps</h4>
+<ul class="overlay-steps">
+<li class="overlay-step">
+<div class="os-num">1</div>
+<div class="os-body">
+<div class="os-title">Stop the leak</div>
+<div class="os-text">Pause new intake for 24 hours. Reply with a holding line and require priorities/trade-offs before accepting more.</div>
+</div>
+</li>
+<li class="overlay-step">
+<div class="os-num">2</div>
+<div class="os-body">
+<div class="os-title">Convert urgency into a decision</div>
+<div class="os-text">Ask: “What moves if this comes in?” If nobody will name the trade-off, it is not a real priority.</div>
+</div>
+</li>
+<li class="overlay-step">
+<div class="os-num">3</div>
+<div class="os-body">
+<div class="os-title">Protect sleep as a delivery dependency</div>
+<div class="os-text">Choose one non-negotiable: hard stop time, no late emails, or a short reset block. Your output depends on it.</div>
+</div>
+</li>
+<li class="overlay-step">
+<div class="os-num">4</div>
+<div class="os-body">
+<div class="os-title">Make the plan visible</div>
+<div class="os-text">Send a short note with priorities + what you’re not doing. Clarity reduces “surprise urgency”.</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="overlay-mini">
+<div class="mini-box">
+<h5><i class="fas fa-scissors"></i> What will you stop or pause today?</h5>
+<p>Write 3 items you will pause for 24–48 hours. This is not failure — it is triage.</p>
+<textarea id="pmStopBox" placeholder="Example: Pause non-essential reporting • Decline optional meetings • Stop doing two people’s roles"></textarea>
+</div>
+<div class="mini-box">
+<h5><i class="fas fa-scale-balanced"></i> Trade-off question (copy/paste)</h5>
+<p>Use this line to force a prioritisation decision without sounding dramatic.</p>
+<textarea id="pmTradeoffBox" placeholder="“I can take this on. What should I move or drop to make room for it?”"></textarea>
+</div>
+</div>
+</div>
+<div class="overlay-actions">
+<button class="btn secondary" id="pressureCopyBtn"><i class="far fa-copy"></i> Copy triage notes</button>
+<button class="btn primary" id="pressureApplyBtn"><i class="fas fa-wand-magic-sparkles"></i> Apply to draft (autofill)</button>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

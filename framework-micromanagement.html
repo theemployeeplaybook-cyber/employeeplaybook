@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Micromanagement Checklist | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="framework-micromanagement">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<a class="mobile-cta-tab" href="#" id="mobileMyPlaybookTab">My Playbook</a>
+<div id="toolMain">
+     HERO
+=========================== --&gt;
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span></span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-manager-relationship-and-leadership-style.html">Manager Relationship &amp; Leadership Style</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Micromanagement Framework</span>
+</div>
+<span class="checklist-name">MICROMANAGEMENT FRAMEWORK</span>
+<h1 class="hero-main-heading">Diagnose the pattern, then choose moves that restore control without a blow-up</h1>
+<div class="hero-subheading">
+            Micromanagement is rarely “just a personality”. It’s usually a control system: visibility demands, decision capture, and trust erosion.
+            Identify the type of micromanager you’re dealing with, then respond in ways that protect delivery, credibility, and energy.
+        </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-compass category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html">
+<i class="fas fa-battery-half category-icon"></i>
+<span>Expectations, Burnout &amp; Capacity</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-users category-icon"></i>
+<span>Workplace Dynamics and Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-calendar-check"></i>When to Use This Framework</h3>
+<ul class="bullet-list">
+<li>When your autonomy is shrinking and “updates” have become constant surveillance.</li>
+<li>When decisions are repeatedly reopened, rewritten, or rerouted through your manager.</li>
+<li>When you’re working harder but delivering less, because control friction is eating time.</li>
+<li>When you can feel your confidence changing (second-guessing, over-explaining, hesitating).</li>
+<li>When you need to stabilise the situation without escalating into a formal conflict.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Don’t “win the argument”. Build an operating rhythm that makes micromanagement unnecessary.</li>
+<li>Use structure as a shield: clear plans, clear checkpoints, and clean decision records.</li>
+<li>Never fight for autonomy with emotion. Ask for it with delivery controls.</li>
+<li>Track patterns, not vibes: what’s happening, how often, and what it impacts.</li>
+<li>If the behaviour becomes punitive or reputation-damaging, switch to protection mode early.</li>
+</ul>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title">Micromanagement Signals Checklist</h2>
+<div class="checklist-grid">
+<div class="checklist-item" data-category="visibility">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                I’m asked for frequent “quick updates” that don’t change decisions, they mainly prove I’m working.
+            </div>
+</div>
+<div class="checklist-item" data-category="control">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                My manager rewrites my work or messaging, even when the original is correct and fit for purpose.
+            </div>
+</div>
+<div class="checklist-item" data-category="trust">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                Decisions get pulled back to my manager “for review” after I’ve already agreed them with stakeholders.
+            </div>
+</div>
+<div class="checklist-item" data-category="process">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                I’m required to copy them into everything, or get approval for routine actions that shouldn’t need it.
+            </div>
+</div>
+<div class="checklist-item" data-category="tone">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                Feedback focuses on style, wording, or “tone”, more than outcomes or impact.
+            </div>
+</div>
+<div class="checklist-item" data-category="visibility">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                They ask for status even when we agreed a checkpoint, as if they can’t tolerate unknowns.
+            </div>
+</div>
+<div class="checklist-item" data-category="control">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                I’m not allowed to present my own work; they speak for it, then send me to “action it”.
+            </div>
+</div>
+<div class="checklist-item" data-category="politics">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                They manage optics aggressively, who gets credit, who gets access, and what gets seen.
+            </div>
+</div>
+<div class="checklist-item" data-category="process">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                Work keeps being “refined” with no clear definition of done, it turns into endless iteration.
+            </div>
+</div>
+<div class="checklist-item" data-category="hr">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                They use policy/process language to control behaviour (e.g., “compliance”, “standards”), rather than coaching.
+            </div>
+</div>
+<div class="checklist-item" data-category="trust">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                My judgement is questioned in public (subtle undermining, “just checking”, or “are you sure?”).
+            </div>
+</div>
+<div class="checklist-item" data-category="burnout">
+<i class="far fa-square"></i>
+<div class="checklist-text">
+                I’m burning extra hours because control friction creates rework, delays, and anxiety loops.
+            </div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="step-sidebar-overlay" id="stepOverlay">
+<aside aria-label="Step details panel" class="step-sidebar" id="stepSidebar">
+<div class="step-sidebar-topbar">
+<div class="step-top-row">
+<div class="step-chip">
+<div class="step-badge" id="stepBadge">1</div>
+<div class="step-chip-text">
+<div class="step-chip-title" id="stepTitle">Step title</div>
+<div class="step-chip-sub" id="stepSubtitle">Click “Mark complete” if this is true for you.</div>
+</div>
+</div>
+<button aria-label="Close step panel" class="step-close-btn" id="closeStepSidebar">
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
+<div class="step-sidebar-body">
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-bullseye"></i>What it signals</div>
+<p id="stepFocus"></p>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-lightbulb"></i>What works reliably</div>
+<ul class="step-mini-list" id="stepStrong"></ul>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-triangle-exclamation"></i>What not to do</div>
+<p id="stepSlip"></p>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-bolt"></i>Protection move</div>
+<p id="stepMicro"></p>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-quote-right"></i>Useful phrase</div>
+<p id="stepLine"></p>
+</div>
+</div>
+<div class="step-sidebar-footer">
+<button class="step-footer-btn secondary" id="prevStepBtn"><i class="fas fa-arrow-left"></i> Previous</button>
+<button class="step-footer-btn secondary" id="nextStepBtn">Next <i class="fas fa-arrow-right"></i></button>
+<button class="step-footer-btn primary" id="toggleStepCompleteBtn">
+<i class="fas fa-check"></i> Mark complete
+            </button>
+</div>
+</aside>
+</div>
+<div class="clarity-score-section">
+<div class="presence-snapshot-header">
+<h2>Your Micromanagement Snapshot</h2>
+<p>
+            Your score reflects how strongly micromanagement is showing up as a system (visibility demands, decision capture, trust erosion and rework).
+            A higher score doesn’t automatically mean “malicious”, it means the control pattern is materially affecting delivery and needs a structured response.
+        </p>
+</div>
+<div class="clarity-score-bar">
+<div class="clarity-progress-container">
+<div class="clarity-header">
+<div class="clarity-title">Micromanagement Intensity Score</div>
+<div class="clarity-percentage" id="clarityPercentage">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Low</span>
+<span>Moderate</span>
+<span>High</span>
+</div>
+<div class="presence-dimensions">
+<div class="presence-dimension-pill">
+<span class="label">Visibility Control</span>
+<span class="score" id="scoreVisibility">0%</span>
+</div>
+<div class="presence-dimension-pill">
+<span class="label">Decision Capture</span>
+<span class="score" id="scoreControl">0%</span>
+</div>
+<div class="presence-dimension-pill">
+<span class="label">Trust Erosion</span>
+<span class="score" id="scoreTrust">0%</span>
+</div>
+<div class="presence-dimension-pill">
+<span class="label">Burnout Pressure</span>
+<span class="score" id="scoreBurnout">0%</span>
+</div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+            </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+            </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+            </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+            </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Smart Micromanagement Summary</h2>
+<p class="summary-subtitle">Based on your Micromanagement Intensity Score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">
+            This summary identifies the manager pattern most consistent with what you selected, then gives moves that restore control without turning it into a personality war.
+        </p>
+</div>
+<h3 class="section-header purple">
+<i class="fas fa-fingerprint"></i> Likely manager pattern
+    </h3>
+<div class="manager-type-wrap">
+<div class="manager-type-card">
+<div class="mt-title"><i class="fas fa-user-shield"></i>Manager type</div>
+<div class="mt-name" id="managerTypeName"></div>
+<div class="mt-desc" id="managerTypeDesc"></div>
+</div>
+<div class="manager-handling-card">
+<div class="mt-title"><i class="fas fa-chess"></i>How to deal with it</div>
+<ul class="mt-list" id="managerTypeMoves"></ul>
+</div>
+</div>
+<h3 class="section-header red">
+<i class="fas fa-exclamation-triangle"></i> Risk flags in your situation
+    </h3>
+<div class="red-flags-grid" id="redFlagsGrid"></div>
+<h3 class="section-header purple">
+<i class="fas fa-forward"></i> What to do next
+    </h3>
+<div class="next-steps-grid" id="nextStepsGrid"></div>
+<h3 class="section-header blue">
+<i class="fas fa-tools"></i> Recommended tools to support you
+    </h3>
+<div class="resources-grid" id="resourcesGrid"></div>
+</div>
+<div class="closure-section" id="closureSection">
+<div class="closure-card">
+<div class="closure-left">
+<div class="closure-title">
+<i class="fas fa-flag-checkered"></i>
+<h3>Closure: lock your next 7 days</h3>
+</div>
+<p class="closure-lead">
+                Your goal now is simple: reduce control friction while increasing confidence signals.
+                Do it with a clean operating rhythm, crisp decision records, and predictable checkpoints, not confrontation.
+            </p>
+<ul class="closure-list" id="closureList"></ul>
+</div>
+<aside class="closure-right">
+<div class="tip-card">
+<div class="tip-head">
+<i class="fas fa-lightbulb"></i>
+<span>PRACTICAL TIP</span>
+</div>
+<p class="tip-body" id="closureTip"></p>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Toxic Behaviour Response Guide | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="guide-toxic-behaviour-response">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-manager-relationship-and-leadership-style.html">Manager Relationship &amp; Leadership Style</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Toxic Behaviour Response Guide</span>
+</div>
+<span class="checklist-name">TOXIC BEHAVIOUR RESPONSE GUIDE</span>
+<h1 class="hero-main-heading">
+<i class="fas fa-shield-halved"></i>
+      Respond without spiralling — and protect your position
+    </h1>
+<div class="hero-subheading">
+      A calm, outcome-led guide for when someone is undermining, controlling, humiliating, or rewriting reality so you can protect your credibility, keep your work clean, and escalate correctly.
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-people-group"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+<a class="category-pill" href="category-hr-insider.html">
+<i class="fas fa-gavel"></i>
+<span>HR Insider</span>
+</a>
+</div>
+</div>
+<div class="hero-disclaimer">
+<strong>Disclaimer:</strong> This guide is for general workplace planning and documentation support. It does not replace your employer’s policies, professional HR support, union/representative guidance, or tailored legal guidance for your specific circumstances. If you feel unsafe, harassed, or discriminated against, seek appropriate support promptly.
+    </div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Guide</h3>
+<ul class="bullet-list">
+<li>When someone is undermining you, changing the story, or provoking reactions you later regret.</li>
+<li>When your manager/peer’s behaviour is inconsistent: praise in private, pressure in public.</li>
+<li>When you’re getting “performance vibes” without clear facts, objectives, or fair process.</li>
+<li>When conflict is starting to bleed into your sleep, confidence, or delivery pace.</li>
+<li>When you suspect retaliation risk — and you need clean, UK-safe evidence and options.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>How to Win Without Escalating</h3>
+<div class="tip-badges">
+</div>
+<ul class="bullet-list">
+<li><strong>Your goal isn’t to win a debate.</strong> It’s to keep your credibility intact and the facts clean.</li>
+<li>Toxic behaviour feeds on emotional fuel. Use <strong>neutral language + precise boundaries</strong>.</li>
+<li>Most “he said/she said” collapses when you can show <strong>timeline + impact + evidence</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="framework-shell" id="frameworkBlueprint">
+<div class="framework-header">
+<h2>Response Blueprint</h2>
+<p>Complete the blueprint to generate: a clean response line, an evidence plan, escalation triggers, and a 14-day stabilisation sequence (without making it messy).</p>
+</div>
+<div class="canvas-grid">
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-magnifying-glass"></i> 1) Situation Snapshot</div>
+</div>
+<div class="panel-sub">Keep this clinical: what’s happening, where, how often, and what risk it creates for you.</div>
+<div class="field-grid">
+<div class="field">
+<div class="label">Who is the behaviour coming from? </div>
+<input class="input sa-input" data-dimension="read" id="x_who" placeholder="E.g., Line manager / Senior peer / Stakeholder"/>
+</div>
+<div class="field">
+<div class="label">Relationship type </div>
+<select class="select sa-input" data-dimension="read" id="x_reltype">
+<option selected="" value="">Select…</option>
+<option value="Manager (direct line)">Manager (direct line)</option>
+<option value="Senior leader (skip-level)">Senior leader (skip-level)</option>
+<option value="Peer / colleague">Peer / colleague</option>
+<option value="Cross-functional partner">Cross-functional partner</option>
+<option value="Direct report">Direct report</option>
+<option value="Client / external stakeholder">Client / external stakeholder</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Where is it happening most? </div>
+<select class="select sa-input" data-dimension="read" id="x_where">
+<option selected="" value="">Select…</option>
+<option value="Meetings (public)">Meetings (public)</option>
+<option value="1:1s (private)">1:1s (private)</option>
+<option value="Messages (Teams/Slack)">Messages (Teams/Slack)</option>
+<option value="Email">Email</option>
+<option value="Docs / tickets">Docs / tickets</option>
+<option value="Stakeholder settings">Stakeholder settings</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Frequency </div>
+<select class="select sa-input" data-dimension="impact" id="x_freq">
+<option selected="" value="">Select…</option>
+<option value="One-off">One-off</option>
+<option value="Occasional (monthly)">Occasional (monthly)</option>
+<option value="Regular (weekly)">Regular (weekly)</option>
+<option value="Frequent (multiple times/week)">Frequent (multiple times/week)</option>
+<option value="Constant (most interactions)">Constant (most interactions)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">What’s happening? </div>
+<textarea class="textarea sa-input" data-dimension="read" id="x_facts" placeholder="E.g., Publicly challenges your competence, rewrites agreements after the fact, assigns blame for shared decisions, excludes you from key meetings."></textarea>
+</div>
+<div class="field span-2">
+<div class="label">Impact on you / delivery </div>
+<textarea class="textarea sa-input" data-dimension="impact" id="x_impact" placeholder="E.g., More checking, delays, confidence drop, sleep disruption, avoidance, you over-explain, you’re being positioned as the problem."></textarea>
+</div>
+<div class="field">
+<div class="label">Your priority outcome </div>
+<select class="select sa-input" data-dimension="impact" id="x_protect">
+<option selected="" value="">Select…</option>
+<option value="Performance standing / role security">Performance standing / role security</option>
+<option value="Reputation / credibility">Reputation / credibility</option>
+<option value="Wellbeing / sustainable workload">Wellbeing / sustainable workload</option>
+<option value="Progression / visibility">Progression / visibility</option>
+<option value="Team stability / delivery">Team stability / delivery</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Your response aim </div>
+<select class="select sa-input" data-dimension="read" id="x_goal">
+<option selected="" value="">Select…</option>
+<option value="Stabilise (stop escalation)">Stabilise (stop escalation)</option>
+<option value="Boundary (clear line + consequence)">Boundary (clear line + consequence)</option>
+<option value="Reset expectations (reduce reinterpretation)">Reset expectations (reduce reinterpretation)</option>
+<option value="Escalate (formal route / HR)">Escalate (formal route / HR)</option>
+<option value="Exit planning (quietly reduce risk)">Exit planning (quietly reduce risk)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">What would “better” look like? </div>
+<input class="input sa-input" data-dimension="read" id="x_better" placeholder="E.g., No public undermining, agreements honoured, feedback becomes specific, you’re included early, expectations are written and stable."/>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-sliders"></i> 2) Behaviour Pattern Diagnostic</div>
+</div>
+<div class="panel-sub">Identify the pattern. Then choose the smallest response that removes oxygen from it.</div>
+<div class="field-grid">
+<div class="field">
+<div class="label">Pattern type </div>
+<select class="select sa-input" data-dimension="impact" id="p_pattern">
+<option selected="" value="">Select…</option>
+<option value="Undermining / public disrespect">Undermining / public disrespect</option>
+<option value="Goalpost shifting / rewriting agreements">Goalpost shifting / rewriting agreements</option>
+<option value="Blame shifting / scapegoating">Blame shifting / scapegoating</option>
+<option value="Micromanagement / excessive checking">Micromanagement / excessive checking</option>
+<option value="Exclusion / information withholding">Exclusion / information withholding</option>
+<option value="Credit stealing / visibility manipulation">Credit stealing / visibility manipulation</option>
+<option value="Passive aggression / snide tone">Passive aggression / snide tone</option>
+<option value="Intimidation / threats / retaliation cues">Intimidation / threats / retaliation cues</option>
+<option value="Harassment / discrimination concerns">Harassment / discrimination concerns</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Power imbalance </div>
+<select class="select sa-input" data-dimension="impact" id="p_power">
+<option selected="" value="">Select…</option>
+<option value="Low (peer level)">Low (peer level)</option>
+<option value="Medium (some influence)">Medium (some influence)</option>
+<option value="High (controls work/performance)">High (controls work/performance)</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Retaliation risk </div>
+<select class="select sa-input" data-dimension="safeguards" id="p_retaliation">
+<option selected="" value="">Select…</option>
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Severity (impact) </div>
+<select class="select sa-input" data-dimension="impact" id="p_severity">
+<option selected="" value="">Select…</option>
+<option value="1 - Mild (annoying, manageable)">1 - Mild (annoying, manageable)</option>
+<option value="2 - Disruptive (affects delivery)">2 - Disruptive (affects delivery)</option>
+<option value="3 - Serious (reputation/wellbeing risk)">3 - Serious (reputation/wellbeing risk)</option>
+<option value="4 - Critical (unsafe / formal risk)">4 - Critical (unsafe / formal risk)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Your weak spot they press </div>
+<input class="input sa-input" data-dimension="read" id="p_trigger" placeholder="E.g., You over-explain, you seek fairness, you want to be liked, you hate public conflict."/>
+</div>
+<div class="field span-2">
+<div class="label">Your calm counter-move </div>
+<input class="input sa-input" data-dimension="behaviours" id="p_counter" placeholder="E.g., ‘Let’s keep this to facts and agreed deliverables — here’s what’s true and what I’ll do next.’"/>
+</div>
+<div class="field span-2">
+<div class="label">3 calibrating questions </div>
+<textarea class="textarea sa-input" data-dimension="behaviours" id="p_questions" placeholder="E.g., ‘What does good look like specifically?’ ‘What changed since we agreed X?’ ‘What’s the decision and who owns it?’"></textarea>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Response line (auto)</h4>
+<div>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="resp_line_out">Click “Build” to generate a neutral, outcome-led response line you can use live (meeting/Slack/email).</div>
+</div>
+</div>
+</div>
+<div class="canvas-grid">
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-route"></i> 3) Response Plan</div>
+</div>
+<div class="panel-sub">Choose the smallest effective response. Your goal is control, not confrontation.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label">Your boundary line </div>
+<input class="input sa-input" data-dimension="behaviours" id="r_boundary" placeholder="E.g., ‘I’m happy to take feedback — not in a public put-down. If there’s a concern, raise it directly and specifically.’"/>
+</div>
+<div class="field span-2">
+<div class="label">Your consequence (if needed) </div>
+<input class="input sa-input" data-dimension="behaviours" id="r_consequence" placeholder="E.g., ‘If this continues, I’ll document the incidents and ask HR for guidance on next steps.’"/>
+</div>
+<div class="field">
+<div class="label">Preferred channel </div>
+<select class="select sa-input" data-dimension="behaviours" id="r_channel">
+<option selected="" value="">Select…</option>
+<option value="Live (meeting)">Live (meeting)</option>
+<option value="1:1 (private)">1:1 (private)</option>
+<option value="Message (Teams/Slack)">Message (Teams/Slack)</option>
+<option value="Email (evidence-friendly)">Email (evidence-friendly)</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Your tone target </div>
+<select class="select sa-input" data-dimension="behaviours" id="r_tone">
+<option selected="" value="">Select…</option>
+<option value="Neutral (facts only)">Neutral (facts only)</option>
+<option value="Warm-firm (respect + line)">Warm-firm (respect + line)</option>
+<option value="Formal (policy-safe)">Formal (policy-safe)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Your first move (today) </div>
+<input class="input sa-input" data-dimension="behaviours" id="r_first" placeholder="E.g., Send a recap with decision + owners; request clarity on expectations; redirect tone in a meeting."/>
+</div>
+<div class="field span-2">
+<div class="label">What you will stop doing </div>
+<textarea class="textarea sa-input" data-dimension="behaviours" id="r_stop" placeholder="E.g., Stop over-explaining, stop apologising for things you didn’t do, stop responding instantly to bait, stop having ‘invisible’ decisions."></textarea>
+</div>
+</div>
+<div class="micro-cards">
+<div class="micro">
+<h4><i class="fas fa-shield"></i> Keep your record clean</h4>
+<p>When the dynamic turns political, your advantage is a boring tone and a sharp record: <strong>facts, impact, and consistency</strong>.</p>
+</div>
+<div class="micro">
+<h4><i class="fas fa-fire-extinguisher"></i> Don’t become the story</h4>
+<p>Toxic dynamics often flip the narrative: your reaction becomes the headline. Keep your response boring — and your evidence sharp.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-shield-halved"></i> 4) Evidence &amp; Escalation Guardrails (UK)</div>
+</div>
+<div class="panel-sub">Define what you’ll document, how you’ll frame it, and what triggers a formal route — without panic.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label">What you will document </div>
+<textarea class="textarea sa-input" data-dimension="safeguards" id="e_document" placeholder="E.g., incidents, exact words where possible, dates, witnesses, changes to agreements, exclusion, workload impact, delivery impact, wellbeing impact."></textarea>
+</div>
+<div class="field">
+<div class="label">Policy route (if needed) </div>
+<select class="select sa-input" data-dimension="safeguards" id="e_policy">
+<option selected="" value="">Select…</option>
+<option value="Informal resolution / manager conversation">Informal resolution / manager conversation</option>
+<option value="HR advice (confidential guidance)">HR advice (confidential guidance)</option>
+<option value="Bullying/harassment policy">Bullying/harassment policy</option>
+<option value="Grievance process">Grievance process</option>
+<option value="Whistleblowing (where applicable)">Whistleblowing (where applicable)</option>
+<option value="Union / employee representative">Union / employee representative</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Support option </div>
+<select class="select sa-input" data-dimension="safeguards" id="e_support">
+<option selected="" value="">Select…</option>
+<option value="EAP / wellbeing support">EAP / wellbeing support</option>
+<option value="Union rep / companion">Union rep / companion</option>
+<option value="Trusted senior sponsor">Trusted senior sponsor</option>
+<option value="HR business partner">HR business partner</option>
+<option value="Occupational Health (if relevant)">Occupational Health (if relevant)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Your red lines </div>
+<textarea class="textarea sa-input" data-dimension="safeguards" id="e_redlines" placeholder="E.g., humiliation, threats, discriminatory comments, repeated rewriting of agreements, retaliation, unsafe conditions, repeated exclusion from required information."></textarea>
+</div>
+<div class="field span-2">
+<div class="label">Escalation trigger </div>
+<input class="input sa-input" data-dimension="safeguards" id="e_trigger" placeholder="E.g., If X happens 2 more times in 14 days OR if retaliation occurs, I escalate with timeline + impact + proposed remedy."/>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>14-day stabilisation plan (auto)</h4>
+<div>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="stabilise14_out">Click “Build” to generate a 14-day sequence: stabilise → document → boundary → decide escalation.</div>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-clipboard-list"></i> Evidence Log (optional, but powerful)</div>
+</div>
+<div class="panel-sub">Use this to keep a clean record: what happened, impact, witnesses, evidence — without emotion or assumptions.</div>
+<table class="timeline-table" id="timelineTable">
+<thead>
+<tr>
+<th>Date</th>
+<th>What happened (fact)</th>
+<th>Impact</th>
+<th>Witnesses</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody id="timelineBody">
+<tr>
+<td><input class="input sa-input" data-dimension="safeguards" name="guide-toxic-behaviour-response_field_28" placeholder="DD/MM/YYYY"/></td>
+<td><input class="input sa-input" data-dimension="read" name="guide-toxic-behaviour-response_field_29" placeholder="Exact words/behaviour where possible"/></td>
+<td><input class="input sa-input" data-dimension="impact" name="guide-toxic-behaviour-response_field_30" placeholder="Delivery/reputation/wellbeing"/></td>
+<td><input class="input sa-input" data-dimension="safeguards" name="guide-toxic-behaviour-response_field_31" placeholder="Names (if any)"/></td>
+<td>
+<select class="select sa-input" data-dimension="safeguards" name="guide-toxic-behaviour-response_field_32">
+<option selected="" value="">Select…</option>
+<option value="Email / message">Email / message</option>
+<option value="Meeting notes">Meeting notes</option>
+<option value="Ticket / system log">Ticket / system log</option>
+<option value="Document / deck">Document / deck</option>
+<option value="Other">Other</option>
+</select>
+</td>
+</tr>
+</tbody>
+</table>
+<div>
+<button class="mini-btn"><i class="fas fa-plus"></i> Add row</button>
+<button class="mini-btn"><i class="fas fa-minus"></i> Remove row</button>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-file-lines"></i> Executive Outputs</div>
+</div>
+<div class="panel-sub">Designed to be copy/pasted into notes, a message, or a structured escalation conversation.</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Response brief (one paragraph)</h4>
+</div>
+<div class="output-content" id="out_summary">Complete the blueprint, then click "Generate outputs".</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Evidence &amp; guardrails snapshot</h4>
+</div>
+<div class="output-content" id="out_risk">—</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Message draft (neutral + hard to misread)</h4>
+</div>
+<div class="output-content" id="out_opener">—</div>
+</div>
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+    </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+    </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title"><i class="fas fa-list-check"></i> Quick Coverage Checklist</h2>
+<div class="checklist-intro">Final audit: ensures you’ve got a clean read, a controlled response, and evidence-ready guardrails.</div>
+<div class="checklist-grid">
+<div class="checklist-item" data-category="read">
+<i class="far fa-square"></i>
+<div class="checklist-text">I can describe the behaviour using facts (not labels, motives, or emotional language).</div>
+</div>
+<div class="checklist-item" data-category="read">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve identified where it’s happening (meeting/Slack/email) and the pattern frequency.</div>
+</div>
+<div class="checklist-item" data-category="impact">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve stated the impact (delivery/reputation/wellbeing) in observable terms.</div>
+</div>
+<div class="checklist-item" data-category="impact">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve identified the pattern type and power/retaliation risk realistically.</div>
+</div>
+<div class="checklist-item" data-category="behaviours">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have a response line that is neutral, outcome-led, and hard to misread.</div>
+</div>
+<div class="checklist-item" data-category="behaviours">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve defined a boundary line and (if needed) a non-dramatic consequence.</div>
+</div>
+<div class="checklist-item" data-category="safeguards">
+<i class="far fa-square"></i>
+<div class="checklist-text">I know what I’m documenting (timeline + impact + evidence) and I’m keeping it factual.</div>
+</div>
+<div class="checklist-item" data-category="safeguards">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve defined red lines and an objective trigger for escalation.</div>
+</div>
+<div class="checklist-item" data-category="safeguards">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’m not sending emotional messages (no venting, no diagnosing, no sarcasm).</div>
+</div>
+<div class="checklist-item" data-category="behaviours">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have a first move I can execute today without increasing risk.</div>
+</div>
+<div class="checklist-item" data-category="safeguards">
+<i class="far fa-square"></i>
+<div class="checklist-text">If needed, I know the route: informal → HR guidance → policy/grievance (UK context).</div>
+</div>
+<div class="checklist-item" data-category="impact">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’m protecting a priority outcome (role security, reputation, wellbeing, delivery).</div>
+</div>
+</div>
+</div>
+<div class="clarity-score-section">
+<div class="presence-snapshot-header">
+<h2>Your Toxic Behaviour Response Snapshot</h2>
+<p>This score reflects your <strong>checklist completion only</strong> — a simple coverage gauge you control. (The blueprint still powers the outputs below.)</p>
+</div>
+<div class="clarity-score-bar">
+<div class="clarity-progress-container">
+<div class="clarity-header">
+<div class="clarity-title">Response Readiness Score</div>
+<div class="clarity-percentage" id="clarityPercentage">0%</div>
+</div>
+<div class="progress-container">
+<div class="mini-fill low" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Loose</span><span>Developing</span><span>Solid</span>
+</div>
+<div class="presence-dimensions">
+<div class="presence-dimension-pill"><span class="label">Situation Read</span><span class="score" id="scoreVoice">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Pattern &amp; Risk</span><span class="score" id="scoreStructure">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Response Plan</span><span class="score" id="scoreChallenge">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Guardrails</span><span class="score" id="scoreNonverbal">0%</span></div>
+</div>
+</div>
+<div class="primary-actions-bottom1">
+<button class="action-btn primary" disabled="" id="generateOutputsBtnBottom">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtnBottom">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtnBottom">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtnBottom">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-status" id="saveStatusBottom">
+<span id="unsavedTextBottom"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedTextBottom"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Smart Response Summary</h2>
+<p class="summary-subtitle">Based on your readiness score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">Highlights what’s missing, what’s risky, and the cleanest next move — without escalating the situation unnecessarily.</p>
+</div>
+<h3 class="section-header red"><i class="fas fa-exclamation-triangle"></i> Red Flags in Your Response Plan</h3>
+<div class="red-flags-grid" id="redFlagsGrid"></div>
+<h3 class="section-header purple"><i class="fas fa-forward"></i> Next Moves (Controlled + Effective)</h3>
+<div class="next-steps-grid" id="nextStepsGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-tools"></i> Recommended Tools to Support You</h3>
+<div class="resources-grid" id="resourcesGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

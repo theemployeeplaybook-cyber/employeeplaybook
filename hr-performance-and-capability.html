@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>HR Insider — Performance &amp; Capability | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="hr-performance-and-capability">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i><span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR &amp; Formal Processes</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">HR Insider — Performance &amp; Capability</span>
+</div>
+<div class="insider-kicker"><i class="fas fa-file-circle-check"></i> HR Insider Guide</div>
+<h1 class="hero-main-heading">Performance &amp; Capability: what HR is really looking for — and how to protect yourself</h1>
+<div class="hero-subheading">
+          If you’re being managed on “performance”, “capability”, “standards”, or “not meeting expectations”, it can feel personal.
+          HR treats it as a <strong>process</strong>. This guide helps you stay calm, gather the right evidence, and respond with precision —
+          without accidentally handing your employer a clean route to exit.
+        </div>
+<div class="disclaimer-strip">
+<i class="fas fa-circle-info"></i>
+<p>
+<strong>Not legal advice.</strong> This is practical HR guidance for UK workplaces to help you understand typical processes,
+            documentation standards, and risk patterns. Policies, contracts, and facts matter. If your situation involves discrimination,
+            disability, whistleblowing, pregnancy, safety issues, or mental health impacts, treat it as higher risk and document carefully.
+          </p>
+</div>
+</div>
+<div class="hero-bottom-row">
+<div class="triage-card">
+<div class="triage-title"><i class="fas fa-stethoscope"></i> 60-second triage: what kind of “performance” situation is this?</div>
+<div class="triage-grid">
+<div class="triage-pill">
+<div class="label">Misaligned expectations</div>
+<div class="desc">Vague goals, shifting priorities, unclear “good”.</div>
+<div class="tag"><i class="fas fa-bullseye"></i> Clarity problem</div>
+</div>
+<div class="triage-pill">
+<div class="label">Support gap</div>
+<div class="desc">No training, broken tools, unrealistic workload.</div>
+<div class="tag"><i class="fas fa-toolbox"></i> Capability support</div>
+</div>
+<div class="triage-pill">
+<div class="label">Exit route</div>
+<div class="desc">Sudden criticism, HR “appears”, documentation ramps.</div>
+<div class="tag"><i class="fas fa-triangle-exclamation"></i> Process risk</div>
+</div>
+</div>
+</div>
+<div class="crisis-card" id="crisisCard">
+<div class="crisis-title"><i class="fas fa-life-ring"></i> Crisis Expert (Strategic Edge)</div>
+<div class="crisis-sub">
+            When the stakes are high, you need a plan that’s <strong>documented</strong>, <strong>credible</strong>, and <strong>hard to ignore</strong>.
+            Get a <strong>90-minute email exchange</strong> with HR experts (30+ years’ combined experience) to sanity-check your situation and tighten your next moves.
+          </div>
+<ul class="crisis-features">
+<li><i class="fas fa-check"></i><span>Risk scan: what HR will care about, what your manager will push, and what you must evidence</span></li>
+<li><i class="fas fa-check"></i><span>Script + structure: how to respond in writing without self-sabotage</span></li>
+<li><i class="fas fa-check"></i><span>Evidence plan: what to gather, how to phrase it, and what not to say</span></li>
+</ul>
+<div class="crisis-cta-row">
+<span class="tier-badge"><i class="fas fa-crown"></i> Strategic Edge only</span>
+<button class="btn primary" id="crisisUnlockBtn" type="button"><i class="fas fa-unlock"></i> Unlock</button>
+<a class="btn secondary" href="the-pricing.html"><i class="fas fa-tags"></i> View plans</a>
+</div>
+<div class="status-box" id="crisisStatus">
+<strong>Status:</strong> Checking access…
+          </div>
+</div>
+</div>
+</div>
+<section class="insider-wrap">
+<div class="insider-grid">
+<aside aria-label="HR Insider contents" class="side-card">
+<div class="side-title"><i class="fas fa-list"></i> On this page</div>
+<ul class="toc">
+<li><a href="#start-here"><i class="fas fa-play"></i> Start here (mindset + mistakes)</a></li>
+<li><a href="#process"><i class="fas fa-diagram-project"></i> The typical process (what HR expects)</a></li>
+<li><a href="#evidence"><i class="fas fa-folder-open"></i> Evidence &amp; documentation (your shield)</a></li>
+<li><a href="#support"><i class="fas fa-hand-holding-heart"></i> Reasonable adjustments &amp; support</a></li>
+<li><a href="#meetings"><i class="fas fa-people-group"></i> Meetings, scripts &amp; what to say</a></li>
+<li><a href="#builder"><i class="fas fa-pen-to-square"></i> Build your HR Insider brief</a></li>
+<li><a href="#report"><i class="fas fa-file-lines"></i> Your brief (generated)</a></li>
+</ul>
+<div class="side-actions">
+<button class="btn primary" data-action="save-tool" disabled="" id="saveProgressBtn" type="button"><i class="fas fa-cloud-arrow-up"></i> Save Progress</button>
+<button class="btn secondary" data-action="print-page" id="printBtn" type="button"><i class="fas fa-print"></i> Print / Save PDF</button>
+<button class="btn secondary" disabled="" id="clearBtn" type="button"><i class="fas fa-eraser"></i> Clear All</button>
+</div>
+<div class="status-box" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</aside>
+<div class="content-col">
+<div class="insider-panel" id="start-here">
+<div class="panel-title"><i class="fas fa-compass"></i> Start here: the “don’t panic, don’t gift-wrap your exit” section</div>
+<div class="panel-sub">
+              A performance/capability process is often a mix of genuine concerns, messy management, and risk management.
+              Your job is to stay <strong>credible</strong>, <strong>specific</strong>, and <strong>well-documented</strong>.
+              Don’t argue feelings. Argue facts, clarity, support, and fairness.
+            </div>
+<div class="callout-row">
+<div class="callout">
+<div class="h"><i class="fas fa-ban"></i> Don’t do this</div>
+<div class="b">Over-explain and apologise</div>
+<div class="s">It reads like admission. Keep it factual: gaps, constraints, actions, outcomes.</div>
+</div>
+<div class="callout">
+<div class="h"><i class="fas fa-wand-magic-sparkles"></i> Do this</div>
+<div class="b">Force clarity in writing</div>
+<div class="s">Ask for measurable expectations, examples, and how “good” will be assessed.</div>
+</div>
+<div class="callout">
+<div class="h"><i class="fas fa-shield-halved"></i> Protect this</div>
+<div class="b">Your narrative</div>
+<div class="s">“I’m engaged, I want to improve, and I need clear expectations + support to meet them.”</div>
+</div>
+</div>
+<div class="chipbar">
+<div class="chip" data-chip="chip1"><input name="hr-performance-and-capability_field_1" type="checkbox"/><i class="fas fa-check"></i> I will keep responses factual</div>
+<div class="chip" data-chip="chip2"><input name="hr-performance-and-capability_field_2" type="checkbox"/><i class="fas fa-check"></i> I will ask for clarity in writing</div>
+<div class="chip" data-chip="chip3"><input name="hr-performance-and-capability_field_3" type="checkbox"/><i class="fas fa-check"></i> I will document support gaps</div>
+<div class="chip" data-chip="chip4"><input name="hr-performance-and-capability_field_4" type="checkbox"/><i class="fas fa-check"></i> I will follow up meetings by email</div>
+</div>
+</div>
+<div class="insider-panel" id="process">
+<div class="panel-title"><i class="fas fa-diagram-project"></i> The typical process: what HR usually expects to see</div>
+<div class="panel-sub">
+              Most employers rely on internal policies. In practice, HR tends to look for a paper trail showing:
+              <strong>expectations were clear</strong>, <strong>support was offered</strong>, <strong>time was given</strong>, <strong>reviews happened</strong>, and <strong>the outcome was reasonable</strong>.
+              Your goal is to ensure the record includes <em>your side</em> of each point.
+            </div>
+<div aria-label="Performance and capability process accordion" class="accordion" role="region">
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-flag"></i></div>
+<div>
+<div class="acc-title">Step 1: Trigger &amp; informal warnings</div>
+<div class="acc-desc">It starts with “concerns”, a drop in feedback quality, or a sudden focus on mistakes.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>What HR wants:</strong> examples, dates, impact, and what “good” looks like.</span></li>
+<li><i class="fas fa-check"></i><span><strong>Your move:</strong> ask for 3–5 specific examples + measurable expectations.</span></li>
+<li><i class="fas fa-check"></i><span><strong>Red flag:</strong> vague language (“attitude”, “not proactive”) without evidence.</span></li>
+</ul>
+</div>
+</div>
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-bullseye"></i></div>
+<div>
+<div class="acc-title">Step 2: Expectations &amp; plan (the capability bridge)</div>
+<div class="acc-desc">A plan is only fair if it’s measurable, resourced, and realistic.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<div class="mini-grid">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>Expectations</strong> should be measurable (quality, speed, error rate, outputs).</span></li>
+<li><i class="fas fa-check"></i><span><strong>Inputs</strong> should be addressed: training, tools, workload, dependencies.</span></li>
+</ul>
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>Time</strong> should be enough to improve (and aligned to job complexity).</span></li>
+<li><i class="fas fa-check"></i><span><strong>Support</strong> should be explicit: coaching, buddying, shadowing, feedback cadence.</span></li>
+</ul>
+</div>
+<div class="panel-sub">
+<strong>Game-changer:</strong> If the plan ignores constraints (unrealistic workload, broken processes), you document that early.
+                    Capability isn’t just “try harder” — it’s “given X constraints, the output can’t be met without Y changes.”
+                  </div>
+</div>
+</div>
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-clipboard-check"></i></div>
+<div>
+<div class="acc-title">Step 3: Review meetings &amp; documentation</div>
+<div class="acc-desc">This is where narratives get locked in. Follow up in writing.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>Follow-up email template:</strong> “Thank you for today. My understanding is… [expectations]… [support]… [review date]. Please confirm if I’ve missed anything.”</span></li>
+<li><i class="fas fa-check"></i><span><strong>Ask for minutes</strong> (or send your own) if you believe notes may be selective.</span></li>
+<li><i class="fas fa-check"></i><span><strong>Keep a timeline</strong> of what happened and when: it helps you spot shifting standards.</span></li>
+</ul>
+</div>
+</div>
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-scale-balanced"></i></div>
+<div>
+<div class="acc-title">Step 4: Formal capability / performance procedure</div>
+<div class="acc-desc">HR expects consistency, reasonableness, and “support offered”. You want the same.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>Bring a companion</strong> if policy allows (it changes behaviour and reduces mis-recording).</span></li>
+<li><i class="fas fa-check"></i><span><strong>Challenge vagueness</strong> politely: “What specifically would meet standard, and how will it be measured?”</span></li>
+<li><i class="fas fa-check"></i><span><strong>Ask what support was considered</strong> and why certain options were not used.</span></li>
+</ul>
+</div>
+</div>
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-door-open"></i></div>
+<div>
+<div class="acc-title">Step 5: Outcomes (and what you can do)</div>
+<div class="acc-desc">The outcome should logically match evidence + support + time + role requirements.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>Possible outcomes:</strong> continue support, extend plan, redeploy, formal warning, exit.</span></li>
+<li><i class="fas fa-check"></i><span><strong>Your move:</strong> request rationale in writing and the evidence basis for the decision.</span></li>
+<li><i class="fas fa-check"></i><span><strong>If it feels pre-decided:</strong> document process gaps, inconsistencies, and missing support.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="insider-panel" id="evidence">
+<div class="panel-title"><i class="fas fa-folder-open"></i> Evidence &amp; documentation: the difference between “feelings” and “proof”</div>
+<div class="panel-sub">
+              Most employees lose leverage because they rely on memory. HR relies on written records. You need your own record that’s calm, factual, and timestamped.
+            </div>
+<div class="risk-row">
+<div class="riskbox safe">
+<div class="t"><i class="fas fa-circle-check"></i> Strong evidence</div>
+<div class="b">Outputs + measures</div>
+<div class="s">Examples of work, quality metrics, feedback excerpts, deliverables, tickets, dashboards, QA logs.</div>
+</div>
+<div class="riskbox warn">
+<div class="t"><i class="fas fa-circle-exclamation"></i> Medium</div>
+<div class="b">Context evidence</div>
+<div class="s">Workload volume, resourcing gaps, tool failures, shifting priorities, dependency blocks.</div>
+</div>
+<div class="riskbox risk">
+<div class="t"><i class="fas fa-triangle-exclamation"></i> Weak</div>
+<div class="b">Emotional statements</div>
+<div class="s">“I feel targeted”, “This is unfair” with no examples. Keep it, but pair it with facts.</div>
+</div>
+</div>
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>Build a timeline:</strong> dates, who said what, expectations given, support offered, outcomes.</span></li>
+<li><i class="fas fa-check"></i><span><strong>Capture clarity gaps:</strong> when expectations changed, were contradictory, or not measurable.</span></li>
+<li><i class="fas fa-check"></i><span><strong>Capture support gaps:</strong> training not provided, onboarding missing, workload incompatible with targets.</span></li>
+<li><i class="fas fa-check"></i><span><strong>Follow-up emails:</strong> the most powerful “quiet weapon” — polite, factual, and hard to dispute.</span></li>
+</ul>
+</div>
+<div class="insider-panel" id="support">
+<div class="panel-title"><i class="fas fa-hand-holding-heart"></i> Support, health and reasonable adjustments (capability isn’t just performance)</div>
+<div class="panel-sub">
+              If health (including stress, anxiety, ADHD traits, menopause, long-term conditions) is relevant, the situation can shift from “performance” to “capability with support”.
+              You don’t need to overshare — you do need to document what support would make performance possible.
+            </div>
+<div class="accordion">
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-heart-pulse"></i></div>
+<div>
+<div class="acc-title">When to raise health (without making it messy)</div>
+<div class="acc-desc">Raise it when it materially affects performance or when you need adjustments/support.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>Say:</strong> “There are health factors affecting capacity. I’m seeking support and would like to discuss adjustments.”</span></li>
+<li><i class="fas fa-check"></i><span><strong>Do not:</strong> write long emotional paragraphs. Keep it professional and specific.</span></li>
+<li><i class="fas fa-check"></i><span><strong>Ask:</strong> what support routes exist (OH referral, temporary adjustments, workload reset).</span></li>
+</ul>
+</div>
+</div>
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-wrench"></i></div>
+<div>
+<div class="acc-title">Examples of adjustments/support that actually change outcomes</div>
+<div class="acc-desc">These are practical levers HR can recognise (and document).</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<div class="mini-grid">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span>Reduced scope or fewer parallel projects for a defined period</span></li>
+<li><i class="fas fa-check"></i><span>Weekly prioritisation meeting + written “top 3” priorities</span></li>
+<li><i class="fas fa-check"></i><span>Clear quality bar examples and template outputs</span></li>
+</ul>
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span>Buddying / shadowing / targeted training on specific gaps</span></li>
+<li><i class="fas fa-check"></i><span>Protected focus blocks + fewer context-switch meetings</span></li>
+<li><i class="fas fa-check"></i><span>Tool/process fixes for known blockers (with agreed turnaround)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="insider-panel" id="meetings">
+<div class="panel-title"><i class="fas fa-people-group"></i> Meetings, scripts &amp; what to say (without self-sabotage)</div>
+<div class="panel-sub">
+              The best strategy is calm, structured, and consistent. You are building a record: “I’m engaged, I want to improve,
+              I need measurable expectations and support, and I will document progress.”
+            </div>
+<div class="accordion">
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-comment-dots"></i></div>
+<div>
+<div class="acc-title">Script: asking for clarity</div>
+<div class="acc-desc">Use this when feedback is vague or shifting.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span>“To make sure I meet expectations, can you define what ‘good’ looks like in measurable terms?”</span></li>
+<li><i class="fas fa-check"></i><span>“Can you share 3–5 examples (with dates) so I can target improvements precisely?”</span></li>
+<li><i class="fas fa-check"></i><span>“How will progress be assessed — quality, speed, error rate, stakeholder feedback?”</span></li>
+</ul>
+</div>
+</div>
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-envelope"></i></div>
+<div>
+<div class="acc-title">Script: post-meeting follow-up email</div>
+<div class="acc-desc">The simplest way to stop narrative drift.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span><strong>Subject:</strong> Summary &amp; next steps — performance support plan</span></li>
+<li><i class="fas fa-check"></i><span><strong>Body:</strong> “Thanks for today. My understanding is: (1) Expectations: … (2) Support: … (3) Measures: … (4) Review date: … Please confirm if I’ve missed anything.”</span></li>
+<li><i class="fas fa-check"></i><span><strong>Add:</strong> “If any priorities change, please confirm in writing so I can adapt accordingly.”</span></li>
+</ul>
+</div>
+</div>
+<div class="acc-item">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-shield-halved"></i></div>
+<div>
+<div class="acc-title">What not to say (even if it’s true)</div>
+<div class="acc-desc">Avoid statements that read like admission or emotional volatility.</div>
+</div>
+</div>
+<i class="fas fa-chevron-down acc-chevron"></i>
+</button>
+<div class="acc-panel">
+<ul class="hr-list">
+<li><i class="fas fa-check"></i><span>“I’m failing / I can’t do this role.” → replace with: “I can meet the standard with clear expectations and agreed support.”</span></li>
+<li><i class="fas fa-check"></i><span>“You’re targeting me.” → replace with: “I want to ensure the process is fair and evidence-based. Can we confirm expectations and measures?”</span></li>
+<li><i class="fas fa-check"></i><span>“I’m overwhelmed.” → replace with: “Current workload volume conflicts with targets. I’d like to align priorities and remove blockers.”</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="insider-panel" id="builder">
+<div class="panel-title"><i class="fas fa-pen-to-square"></i> Build your HR Insider brief (clean, credible, evidence-led)</div>
+<div class="panel-sub">
+              Fill this in. Then click <strong>Build Brief</strong>. You’ll get a structured summary you can use for:
+              (1) your own clarity, (2) sending to HR/your manager, or (3) preparing for a formal meeting.
+            </div>
+<div class="form-grid">
+<div class="field">
+<label for="caseStage">Where are you in the process?</label>
+<select id="caseStage">
+<option value="">Select…</option>
+<option value="Informal concerns / feedback changed">Informal concerns / feedback changed</option>
+<option value="Support plan being discussed">Support plan being discussed</option>
+<option value="Plan active (improvement period)">Plan active (improvement period)</option>
+<option value="Formal capability/performance process">Formal capability/performance process</option>
+<option value="Outcome pending / warning issued">Outcome pending / warning issued</option>
+</select>
+</div>
+<div class="field">
+<label for="roleContext">Role &amp; context (1 sentence)</label>
+<input id="roleContext" placeholder="e.g., Customer Ops Analyst supporting 4 regions, high ticket volume" type="text"/>
+</div>
+<div class="field">
+<label for="expectations">What expectations are being referenced?</label>
+<textarea id="expectations" placeholder="What does your manager say you’re not meeting? Be specific."></textarea>
+</div>
+<div class="field">
+<label for="yourView">Your view (facts, not feelings)</label>
+<textarea id="yourView" placeholder="What changed? What constraints exist? What evidence do you have?"></textarea>
+</div>
+<div class="field">
+<label for="supportOffered">Support offered (if any)</label>
+<textarea id="supportOffered" placeholder="Training, coaching, buddying, time, tools, adjusted workload…"></textarea>
+</div>
+<div class="field">
+<label for="supportMissing">Support missing / blockers</label>
+<textarea id="supportMissing" placeholder="Where does the plan ignore reality? Tools, scope, resourcing, clarity, dependencies…"></textarea>
+</div>
+</div>
+<div class="panel-sub">
+              Select any higher-risk factors (these change how you document and how you phrase things):
+            </div>
+<div class="chipbar" id="riskChips">
+<div class="chip" data-risk="health"><input name="hr-performance-and-capability_field_11" type="checkbox"/><i class="fas fa-heart-pulse"></i> Health / disability / neurodiversity factors</div>
+<div class="chip" data-risk="discrimination"><input name="hr-performance-and-capability_field_12" type="checkbox"/><i class="fas fa-scale-balanced"></i> Discrimination concern</div>
+<div class="chip" data-risk="whistle"><input name="hr-performance-and-capability_field_13" type="checkbox"/><i class="fas fa-bullhorn"></i> Whistleblowing / safety issue involved</div>
+<div class="chip" data-risk="pregnancy"><input name="hr-performance-and-capability_field_14" type="checkbox"/><i class="fas fa-baby"></i> Pregnancy / maternity related</div>
+<div class="chip" data-risk="sudden"><input name="hr-performance-and-capability_field_15" type="checkbox"/><i class="fas fa-bolt"></i> Sudden change / “this came out of nowhere”</div>
+<div class="chip" data-risk="hr"><input name="hr-performance-and-capability_field_16" type="checkbox"/><i class="fas fa-user-tie"></i> HR now heavily involved</div>
+</div>
+<div class="report-actions">
+<button class="btn primary" disabled="" id="buildBriefBtn" type="button"><i class="fas fa-file-signature"></i> Build Brief</button>
+<button class="btn secondary" disabled="" id="copyBriefBtn" type="button"><i class="fas fa-copy"></i> Copy Brief</button>
+</div>
+</div>
+<div class="insider-panel report-wrap" id="report">
+<div class="report-head">
+<div class="title"><i class="fas fa-file-lines"></i> Your HR Insider brief</div>
+<div class="meta" id="reportMeta">—</div>
+</div>
+<div class="report-grid">
+<div class="report-card" id="reportCard1">
+<div class="h"><i class="fas fa-bullseye"></i> What’s being alleged</div>
+<div class="p" id="r1">—</div>
+</div>
+<div class="report-card" id="reportCard2">
+<div class="h"><i class="fas fa-shield-halved"></i> Your evidence-led position</div>
+<div class="p" id="r2">—</div>
+</div>
+<div class="report-card" id="reportCard3">
+<div class="h"><i class="fas fa-forward"></i> What you’re requesting next</div>
+<div class="p" id="r3">—</div>
+</div>
+</div>
+<div class="report-actions">
+<button class="btn primary" data-action="save-tool" disabled="" id="saveAfterReportBtn" type="button"><i class="fas fa-cloud-arrow-up"></i> Save Progress</button>
+<button class="btn secondary" data-action="print-page" id="printFromReportBtn" type="button"><i class="fas fa-print"></i> Print / Save PDF</button>
+</div>
+</div>
+<div class="insider-panel">
+<div class="panel-title"><i class="fas fa-toolbox"></i> Related tools that pair perfectly with this page</div>
+<div class="panel-sub">
+              If you’re inside a process, you’ll win by pairing this guide with evidence structure and meeting control tools.
+            </div>
+<div class="callout-row">
+<div class="callout">
+<div class="h"><i class="fas fa-file-circle-check"></i> Template</div>
+<div class="b">Decision Record</div>
+<div class="s">Lock decisions, expectations, and trade-offs in writing.</div>
+<a class="btn secondary" href="template-decision-record.html"><i class="fas fa-arrow-right"></i> Open</a>
+</div>
+<div class="callout">
+<div class="h"><i class="fas fa-clipboard-list"></i> Review</div>
+<div class="b">Meeting Effectiveness</div>
+<div class="s">Stop vague meetings and convert them into measurable outputs.</div>
+<a class="btn secondary" href="review-meeting-effectiveness.html"><i class="fas fa-arrow-right"></i> Open</a>
+</div>
+<div class="callout">
+<div class="h"><i class="fas fa-folder-open"></i> Playbook</div>
+<div class="b">Evidence &amp; Documentation</div>
+<div class="s">A clean system for collecting, organising, and using evidence.</div>
+<a class="btn secondary" href="framework-evidence-and-documentation.html"><i class="fas fa-arrow-right"></i> Open</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

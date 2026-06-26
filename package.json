@@ -1,0 +1,19 @@
+{
+  "name": "employee-playbook-clean",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "node scripts/check-project.mjs",
+    "check:js": "find assets api scripts -name '*.js' -o -name '*.mjs' | xargs -I{} node --check {}"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "openai": "^4.0.0",
+    "stripe": "^14.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "vercel": "^34.0.0"
+  }
+}

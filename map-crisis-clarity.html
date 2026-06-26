@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Crisis Clarity Map | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="map-crisis-clarity">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-expectation-burnout-and-capacity.html">Expectation, Burnout &amp; Capacity</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Crisis Clarity Map</span>
+</div>
+<span class="checklist-name">CRISIS CLARITY MAP</span>
+<h1 class="hero-main-heading">Stop the spiral — get a clean read on what’s driving pressure, risk, and cognitive overload</h1>
+<div class="hero-subheading">
+        Rate each dimension from <strong>0 to 10</strong> based on how intense it feels right now (<strong>0</strong> = calm / controlled, <strong>10</strong> = critical / unstable).
+        Add a short note if you want. The map will show where pressure is concentrated — and the 72-hour plan will tell you what to do first.
+      </div>
+<div class="tool-toggle-row">
+<div aria-label="Tool toggle" class="toggle-shell" role="tablist">
+<button aria-selected="true" class="toggle-btn active" id="tabMap" role="tab">
+<i class="fas fa-chart-radar"></i> Crisis Map
+          </button>
+<button aria-selected="false" class="toggle-btn" id="tabPlan" role="tab">
+<i class="fas fa-hourglass-half"></i> 72-Hour Stabilisation Plan
+          </button>
+</div>
+</div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-compass category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill hr" href="category-hr-insider.html">
+<i class="fas fa-file-shield category-icon"></i>
+<span>HR Insider</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-circle-nodes"></i>When to Use This Map</h3>
+<ul class="bullet-list">
+<li>When you feel flooded and can’t separate urgency from importance</li>
+<li>When you’re “coping” but your decision quality is slipping</li>
+<li>When you suspect risk is building (HR, reputation, conflict, burnout) but it’s blurred</li>
+<li>When you need a <strong>72-hour stabilisation</strong> sequence, not another framework</li>
+<li>When you need to communicate clearly without emotional leakage</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Rate <strong>now</strong>, not your “best day” or potential</li>
+<li>High scores are not “bad” — they are <strong>signal</strong></li>
+<li>Look for <strong>clusters</strong>: pressure often concentrates into 2–3 root drivers</li>
+<li>Add a note where the number is high — that’s where your first move sits</li>
+<li>Use the 72-hour plan to reduce pressure before you try to “perform through it”</li>
+</ul>
+</div>
+</div>
+<div class="panel active" id="panelMap">
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title">Rate Each Dimension (0–10)</h2>
+<div class="checklist-section-subtitle">
+<strong>0</strong> = calm / controlled   ·   <strong>5</strong> = unstable / distracting   ·   <strong>10</strong> = critical / uncontained
+      </div>
+<div class="checklist-grid" id="assessmentGrid"></div>
+</div>
+<div class="risk-dashboard-section">
+<div class="risk-snapshot-header">
+<h2>Your Crisis Snapshot</h2>
+<p>
+          The map shows where pressure is concentrated. The Heat Index is not a judgement — it’s a <strong>stability forecast</strong>.
+          High heat means your nervous system and your risk profile are competing with your performance.
+        </p>
+</div>
+<div class="risk-dashboard">
+<div class="risk-card">
+<div class="risk-card-header">
+<div>
+<div class="risk-card-title"><i class="fas fa-chart-radar"></i> Crisis Map (Live)</div>
+<div class="risk-card-sub">High spikes = pressure drivers. Aim to reduce the top 1–2 spikes first.</div>
+</div>
+<div class="risk-score-pill medium" id="mapLevelPill">
+<span class="dot"></span>
+<span id="mapLevelLabel">Not rated</span>
+</div>
+</div>
+<div class="radar-wrap">
+<div class="radar-canvas-wrap">
+<canvas aria-label="Crisis map" height="640" id="radarCanvas" width="800"></canvas>
+</div>
+<div class="radar-legend">
+<span class="legend-chip"><span class="legend-swatch"></span> Severity intensity across 9 dimensions</span>
+<span id="answeredCount">0/9 rated</span>
+</div>
+<div class="map-comments-wrap">
+<div class="map-comments-header">
+<div class="map-comments-title"><i class="fas fa-note-sticky"></i> Notes (Live)</div>
+<div class="map-comments-hint">Your notes will appear here as you add them.</div>
+</div>
+<div class="comment-list-inline" id="commentListInline"></div>
+</div>
+</div>
+</div>
+<div class="risk-card">
+<div class="risk-card-header">
+<div>
+<div class="risk-card-title"><i class="fas fa-sliders"></i> Heat Index</div>
+<div class="risk-card-sub">Higher = more instability competing with clarity, energy, and execution.</div>
+</div>
+<div class="risk-score-pill medium" id="heatPill">
+<span class="dot"></span>
+<span id="heatLabel">Not rated</span>
+</div>
+</div>
+<div class="heat-index-row">
+<div class="heat-index-title">Heat Index</div>
+<div class="heat-index-value" id="heatValue">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill low" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Low</span>
+<span>Watch</span>
+<span>Critical</span>
+</div>
+<div class="dimension-pills">
+<div class="dimension-pill">
+<span class="label">Average Severity</span>
+<span class="score" id="avgScore">0.0</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Highest Spike</span>
+<span class="score" id="topSpike">0</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Top Driver</span>
+<span class="score" id="topDriver">—</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Second Driver</span>
+<span class="score" id="secondDriver">—</span>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+            </button>
+<button class="action-btn secondary" id="copyBtn">
+<i class="far fa-copy"></i> Copy Notes
+            </button>
+<button aria-label="Clear all" class="action-btn secondary" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear all
+            </button>
+</div>
+<div>
+<strong>Rule:</strong> stabilise first, optimise later.
+            When heat is high, the “right” long-term move often fails because your system can’t hold it yet.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel" id="panelPlan">
+<div class="risk-dashboard-section">
+<div class="risk-snapshot-header">
+<h2>Your 72-Hour Stabilisation Plan</h2>
+<p>
+          This is the sequence that buys you oxygen: reduce pressure, contain risk, protect energy, and create one clean conversation.
+          It adapts to your top drivers from the Crisis Map. Rate at least <strong>5</strong> dimensions to generate a sharper plan.
+        </p>
+</div>
+<div class="risk-card">
+<div class="risk-card-header">
+<div>
+<div class="risk-card-title"><i class="fas fa-hourglass-half"></i> Stabilisation Sequence</div>
+<div class="risk-card-sub">Short, surgical, measurable. This is how you stop compounding damage.</div>
+</div>
+<div class="risk-score-pill medium" id="planPill">
+<span class="dot"></span>
+<span id="planLabel">Adaptive</span>
+</div>
+</div>
+<div class="dimension-pills">
+<div class="dimension-pill">
+<span class="label">Heat Index</span>
+<span class="score" id="planHeat">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Top Driver</span>
+<span class="score" id="planTop">—</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Second Driver</span>
+<span class="score" id="planSecond">—</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Fastest Win Lever</span>
+<span class="score" id="planLever">—</span>
+</div>
+</div>
+<div class="plan-grid">
+<div class="plan-block">
+<h4><i class="fas fa-stopwatch"></i> 0–2 Hours (Contain)</h4>
+<ul class="plan-list" id="plan0"></ul>
+<div class="plan-foot" id="plan0Foot">Output: a single-page “today is contained” list.</div>
+</div>
+<div class="plan-block">
+<h4><i class="fas fa-calendar-day"></i> 2–24 Hours (Stabilise)</h4>
+<ul class="plan-list" id="plan24"></ul>
+<div class="plan-foot" id="plan24Foot">Output: one boundary + one conversation request.</div>
+</div>
+<div class="plan-block">
+<h4><i class="fas fa-clipboard-check"></i> 24–48 Hours (De-risk)</h4>
+<ul class="plan-list" id="plan48"></ul>
+<div class="plan-foot" id="plan48Foot">Output: evidence, alignment, and fewer moving parts.</div>
+</div>
+<div class="plan-block">
+<h4><i class="fas fa-shield"></i> 48–72 Hours (Lock In)</h4>
+<ul class="plan-list" id="plan72"></ul>
+<div class="plan-foot" id="plan72Foot">Output: a repeatable operating rule for next week.</div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="regenBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate / Refresh Plan
+          </button>
+<button class="action-btn secondary" id="copyPlanBtn">
+<i class="far fa-copy"></i> Copy Plan
+          </button>
+<button class="action-btn secondary" id="backBtn">
+<i class="fas fa-arrow-left"></i> Back to Map
+          </button>
+</div>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

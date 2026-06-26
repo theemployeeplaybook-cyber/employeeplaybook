@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>My Playbook | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="account" data-protected="true">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell account-page">
+<div class="container stack">
+<section aria-label="Welcome back" class="card welcome-card">
+<div class="welcome-top">
+<div>
+<div class="welcome-hello" id="helloLine">Hello —</div>
+<div class="welcome-hero-line">Welcome back — your saved library is ready.</div>
+<div class="welcome-sub">
+            This is your private working space: save what matters, keep the record clean, and pick your next move with calm precision.
+          </div>
+</div>
+<div class="welcome-actions">
+<button class="quiet-link" id="setNameBtn"><i class="fas fa-user-pen"></i> Set name</button>
+<button class="quiet-link" id="clearNameBtn"><i class="fas fa-user-slash"></i> Clear</button>
+</div>
+</div>
+</section>
+<section aria-label="Saved Categories" class="card" id="catsSection">
+<div class="card-header">
+<div>
+<div class="card-title"><i class="fas fa-grid-2"></i> Saved Categories</div>
+<div class="card-sub">Jump straight to a theme. Clicking a category filters your saved list instantly.</div>
+</div>
+</div>
+<div class="pills-wrap" id="catsWrap"></div>
+</section>
+<section aria-label="Playbook workspace" class="grid">
+<div class="left-col">
+<section aria-label="Saved resources and tools" class="card" id="savedSection">
+<div class="card-header">
+<div>
+<div class="card-title"><i class="fas fa-bookmark"></i> Saved Resources &amp; Tools</div>
+<div class="card-sub">Search, sort, open, or remove — everything you need, exactly when you need it.</div>
+</div>
+</div>
+<div class="saved-controls">
+<div class="search">
+<i class="fas fa-search"></i>
+<input id="savedSearch" placeholder="Search by title, type, or situation..." type="text"/>
+</div>
+<div class="sort">
+<select id="savedSort">
+<option value="recent">Sort: Recently used</option>
+<option value="created">Sort: Date added</option>
+<option value="az">Sort: A–Z</option>
+<option value="category">Sort: Category</option>
+</select>
+</div>
+</div>
+<div class="saved-list" id="savedList"></div>
+<div id="savedEmpty">
+<div><i class="fas fa-inbox"></i></div>
+<div>Nothing saved yet.</div>
+<div>From any tool, click <b>Save to My Playbook</b> to build your library.</div>
+</div>
+</section>
+</div>
+<aside class="right-col">
+<section aria-label="Suggested reading" class="card">
+<div class="card-header">
+<div>
+<div class="card-title"><i class="fas fa-book-open"></i> Suggested reading</div>
+<div class="card-sub">Three high-leverage resources that protect your energy and reputation.</div>
+</div>
+</div>
+<div class="reading-list" id="readingList"></div>
+</section>
+<section aria-label="Notes private" class="card" id="notesSection">
+<div class="card-header">
+<div>
+<div class="card-title"><i class="fas fa-note-sticky"></i> Notes (private)</div>
+<div class="notes-desc">Capture facts, dates, wording, decisions and follow-ups. Autosaves locally.</div>
+</div>
+</div>
+<div class="notes-box">
+<textarea class="notes-area" id="notesArea" placeholder="Write here… (facts, dates, decisions, follow-ups)"></textarea>
+</div>
+<div class="notes-footer">
+<div><span>Saved:</span> <span id="notesSavedAt">—</span></div>
+<div><span>Words:</span> <span id="notesWordCount">0</span></div>
+</div>
+<div class="notes-actions">
+<button class="btn primary" data-action="save-tool" id="saveNotesBtn"><i class="fas fa-floppy-disk"></i> Save notes</button>
+<button class="btn neutral" id="copyNotesBtn"><i class="fas fa-copy"></i> Copy</button>
+<button class="btn danger" id="clearNotesBtn"><i class="fas fa-eraser"></i> Clear</button>
+</div>
+</section>
+</aside>
+</section>
+<section aria-label="Personal check-in" class="card" id="checkinSection">
+<div class="card-header">
+<div>
+<div class="card-title"><i class="fas fa-compass"></i> Personal check-in</div>
+<div class="card-sub">Name the state, name the pressure point — get a recommendation and one clean move you can execute today.</div>
+</div>
+</div>
+<div class="checkin-grid">
+<div>
+<div>
+<i class="fas fa-face-smile"></i> How do you feel right now?
+          </div>
+<div class="checkin-row" id="moodRow">
+<button class="chip" data-mood="calm"><i class="fas fa-leaf"></i> Calm</button>
+<button class="chip" data-mood="anxious"><i class="fas fa-wave-square"></i> Anxious</button>
+<button class="chip" data-mood="overwhelmed"><i class="fas fa-burn"></i> Overwhelmed</button>
+<button class="chip" data-mood="angry"><i class="fas fa-fire"></i> Angry</button>
+<button class="chip" data-mood="tired"><i class="fas fa-moon"></i> Exhausted</button>
+</div>
+<div>
+<i class="fas fa-location-crosshairs"></i> What’s the pressure point?
+          </div>
+<div class="checkin-row" id="tagRow">
+<button class="chip" data-tag="deadline"><i class="fas fa-hourglass-half"></i> Deadline</button>
+<button class="chip" data-tag="conflict"><i class="fas fa-hand-fist"></i> Conflict</button>
+<button class="chip" data-tag="scope"><i class="fas fa-layer-group"></i> Scope creep</button>
+<button class="chip" data-tag="politics"><i class="fas fa-sitemap"></i> Politics</button>
+<button class="chip" data-tag="performance"><i class="fas fa-chart-line"></i> Performance risk</button>
+<button class="chip" data-tag="hr"><i class="fas fa-scale-balanced"></i> Formal process</button>
+<button class="chip" data-tag="burnout"><i class="fas fa-battery-quarter"></i> Burnout signs</button>
+<button class="chip" data-tag="unclear"><i class="fas fa-question"></i> Unclear direction</button>
+</div>
+<div class="sliders">
+<div class="slider">
+<div class="slider-top">
+<span><i class="fas fa-bolt"></i> Energy</span>
+<b id="energyVal">6/10</b>
+</div>
+<input id="energyRange" max="10" min="1" type="range" value="6"/>
+</div>
+<div class="slider">
+<div class="slider-top">
+<span><i class="fas fa-lightbulb"></i> Clarity</span>
+<b id="clarityVal">6/10</b>
+</div>
+<input id="clarityRange" max="10" min="1" type="range" value="6"/>
+</div>
+</div>
+</div>
+<div>
+<div aria-label="Recommended tool" class="support-mini">
+<div class="mini-label"><i class="fas fa-compass"></i> Recommended tool</div>
+<div class="mini-text" id="recToolTitle">Select a mood and pressure point.</div>
+<div class="mini-sub" id="recToolWhy">Your recommendation will update automatically.</div>
+<div class="mini-cta">
+<button class="btn success" id="openRecBtn"><i class="fas fa-arrow-up-right-from-square"></i> Open</button>
+<button class="btn danger" data-action="reset-tool" id="resetCheckinBtn"><i class="fas fa-rotate-left"></i> Reset</button>
+</div>
+</div>
+<div aria-label="One move I will make next" class="support-mini">
+<div class="mini-label"><i class="fas fa-chess"></i> One move I’ll make next</div>
+<div class="mini-text" id="nextMoveText">A clear move will appear here once you’ve checked in.</div>
+<div class="mini-sub" id="nextMoveHint">Keep it small, specific, and timed. One clean action beats five vague intentions.</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

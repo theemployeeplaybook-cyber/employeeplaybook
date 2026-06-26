@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="An interactive UK-focused assessment to check pivot readiness and risk, choose a decision path, and generate scripts for manager conversations. Not legal advice." name="description"/>
+<title>Strategic Career Pivot Guide | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="guide-strategic-career-pivot">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-career-playbook.html">Career Playbook</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Strategic Career Pivot Guide</span>
+</div>
+<span class="checklist-name">STRATEGIC CAREER PIVOT GUIDE</span>
+<h1 class="hero-main-heading" id="printTitle">Decide whether to stay, move internally, or pivot externally — with clarity and leverage</h1>
+<div class="hero-subheading">
+          Use this interactive assessment to measure <strong>Pivot Readiness</strong> and <strong>Pivot Risk</strong>,
+          choose a decision path, and generate manager scripts that help you negotiate growth without sounding entitled.
+          UK-focused and written in British English. <strong>Not legal advice.</strong>
+</div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-bullseye category-icon"></i><span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-people-arrows category-icon"></i><span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-users category-icon"></i><span>Workplace Dynamics &amp; Politics</span>
+</a>
+<a class="category-pill hr" href="category-hr-insider.html">
+<i class="fas fa-scale-balanced category-icon"></i><span>HR Insider</span>
+</a>
+<a class="category-pill confidence" href="category-confidence-presence-influence.html">
+<i class="fas fa-bolt category-icon"></i><span>Confidence, Presence &amp; Influence</span>
+</a>
+<a class="category-pill career" href="category-career-playbook.html">
+<i class="fas fa-flag category-icon"></i><span>Career Playbook</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-circle-question"></i>When to Use This Guide</h3>
+<ul class="bullet-list">
+<li>When you feel your role has plateaued and you want a strategic next move.</li>
+<li>When you’re tempted to resign but you’re not sure you’ve reduced risk first.</li>
+<li>When internal politics, restructure fog, or shifting priorities are affecting your prospects.</li>
+<li>When you want to translate achievements into business impact stories.</li>
+<li>When you need language for growth conversations without sounding entitled.</li>
+<li>When you’re deciding between a stay plan, internal move, or external pivot.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Don’t confuse frustration with strategy: pivots work when you’re moving towards a clear value story.</li>
+<li>Reduce risk before you “go loud”: build evidence, references, and a plan to protect momentum.</li>
+<li>Internal moves are often faster than external moves — if you can align to priorities and sponsors.</li>
+<li>In the UK, keep things professional and proportionate — build a narrative, not a grievance.</li>
+<li>If you’re near a restructure, understand your leverage and timing before you trigger anything.</li>
+</ul>
+</div>
+</div>
+<div class="assessment-wrap">
+<div class="two-col">
+<section aria-label="Pivot readiness assessment" class="panel">
+<div class="panel-title"><i class="fas fa-compass"></i> Pivot Readiness</div>
+<div class="panel-sub">
+            Score how prepared you are to execute a pivot with credibility, stability, and a clean story.
+            Lower scores don’t mean “don’t pivot” — they mean “sequence the pivot”.
+          </div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Clarity of target direction</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Clarity of target direction" id="r_clarity" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_r_clarity">0</div>
+</div>
+<div class="scale-labels"><span>Vague</span><span>Clear</span></div>
+</div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Evidence &amp; outcomes (business impact)</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Evidence and outcomes" id="r_evidence" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_r_evidence">0</div>
+</div>
+<div class="scale-labels"><span>Thin</span><span>Strong</span></div>
+</div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Skills alignment (gap to target role)</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Skills alignment" id="r_skills" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_r_skills">0</div>
+</div>
+<div class="scale-labels"><span>Big gap</span><span>Aligned</span></div>
+</div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Support network (sponsors/advocates)</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Support network" id="r_sponsors" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_r_sponsors">0</div>
+</div>
+<div class="scale-labels"><span>None</span><span>Strong</span></div>
+</div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Financial runway (buffer)</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Financial runway" id="r_runway" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_r_runway">0</div>
+</div>
+<div class="scale-labels"><span>Fragile</span><span>Comfortable</span></div>
+</div>
+<div class="panel-sub">
+            Choose any factors that apply right now (these adjust risk and the recommended decision path).
+          </div>
+<div aria-label="Context factors" class="chip-grid" id="factorChips">
+<div class="chip" data-key="restructure"><i class="fas fa-diagram-project"></i>Restructure / role uncertainty</div>
+<div class="chip" data-key="managerRisk"><i class="fas fa-user-shield"></i>Manager relationship fragile</div>
+<div class="chip" data-key="health"><i class="fas fa-heart-pulse"></i>Stress / burnout signs</div>
+<div class="chip" data-key="visa"><i class="fas fa-passport"></i>Visa / right-to-work constraints</div>
+<div class="chip" data-key="discipline"><i class="fas fa-triangle-exclamation"></i>Formal process risk (PIP / HR)</div>
+</div>
+</section>
+<section aria-label="Pivot risk assessment" class="panel">
+<div class="panel-title"><i class="fas fa-shield-halved"></i> Pivot Risk</div>
+<div class="panel-sub">
+            Risk is about timing, exposure, and stability — not “fear”. A smart pivot reduces risk first, then moves.
+          </div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Market volatility in your target</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Market volatility" id="k_market" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_k_market">0</div>
+</div>
+<div class="scale-labels"><span>Stable</span><span>Volatile</span></div>
+</div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Reputation exposure (risk of story gaps)</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Reputation exposure" id="k_story" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_k_story">0</div>
+</div>
+<div class="scale-labels"><span>Low</span><span>High</span></div>
+</div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Financial pressure (month-to-month)</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Financial pressure" id="k_fin" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_k_fin">0</div>
+</div>
+<div class="scale-labels"><span>Low</span><span>High</span></div>
+</div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Contract constraints (notice / non-compete)</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Contract constraints" id="k_contract" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_k_contract">0</div>
+</div>
+<div class="scale-labels"><span>Easy</span><span>Hard</span></div>
+</div>
+<div class="scale-block">
+<div class="scale-title">
+<span>Execution load (how much else is going on)</span><span class="scale-hint">0–10</span>
+</div>
+<div class="scale-row">
+<input aria-label="Execution load" id="k_load" max="10" min="0" step="1" type="range" value="0"/>
+<div class="scale-value" id="v_k_load">0</div>
+</div>
+<div class="scale-labels"><span>Clear</span><span>Overloaded</span></div>
+</div>
+<div class="panel-sub">
+            Quick snapshot (auto-updates as you move sliders).
+          </div>
+<div aria-label="Snapshot pills" class="pill-row">
+<div class="mini-pill"><i class="fas fa-gauge"></i> Readiness <span class="value" id="pillReadiness">0%</span></div>
+<div class="mini-pill"><i class="fas fa-triangle-exclamation"></i> Risk <span class="value" id="pillRisk">0%</span></div>
+<div class="mini-pill"><i class="fas fa-route"></i> Path <span class="value" id="pillPath">—</span></div>
+</div>
+<div class="panel-sub" id="pathNarrative">
+            Move at least one slider to see your recommended decision path.
+          </div>
+</section>
+</div>
+</div>
+<div class="score-section">
+<div class="score-snapshot-header">
+<h2>Your Pivot Snapshot</h2>
+<p>
+          Readiness is your ability to execute a pivot without losing credibility. Risk is your exposure if the pivot takes longer than planned.
+          The goal is not “maximum change” — it’s <strong>maximum leverage</strong>.
+        </p>
+</div>
+<div class="score-bar">
+<div class="progress-side">
+<div class="score-head">
+<div class="score-title"><i class="fas fa-chart-line"></i> Combined Pivot Signal</div>
+<div class="score-big">
+<span id="combinedScore">0%</span>
+<small>(Readiness <span id="readinessPct">0%</span> • Risk <span id="riskPct">0%</span>)</small>
+</div>
+</div>
+<div aria-hidden="true" class="progress-container">
+<div class="progress-fill" id="combinedFill"></div>
+</div>
+<div class="progress-labels">
+<span>Stabilise first</span>
+<span>Sequence the pivot</span>
+<span>Move with leverage</span>
+</div>
+<div aria-label="Dimension scores" class="dimension-grid">
+<div class="dimension-pill"><span class="label">Readiness</span><span class="score" id="dimReadiness">0%</span></div>
+<div class="dimension-pill"><span class="label">Risk</span><span class="score" id="dimRisk">0%</span></div>
+<div class="dimension-pill"><span class="label">Decision Path</span><span class="score" id="dimPath">—</span></div>
+<div class="dimension-pill"><span class="label">Priority</span><span class="score" id="dimPriority">—</span></div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-list-check"></i> Generate Pivot Report
+          </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+          </button>
+<button class="action-btn secondary" data-action="print-page" disabled="" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+          </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+          </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Strategic Pivot Report</h2>
+<p class="summary-subtitle">
+          Decision path: <strong><span id="reportPath">—</span></strong> •
+          Readiness: <strong><span id="reportReadiness">0%</span></strong> •
+          Risk: <strong><span id="reportRisk">0%</span></strong>
+</p>
+<p class="summary-insight" id="reportInsight">
+          Generate your report to see next steps, decision sequencing, and scripts you can use immediately.
+        </p>
+</div>
+<h3 class="section-header red"><i class="fas fa-triangle-exclamation"></i> Key Risks to Address</h3>
+<div class="grid-3" id="riskCards"></div>
+<h3 class="section-header purple"><i class="fas fa-route"></i> Recommended Decision Path</h3>
+<div class="grid-3" id="pathCards"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Manager Conversation Scripts</h3>
+<div class="script-stack" id="scriptBlocks"></div>
+</div>
+<section class="updates-bottom" id="updatesBottom">
+<div class="updates-title"><i class="fas fa-arrow-down-wide-short"></i> Risk &amp; Readiness Updates</div>
+<div class="updates-sub">
+        These updates sit at the bottom by design: you set your inputs, then you read the meaning. They update live, even before you generate the report.
+      </div>
+<div class="updates-grid">
+<div class="update-card">
+<h4><i class="fas fa-gauge"></i> Readiness Update</h4>
+<p id="readinessUpdateText">Move at least one slider to generate a readiness interpretation.</p>
+<div class="update-pill" id="readinessUpdatePill">Readiness: 0%</div>
+</div>
+<div class="update-card">
+<h4><i class="fas fa-triangle-exclamation"></i> Risk Update</h4>
+<p id="riskUpdateText">Move at least one slider to generate a risk interpretation.</p>
+<div class="update-pill" id="riskUpdatePill">Risk: 0%</div>
+</div>
+</div>
+</section>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

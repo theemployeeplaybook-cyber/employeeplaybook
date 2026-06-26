@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Communication Planning Template | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="template-communication-planning">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Communication Planning Template</span>
+</div>
+<span class="checklist-name">COMMUNICATION PLANNING TEMPLATE</span>
+<h1 class="hero-main-heading" data-date="">
+      Plan what you’ll say, who it’s for, and what success looks like so your message is clear and drives decisions
+    </h1>
+<div class="hero-subheading">
+      Move from <strong>emotion</strong> to <strong>architecture</strong>: objective, audience, message, proof, tone, channel, timing, and follow-up.
+      Reduce misinterpretation, protect credibility, and make your communication harder to ignore, without being aggressive.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div aria-label="Category pills" class="related-pills">
+<a class="category-pill confidence" href="category-confidence-presence-influence.html" title="Confidence &amp; Influence">
+<i class="fas fa-bolt"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html" title="Workplace Dynamics &amp; Politics">
+<i class="fas fa-users"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Template</h3>
+<ul class="bullet-list">
+<li>Before a difficult 1:1, pushback, boundary reset, or escalation email.</li>
+<li>When you need a decision and want to avoid “we’ll circle back”.</li>
+<li>When you’re worried your message could be misread, politicised, or minimised.</li>
+<li>When you need to communicate change, risk, or impact without sounding dramatic.</li>
+<li>When you want a calm paper trail that holds under scrutiny.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Define <strong>one</strong> objective and one measurable success outcome.</li>
+<li>Write your key message in a single sentence that survives forwarding.</li>
+<li>Include <strong>proof points</strong>: facts, impact, dates, examples.</li>
+<li>Choose tone deliberately (not based on mood) and match it to stakes.</li>
+<li>Lock the follow-up: owner, timeline, review date, “if not resolved then…”</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Draft your communication plan</h2>
+<p>
+        Four structured sections: (1) objective + stakes, (2) audience + decision context, (3) message + proof + tone,
+        (4) channel + timing + follow-up. Generate your Comms Pack when you have enough to be specific and action-led.
+      </p>
+</div>
+</div>
+<div class="stakes-row">
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="left">
+<div class="title"><i class="fas fa-gauge-high"></i> Stakes &amp; Sensitivity Index</div>
+<div class="sub">How easy is this to politicise or misread? Used to shape tone + scripts.</div>
+</div>
+<div class="mini-tag" id="stakesTag"><i class="fas fa-circle"></i> —</div>
+</div>
+<input aria-label="Stakes &amp; Sensitivity Index" class="range" id="stakes" max="10" min="1" step="1" type="range" value="1"/>
+<div class="scale">
+<span>1 low</span>
+<span>5 medium</span>
+<span>10 high</span>
+</div>
+</div>
+</div>
+<div class="form-grid" id="formGrid">
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+    </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+    </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Communication Pack</h2>
+<p class="pack-subtitle">
+      One-page plan you can paste into notes, plus risk framing (how it could be misread and how you prevent it),
+      and copy-ready scripts that lock decisions without sounding heavy.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Plan strength</div>
+<div class="metric-score" id="strengthSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page comms plan</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Risk framing (how it could be misread)</h3>
+<div class="pack-grid" id="riskGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (clear, calm, UK-friendly)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

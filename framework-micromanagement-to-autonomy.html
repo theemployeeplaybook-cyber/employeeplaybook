@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Micromanagement to Autonomy Framework | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="framework-micromanagement-to-autonomy">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Micromanagement to Autonomy Framework</span>
+</div>
+<span class="checklist-name">MICROMANAGEMENT TO AUTONOMY FRAMEWORK</span>
+<h1 class="hero-main-heading">Move from micromanagement to autonomy without triggering political fallout</h1>
+<div class="hero-subheading">
+      Diagnose the pattern, reset expectations, create proof, and lock in clear decision rights.
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-compass category-icon"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="playbook-wrap">
+<div class="intro-grid">
+<div class="card">
+<div class="card-title"><i class="fas fa-bullseye"></i>How to use this framework</div>
+<p class="mini">
+<strong>What this is:</strong> a practical framework to shift a control-heavy manager relationship into one with clear autonomy — without "rebellion energy".
+        <br/><br/>
+<strong>How to use it:</strong> work through the sections in order. You'll identify the exact micromanagement pattern, pick the safest leverage points, and build a short "autonomy contract" (decision rights + check‑ins + proof signals).
+        <br/><br/>
+<strong>Best outcome:</strong> you leave with a clear plan you can run this week: what to do, what to stop, what to say, and what success looks like.
+</p>
+<div></div>
+<div class="pill-grid">
+<div class="micro-pill"><span class="label">Time</span><span class="value">25–40 mins</span></div>
+<div class="micro-pill"><span class="label">Output</span><span class="value">Autonomy plan</span></div>
+<div class="micro-pill"><span class="label">Depth</span><span class="value">Tactical + strategic</span></div>
+<div class="micro-pill"><span class="label">Best use</span><span class="value">Manager reset</span></div>
+</div>
+</div>
+<div class="card">
+<div class="card-title"><i class="fas fa-gauge-high"></i>Live shift score</div>
+<p class="mini">This isn't a performance rating. It's a completion signal so you leave with a usable plan, not "nice ideas".</p>
+<div></div>
+<div class="score-row">
+<span class="score-label">Completed</span>
+<span class="score-value" id="overallScore">0%</span>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="overallFill"></div>
+</div>
+<div class="pill-grid">
+<div class="micro-pill"><span class="label">Diagnose</span><span class="value" id="scoreDiagnose">0%</span></div>
+<div class="micro-pill"><span class="label">Reset</span><span class="value" id="scoreReset">0%</span></div>
+<div class="micro-pill"><span class="label">Influence</span><span class="value" id="scoreInfluence">0%</span></div>
+<div class="micro-pill"><span class="label">Agreement</span><span class="value" id="scoreAgreement">0%</span></div>
+</div>
+</div>
+</div>
+<div class="anchor-profiles-insight">
+<div>
+<i class="fas fa-lightbulb"></i>
+      Anchor profiles
+    </div>
+<div class="anchor-profiles-grid">
+<div><strong>Builder/Operator</strong><div>You thrive on creating order from chaos. Good processes, clear ownership, and tangible progress matter most.</div></div>
+<div><strong>Specialist/Expert</strong><div>You're driven to go deep. Being the person others turn to for mastery and credibility gives you meaning.</div></div>
+<div><strong>Leader/People Catalyst</strong><div>You see potential in people. Building capability, unlocking growth, and shaping culture fuels you.</div></div>
+<div><strong>Change/Turnaround</strong><div>You're energised by ambiguity and fixing broken things. Stagnation drains you; solving hard problems energises you.</div></div>
+<div><strong>Autonomy/Freedom</strong><div>You need control over how and when you work. Micromanagement kills your motivation faster than anything else.</div></div>
+<div><strong>Mission/Values</strong><div>You won't stay where your values don't align. Working toward something you believe in is non-negotiable.</div></div>
+<div><strong>Status/Progression</strong><div>You want visible seniority and influence. Titles, scope, and recognition signal progress and signal to others you've made it.</div></div>
+<div><strong>Security/Stability</strong><div>You prefer predictability and low volatility. Knowing what's expected lets you perform at your best without stress.</div></div>
+</div>
+</div>
+<div class="section" data-section="diagnose">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">1</div>
+<div class="section-title">
+<strong>Diagnose the micromanagement pattern</strong>
+<span>Get precise: what’s happening, when, and what it costs you.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-diagnose">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-magnifying-glass"></i>
+<strong>What do they do that feels like micromanagement?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="diagnose" name="framework-micromanagement-to-autonomy_field_1" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_2" placeholder="Be behavioural: rework, over-checking, changing priorities mid-task, direct messages for every step, speaking for you in meetings, etc."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-clock-rotate-left"></i>
+<strong>Where does it show up most?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="diagnose" name="framework-micromanagement-to-autonomy_field_3" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_4" placeholder="Which work types trigger it (comms, stakeholder updates, decisions, deadlines, quality, risk)? When in the week? In which channels?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-money-bill-trend-up"></i>
+<strong>What is the real cost?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="diagnose" name="framework-micromanagement-to-autonomy_field_5" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_6" placeholder="Lost time, slower delivery, reduced confidence, missed opportunities, decision paralysis, burnout risk, reputational impact. Quantify if you can."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-bullseye"></i>
+<strong>What autonomy would change everything?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="diagnose" name="framework-micromanagement-to-autonomy_field_7" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_8" placeholder="Pick 1–2 autonomy outcomes (e.g. you own comms drafts; you own prioritisation inside agreed goals; you own stakeholder updates)."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-lightbulb"></i>
+<div>
+<strong>Insight:</strong> “Micromanagement” is often a proxy for unclear expectations, low trust, or risk anxiety. You fix outcomes by fixing the trust system.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="reset">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">2</div>
+<div class="section-title">
+<strong>Reset the working system</strong>
+<span>Shift from ad‑hoc checking to a predictable cadence and clear standards.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-reset">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-list-check"></i>
+<strong>What “good” looks like</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="reset" name="framework-micromanagement-to-autonomy_field_9" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_10" placeholder="Define quality/format/tone/accuracy expectations for your key outputs. If you don’t define it, they will keep checking it."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-calendar-check"></i>
+<strong>Default check‑in cadence</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="reset" name="framework-micromanagement-to-autonomy_field_11" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_12" placeholder="Propose a rhythm: e.g. Mon priorities (15m), Wed progress (10m), Fri outcomes (10m). Decide the channel too (call, doc, Slack)."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-triangle-exclamation"></i>
+<strong>Escalation rules</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="reset" name="framework-micromanagement-to-autonomy_field_13" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_14" placeholder="When do you pull them in? Define triggers: risk thresholds, external deadlines, budget/people impact, stakeholder sensitivity."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-route"></i>
+<strong>Your “autonomy boundary”</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="reset" name="framework-micromanagement-to-autonomy_field_15" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_16" placeholder="Where you will operate independently (within guardrails) and what you’ll always align on first."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-shield"></i>
+<div>
+<strong>Tip:</strong> You’re not asking for “freedom”. You’re offering a risk‑managed system: visibility + escalation + predictable updates.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="influence">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">3</div>
+<div class="section-title">
+<strong>Create trust and proof</strong>
+<span>Make it easy for them to relax control.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-influence">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-handshake"></i>
+<strong>What do they need to trust?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="influence" name="framework-micromanagement-to-autonomy_field_17" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_18" placeholder="Accuracy, tone, stakeholder judgement, speed, prioritisation, discretion, risk management, attention to detail. Pick 1–2."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-clipboard-check"></i>
+<strong>Proof signals you can provide</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="influence" name="framework-micromanagement-to-autonomy_field_19" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_20" placeholder="Examples: a one‑page weekly outcomes doc; decision log; pre‑read before meetings; draft‑then‑ship rule; measurable KPIs; stakeholder feedback."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-comments"></i>
+<strong>Language that keeps it non‑threatening</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="influence" name="framework-micromanagement-to-autonomy_field_21" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_22" placeholder="Write phrases that signal alignment, not challenge (e.g. ‘to reduce your load’, ‘so you have visibility’, ‘so we move faster safely’)."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-chart-line"></i>
+<strong>90‑day credibility plan</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="influence" name="framework-micromanagement-to-autonomy_field_23" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_24" placeholder="What 2–3 outcomes will you deliver to earn autonomy? Include timing, measures, and how you’ll report progress."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-seedling"></i>
+<div>
+<strong>Reality:</strong> autonomy is rarely “granted”. It’s earned through visible reliability and clean escalation when risk is real.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="agreement">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">4</div>
+<div class="section-title">
+<strong>Autonomy agreement</strong>
+<span>Lock it in: decision rights, check‑ins, and what happens when things change.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-agreement">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-scale-balanced"></i>
+<strong>Decision rights</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="agreement" name="framework-micromanagement-to-autonomy_field_25" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_26" placeholder="List 3–5 decisions you own, 1–2 you co‑decide, and 1–2 they own. Be specific: ‘I decide X with informed update’ etc."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-flag-checkered"></i>
+<strong>Success criteria</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="agreement" name="framework-micromanagement-to-autonomy_field_27" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_28" placeholder="How will both of you know autonomy is working? Include speed, quality, fewer interruptions, stakeholder outcomes, and risk management."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-right-left"></i>
+<strong>What you’ll do when priorities shift</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="agreement" name="framework-micromanagement-to-autonomy_field_29" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_30" placeholder="Define a simple re‑prioritisation method: what gets paused, who informs stakeholders, and how changes get documented."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-comment-dots"></i>
+<strong>Conversation starter script</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="agreement" name="framework-micromanagement-to-autonomy_field_31" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-micromanagement-to-autonomy_field_32" placeholder="Draft a 60–90 second opener you can use with your manager. Keep it calm, practical, and outcome‑focused."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-lock"></i>
+<div>
+<strong>Make it stick:</strong> after the conversation, summarise the agreement in writing. That’s how you stop the system sliding back to “check everything”.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="anchor-output-card" id="anchorOutputCard">
+<div class="card">
+<div class="card-title"><i class="fas fa-sparkles"></i>Your Autonomy Shift Output</div>
+<div id="outputEmptyState">
+<p>Fill in the sections above, then generate your structured autonomy plan.<br/>
+<span>This will summarise your diagnosis, reset plan, proof signals and autonomy agreement.</span></p>
+</div>
+<div id="outputContent"></div>
+<div id="outputQualityCheck"></div>
+</div>
+</div>
+<div>
+<button class="mini-btn primary" id="generateOutputBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="mini-btn secondary" id="collapseAll"><i class="fas fa-compress"></i> Collapse all</button>
+<button class="mini-btn primary" id="expandAll"><i class="fas fa-expand"></i> Expand all</button>
+<button class="mini-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn"><i class="fas fa-cloud-arrow-up"></i> Save Progress</button>
+<button class="mini-btn secondary" data-action="print-page" id="printBtn"><i class="fas fa-print"></i> Print / Save PDF</button>
+<button class="mini-btn secondary" disabled="" id="clearBtn"><i class="fas fa-eraser"></i> Clear All</button>
+</div>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

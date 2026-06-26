@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Decision Record Template | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="template-decision-record">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Decision Record Template</span>
+</div>
+<span class="checklist-name">DECISION RECORD TEMPLATE</span>
+<h1 class="hero-main-heading" data-date="">
+      Capture the decision, the why, and the trade-offs — so it survives scrutiny, politics, and future memory gaps
+    </h1>
+<div class="hero-subheading">
+      Move from “we agreed something” to a clean record: <strong>context</strong>, <strong>options</strong>, <strong>rationale</strong>, <strong>risks</strong>, <strong>owners</strong> and <strong>review points</strong>.
+      Protect credibility, reduce rework, and stop decisions being quietly rewritten later.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div aria-label="Category pills" class="related-pills">
+<a class="category-pill career" href="category-career-playbook.html" title="Decision Making &amp; Career Path">
+<i class="fas fa-route"></i>
+<span>Career Playbook</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html" title="Workplace Dynamics &amp; Politics">
+<i class="fas fa-users"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-clipboard-list"></i>When to Use This Template</h3>
+<ul class="bullet-list">
+<li>After a meeting where “something was agreed” but you want it unambiguous.</li>
+<li>When decisions keep getting revisited, reframed, or quietly rewritten.</li>
+<li>Before implementing something that affects scope, resourcing, risk, or reputation.</li>
+<li>When you’re being asked to “just do it” without clarity on trade-offs.</li>
+<li>Any time you want a calm paper trail that holds under scrutiny.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Write the <strong>decision statement</strong> in one sentence (clear enough to quote).</li>
+<li>List <strong>options considered</strong> + why they were rejected (avoids hindsight blame).</li>
+<li>State <strong>assumptions</strong> explicitly — then add a review trigger if they change.</li>
+<li>Lock <strong>owners</strong>, <strong>next actions</strong> and a <strong>review date</strong>.</li>
+<li>Send a recap: “If anything is incorrect, reply with amendments within 24 hours.”</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Build your decision record</h2>
+<p>
+        Four sections: (1) decision basics, (2) context + constraints, (3) options + rationale, (4) risks + alignment + next steps.
+        Generate a clean Decision Record when you have enough to be specific and defendable.
+      </p>
+</div>
+</div>
+<div class="stakes-row">
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="left">
+<div class="title"><i class="fas fa-scale-balanced"></i> Decision Impact Index</div>
+<div class="sub">How costly is it if this decision is wrong or reversed? Used to shape risk + review.</div>
+</div>
+<div class="mini-tag" id="impactTag"><i class="fas fa-circle"></i> —</div>
+</div>
+<input aria-label="Decision Impact Index" class="range" id="impact" max="10" min="1" step="1" type="range" value="1"/>
+<div class="scale">
+<span>1 low</span>
+<span>5 medium</span>
+<span>10 high</span>
+</div>
+</div>
+</div>
+<div class="form-grid" id="formGrid">
+</div>
+<div class="workspace-actions bottom">
+<button class="mini-btn primary" disabled="" id="generatePackBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="mini-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn"><i class="fas fa-cloud-arrow-up"></i> Save Progress</button>
+<button class="mini-btn secondary" data-action="print-page" id="printBtn"><i class="fas fa-print"></i> Print / Save PDF</button>
+<button class="mini-btn secondary" disabled="" id="clearBtn"><i class="fas fa-eraser"></i> Clear All</button>
+</div>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Decision Record</h2>
+<p class="pack-subtitle">
+      A one-page record you can paste into notes, a risk lens (how this could be challenged), and copy-ready scripts to confirm the record in writing.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Record completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Record strength</div>
+<div class="metric-score" id="strengthSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page decision record</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Challenge points (how it could be attacked)</h3>
+<div class="pack-grid" id="riskGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (confirm the record in writing)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

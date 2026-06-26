@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Career Advancement Playbook | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="playbook-career-advancement">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<section class="pb-card" id="c1">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-crosshairs"></i> Chapter 1) Target &amp; timeline</div>
+<div class="pb-card-sub">
+              Vague ambition leaks months. A clean target makes you easier to back, easier to sponsor, and harder to ignore.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Current role</span></div>
+<input class="input pb-input" id="c1_now" placeholder="Example: Senior Analyst (Ops), Team Lead (People), Project Manager"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Target role (next step)</span></div>
+<input class="input pb-input" id="c1_target" placeholder="Example: Lead / Manager / Principal / Senior PM / Head of…"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Timeline</span></div>
+<input class="input pb-input" id="c1_timeline" placeholder="Example: 3 months / 6 months / next cycle / by Q2"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Non-negotiables</span></div>
+<input class="input pb-input" id="c1_nonneg" placeholder="Example: no travel, remote, salary floor, protected time, wellbeing"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Who ultimately decides?</span></div>
+<input class="input pb-input" id="c1_decider" placeholder="Example: Manager + Director / Calibration panel / HR + VP"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">What “yes” looks like</span></div>
+<input class="input pb-input" id="c1_yes" placeholder="Example: Own X scope; lead Y forum; deliver Z outcomes; trusted for decisions"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your “why now” (credibility version)</span></div>
+<textarea class="textarea pb-input" id="c1_whynow" placeholder="Example: I’m already operating at the next level: owning decisions, stakeholder management, delivery under pressure, coaching others."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">The skill bet (what you’re building)</span></div>
+<textarea class="textarea pb-input" id="c1_bet" placeholder="Example: stronger decision-making; executive comms; commercial judgement; leading through ambiguity; AI-enabled efficiency."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-lightbulb"></i>
+<div>
+<b>Modern-day insight: promotions are often “capacity decisions”</b>
+<span>Many companies promote when they believe you’ll <b>reduce leadership load</b>. Show you can absorb complexity, not just do tasks.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-bolt"></i>
+<div>
+<b>Uncommon knowledge: titles follow proof of “scope”</b>
+<span>If you want the title, ask for <b>decision rights</b>, <b>ownership</b>, and <b>measurable outcomes</b>. Title comes after scope becomes real.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-bullseye"></i> Career North Star (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_northstar">Click Build to generate your Career North Star.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c1"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c2">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-medal"></i> Chapter 2) Narrative &amp; signals</div>
+<div class="pb-card-sub">
+              The game is not “who worked hardest”. It’s “whose value is most obvious, safest to back, and easiest to justify”.
+              Build a narrative people can repeat in one breath.
+            </div>
+</div>
+</div>
+<div aria-label="Narrative tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="nA" type="button"><i class="fas fa-bolt"></i> Impact</button>
+<button class="pb-tab" data-tab="nB" type="button"><i class="fas fa-shield"></i> Reliability</button>
+<button class="pb-tab" data-tab="nC" type="button"><i class="fas fa-people-group"></i> Leadership signals</button>
+<button class="pb-tab" data-tab="nD" type="button"><i class="fas fa-brain"></i> Neuro advantage</button>
+</div>
+<div class="pb-tab-panel active" id="nA">
+<div class="pb-card-sub">
+<b>Rule:</b> “Busy” doesn’t sell. <b>Outcome</b> sells. Use numbers, time saved, risk reduced, revenue protected, mistakes prevented.
+          </div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">10-second headline (meeting opener)</span></div>
+<input class="input pb-input" id="c2_headline" placeholder="Example: Headline: we’re on track; decision needed on X; next step Y."/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Top 3 outcomes you’ve delivered</span></div>
+<textarea class="textarea pb-input" id="c2_outcomes" placeholder="Example: Reduced cycle time by 25%; rebuilt process; delivered a high-risk launch with zero incidents."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Numbers you can safely use</span></div>
+<input class="input pb-input" id="c2_numbers" placeholder="Example: +20% / -£50k cost / -2 days / 3 stakeholders / 12 projects"/>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="nB">
+<div class="pb-card-sub">
+<b>Uncommon truth:</b> senior leaders value people who lower uncertainty. “Reliable” beats “brilliant but unpredictable”.
+          </div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your reliability signals</span></div>
+<textarea class="textarea pb-input" id="c2_reliability" placeholder="Example: clean weekly updates; early risk flags; no surprises; consistent delivery; calm in ambiguity."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Where you sometimes leak credibility</span></div>
+<textarea class="textarea pb-input" id="c2_leaks" placeholder="Example: over-explaining; apologising; late updates; unclear ownership; reacting emotionally."></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="nC">
+<div class="pb-card-sub">
+<b>Leadership signals</b> are not motivational quotes. They’re behaviours: decisions, boundaries, calm, and lifting others’ capability.
+          </div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Your “signature strength”</span></div>
+<input class="input pb-input" id="c2_brand" placeholder="Example: turning chaos into structure / stakeholder calm / execution under pressure"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your next-level behaviour</span></div>
+<input class="input pb-input" id="c2_nextbeh" placeholder="Example: own decisions; coach others; unblock; simplify; protect priorities"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">A story you want attached to your name</span></div>
+<textarea class="textarea pb-input" id="c2_story" placeholder="Example: “When it got messy, they made it clear and delivered.”"></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="nD">
+<div class="pb-card-sub">
+<b>Neuro hacks you can actually use:</b> these are practical perception tools—no fluff.
+          </div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-bullseye"></i>
+<div><b>Primacy effect</b><span>First impressions stick. Lead meetings with a 10-second <b>headline</b> + <b>decision</b> + <b>next step</b>.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-layer-group"></i>
+<div><b>Chunking</b><span>People remember in 3s. Use <b>3 outcomes</b>, <b>3 risks</b>, <b>3 asks</b>.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-flag-checkered"></i>
+<div><b>Peak-end rule</b><span>How you end a project matters. Finish with a clean summary and “what this unlocks next”.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-eye"></i>
+<div><b>Availability bias</b><span>People promote what they can recall. Create a monthly “wins memo” to your manager (short, factual, consistent).</span></div>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-microphone-lines"></i> Your positioning paragraph (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_positioning">Click Build to generate a short positioning paragraph.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c2"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c3">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-diagram-project"></i> Chapter 3) Leverage map</div>
+<div class="pb-card-sub">
+              Progression is often decided in rooms you’re not in. You don’t need to be political—you need to be <b>aware</b>.
+              This chapter maps who influences your progression and how to move without drama.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Sponsor candidate</span></div>
+<input class="input pb-input" id="c3_sponsor" placeholder="Example: a senior leader who benefits from your success"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your manager’s incentive</span></div>
+<input class="input pb-input" id="c3_mgr_incentive" placeholder="Example: delivery, stability, headcount, reputation, risk"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Key rooms / forums where progression is decided</span></div>
+<textarea class="textarea pb-input" id="c3_rooms" placeholder="Example: calibration meeting; leadership forum; quarterly planning; headcount review; project steering group."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Stakeholders who can validate you</span></div>
+<textarea class="textarea pb-input" id="c3_validators" placeholder="Example: Finance, Product, Ops lead, key client, peer manager (names/roles)."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Potential blockers / friction points</span></div>
+<textarea class="textarea pb-input" id="c3_blockers" placeholder="Example: someone threatened by your visibility; competing priorities; manager insecurity; unclear levelling."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your leverage moves (quiet, clean, strategic)</span></div>
+<textarea class="textarea pb-input" id="c3_moves" placeholder="Example: align on outcomes; ask for decision rights; send concise win recaps; request stretch scope with guardrails; collect validator quotes."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-chess"></i>
+<div>
+<b>Uncommon knowledge: “credit flow” matters</b>
+<span>People support what makes them look good. Route wins through your manager, then widen visibility. Don’t blindside them.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-user-gear"></i>
+<div>
+<b>Personality / Behaviour lens</b>
+<span><b>High-control manager:</b> use written recaps + controlled trials. <b>Avoidant manager:</b> time-box and bring “2 options” so decisions happen.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-map"></i> Stakeholder plan (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_stakeholders">Click Build to generate a stakeholder plan.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c3"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c4">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-folder-open"></i> Chapter 4) Proof pack</div>
+<div class="pb-card-sub">
+              Your proof pack is your career insurance. When memory gets fuzzy and politics get loud, evidence stays clean.
+              Think: metrics, artefacts, and third-party validation.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Artefacts you can show</span></div>
+<textarea class="textarea pb-input" id="c4_assets" placeholder="Example: dashboards, process docs, roadmaps, playbooks, stakeholder comms, training materials, retros."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Leadership signals you can evidence</span></div>
+<textarea class="textarea pb-input" id="c4_leadership" placeholder="Example: coaching others; owning decisions; cross-team alignment; crisis handling; simplifying complexity; protecting priorities."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Before → After</span></div>
+<input class="input pb-input" id="c4_beforeafter" placeholder="Example: 10 days → 7 days; chaos → cadence; reactive → predictable"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Third-party validation</span></div>
+<input class="input pb-input" id="c4_quotes" placeholder="Example: “They’re the calm operator” — Director, Finance"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Impact bullets (simple + defensible)</span></div>
+<textarea class="textarea pb-input" id="c4_bullets" placeholder="Example: • Reduced X by Y% by doing Z • Delivered A under B constraints • Prevented risk C by implementing D"></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-file-signature"></i>
+<div>
+<b>Modern-day insight: proof beats “potential”</b>
+<span>In uncertain markets, companies promote people who can <b>demonstrate</b> value now. Your proof pack turns you into a safe bet.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-wand-magic-sparkles"></i>
+<div>
+<b>AI advantage (ethical use)</b>
+<span>Use AI to tighten wording, extract bullets, and build clean summaries—but keep the facts yours. The signal is clarity, not “fancy”.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-folder-tree"></i> Proof pack outline + folder structure (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_proof">Click Build to generate a proof pack outline.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c4"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c5">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-comment-dots"></i> Chapter 5) Scripts that move doors</div>
+<div class="pb-card-sub">
+              The right sentence at the right time can change your trajectory. These scripts are designed to keep you calm, credible, and hard to dismiss.
+            </div>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-lock"></i>
+<div><b>Neuro hack: reduce threat cues</b><span>People resist when they feel cornered. Use “alignment” language: <b>clarify</b>, <b>agree</b>, <b>decide</b>, <b>sequence</b>.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-user-check"></i>
+<div><b>Personality / Behaviour lens</b><span><b>Defensive manager:</b> “help me understand the evidence” (not “you’re wrong”). <b>Detail-heavy manager:</b> bring a 3-bullet summary + appendix.</span></div>
+</div>
+</div>
+<div class="script-search">
+<input class="input" id="scriptSearch" placeholder="Search scripts (e.g., sponsor, scope, pay, feedback, progression)"/>
+</div>
+<div class="acc" id="scriptsAcc">
+<div class="acc-item" data-search="progression path criteria timeline clarity">
+<button class="acc-head" data-acc="s1" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-route"></i></div>
+<div>
+<div class="acc-title">Ask for the progression path (without sounding needy)</div>
+<div class="acc-meta">Use when: you want criteria, timeline, and scope clarity.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s1">
+<p><b>Positioning:</b> You’re asking for clarity so you can deliver what the business needs — not asking for permission to be ambitious.</p>
+<p><b>Tip:</b> Don’t ask “Do you think I’m ready?” Ask “What evidence would make you comfortable backing it?”</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s1">I’d like to align on my progression path to &lt;TARGET ROLE&gt;.  Can we agree the 3–4 signals you’d need to see to feel confident backing it, and the scope I should own to prove it?  If we set a simple timeline (for example, &lt;TIMELINE&gt;) I can focus my effort on the right outcomes, not just being busy.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="scope decision rights authority trial guardrails ownership">
+<button class="acc-head" data-acc="s2" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-user-shield"></i></div>
+<div>
+<div class="acc-title">Ask for scope + decision rights (the hidden promotion trigger)</div>
+<div class="acc-meta">Use when: you’re doing higher-level work but not getting the title.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s2">
+<p><b>Positioning:</b> You’re removing bottlenecks and increasing throughput. Leaders like that.</p>
+<p><b>Pitfall:</b> Don’t demand authority. Offer a controlled trial with clear guardrails.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s2">To increase delivery speed and reduce rework, I’d like to own &lt;SCOPE&gt; end-to-end with clear decision rights. Can we agree what I can decide independently, what needs your approval, and what “done” looks like?  Let’s run it for 4 weeks and review outcomes against &lt;MEASURES&gt;. If it works, we formalise the scope.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="wins memo visibility recall monthly recap availability bias">
+<button class="acc-head" data-acc="s3" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-file-lines"></i></div>
+<div>
+<div class="acc-title">The “wins memo” (monthly signal amplifier)</div>
+<div class="acc-meta">Use when: you need recall + visibility without being loud.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s3">
+<p><b>Neuro logic:</b> availability bias. People promote what they remember.</p>
+<p><b>Format:</b> 6 lines max. No hype. Facts only.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s3">Quick monthly recap (so you have it for leadership updates):  1) Outcomes delivered: &lt;OUTCOME 1&gt;, &lt;OUTCOME 2&gt;, &lt;OUTCOME 3&gt; 2) Risks removed / issues prevented: &lt;RISK&gt; 3) Stakeholder feedback: &lt;QUOTE&gt; 4) Next month focus: &lt;FOCUS&gt; 5) Where I need your decision: &lt;DECISION&gt;</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="pay title compensation negotiation align scope market">
+<button class="acc-head" data-acc="s4" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-coins"></i></div>
+<div>
+<div class="acc-title">Pay / title alignment (calm negotiation)</div>
+<div class="acc-meta">Use when: scope has grown but compensation/title has not.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s4">
+<p><b>Power move:</b> anchor to scope + market logic, not emotion.</p>
+<p><b>Pitfall:</b> don’t threaten to leave. Keep it businesslike. You can escalate later if needed.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s4">I’d like to align role scope and compensation/title so it matches the level of responsibility I’m carrying.  Over the past &lt;TIME&gt;, I’ve been owning &lt;SCOPE&gt; and delivering &lt;PROOF&gt;.  What’s the cleanest path to bring my title/pay in line with the role level — and what would you need from me to support that decision?</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="sponsor endorse calibration backing advocacy">
+<button class="acc-head" data-acc="s5" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-handshake"></i></div>
+<div>
+<div class="acc-title">Secure a sponsor (clean ask, no awkwardness)</div>
+<div class="acc-meta">Use when: you need someone senior to advocate in rooms you’re not in.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s5">
+<p><b>Positioning:</b> You’re making it easy for them to say yes: clear outcomes, clear timeline, low reputational risk.</p>
+<p><b>Tip:</b> Ask for <b>support conditioned on evidence</b>. That makes you safer to back.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s5">I’m aiming for &lt;TARGET ROLE&gt; in the next &lt;TIMELINE&gt;. If I deliver &lt;OUTCOME 1&gt; and &lt;OUTCOME 2&gt;, would you be comfortable endorsing me in the relevant forums / calibration discussions? I’ll keep it simple: a monthly 6-line update so you have the facts when it matters.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="feedback not ready vague criteria evidence gate">
+<button class="acc-head" data-acc="s6" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-magnifying-glass"></i></div>
+<div>
+<div class="acc-title">When you get vague feedback (“not yet”, “keep doing what you’re doing”)</div>
+<div class="acc-meta">Use when: you need specific criteria and a decision date.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s6">
+<p><b>Positioning:</b> You’re not arguing. You’re converting ambiguity into measurable evidence.</p>
+<p><b>Tip:</b> Always end with a <b>review date</b>. Otherwise you drift.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s6">I want to make sure I’m focusing on the right evidence. When you say “not yet”, what are the specific 2–3 signals you’d need to see to feel comfortable backing &lt;TARGET ROLE&gt;? Can we agree how we’ll measure them, and set a review point on &lt;DATE / TIMELINE&gt; so this has a decision moment?</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="no budget alternatives off-cycle review title scope bonus">
+<button class="acc-head" data-acc="s7" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-shield-halved"></i></div>
+<div>
+<div class="acc-title">If they say “no budget” (keep momentum without losing position)</div>
+<div class="acc-meta">Use when: pay can’t move now but you want a clean path.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s7">
+<p><b>Power move:</b> turn “no budget” into a <b>sequence</b>: title/scope now, pay at a date, evidence agreed.</p>
+<p><b>Tip:</b> Avoid “so I’m stuck?” language. Keep it: options, trade-offs, timing.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s7">Understood on budget. To keep this clean, can we agree a sequence? Option A: formalise the scope/title now, with an off-cycle pay review on &lt;DATE&gt; if I deliver &lt;EVIDENCE&gt;. Option B: if neither can move, what’s the closest alternative lever you can offer (bonus, retention adjustment, additional leave, funded training) — and when can we reopen the comp decision?</div>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c5"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c6">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-scale-balanced"></i> Chapter 6) Process + pay advantage</div>
+<div class="pb-card-sub">
+              This is the chapter most people avoid — then wonder why they’re stuck. You don’t need to be cynical.
+              You need to understand how decisions are made so you can time your moves.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Your company’s cycle (if known)</span></div>
+<input class="input pb-input" id="c6_cycle" placeholder="Example: quarterly reviews / annual comp / mid-year promotion window"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your best internal route</span></div>
+<input class="input pb-input" id="c6_route" placeholder="Example: promotion in-role / lateral move / new team / internal posting"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Market range (rough)</span></div>
+<input class="input pb-input" id="c6_market" placeholder="Example: £65–75k (recruiter / peers / Glassdoor)"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your ask (anchor)</span></div>
+<input class="input pb-input" id="c6_ask" placeholder="Example: £72k + title alignment / band move"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your floor (minimum)</span></div>
+<input class="input pb-input" id="c6_floor" placeholder="Example: £68k or title + off-cycle review date"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">If they say “no budget”</span></div>
+<input class="input pb-input" id="c6_alts" placeholder="Example: title now; scope formalised; bonus; training; review date"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What you suspect is the real gate</span></div>
+<textarea class="textarea pb-input" id="c6_gate" placeholder="Example: budget, headcount, manager confidence, lack of sponsor, unclear levelling, politics."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your “advantage moves” (process-aware)</span></div>
+<textarea class="textarea pb-input" id="c6_adv" placeholder="Example: align before calibration; secure a sponsor quote; ask HR about levelling; time ask pre-budget; collect proof pack early."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-circle-nodes"></i>
+<div>
+<b>Uncommon knowledge: calibration is a story battle</b>
+<span>Managers often compare people quickly. The winner has: <b>clear scope</b> + <b>clean proof</b> + <b>visible impact</b>.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-money-bill-trend-up"></i>
+<div>
+<b>Pay truth: you get paid for replaceability</b>
+<span>It’s not “deserved”. It’s “what it costs to replace you”. Build scarce skills, visible outcomes, and external options quietly.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-diagram-project"></i> Advantage plan (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_advantage">Click Build to generate a short advantage plan.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c6"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c7">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-heart-pulse"></i> Chapter 7) Execution + wellbeing</div>
+<div class="pb-card-sub">
+              Career acceleration that destroys your nervous system is not a win. This chapter locks in a rhythm that grows your position
+              while keeping you steady.
+            </div>
+</div>
+</div>
+<div aria-label="Execution tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="eA" type="button"><i class="fas fa-calendar-check"></i> 14-day plan</button>
+<button class="pb-tab" data-tab="eB" type="button"><i class="fas fa-shield-halved"></i> Boundary defence</button>
+<button class="pb-tab" data-tab="eC" type="button"><i class="fas fa-brain"></i> Neuro regulation</button>
+</div>
+<div class="pb-tab-panel active" id="eA">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your next 3 actions (tiny but high-leverage)</span></div>
+<textarea class="textarea pb-input" id="c7_next3" placeholder="Example: book progression conversation; draft proof pack; send 6-line wins memo; ask for scope trial."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Weekly cadence</span></div>
+<input class="input pb-input" id="c7_cadence" placeholder="Example: Mon plan, Wed update, Fri recap"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Visibility touchpoint</span></div>
+<input class="input pb-input" id="c7_touch" placeholder="Example: weekly 3-line update to manager + monthly wins memo"/>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="eB">
+<div class="pb-card-sub">
+<b>Boundary truth:</b> if your calendar is owned by other people, your career will drift.
+          </div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your boundary statement</span></div>
+<textarea class="textarea pb-input" id="c7_boundary" placeholder="Example: I can take this on if we move X or extend the deadline. Which do you prefer?"></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your “no drama” rule</span></div>
+<textarea class="textarea pb-input" id="c7_rule" placeholder="Example: I don’t argue. I offer options, trade-offs, and written recap."></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="eC">
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-wind"></i>
+<div><b>Downshift in 90 seconds</b><span>Before high-stakes conversations: slow breathing + longer exhale. You’re signalling safety to your own system.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-circle-check"></i>
+<div><b>Decision fatigue defence</b><span>Make fewer decisions at once. Use “next 2 steps only”. Clarity lowers stress and improves presence.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-mountain"></i>
+<div><b>Confidence hack: evidence review</b><span>Read your proof bullets before calls. The brain responds to data you give it.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-shield"></i>
+<div><b>Wellbeing boundary</b><span>Pick one protected block each week for your proof pack / progression work. Treat it as non-negotiable.</span></div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your stabiliser routine (small + repeatable)</span></div>
+<textarea class="textarea pb-input" id="c7_stabiliser" placeholder="Example: 10-min plan; 6-line update; 15-min proof pack build; end-of-day shutdown note."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Early warning signs (catch burnout early)</span></div>
+<textarea class="textarea pb-input" id="c7_warn" placeholder="Example: sleep drops, irritability, racing thoughts, procrastination, doom-scrolling, late-night work, emotional reactivity."></textarea>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-file-lines"></i> Career one-pager (final output)</h4>
+</div>
+<div class="output-content" id="out_onepager">Click Build to generate your career one-pager.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c7"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

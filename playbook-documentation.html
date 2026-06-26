@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Documentation Playbook | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="playbook-documentation">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<section class="pb-card" id="c1">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-crosshairs"></i> Chapter 1) Define what you need to prove</div>
+<div class="pb-card-sub">
+              Documentation without an aim becomes noise. Your advantage is <b>selective precision</b>:
+              decide the story you need to protect (scope, decisions, behaviour, delivery, performance) and capture proof that supports it.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Your situation (short)</span></div>
+<input class="input pb-input" id="c1_context" placeholder="Example: scope drift + blame risk / manager re-writes agreements / performance narrative shifting"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Primary risk</span></div>
+<select class="select pb-input" id="c1_risk">
+<option value="">Select a risk…</option>
+<option>Performance narrative being shaped unfairly</option>
+<option>Scope/decisions being rewritten later</option>
+<option>Being blamed for delivery delays</option>
+<option>Undermining / credit being taken</option>
+<option>Harassment / bullying / hostile behaviour</option>
+<option>Discrimination / protected characteristic concern</option>
+<option>Process risk (PIP, warning, grievance)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What you need to prove (in one line)</span></div>
+<textarea class="textarea pb-input" id="c1_prove" placeholder="Example: I raised risks early, delivered agreed scope, and decisions/changes were made by others after the fact."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your “proof buckets”</span></div>
+<textarea class="textarea pb-input" id="c1_buckets" placeholder="Example:
+1) Decisions (what was agreed + when)
+2) Delivery (what I did + artefacts)
+3) Risks (what I raised + dates)
+4) Behaviour (what happened + impact)
+5) Escalations (who I informed + what I asked for)"></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Key people</span></div>
+<input class="input pb-input" id="c1_people" placeholder="Example: manager, skip-level, PM, HR, stakeholder"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Where incidents occur</span></div>
+<input class="input pb-input" id="c1_arena" placeholder="Example: meetings, 1:1s, Teams, email, reviews"/>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-screwdriver-wrench"></i>
+<div>
+<b>Premium move: document decisions, not emotions</b>
+<span>Even when it’s personal, the strongest record is: decision → date → owner → impact → next step. Keep it boring. Boring wins.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-eye"></i>
+<div>
+<b>Visibility shifts behaviour</b>
+<span>Agendas, minutes, and recaps reduce “creative memory”. You’re not exposing anyone — you’re stabilising the system.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-clipboard-list"></i> Documentation aim (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_aim">Click Build to generate your documentation aim.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c1"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c2">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-layer-group"></i> Chapter 2) Build your documentation system</div>
+<div class="pb-card-sub">
+              This is your <b>minimal, high-power system</b> — designed to run in 10 minutes a day.
+              The goal is consistency: you're building a timeline that can be understood by a third party in under five minutes.
+            </div>
+</div>
+</div>
+<div aria-label="System tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="sysA" type="button"><i class="fas fa-box-archive"></i> Folder structure</button>
+<button class="pb-tab" data-tab="sysB" type="button"><i class="fas fa-clipboard-check"></i> Decision log</button>
+<button class="pb-tab" data-tab="sysC" type="button"><i class="fas fa-calendar-day"></i> 10-min daily ritual</button>
+<button class="pb-tab" data-tab="sysD" type="button"><i class="fas fa-triangle-exclamation"></i> What NOT to do</button>
+</div>
+<div class="pb-tab-panel active" id="sysA">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your folder system (simple)</span></div>
+<textarea class="textarea pb-input" id="c2_folders" placeholder="Example:
+01 Decisions &amp; Recaps
+02 Delivery Evidence (docs, links, screenshots)
+03 Risks &amp; Issues (raised + responses)
+04 Behaviour / Incidents (facts + impact)
+05 HR / Formal (policies, letters, meeting notes)"></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Naming rule</span></div>
+<input class="input pb-input" id="c2_naming" placeholder="Example: YYYY-MM-DD — Topic — Who"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Where you’ll store it</span></div>
+<input class="input pb-input" id="c2_where" placeholder="Example: work OneDrive / personal log (facts only) / encrypted notes"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your non-negotiable rule</span></div>
+<textarea class="textarea pb-input" id="c2_rule" placeholder="Example: Any decision or scope change gets a recap the same day. No exceptions."></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="sysB">
+<div class="pb-card-sub">
+            Decision logs are a quiet form of power. They stop “I never said that” without arguing.
+          </div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Decision topic</span></div>
+<input class="input pb-input" id="c2_dec_topic" placeholder="Example: scope for Q1 deliverable / ownership / deadline"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Decision owner</span></div>
+<input class="input pb-input" id="c2_dec_owner" placeholder="Example: manager / steering group / stakeholder"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Decision made</span></div>
+<input class="input pb-input" id="c2_decision" placeholder="Example: proceed with Option B; reduce scope; change date"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Date/time</span></div>
+<input class="input pb-input" id="c2_dec_when" placeholder="Example: 2025-01-14 15:30"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Impact / dependencies</span></div>
+<textarea class="textarea pb-input" id="c2_dec_impact" placeholder="Example: moves deadline; requires X; increases risk; changes quality gate."></textarea>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-clipboard-check"></i> Decision log entry (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_decision">Click Build to generate a decision log entry.</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="sysC">
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-stopwatch"></i>
+<div><b>10 minutes, daily</b><span>Consistency beats intensity. A small, reliable habit creates a timeline you can trust.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-list-check"></i>
+<div><b>What you capture</b><span>1) Decision(s) 2) Deliverable(s) shipped 3) Risk raised 4) Any behaviour incident (facts only).</span></div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your daily ritual (write it in your words)</span></div>
+<textarea class="textarea pb-input" id="c2_ritual" placeholder="Example:
+End of day:
+• 1 recap sent (if needed)
+• 1 decision captured
+• 1 delivery artefact saved
+• 1 risk/issue note (if relevant)
+• 1-line plan for tomorrow"></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="sysD">
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-fire"></i>
+<div><b>Don’t write angry</b><span>If you’re activated, you’ll over-share. Draft, pause, then send neutral language.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-tags"></i>
+<div><b>Don’t label people</b><span>Avoid words like “bully”, “toxic”, “gaslighting” in logs. Capture behaviour and impact instead.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-comment-dots"></i>
+<div><b>Don’t argue in writing</b><span>Recaps are for alignment. Disputes become: “Here’s what I captured — please amend if incorrect.”</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-lock"></i>
+<div><b>Don’t breach policy</b><span>Keep things professional and compliant. Focus on work decisions, deliverables, and conduct standards.</span></div>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-toolbox"></i> System blueprint (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_system">Click Build to generate your system blueprint.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c2"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c3">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-pen-to-square"></i> Chapter 3) Neutral recap method (email/Teams)</div>
+<div class="pb-card-sub">
+              Recaps are your quiet superpower. They create "default truth" without confrontation.
+              The tone is calm, specific, and focused on delivery: <b>decision, owner, date, next steps</b>.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Meeting/topic</span></div>
+<input class="input pb-input" id="c3_topic" placeholder="Example: Weekly check-in / Project scope / Performance discussion"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Date/time</span></div>
+<input class="input pb-input" id="c3_when" placeholder="Example: 2025-02-06 10:00"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Decision(s)</span></div>
+<textarea class="textarea pb-input" id="c3_decisions" placeholder="Example:
+• We will deliver X by Friday.
+• Y is out of scope.
+• Owner for Z is Jordan."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Owners + deadlines</span></div>
+<textarea class="textarea pb-input" id="c3_owners" placeholder="Example:
+• Me — draft doc by Wed EOD
+• Sam — confirm data by Thurs 12:00
+• Jordan — final decision by Fri 15:00"></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Risks/dependencies (optional)</span></div>
+<textarea class="textarea pb-input" id="c3_risks" placeholder="Example: Dependent on access to X. If not confirmed by Thurs, timeline moves."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Neutral “amend if incorrect” line</span></div>
+<input class="input pb-input" id="c3_amend" placeholder="Example: If anything above is incorrect, please reply with amendments by EOD."/>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-feather"></i>
+<div>
+<b>Premium language rule: remove emotional adjectives</b>
+<span>Swap “unfair / aggressive / unreasonable” for “raised voice / interrupted / changed scope after agreement / declined to confirm”.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-gavel"></i>
+<div>
+<b>Credibility hack: write like a minutes-taker</b>
+<span>Short bullets. No blame. Just facts. If it ever needs to be reviewed, this style reads as stable and trustworthy.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-envelope"></i> Recap message (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_recap">Click Build to generate your recap message.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c3"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c4">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-clock-rotate-left"></i> Chapter 4) Incident log + timeline building</div>
+<div class="pb-card-sub">
+              If behaviour or process risk exists, your timeline is the difference between "it feels bad" and "here is what happened".
+              Capture <b>date/time, context, exact words, impact, and follow-up</b>.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Date/time</span></div>
+<input class="input pb-input" id="c4_when" placeholder="Example: 2025-02-10 14:20"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Context</span></div>
+<input class="input pb-input" id="c4_context" placeholder="Example: project meeting / 1:1 / Teams message / review"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What was said/done (facts, quote if possible)</span></div>
+<textarea class="textarea pb-input" id="c4_facts" placeholder="Example: 'You clearly can't handle this' said in meeting; interrupted 5 times; raised voice; refused to confirm scope in writing."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Impact (delivery/people)</span></div>
+<textarea class="textarea pb-input" id="c4_impact" placeholder="Example: blocked decision; undermined credibility; caused rework; distress; team confusion."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Witnesses/artefacts</span></div>
+<input class="input pb-input" id="c4_proof" placeholder="Example: attendees; email thread; screenshot; meeting notes"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your follow-up</span></div>
+<input class="input pb-input" id="c4_follow" placeholder="Example: recap sent; asked for criteria; requested reset; escalated to manager"/>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-shield-halved"></i>
+<div>
+<b>Personality / Behaviour lens</b>
+<span><b>Controller types</b> attack uncertainty; <b>critics</b> attack standards; <b>chaos merchants</b> create drama for centrality. Your log stops the “fog”.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-clipboard"></i>
+<div>
+<b>High-value rule: capture pattern, not just incidents</b>
+<span>One event can be dismissed. Three events with dates and the same tactic becomes a pattern. Patterns get taken seriously.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-file-lines"></i> Incident log entry (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_incident">Click Build to generate an incident entry.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c4"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c5">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-award"></i> Chapter 5) Performance evidence bank</div>
+<div class="pb-card-sub">
+              When performance narratives get political, you don't "argue" — you show an evidence bank.
+              This section builds a <b>clean portfolio</b>: outcomes, metrics, stakeholder proof, risks raised, and work shipped.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Top outcomes delivered (bullets)</span></div>
+<textarea class="textarea pb-input" id="c5_wins" placeholder="Example:
+• Delivered X by date (impact: Y)
+• Reduced rework by Z
+• Unblocked stakeholder decision; improved SLA"></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Metrics (if any)</span></div>
+<input class="input pb-input" id="c5_metrics" placeholder="Example: time saved; error rate; revenue; tickets closed"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Stakeholder proof</span></div>
+<input class="input pb-input" id="c5_proof" placeholder="Example: email praise; meeting note; Slack message; demo recording"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Risks raised early (with dates)</span></div>
+<textarea class="textarea pb-input" id="c5_risks" placeholder="Example:
+• 2025-01-12: Raised dependency risk on X
+• 2025-01-19: Flagged scope creep impact; requested decision"></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Constraints you worked under</span></div>
+<textarea class="textarea pb-input" id="c5_constraints" placeholder="Example: unclear ownership; shifting priorities; missing access; late changes; staffing gaps."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-bullseye"></i>
+<div>
+<b>Premium move: frame as business value</b>
+<span>Don’t list tasks. List outcomes. “Delivered X which reduced Y” is harder to dismiss than “worked on X”.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-user-check"></i>
+<div>
+<b>Stability signal</b>
+<span>When others go emotional, you go structured. That contrast is reputational leverage.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-folder-open"></i> Evidence bank summary (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_evidence">Click Build to generate your evidence bank summary.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c5"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c6">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-file-signature"></i> Chapter 6) Escalation-ready pack (HR/process)</div>
+<div class="pb-card-sub">
+              If you need to escalate, you want to arrive with <b>structure</b>: pattern, timeline, evidence, impact, and a clear ask.
+              This stops you being pulled into messy debates or emotional framing.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Escalation goal</span></div>
+<input class="input pb-input" id="c6_goal" placeholder="Example: stop behaviour; clarify scope; reset expectations; protect performance narrative"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Route</span></div>
+<input class="input pb-input" id="c6_route" placeholder="Example: manager 1:1; skip-level; HR; grievance; mediation"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Pattern summary (facts)</span></div>
+<textarea class="textarea pb-input" id="c6_pattern" placeholder="Example: repeated scope changes after agreement; public undermining; refusal to confirm decisions; aggressive tone."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Impact (business + wellbeing)</span></div>
+<textarea class="textarea pb-input" id="c6_impact" placeholder="Example: delays and rework; increased risk; reduced psychological safety; inability to deliver predictably."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What you want done (specific ask)</span></div>
+<textarea class="textarea pb-input" id="c6_ask" placeholder="Example: confirm decision rights; require written scope changes; agree meeting norms; intervene on conduct; formalise expectations."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your evidence list</span></div>
+<textarea class="textarea pb-input" id="c6_evidence" placeholder="Example:
+• Recap email 2025-02-06
+• Decision log entry 2025-02-10
+• Incident log entries (3)
+• Artefacts showing delivery and approvals"></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-chess"></i>
+<div>
+<b>Premium move: escalate with solutions</b>
+<span>“Here’s the pattern and impact, and here are two routes to fix it.” It positions you as stable and strategic.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-circle-check"></i>
+<div>
+<b>Credibility line that works</b>
+<span>“I’m raising this to protect delivery and standards of conduct.” That keeps it professional, not personal.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-file-lines"></i> Escalation note (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_escalation">Click Build to generate a clean escalation note.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c6"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c7">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-lock"></i> Chapter 7) Safety, privacy &amp; boundaries</div>
+<div class="pb-card-sub">
+              Documentation should protect you — not create new risk. This section keeps your approach clean: privacy, policy, and self-protection.
+            </div>
+</div>
+</div>
+<div aria-label="Safety tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="sA" type="button"><i class="fas fa-shield"></i> Safe documentation rules</button>
+<button class="pb-tab" data-tab="sB" type="button"><i class="fas fa-briefcase"></i> High-risk situations</button>
+<button class="pb-tab" data-tab="sC" type="button"><i class="fas fa-scroll"></i> Your final one-pager</button>
+</div>
+<div class="pb-tab-panel active" id="sA">
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-pen"></i>
+<div><b>Write like a witness</b><span>Date/time, context, exact words, impact, follow-up. Avoid labels. Avoid diagnoses.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-folder"></i>
+<div><b>Keep artefacts tidy</b><span>One place. Clear names. Easy retrieval. If you can’t find it fast, it can’t protect you.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-comment"></i>
+<div><b>Use “alignment” language</b><span>“To confirm”, “to clarify”, “to avoid drift”, “for accuracy”. It stays non-accusatory.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-heart-pulse"></i>
+<div><b>Regulate first</b><span>If your body is activated, your writing will leak emotion. Pause, then recap.</span></div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your personal rule set</span></div>
+<textarea class="textarea pb-input" id="c7_rules" placeholder="Example:
+• I recap decisions same day.
+• I keep logs factual.
+• I avoid emotional language in writing.
+• I store artefacts in one folder."></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="sB">
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-triangle-exclamation"></i>
+<div><b>If there’s harassment, discrimination, or threats</b><span>Don’t “wait and see”. Document fast, seek support, and use formal routes early.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-user-shield"></i>
+<div><b>Protective move</b><span>Bring a witness to key meetings, request agendas, and confirm outcomes in writing immediately.</span></div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your immediate safety actions (if needed)</span></div>
+<textarea class="textarea pb-input" id="c7_safety" placeholder="Example:
+• Ask for a manager/HR meeting
+• Request a change in working arrangement
+• Capture timeline and evidence bundle
+• Seek support (EAP, GP, trusted leader)"></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="sC">
+<div class="script-search">
+<input class="input" id="scriptSearch" placeholder="Search scripts (e.g., recap, accuracy, scope, decision, behaviour, HR, performance)"/>
+</div>
+<div class="acc" id="scriptsAcc">
+<div class="acc-item" data-search="recap confirm alignment email follow up minutes">
+<button class="acc-head" data-acc="sc1" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-envelope"></i></div>
+<div>
+<div class="acc-title">Neutral recap (after a meeting)</div>
+<div class="acc-meta">Use when: you want clarity without sounding defensive.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="sc1">
+<p><b>Goal:</b> lock decisions + owners. Keep it short and boring.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_sc1">Thanks — summarising to confirm:
+• Decisions:
+• Owners:
+• Deadlines:
+• Risks/Dependencies:
+• Next steps:
+
+If anything above is incorrect, please reply with amendments by EOD — otherwise I'll proceed on that basis.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="scope change trade off deadline resources">
+<button class="acc-head" data-acc="sc2" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-arrows-rotate"></i></div>
+<div>
+<div class="acc-title">Scope change (force trade-offs)</div>
+<div class="acc-meta">Use when: new asks appear after agreement.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="sc2">
+<p><b>Goal:</b> stop “free” scope creep. Make choices explicit.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_sc2">Happy to include &lt;NEW ITEM&gt;. To keep this clean, we’ll need to trade off one of:
+A) Move the deadline to &lt;NEW DATE&gt;, or
+B) Drop &lt;ITEM TO DROP&gt;.
+
+Which option are you choosing? I'll reflect it in the plan and recap.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="rewrite agreement not what we agreed accuracy amend">
+<button class="acc-head" data-acc="sc3" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-eraser"></i></div>
+<div>
+<div class="acc-title">When someone rewrites what was agreed</div>
+<div class="acc-meta">Use when: “I never said that” / “that wasn’t the decision”.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="sc3">
+<p><b>Goal:</b> anchor to artefacts, not debate.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_sc3">To keep us aligned, here’s what I captured on &lt;DATE&gt;:
+• Decision:
+• Owner:
+• Deadline:
+
+If anything above is incorrect, please reply with amendments. Otherwise I'll proceed on that basis for delivery.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="written instructions confirm request clarify">
+<button class="acc-head" data-acc="sc4" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-pen"></i></div>
+<div>
+<div class="acc-title">Request written instructions (without sounding difficult)</div>
+<div class="acc-meta">Use when: instructions change live or verbally.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="sc4">
+<p><b>Goal:</b> move ambiguity into writing.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_sc4">To avoid drift, can you confirm the scope and "definition of done" in writing?
+Once I have that, I'll align the plan, owners, and dates — and recap back.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="performance feedback objectives criteria">
+<button class="acc-head" data-acc="sc5" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-bullseye"></i></div>
+<div>
+<div class="acc-title">Convert vague performance feedback into criteria</div>
+<div class="acc-meta">Use when: you get unclear criticism.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="sc5">
+<p><b>Goal:</b> force measurable expectations and stop moving goalposts.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_sc5">To make this actionable, can we define:
+• What “good” looks like (specific examples)
+• The success measures
+• The timeframe to demonstrate improvement
+• How progress will be assessed
+
+Once agreed, I'll summarise in writing so we're aligned.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="behaviour tone conduct meeting norms reset">
+<button class="acc-head" data-acc="sc6" data-action="reset-tool" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-hand"></i></div>
+<div>
+<div class="acc-title">Reset conduct (calm boundary + recap)</div>
+<div class="acc-meta">Use when: tone is inappropriate or aggressive.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="sc6">
+<p><b>Goal:</b> set a standard without escalating emotion.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_sc6">I’m happy to discuss the work. I’m not engaging with that tone.
+Let’s reset and come back to the decision and next steps.
+
+For accuracy, I'll recap the outcomes of this discussion in writing.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-file-shield"></i> Documentation one-pager (final output)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_onepager">Click Build to generate your one-pager.</div>
+</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c7"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

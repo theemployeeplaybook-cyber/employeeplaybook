@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Strategic Silence Playbook | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="playbook-strategic-silence">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<section class="pb-card" id="c1">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-bullseye"></i> Chapter 1) Intent &amp; context</div>
+<div class="pb-card-sub">
+                Silence works when it has an <b>intent</b>. Otherwise it becomes awkward, passive, or read as sulking.
+                This chapter sets your outcome and the "shape" of the room.
+              </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Situation</span></div>
+<input class="input pb-input" id="c1_situation" placeholder="Example: pushback in meeting / negotiation / awkward feedback / stakeholder conflict"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your outcome</span></div>
+<input class="input pb-input" id="c1_outcome" placeholder="Example: secure decision / reset tone / get clarity / stop scope creep"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your risk</span></div>
+<input class="input pb-input" id="c1_risk" placeholder="Example: being steamrolled / over-explaining / sounding defensive / losing authority"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Their likely motive</span></div>
+<input class="input pb-input" id="c1_motive" placeholder="Example: time pressure / status play / uncertainty / fear / control"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your "non-negotiable line"</span></div>
+<textarea class="textarea pb-input" id="c1_line" placeholder="Example: I will not accept vague ownership / surprise deadlines / blame for unagreed scope."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What you will NOT do (self-sabotage list)</span></div>
+<textarea class="textarea pb-input" id="c1_notdo" placeholder="Examples: apologise repeatedly, explain for 2 minutes, argue facts in heat, agree to unclear next steps."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-eye"></i>
+<div>
+<b>Credibility hack: name the frame, not the emotion</b>
+<span>Instead of “I feel…”, use “To make a good decision, we need…”.
+                  It sounds adult, keeps you calm, and pulls the room into <b>problem-solving</b>.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-chess"></i>
+<div>
+<b>Silence works best after a clean question</b>
+<span>A well-designed question + silence is a trapdoor for clarity.
+                  People either answer properly, or they reveal they can’t.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-pen-nib"></i> Silence intent statement (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_intent">Click Build to generate your silence intent statement.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c1"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c2">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-hand"></i> Chapter 2) Silence toolkit</div>
+<div class="pb-card-sub">
+                Silence is not one move. It's a toolkit. Your job is to pick the right silence for the moment —
+                <b>pause</b>, <b>mirror</b>, <b>label + pause</b>, <b>question + hold</b>, or <b>decline + stillness</b>.
+              </div>
+</div>
+</div>
+<div aria-label="Silence toolkit tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="tA" type="button"><i class="fas fa-pause"></i> The pause</button>
+<button class="pb-tab" data-tab="tB" type="button"><i class="fas fa-repeat"></i> The mirror</button>
+<button class="pb-tab" data-tab="tC" type="button"><i class="fas fa-tag"></i> Label + pause</button>
+<button class="pb-tab" data-tab="tD" type="button"><i class="fas fa-question"></i> Question + hold</button>
+<button class="pb-tab" data-tab="tE" type="button"><i class="fas fa-ban"></i> Decline + stillness</button>
+</div>
+<div class="pb-tab-panel active" id="tA">
+<div class="pb-card-sub">
+<b>The pause</b> is for control. It stops you reacting and forces the room to adjust to your pace.
+              Use it after a provocation, after a big ask, or before a decision.
+            </div>
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-stopwatch"></i><div><b>How to do it</b><span>Say one sentence. Stop. Count 2–3 seconds. Keep eye contact or calm note-taking. No extra explanation.</span></div></div>
+<div class="insight"><i class="fas fa-triangle-exclamation"></i><div><b>Common mistake</b><span>Filling the pause with “just…” or “sorry…”. That trains people to push you faster.</span></div></div>
+</div>
+</div>
+<div class="pb-tab-panel" id="tB">
+<div class="pb-card-sub">
+<b>The mirror</b> is how you make people expand without arguing. You repeat 1–3 key words as a question, then stop.
+              It’s subtle, it’s calm, and it makes sloppy thinking visible.
+            </div>
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-comment"></i><div><b>Example</b><span><b>Them:</b> “This needs to be done by Friday.” <b>You:</b> “By Friday?” (pause)</span></div></div>
+<div class="insight"><i class="fas fa-bolt"></i><div><b>Why it works</b><span>It invites justification without you requesting it. People often soften, clarify, or reveal constraints.</span></div></div>
+</div>
+</div>
+<div class="pb-tab-panel" id="tC">
+<div class="pb-card-sub">
+<b>Label + pause</b> is influence without confrontation. You name the dynamic (not the person), then stop.
+              It makes you feel unshakeable — and it lowers temperature.
+            </div>
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-tag"></i><div><b>Examples</b><span>“It sounds like there’s urgency.” / “Feels like we’re skipping clarity.” / “Sounds like we’re being asked to take risk.” (pause)</span></div></div>
+<div class="insight"><i class="fas fa-shield"></i><div><b>Hidden power</b><span>Labelling makes you look like the adult in the room. Then silence makes people meet you there.</span></div></div>
+</div>
+</div>
+<div class="pb-tab-panel" id="tD">
+<div class="pb-card-sub">
+<b>Question + hold</b> is the “calm trapdoor”. Ask a question that forces specificity, then do not rescue them.
+              This is how you stop being steamrolled by vagueness.
+            </div>
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-question"></i><div><b>Best questions</b><span>“What does success look like?” / “Which trade-off do you want?” / “What are we de-prioritising?” / “Who owns the decision?”</span></div></div>
+<div class="insight"><i class="fas fa-lock"></i><div><b>How to hold</b><span>Stay still. Look neutral. If needed: “Take your time.” Then silence again.</span></div></div>
+</div>
+</div>
+<div class="pb-tab-panel" id="tE">
+<div class="pb-card-sub">
+<b>Decline + stillness</b> is a boundary move. You say no (or “not like this”), then stop.
+              The stillness prevents negotiation against yourself.
+            </div>
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-ban"></i><div><b>Example</b><span>“I can’t commit to that with the current information.” (pause) “I can commit once we clarify X and Y.” (pause)</span></div></div>
+<div class="insight"><i class="fas fa-triangle-exclamation"></i><div><b>Do not do</b><span>Don’t over-justify. The more you justify, the more people look for a hole.</span></div></div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your default "silence move" (pick 1–2)</span></div>
+<input class="input pb-input" id="c2_default" placeholder="Example: Mirror + Pause / Label + Pause / Question + Hold"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Where you usually over-talk</span></div>
+<textarea class="textarea pb-input" id="c2_overtalk" placeholder="Example: when challenged, when senior people push, when I feel rushed, when I'm unsure."></textarea>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-toolbox"></i> Your silence moveset (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_moveset">Click Build to generate your silence moveset.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c2"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c3">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-people-arrows"></i> Chapter 3) Room control plan</div>
+<div class="pb-card-sub">
+                The best influence happens before the meeting. This chapter sets your <b>pre-frame</b>, the one question that changes the room,
+                and the "silent steering" moves that keep you in control without being difficult.
+              </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Key decision needed</span></div>
+<input class="input pb-input" id="c3_decision" placeholder="Example: approve scope / confirm owner / choose option A vs B"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Who you must win</span></div>
+<input class="input pb-input" id="c3_win" placeholder="Example: Director, budget owner, sceptical stakeholder, manager"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your pre-frame (one sentence that sets tone)</span></div>
+<input class="input pb-input" id="c3_frame" placeholder="Example: 'To make a good decision, we need clarity on scope, trade-offs and owner.'"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your one power question</span></div>
+<textarea class="textarea pb-input" id="c3_powerq" placeholder="Example: 'What are we de-prioritising if we do this by Friday?'"></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your 'silent steering' moves</span></div>
+<textarea class="textarea pb-input" id="c3_steer" placeholder="Examples: pause after pushback; mirror deadlines; label urgency; ask for trade-offs; summarise in 3 bullets then stop."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-layer-group"></i>
+<div>
+<b>Executive pattern: 3 bullets, then stop</b>
+<span>Senior people trust clarity. Give a 3-bullet summary, ask for the decision, then silence.
+                  This is how you look senior without saying "I'm senior".</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-user-gear"></i>
+<div>
+<b>Personality / Behaviour lens</b>
+<span><b>High-control person:</b> offer two options. <b>Defensive person:</b> label the pressure ("Sounds like time is tight"). <b>Avoidant person:</b> lock a next step + date.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-map"></i> Room control plan (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_room">Click Build to generate your room control plan.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c3"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c4">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-shield-halved"></i> Chapter 4) De-escalation under heat</div>
+<div class="pb-card-sub">
+                When the room gets sharp, people either fight or fold. Strategic silence gives you a third option:
+                <b>calm control</b>. You reduce threat cues, keep your dignity, and still move the outcome.
+              </div>
+</div>
+</div>
+<div aria-label="De-escalation tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="dA" type="button"><i class="fas fa-fire"></i> When they’re aggressive</button>
+<button class="pb-tab" data-tab="dB" type="button"><i class="fas fa-shield"></i> When they’re defensive</button>
+<button class="pb-tab" data-tab="dC" type="button"><i class="fas fa-ghost"></i> When they avoid</button>
+</div>
+<div class="pb-tab-panel active" id="dA">
+<div class="pb-card-sub">
+<b>Aggression</b> is often a speed tactic. They want you flustered so you concede. Your job is to slow the pace and force specificity.
+            </div>
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-tag"></i><div><b>Label + pause</b><span>“Sounds like this is urgent.” (pause) “What’s driving the urgency?” (pause)</span></div></div>
+<div class="insight"><i class="fas fa-question"></i><div><b>Trade-off question</b><span>“If we do this by Friday, what are we de-prioritising?” (silence)</span></div></div>
+</div>
+</div>
+<div class="pb-tab-panel" id="dB">
+<div class="pb-card-sub">
+<b>Defensiveness</b> is fear in a suit. Do not correct them in heat. Convert it into evidence and next steps.
+            </div>
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-magnifying-glass"></i><div><b>Evidence conversion</b><span>“Help me understand what evidence would change your view.” (pause)</span></div></div>
+<div class="insight"><i class="fas fa-people-group"></i><div><b>Joint problem frame</b><span>“Let’s align on what good looks like, then we’ll be in the same fight.” (pause)</span></div></div>
+</div>
+</div>
+<div class="pb-tab-panel" id="dC">
+<div class="pb-card-sub">
+<b>Avoidance</b> keeps you in limbo. Your goal is not emotion — it’s a decision moment: date, owner, next step.
+            </div>
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-calendar-check"></i><div><b>Decision lock</b><span>“What’s the decision date?” (pause) “Who owns it?” (pause)</span></div></div>
+<div class="insight"><i class="fas fa-file-lines"></i><div><b>Written follow-up</b><span>Send a 6-line recap. “If I’ve missed anything, reply with corrections.” Then silence.</span></div></div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your calm anchor phrase (when you feel triggered)</span></div>
+<input class="input pb-input" id="c4_anchor" placeholder="Example: 'Slow is smooth. Smooth is fast.' / 'Clarity, then commitment.'"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your de-escalation plan (3 moves)</span></div>
+<textarea class="textarea pb-input" id="c4_plan" placeholder="Example: 1) Pause 2) Label urgency 3) Ask trade-off question + hold silence"></textarea>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-shield"></i> De-escalation protocol (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_deesc">Click Build to generate your de-escalation protocol.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c4"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c5">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-comment-dots"></i> Chapter 5) Script library</div>
+<div class="pb-card-sub">
+                Scripts are where strategic silence becomes real. The words are designed to be <b>short</b>, <b>calm</b>, and <b>hard to dismiss</b>.
+                Every script includes the hidden intent, the trapdoor question, and the follow-up move if they dodge.
+              </div>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-lock"></i>
+<div><b>Core rule: do not rescue their vagueness</b><span>If they answer vaguely, don’t fill the gap. Ask one clarifying question, then silence.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-user-check"></i>
+<div><b>Personality / Behaviour lens</b><span><b>Dominant:</b> mirror + pause. <b>Detail-heavy:</b> 3 bullets + appendix. <b>Emotional:</b> label + pause.</span></div>
+</div>
+</div>
+<div class="script-search">
+<input class="input" id="scriptSearch" placeholder="Search scripts (e.g., deadline, trade-off, pushback, politics, decision, escalation)"/>
+</div>
+<div aria-label="Script categories" class="script-filter-row">
+<button class="filter-chip active" data-cat="all" type="button"><i class="fas fa-layer-group"></i> All</button>
+<button class="filter-chip" data-cat="clarity" type="button"><i class="fas fa-compass"></i> Clarity</button>
+<button class="filter-chip" data-cat="boundaries" type="button"><i class="fas fa-ban"></i> Boundaries</button>
+<button class="filter-chip" data-cat="negotiation" type="button"><i class="fas fa-coins"></i> Negotiation</button>
+<button class="filter-chip" data-cat="politics" type="button"><i class="fas fa-chess"></i> Politics</button>
+<button class="filter-chip" data-cat="manager" type="button"><i class="fas fa-user-tie"></i> Manager</button>
+<button class="filter-chip" data-cat="hr" type="button"><i class="fas fa-file-shield"></i> HR / Record</button>
+</div>
+<div class="acc" id="scriptsAcc">
+<div class="acc-item" data-cat="clarity" data-search="clarity success criteria decision owner what good looks like">
+<button class="acc-head" data-acc="s1" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-compass"></i></div>
+<div>
+<div class="acc-title">Convert vague pressure into clarity (without sounding difficult)</div>
+<div class="acc-meta">Use when: people push urgency but won’t define success.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s1">
+<p><b>Intent:</b> You’re not resisting work — you’re preventing rework and risk.</p>
+<p><b>Silence trigger:</b> Ask the clarity question and stop. Let them feel the cost of vagueness.</p>
+<div class="script-box">
+<div class="label">Copy-ready script</div>
+<div class="script-text" id="script_s1">Before I commit, can we align on what "good" looks like — success criteria, owner, and the decision we need today? (pause) If we can't define that, we're guessing, and I don't want us to pay for that later.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-cat="boundaries" data-search="deadline friday by friday trade-off de-prioritise scope creep">
+<button class="acc-head" data-acc="s2" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-hourglass-half"></i></div>
+<div>
+<div class="acc-title">The trade-off question (the most polite power move)</div>
+<div class="acc-meta">Use when: someone imposes a deadline without cost.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s2">
+<p><b>Intent:</b> You force reality into the conversation: time, capacity, and consequence.</p>
+<p><b>Follow-up if they dodge:</b> ask again, simpler. Then stop. Don't rescue it.</p>
+<div class="script-box">
+<div class="label">Copy-ready script</div>
+<div class="script-text" id="script_s2">If we need this by &lt;DATE&gt;, what are we de-prioritising to make that possible? (pause) I can do speed or scope — which trade-off do you want?</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-cat="negotiation" data-search="negotiation offer ask silence hold line concession terms">
+<button class="acc-head" data-acc="s3" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-coins"></i></div>
+<div>
+<div class="acc-title">Negotiation: state your ask, then stop talking</div>
+<div class="acc-meta">Use when: you're discussing role scope, pay, title, or resources.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s3">
+<p><b>Intent:</b> You anchor calmly, without begging or over-justifying.</p>
+<p><b>How to hold:</b> after the ask, look at your notes. Silence. If needed: "Take your time." Then silence again.</p>
+<div class="script-box">
+<div class="label">Copy-ready script</div>
+<div class="script-text" id="script_s3">Given the scope I'm owning (&lt;SCOPE&gt;) and the outcomes delivered (&lt;PROOF&gt;), I'm asking for &lt;ASK&gt;. (pause) What would you need to see to feel comfortable approving that?</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-cat="politics" data-search="politics blame narrative risk accountability cover">
+<button class="acc-head" data-acc="s4" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-chess"></i></div>
+<div>
+<div class="acc-title">When someone tries to pin blame: calm correction without a fight</div>
+<div class="acc-meta">Use when: you're being subtly framed as the problem.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s4">
+<p><b>Intent:</b> You correct the record without hostility. The stillness signals certainty.</p>
+<p><b>Silent escalation option:</b> follow up in writing with a factual recap.</p>
+<div class="script-box">
+<div class="label">Copy-ready script</div>
+<div class="script-text" id="script_s4">Just to be precise: the agreed scope was &lt;SCOPE&gt; and the decision on &lt;ITEM&gt; was owned by &lt;OWNER&gt; on &lt;DATE&gt;. (pause) If the scope is changing, I'm happy to support — we just need the updated decision and trade-offs recorded.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-cat="manager" data-search="manager pushback defensive feedback evidence not yet">
+<button class="acc-head" data-acc="s5" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-user-tie"></i></div>
+<div>
+<div class="acc-title">When your manager shuts you down ("not now", "later", "let's see")</div>
+<div class="acc-meta">Use when: you need a decision date and specific criteria.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s5">
+<p><b>Intent:</b> You convert vagueness into measurable evidence without sounding argumentative.</p>
+<p><b>Silence trigger:</b> ask for 2–3 signals, then stop. Don't propose them yourself immediately.</p>
+<div class="script-box">
+<div class="label">Copy-ready script</div>
+<div class="script-text" id="script_s5">Understood. What are the specific 2–3 signals you'd need to see to feel comfortable backing this — and when should we review them? (pause) If we set that clearly, I can focus effort on the right outcomes.</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-cat="hr" data-search="hr record documentation follow-up recap written confirmation">
+<button class="acc-head" data-acc="s6" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-file-shield"></i></div>
+<div>
+<div class="acc-title">Silent escalation: the 6-line written recap that protects you</div>
+<div class="acc-meta">Use when: things feel slippery, political, or risky.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s6">
+<p><b>Intent:</b> You create a clean record without sounding accusatory.</p>
+<p><b>Power detail:</b> end with "If I've missed anything, reply with corrections." Then silence.</p>
+<div class="script-box">
+<div class="label">Copy-ready script</div>
+<div class="script-text" id="script_s6">Quick recap for accuracy: 1) Decision: &lt;DECISION&gt; 2) Owner: &lt;OWNER&gt; 3) Scope: &lt;SCOPE&gt; 4) Deadline: &lt;DATE&gt; 5) Risks / dependencies: &lt;RISKS&gt; 6) Next step: &lt;NEXT&gt; If I've missed anything, please reply with corrections.</div>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c5"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c6">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-file-signature"></i> Chapter 6) Written power (silent escalation)</div>
+<div class="pb-card-sub">
+                When you write well, you don't need to argue. Written influence is how you become "hard to mess with"
+                without being confrontational. It's calm, factual, and incredibly effective in messy workplaces.
+              </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What needs to be recorded (decision / scope / behaviour)</span></div>
+<textarea class="textarea pb-input" id="c6_record" placeholder="Example: scope changed; owner unclear; deadline imposed; disagreement on what was agreed."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Tone you want</span></div>
+<input class="input pb-input" id="c6_tone" placeholder="Example: calm + factual + collaborative"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your desired next step</span></div>
+<input class="input pb-input" id="c6_next" placeholder="Example: confirm owner; approve trade-off; set review date"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your clean recap bullets (facts only)</span></div>
+<textarea class="textarea pb-input" id="c6_facts" placeholder="Example: 1) Decision 2) Owner 3) Deadline 4) Scope 5) Risks 6) Next step"></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-pen"></i>
+<div>
+<b>Why it works: it removes wiggle room</b>
+<span>Most dysfunction survives in ambiguity. Written recaps force reality into the open —
+                  and they change behaviour because people know the record exists.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-shield"></i>
+<div>
+<b>Safety rule</b>
+<span>Never write emotionally. Write like a professional witness: dates, owners, decisions, next steps.
+                  That's how you protect yourself without creating enemies.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-envelope"></i> Silent escalation email (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_email">Click Build to generate your silent escalation email.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c6"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c7">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-heart-pulse"></i> Chapter 7) Practice + wellbeing</div>
+<div class="pb-card-sub">
+                Silence is a nervous system skill. If your body thinks silence is "danger", you'll talk to relieve tension.
+                This chapter gives you a 14-day practice plan that builds calm control without burning you out.
+              </div>
+</div>
+</div>
+<div aria-label="Practice tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="pA" type="button"><i class="fas fa-calendar-check"></i> 14-day plan</button>
+<button class="pb-tab" data-tab="pB" type="button"><i class="fas fa-dumbbell"></i> Micro-drills</button>
+<button class="pb-tab" data-tab="pC" type="button"><i class="fas fa-wind"></i> Regulation</button>
+</div>
+<div class="pb-tab-panel active" id="pA">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your next 3 real situations to practise in</span></div>
+<textarea class="textarea pb-input" id="c7_real" placeholder="Example: Monday planning meeting; stakeholder pushback call; manager 1:1."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your weekly cadence</span></div>
+<input class="input pb-input" id="c7_cadence" placeholder="Example: Mon prep, Wed practise, Fri review"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your default move to practise</span></div>
+<input class="input pb-input" id="c7_move" placeholder="Example: Mirror + pause"/>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="pB">
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-stopwatch"></i><div><b>2-second pause drill</b><span>In low-stakes chats, practise ending your sentence and waiting 2 seconds. It rewires the habit safely.</span></div></div>
+<div class="insight"><i class="fas fa-repeat"></i><div><b>Mirror drill</b><span>Mirror one phrase per meeting ("By Friday?" / "Not possible?") then stop. You'll be shocked how much people clarify.</span></div></div>
+<div class="insight"><i class="fas fa-layer-group"></i><div><b>3 bullets, stop</b><span>Practise summarising in 3 bullets, then asking one question. No fourth bullet.</span></div></div>
+<div class="insight"><i class="fas fa-file-lines"></i><div><b>6-line recap</b><span>After any messy meeting, send the factual recap. It changes the entire power dynamic over time.</span></div></div>
+</div>
+</div>
+<div class="pb-tab-panel" id="pC">
+<div class="insight-grid">
+<div class="insight"><i class="fas fa-wind"></i><div><b>Downshift in 90 seconds</b><span>Before high-stakes calls: slower breathing, longer exhale. It stops the "panic talk" reflex.</span></div></div>
+<div class="insight"><i class="fas fa-circle-check"></i><div><b>Decision fatigue defence</b><span>Use "next 2 steps only". When overwhelmed, your brain fills silence with noise. Keep it narrow.</span></div></div>
+<div class="insight"><i class="fas fa-mountain"></i><div><b>Confidence reset</b><span>Read your 3 proof points before meetings. Your body calms when it remembers evidence.</span></div></div>
+<div class="insight"><i class="fas fa-shield"></i><div><b>Wellbeing boundary</b><span>Protect one weekly block for prep + recaps. That's how you build influence without nervous system damage.</span></div></div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Early warning signs (catch overload early)</span></div>
+<textarea class="textarea pb-input" id="c7_warn" placeholder="Example: sleep drops, irritability, fast speech, doom-scrolling, emotional reactivity, late-night work."></textarea>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-file-lines"></i> Strategic Silence one-pager (final output)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_onepager">Click Build to generate your Strategic Silence one-pager.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c7"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

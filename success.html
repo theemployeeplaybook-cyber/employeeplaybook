@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Welcome — The Employee Playbook | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="account" data-protected="false">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell account-page">
+<section class="hero">
+<h1 id="main-title">Verifying your payment<span class="spinner"></span></h1>
+<p class="note" id="sub-title">Please wait while we confirm your subscription.</p>
+<div id="status-container">
+<div class="success-box" id="success-box">
+<span class="status-icon">✅</span>
+<strong>Payment Successful!</strong>
+<p>Your subscription is now active.</p>
+<p>
+            Plan: <span class="tier-badge" id="tier-badge">Loading...</span>
+</p>
+</div>
+<div class="success-box" id="pending-box">
+<span class="status-icon">⏳</span>
+<strong>Payment Processing</strong>
+<p>Your payment is being processed. This may take a few moments.</p>
+<p>
+<button id="refresh-btn">Check Again</button>
+</p>
+</div>
+<div class="error-box" id="error-box">
+<span class="status-icon">⚠️</span>
+<strong id="error-title">Something went wrong</strong>
+<p id="error-message"></p>
+<p>
+<a href="the-pricing.html">Return to Pricing</a>
+<span> · </span>
+<a href="sign-in.html">Sign In</a>
+</p>
+</div>
+</div>
+<p class="redirect-text" id="redirect-text"></p>
+</section>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

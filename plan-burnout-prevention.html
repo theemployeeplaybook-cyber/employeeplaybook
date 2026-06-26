@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Burnout Prevention Plan | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="plan-burnout-prevention">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-expectation-burnout-and-capacity.html">Expectation, Burnout &amp; Capacity</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Burnout Prevention Plan</span>
+</div>
+<span class="checklist-name">BURNOUT PREVENTION PLAN</span>
+<h1 class="hero-main-heading">
+      Protect capacity, credibility, and delivery — before the strain forces a reset you did not choose
+    </h1>
+<div class="hero-subheading">
+      This is a prevention plan designed for high-output roles, messy realities, and workplaces that quietly normalise overload.
+      Use it to identify early capacity erosion, separate structural load from behavioural over-functioning, and lock clear expectations while you still have leverage.
+      <br/><br/>
+      Then generate your Burnout Pack: a one-page plan, strategic risk signals, quiet-risk prompts, and UK-friendly scripts that protect output without sounding dramatic.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html" title="Clarity, Priorities &amp; Direction">
+<i class="fas fa-bullseye category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill hr" href="category-hr-insider.html" title="HR Insider">
+<i class="fas fa-file-signature category-icon"></i>
+<span>HR Insider</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Plan</h3>
+<ul class="bullet-list">
+<li>When you are still delivering, but the cost is rising every week.</li>
+<li>When your “normal” has become constant catch-up, late nights, and a shrinking recovery window.</li>
+<li>When you are absorbing ambiguity (unclear priorities, politics, shifting definitions of “urgent”).</li>
+<li>When you are carrying hidden responsibility (fixer, buffer, translator, peacemaker, sponge).</li>
+<li>When you want to intervene early — while you still have energy to negotiate change.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Write bluntly. Accuracy beats presentation — this is decision prep.</li>
+<li>Separate what is <strong>structural</strong> (work design, resourcing, expectations) from what is <strong>behavioural</strong> (over-functioning, people-pleasing, avoidance).</li>
+<li>Choose prevention moves that are <strong>visible enough</strong> to reshape expectations — not just private self-care.</li>
+<li>Use scripts to lock trade-offs in writing. Unwritten trade-offs do not exist.</li>
+<li>The objective is sustainable delivery <strong>and</strong> reputation protection, at the same time.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Draft your burnout prevention plan</h2>
+<p>
+        Eight modules to spot early warning signs, map what is truly draining you, and redesign load, boundaries, and recovery in a way you can actually hold.
+        Generate your Burnout Pack once you have enough clarity to act.
+      </p>
+</div>
+</div>
+<div class="modules-grid" id="modulesGrid">
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+    </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+    </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Burnout Pack</h2>
+<p class="pack-subtitle">
+      A structured output you can use immediately: a one-page prevention plan, strategic signals that protect credibility, quiet-risk prompts (to stop slow-burn becoming a crash), and scripts for workload and expectation resets.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Burnout risk signal</div>
+<div class="metric-score" id="riskSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page prevention plan</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-chart-line"></i> Strategic signals (protect capacity and credibility)</h3>
+<div class="pack-grid" id="strategicGrid"></div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Quiet-risk prompts (stop slow-burn becoming a crash)</h3>
+<div class="pack-grid" id="riskGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (clear, calm, UK-friendly)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

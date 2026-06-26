@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Meeting Effectiveness Review | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="review-meeting-effectiveness">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Meeting Effectiveness Review</span>
+</div>
+<span class="checklist-name">MEETING EFFECTIVENESS REVIEW</span>
+<h1 class="hero-main-heading" data-date="">
+      Turn meetings from "time spent" into decisions, clarity, and momentum
+    </h1>
+<div class="hero-subheading">
+      This tool helps you review a meeting with precision: what it was meant to achieve, what actually happened, why it drifted, and what to change next time.
+      You'll get an effectiveness scorecard, a "fix plan" (before / during / after), and ready-to-send follow-up scripts that lock outcomes without creating friction.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html" title="Expectation, Burnout &amp; Capacity">
+<i class="fas fa-fire"></i>
+<span>Expectation, Burnout &amp; Capacity</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This</h3>
+<ul class="bullet-list">
+<li>After a meeting that felt draining, unclear, or "busy" without decisions.</li>
+<li>When meetings keep recurring but outcomes don't change.</li>
+<li>When you need a calm way to request agenda, time-boxing, or decision ownership.</li>
+<li>When status updates are swallowing deep work.</li>
+<li>Before you escalate "meeting load" as a capacity risk.</li>
+</ul>
+<div class="inline-badge"><i class="fas fa-clock"></i> Most meetings fail on design, not effort.</div>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Score the meeting on 5 dimensions (purpose, decisions, participation, time use, follow-through).</li>
+<li>Tick the dysfunctions you observed (no blame—just pattern recognition).</li>
+<li>Write 2–5 lines on what would have made it "worth it".</li>
+<li>Generate your pack: scorecard, fixes, and scripts.</li>
+<li>Use the follow-up email template to lock outcomes and prevent drift.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Review the meeting</h2>
+<p>
+        Capture basics, score what mattered, and name the dysfunctions without turning it into a personality judgement.
+        The output gives you a practical redesign plan and a clean follow-up message you can send today.
+      </p>
+</div>
+</div>
+<div class="form-grid">
+<div class="form-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">1</div>
+<div class="card-title">
+<h3>Meeting snapshot (what it was)</h3>
+<p>Capture basics. This makes follow-up and redesign precise.</p>
+</div>
+</div>
+</div>
+<div class="compact-row">
+<div class="field">
+<label for="meeting_title"><i class="fas fa-tag"></i> Meeting name</label>
+<input class="input" id="meeting_title" placeholder="e.g., Weekly prioritisation / Project sync" type="text"/>
+</div>
+<div class="field">
+<label for="meeting_type"><i class="fas fa-diagram-project"></i> Meeting type</label>
+<select class="select compact" id="meeting_type">
+<option>Decision meeting</option>
+<option>Planning / prioritisation</option>
+<option>Status / sync</option>
+<option>Problem-solving</option>
+<option>1:1</option>
+<option>Stakeholder update</option>
+<option>Other (describe)</option>
+</select>
+</div>
+<div class="field">
+<label for="duration_mins"><i class="fas fa-hourglass-half"></i> Duration (mins)</label>
+<input class="input compact" id="duration_mins" min="5" placeholder="30" step="5" type="number"/>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<label for="meeting_date"><i class="fas fa-calendar"></i> Date</label>
+<input class="input" id="meeting_date" type="date"/>
+</div>
+<div class="field">
+<label for="organiser"><i class="fas fa-user"></i> Organiser</label>
+<input class="input" id="organiser" placeholder="Name / role" type="text"/>
+</div>
+<div class="field">
+<label for="attendees"><i class="fas fa-users"></i> Key attendees</label>
+<input class="input" id="attendees" placeholder="Who mattered in the room?" type="text"/>
+</div>
+<div class="field">
+<label for="recurrence"><i class="fas fa-rotate"></i> Recurrence</label>
+<select class="select" id="recurrence">
+<option>One-off</option>
+<option>Weekly</option>
+<option>Fortnightly</option>
+<option>Monthly</option>
+<option>Ad hoc / inconsistent</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="intended_outcome"><i class="fas fa-bullseye"></i> Intended outcome (1–2 lines)</label>
+<textarea class="textarea" id="intended_outcome" placeholder="What was the meeting meant to produce? A decision? A plan? A set of actions?"></textarea>
+</div>
+</div>
+<div class="form-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">2</div>
+<div class="card-title">
+<h3>Review the meeting (what happened)</h3>
+<p>Score the meeting on what matters. Then tick dysfunctions you observed.</p>
+</div>
+</div>
+</div>
+<div class="review-block">
+<div class="review-head">
+<div>
+<div class="title"><i class="fas fa-gauge-high"></i> Effectiveness score</div>
+<div class="sub">Score each dimension from 1 (poor) to 5 (strong). The tool uses this to generate your fix plan and scripts.</div>
+</div>
+<div class="review-score" id="reviewScoreLabel">—</div>
+</div>
+<div>
+<div>
+<div>Purpose &amp; clarity</div>
+<div class="rating-display" id="lbl_r_purpose">3/5</div>
+</div>
+<div>Was the outcome explicit and kept in scope?</div>
+<input aria-label="Purpose &amp; clarity rating" class="range" id="r_purpose" max="5" min="1" step="1" type="range" value="3"/>
+<div class="scale">
+<span>1 poor</span>
+<span>3 ok</span>
+<span>5 strong</span>
+</div>
+</div>
+<div>
+<div>
+<div>Decisions made</div>
+<div class="rating-display" id="lbl_r_decisions">3/5</div>
+</div>
+<div>Did the meeting produce decisions (not just discussion)?</div>
+<input aria-label="Decisions made rating" class="range" id="r_decisions" max="5" min="1" step="1" type="range" value="3"/>
+<div class="scale">
+<span>1 poor</span>
+<span>3 ok</span>
+<span>5 strong</span>
+</div>
+</div>
+<div>
+<div>
+<div>Participation quality</div>
+<div class="rating-display" id="lbl_r_participation">3/5</div>
+</div>
+<div>Did the right people contribute and align?</div>
+<input aria-label="Participation quality rating" class="range" id="r_participation" max="5" min="1" step="1" type="range" value="3"/>
+<div class="scale">
+<span>1 poor</span>
+<span>3 ok</span>
+<span>5 strong</span>
+</div>
+</div>
+</div>
+<div class="field">
+<label for="what_worked"><i class="fas fa-thumbs-up"></i> What worked (2–5 lines)</label>
+<textarea class="textarea textarea--compact" id="what_worked" placeholder="What should be kept? What was genuinely useful?"></textarea>
+</div>
+</div>
+<div class="form-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">3</div>
+<div class="card-title">
+<h3>Root cause (why it drifted)</h3>
+<p>This stops you blaming people when the design is the real problem.</p>
+</div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<label for="decision_owner"><i class="fas fa-user-check"></i> Decision owner clarity</label>
+<select class="select" id="decision_owner">
+<option>Clear owner(s) existed</option>
+<option>Unclear / shared / avoided</option>
+<option>Owner existed but didn't decide</option>
+<option>No decision needed (but then why meeting?)</option>
+</select>
+</div>
+<div class="field">
+<label for="inputs_ready"><i class="fas fa-file-arrow-up"></i> Inputs ready?</label>
+<select class="select" id="inputs_ready">
+<option>Yes (pre-read / data existed)</option>
+<option>Partially</option>
+<option>No (people arrived cold)</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="hidden_constraint"><i class="fas fa-lock"></i> Hidden constraints (what couldn't be said?)</label>
+<textarea class="textarea" id="hidden_constraint" placeholder="E.g. politics, fear of disagreement, unclear mandate, stakeholder pressure, 'we can't say no' culture."></textarea>
+</div>
+<div class="field">
+<label for="one_change"><i class="fas fa-bolt"></i> One change that would have made it worth it</label>
+<textarea class="textarea" id="one_change" placeholder="Be specific: agenda, time-box, async updates, decision method, required attendees only, pre-read, etc."></textarea>
+</div>
+</div>
+<div class="form-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">4</div>
+<div class="card-title">
+<h3>Next time (fix + follow-up)</h3>
+<p>Lock actions, reduce load, and prevent the same meeting repeating.</p>
+</div>
+</div>
+</div>
+<div class="field">
+<label for="actions_locked"><i class="fas fa-clipboard-check"></i> Actions captured (owner + deadline)</label>
+<textarea class="textarea tall textarea--compact" id="actions_locked" placeholder="Format:\n• Action — Owner — Deadline\n• …"></textarea>
+</div>
+<div class="field">
+<label for="follow_up_needed"><i class="fas fa-envelope"></i> Follow-up you plan to send (notes)</label>
+<textarea class="textarea textarea--compact" id="follow_up_needed" placeholder="What do you need to confirm in writing so there's no drift?"></textarea>
+</div>
+<div class="field">
+<label for="boundary_request"><i class="fas fa-shield-halved"></i> Boundary / meeting change request</label>
+<textarea class="textarea textarea--compact" id="boundary_request" placeholder="E.g. 'Can we move status updates async and use the slot only for decisions?'"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Meeting Review Pack</h2>
+<p class="pack-subtitle">
+      A structured output: scorecard, what went wrong (without drama), the smallest fixes that change outcomes,
+      plus scripts to lock actions and reduce meeting load.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Meeting effectiveness</div>
+<div class="metric-score" id="effectivenessSignal">—</div>
+</div>
+</div>
+<div class="pack-actions">
+<button class="btn secondary" data-action="print-page" id="printPackBtn"><i class="fas fa-print"></i> Print</button>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page scorecard + notes</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-screwdriver-wrench"></i> Fix plan (before / during / after)</h3>
+<div class="pack-grid" id="fixGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (calm, practical, hard to argue with)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+  </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+  </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+  </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+  </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

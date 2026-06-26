@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HR Insider — Disciplinary &amp; Conduct: understand the UK process, protect your position, and use premium scripts and checklists. Not legal advice." />
+  <title>HR Insider | Disciplinary &amp; Conduct | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="hr-disciplinary-and-conduct">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR Insider</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Disciplinary &amp; Conduct</span>
+</div>
+<div class="pill-label">
+<span class="dot"></span>
+<span>HR Insider</span>
+</div>
+<h1 class="hero-main-heading">Disciplinary &amp; Conduct: protect your position, not just your feelings</h1>
+<div class="hero-subheading">
+<strong>Subscribers get a practical, UK-style playbook</strong> for disciplinary and conduct processes —
+          what the employer can (and can’t) do, what you should ask for, how to respond without self-sabotage, and
+          the exact scripts to use in meetings, emails and appeals so you keep leverage and reduce risk.
+        </div>
+<div class="hero-value-row">
+<div class="hero-value-card">
+<div class="hero-value-icon"><i class="fas fa-shield-halved"></i></div>
+<div>
+<h4>High-stakes clarity</h4>
+<p>Know the process stages, your rights, and the traps that quietly weaken your case.</p>
+</div>
+</div>
+<div class="hero-value-card">
+<div class="hero-value-icon"><i class="fas fa-comment-dots"></i></div>
+<div>
+<h4>Premium scripts + evidence prompts</h4>
+<p>Short, credible wording that protects tone, avoids admissions, and forces specificity.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-shell">
+<div class="content-grid">
+<aside aria-label="Contents" class="sidebar">
+<div class="sidebar-title"><i class="fas fa-list"></i> Contents</div>
+<ul class="toc" id="tocList">
+<li><a class="toc-link active" href="#read-first"><i class="fas fa-circle-info"></i> Read this first</a></li>
+<li><a class="toc-link" href="#fast-triage"><i class="fas fa-bolt"></i> Fast triage</a></li>
+<li><a class="toc-link" href="#evidence"><i class="fas fa-folder-open"></i> Evidence &amp; documents</a></li>
+<li><a class="toc-link" href="#stages"><i class="fas fa-route"></i> The process (step-by-step)</a></li>
+<li><a class="toc-link" href="#meeting"><i class="fas fa-handshake"></i> The meeting: how to handle it</a></li>
+<li><a class="toc-link" href="#scripts"><i class="fas fa-quote-left"></i> Scripts &amp; email templates</a></li>
+<li><a class="toc-link" href="#appeal"><i class="fas fa-rotate-left"></i> Appeal strategy</a></li>
+<li><a class="toc-link" href="#lens"><i class="fas fa-user-shield"></i> Personality / Behaviour Lens</a></li>
+</ul>
+<div class="sidebar-cta">
+<div class="mini">
+              Use the buttons below to generate your personalised action summary, then save your progress.
+            </div>
+<div class="sidebar-actions">
+<button class="pill-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Generate Summary
+              </button>
+<button class="pill-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+              </button>
+<button class="pill-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+              </button>
+<button class="pill-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+              </button>
+</div>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</aside>
+<section class="main">
+<div class="content-card" id="read-first">
+<div class="card-title"><i class="fas fa-circle-info"></i> Read this first</div>
+<p class="muted">
+              This is strategic HR guidance for UK-style disciplinary and conduct situations. It is <strong>not legal advice</strong>.
+              Your priority is to (1) reduce avoidable damage, (2) force clarity and evidence, and (3) keep credibility while
+              protecting your position.
+            </p>
+<div class="callout">
+<h4><i class="fas fa-triangle-exclamation"></i> The biggest mistakes employees make</h4>
+<p>
+                (1) Over-explaining in the first response, (2) admitting facts before seeing evidence, (3) reacting emotionally in meetings,
+                (4) failing to request documents, and (5) letting timelines drift until it looks like you “accepted” the narrative.
+              </p>
+</div>
+<div class="grid-2">
+<div class="mini-card">
+<h4><i class="fas fa-clock"></i> If your meeting is within 48 hours</h4>
+<p>
+                  Ask for the allegations in writing, the evidence pack, the policy, and whether it’s investigatory or disciplinary.
+                  Request a reasonable postponement if you don’t have documents or time to prepare.
+                </p>
+</div>
+<div class="mini-card">
+<h4><i class="fas fa-user-check"></i> If you’re already on a final warning</h4>
+<p>
+                  Treat this as “job-on-the-line” even if they act casual. Tighten your wording, document everything,
+                  and consider parallel options (internal move / external search) without signalling panic.
+                </p>
+</div>
+</div>
+</div>
+<div class="content-card" id="fast-triage">
+<div class="card-title"><i class="fas fa-bolt"></i> Fast triage checklist (tick what’s true)</div>
+<p class="muted">These flags drive what you ask for and how defensive you need to be. Tick honestly.</p>
+<div class="checklist-grid" id="checklistGrid">
+<div aria-checked="false" class="checklist-item" data-key="notClearAllegations" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">The allegations are vague (“attitude”, “conduct”, “behaviour”) with no dates/examples.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="noEvidencePack" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I haven’t been given the evidence pack (emails, statements, logs, CCTV, notes).</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="shortNotice" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">The meeting is on short notice and I don’t have time to prepare properly.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="investigationSkipped" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">They seem to be jumping straight to disciplinary without a fair investigation.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="witnesses" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">There are witnesses / complaints, but I haven’t seen statements or specifics.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="healthFactor" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">Health/stress/disability or a protected characteristic may be relevant to context.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="alreadyWarned" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I’m already on a warning (informal/formal/final) or have prior related issues on record.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="targeted" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">This feels like I’m being targeted / managed out (politics, restructure, conflict).</div>
+</div>
+</div>
+<div class="notes">
+<label for="notesBox">Your notes (what happened, in bullet points)</label>
+<textarea id="notesBox" placeholder="Keep it factual. Dates, times, who said what, and any evidence you have."></textarea>
+</div>
+</div>
+<div class="content-card" id="evidence">
+<div class="card-title"><i class="fas fa-folder-open"></i> Evidence &amp; documents: what to request</div>
+<p class="muted">
+              Your goal is to force specificity. Vague allegations are easy to throw around. Specific allegations require proof.
+              Ask calmly and in writing.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="acc1" type="button">
+<span class="left"><i class="fas fa-file-lines"></i> Evidence pack request (copy/paste)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc1">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Email script</div>
+<div class="script-text">Hi [Name],
+
+Thank you for the invitation. To prepare properly, please could you share:
+
+• The specific allegations (with dates/times/examples)
+• The relevant policy/procedure being followed
+• The evidence pack you’ll rely on (emails, documents, statements, logs, meeting notes)
+• The names/roles of attendees and whether this is investigatory or disciplinary
+• The possible outcomes being considered at this stage
+
+Once I’ve received the above, I’ll confirm attendance and any reasonable adjustments/representation.
+
+Kind regards,
+[Your name]</div>
+</div>
+<div class="callout">
+<h4><i class="fas fa-lightbulb"></i> Why this matters</h4>
+<p>If they refuse documents, you have a clean record showing you tried to engage fairly. That becomes valuable later (appeal / grievance / tribunal advice).</p>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="acc2" type="button">
+<span class="left"><i class="fas fa-people-group"></i> Witnesses, complaints, and “anonymous reports”</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc2">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-check"></i> What you ask for</h5>
+<p>Ask for (a) witness statements, (b) dates/times, (c) the exact words/behaviours alleged, (d) who investigated and how, and (e) why anonymity is necessary if claimed.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-triangle-exclamation"></i> The trap</h5>
+<p>“Multiple people have raised concerns” is often used to create pressure without evidence. Do not accept the vibe. Ask for specifics.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="acc3" type="button">
+<span class="left"><i class="fas fa-wheelchair"></i> Reasonable adjustments / health context</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc3">
+<p class="muted">
+                  If disability/health/stress is relevant, you can request adjustments (extra time, breaks, written questions, companion support).
+                  You don’t need to share your life story — keep it functional: what support you need to participate fairly.
+                </p>
+<div class="script-block">
+<div class="script-label"><i class="fas fa-comment-medical"></i> Adjustment request</div>
+<div class="script-text">Hi [Name],
+
+For the meeting, I’m requesting the following reasonable adjustments so I can participate fairly:
+• [e.g., the evidence pack 48 hours in advance]
+• [e.g., short breaks]
+• [e.g., written questions where possible / allow me to respond in writing after]
+
+Please confirm these are agreed.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="stages">
+<div class="card-title"><i class="fas fa-route"></i> The process (step-by-step)</div>
+<p class="muted">
+              Most UK organisations follow a structure broadly aligned to ACAS principles: investigation → hearing → outcome → appeal.
+              Your “power move” is to stay calm, force detail, and keep your record clean.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="acc4" type="button">
+<span class="left"><i class="fas fa-magnifying-glass"></i> 1) Investigation stage</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc4">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-bullseye"></i> Your objective</h5>
+<p>Clarify the allegations and evidence. You’re not “winning the case” here — you’re preventing the narrative from hardening against you.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-list-check"></i> What good looks like</h5>
+<ul>
+<li>Allegations in writing with dates/examples</li>
+<li>Evidence disclosed before you respond</li>
+<li>Notes shared for accuracy (or you take your own notes)</li>
+<li>Neutral investigator (not the complainant / not your conflict)</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-ban"></i> What to avoid</h5>
+<p>Don’t speculate. Don’t fill gaps. Don’t offer “maybe it was because…” explanations that become admissions.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="acc5" type="button">
+<span class="left"><i class="fas fa-gavel"></i> 2) Disciplinary hearing</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc5">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-shield"></i> Your objective</h5>
+<p>Show you’re reasonable, prepared, and evidence-led. If the process is sloppy, you surface it calmly — without sounding combative.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-handshake"></i> Representation</h5>
+<p>If your policy allows a companion/rep, use it. Even a calm colleague changes the dynamic and keeps better notes.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-file-signature"></i> Outcomes</h5>
+<p>Confirm what outcome range is being considered and whether dismissal is on the table. If they won’t say, note that.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="acc6" type="button">
+<span class="left"><i class="fas fa-file-circle-check"></i> 3) Outcome + next steps</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc6">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-clipboard-check"></i> What you check</h5>
+<ul>
+<li>Is the outcome letter specific (facts, evidence, reasoning)?</li>
+<li>Did they address your points, or ignore them?</li>
+<li>Is the sanction proportionate vs policy/precedent?</li>
+<li>Is there any procedural unfairness you can point to?</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-rotate-left"></i> Appeal window</h5>
+<p>Log the appeal deadline immediately. Even if you’re unsure, you can submit a short “holding appeal” and expand later if allowed.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="meeting">
+<div class="card-title"><i class="fas fa-handshake"></i> The meeting: how to handle it</div>
+<p class="muted">
+              Your tone matters. The safest posture is “co-operative but evidence-led”. You can be firm without being difficult.
+            </p>
+<div class="grid-2">
+<div class="mini-card">
+<h4><i class="fas fa-microphone-lines"></i> The opening stance</h4>
+<p>Confirm the purpose, the stage (investigation vs disciplinary), the allegations, and the evidence you’ve received. Then say you’ll respond to specifics.</p>
+</div>
+<div class="mini-card">
+<h4><i class="fas fa-pause"></i> When to request an adjournment</h4>
+<p>If new evidence appears, if you feel unwell, if you need to consult your companion/rep, or if questions become accusatory without evidence.</p>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="acc7" type="button">
+<span class="left"><i class="fas fa-circle-question"></i> Challenging vague claims without sounding defensive</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc7">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-quote-left"></i> Script (meeting)</div>
+<div class="script-text">I want to engage constructively, but I’m struggling to respond to a general characterisation. 
+Could you confirm the specific incident(s), date(s), and the exact behaviour/words being alleged — and what evidence you’re relying on?</div>
+</div>
+<div class="script-block">
+<div class="script-label"><i class="fas fa-quote-left"></i> Script (if they push you)</div>
+<div class="script-text">I’m happy to answer, but I don’t want to guess or speculate. If we anchor the discussion to the specific allegation and evidence, I can respond properly.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="scripts">
+<div class="card-title"><i class="fas fa-quote-left"></i> Scripts &amp; email templates</div>
+<p class="muted">
+              These are designed to protect you from “accidental admissions”, emotional over-explaining, and unhelpful tone.
+              Keep them short. Repeat calmly if needed.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="acc8" type="button">
+<span class="left"><i class="fas fa-envelope-open-text"></i> Accepting the meeting (with conditions)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc8">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Email script</div>
+<div class="script-text">Hi [Name],
+
+I confirm I will attend on [date/time]. 
+Please share the full evidence pack, the relevant policy, and the specific allegations in writing at least [48] hours in advance so I can prepare fairly.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="acc9" type="button">
+<span class="left"><i class="fas fa-calendar-xmark"></i> Requesting a postponement (reasonable + credible)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc9">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Email script</div>
+<div class="script-text">Hi [Name],
+
+Thank you for the invitation. I’m requesting a short postponement to [date] because I haven’t yet received the evidence pack / policy / specific allegations, and I want to prepare properly to support a fair process.
+
+Please confirm the rearranged date/time and share the documents in advance.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="acc10" type="button">
+<span class="left"><i class="fas fa-circle-check"></i> Closing line (meeting) — keeps you safe</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc10">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-quote-left"></i> Script (meeting close)</div>
+<div class="script-text">Thank you. If any additional evidence is being considered, please share it with me and allow me to respond before any decision is made. 
+Please also share the meeting notes for accuracy.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="appeal">
+<div class="card-title"><i class="fas fa-rotate-left"></i> Appeal strategy (what actually works)</div>
+<p class="muted">
+              Appeals win on procedural unfairness, new evidence, inconsistency, or disproportionality — not on emotion.
+              Keep it structured.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="acc11" type="button">
+<span class="left"><i class="fas fa-layer-group"></i> Appeal grounds (choose what applies)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc11">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-triangle-exclamation"></i> Procedural unfairness</h5>
+<p>Insufficient evidence disclosure, rushed timelines, biased investigator, not considering your response, unclear allegations.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-magnifying-glass"></i> Evidence issues</h5>
+<p>Evidence doesn’t support the conclusion; selective use of facts; missing context; contradictions.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-scale-balanced"></i> Disproportionate outcome</h5>
+<p>Sanction too severe vs policy, precedent, or the alleged seriousness. Inconsistency with how others were treated.</p>
+</div>
+</div>
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Appeal opener</div>
+<div class="script-text">Hi [Name],
+
+I’m submitting an appeal against the outcome dated [date]. My appeal is based on:
+1) [Procedural unfairness]
+2) [Evidence not supporting the conclusion]
+3) [Disproportionate sanction]
+
+I’ll share supporting detail and documents below. Please confirm the appeal process, timescales, and who will hear it.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="lens">
+<div class="card-title"><i class="fas fa-user-shield"></i> Personality / Behaviour Lens</div>
+<p class="muted">
+              The “type” of manager/investigator changes the safest approach:
+            </p>
+<div class="output-grid">
+<div class="out-card">
+<h4><i class="fas fa-bullhorn"></i> The Dominator</h4>
+<p>Pushes for quick answers and admissions. Your move: slow it down, ask for specifics, repeat “I need evidence to respond fairly.”</p>
+</div>
+<div class="out-card">
+<h4><i class="fas fa-masks-theater"></i> The Performer</h4>
+<p>Polished, calm, but shaping a narrative. Your move: document, confirm in writing, and avoid friendly “filler” that becomes ammo.</p>
+</div>
+<div class="out-card">
+<h4><i class="fas fa-heart"></i> The Anxious Avoider</h4>
+<p>Wants it over quickly. Your move: stay calm, keep it structured, and request the process steps in writing.</p>
+</div>
+</div>
+</div>
+<div class="content-card output print-keep" id="outputBox">
+<div class="card-title"><i class="fas fa-wand-magic-sparkles"></i> Your generated summary</div>
+<p class="muted">This is your “do next” summary based on what you ticked + your notes. Save it after generating.</p>
+<div class="output-grid" id="outputGrid"></div>
+</div>
+</section>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

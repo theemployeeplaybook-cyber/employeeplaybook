@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Weekly Priority Planner | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="planner-weekly-priority">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Weekly Priority Planner</span>
+</div>
+<span class="checklist-name">WEEKLY PRIORITY PLANNER</span>
+<h1 class="hero-main-heading">
+      Turn a busy week into a controlled week without letting “urgent” decide your agenda
+    </h1>
+<div class="hero-subheading">
+      This planner forces a clean weekly truth: <strong>what matters</strong>, <strong>what fits</strong>, and <strong>what gets parked</strong>.
+      You’ll set 1–3 outcomes for the week, score tasks with a simple priority signal, and drag them into the right day so your week stops leaking into evenings.
+      <br/><br/>
+      Then generate a clean weekly plan and a short boundary script to defend your top outcomes.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html" title="Expectation, Burnout &amp; Capacity">
+<i class="fas fa-battery-half"></i>
+<span>Expectation, Burnout &amp; Capacity</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This</h3>
+<ul class="bullet-list">
+<li>When your “weekly plan” is just a list that grows and never finishes.</li>
+<li>When priorities change mid-week and you need a simple trade-off rule.</li>
+<li>When meetings eat the week and the real work ends up after-hours.</li>
+<li>When you need a plan you can share without oversharing.</li>
+<li>When you want a calmer week without sacrificing outcomes.</li>
+</ul>
+<div class="inline-badge"><i class="fas fa-shield-halved"></i> If it can’t fit in the week, it’s not a plan. It’s a wish.</div>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Pick <strong>1–3 outcomes</strong> that define a “good week”.</li>
+<li>Add tasks as <strong>verb + deliverable</strong> (not “work on X”).</li>
+<li>Score tasks with <strong>Impact</strong>, <strong>Urgency</strong>, <strong>Effort</strong> to reveal what actually wins.</li>
+<li>Drag tasks into the right day. Keep Monday realistic and Friday protected.</li>
+<li>Generate a weekly plan + boundary script to keep expectations clean.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Build your week (priorities + day placement)</h2>
+<p>
+        Add tasks, score them, then place them into the week. Drag tasks between days. Generate a clean weekly plan and a UK-friendly boundary script.
+      </p>
+</div>
+</div>
+<div class="planner-grid">
+<div aria-label="Weekly builder" class="panel">
+<div class="panel-head">
+<div class="panel-title">
+<h3>Weekly builder</h3>
+<p>Define the week, set outcomes, then add tasks with a quick priority signal.</p>
+</div>
+<span class="mini-chip" id="weekScoreChip"><i class="fas fa-gauge"></i> Week clarity: —</span>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="weekStart"><i class="fas fa-calendar"></i> Week starting (Mon)</label>
+<input class="input" id="weekStart" type="date"/>
+</div>
+<div class="field">
+<label for="weekLoad"><i class="fas fa-layer-group"></i> Week load</label>
+<select class="select" id="weekLoad">
+<option selected="" value="normal">Normal (steady output)</option>
+<option value="heavy">Heavy (protect time aggressively)</option>
+<option value="light">Light (recovery / reset)</option>
+<option value="deadline">Deadline week (ship week)</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="weekOutcome1"><i class="fas fa-bullseye"></i> Outcome 1 (non-negotiable)</label>
+<input class="input" id="weekOutcome1" placeholder="e.g., Finalise proposal and send for approval" type="text"/>
+<div class="helper-row">
+<span class="helper">Verb + deliverable. Make it measurable.</span>
+</div>
+</div>
+<div class="field">
+<label for="weekOutcome2"><i class="fas fa-bullseye"></i> Outcome 2 (if capacity)</label>
+<input class="input" id="weekOutcome2" placeholder="e.g., Close two stakeholder decisions in writing" type="text"/>
+<div class="helper-row">
+<span class="helper">Only set this if Outcome 1 stays safe.</span>
+</div>
+</div>
+<div class="field">
+<label for="weekOutcome3"><i class="fas fa-bullseye"></i> Outcome 3 (optional)</label>
+<input class="input" id="weekOutcome3" placeholder="e.g., Reduce meeting load by 20% through batching" type="text"/>
+<div class="helper-row">
+<span class="helper">Optional. Avoid vanity outcomes.</span>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="weekConstraint"><i class="fas fa-triangle-exclamation"></i> Key constraint</label>
+<select class="select" id="weekConstraint">
+<option selected="" value="none">None</option>
+<option value="meetings">Meeting-heavy week</option>
+<option value="context">High context-switching</option>
+<option value="energy">Low energy week</option>
+<option value="manager">Manager volatility</option>
+<option value="external">External dependency risk</option>
+</select>
+</div>
+<div class="field">
+<label for="defaultDay"><i class="fas fa-arrow-right"></i> Add tasks into</label>
+<select class="select" id="defaultDay">
+<option selected="" value="backlog">Backlog (unassigned)</option>
+<option value="mon">Monday</option>
+<option value="tue">Tuesday</option>
+<option value="wed">Wednesday</option>
+<option value="thu">Thursday</option>
+<option value="fri">Friday</option>
+<option value="sat">Saturday</option>
+<option value="sun">Sunday</option>
+</select>
+</div>
+</div>
+<div class="panel-head">
+<div class="panel-title">
+<h3>Add a task</h3>
+<p>Score quickly. The planner will flag what’s pretending to be priority.</p>
+</div>
+<span class="mini-chip green" id="savedChip"><i class="fas fa-check"></i> Saved</span>
+</div>
+<div class="field">
+<label for="taskTitle"><i class="fas fa-pen"></i> Task title (deliverable)</label>
+<input class="input" id="taskTitle" placeholder="e.g., Draft stakeholder update and send" type="text"/>
+<div class="helper-row">
+<span class="helper">If you can’t send/submit it, it’s not finished.</span>
+</div>
+</div>
+<div class="field-row three">
+<div class="field">
+<label for="taskImpact"><i class="fas fa-arrow-trend-up"></i> Impact</label>
+<select class="select" id="taskImpact">
+<option selected="" value="3">High</option>
+<option value="2">Medium</option>
+<option value="1">Low</option>
+</select>
+</div>
+<div class="field">
+<label for="taskUrgency"><i class="fas fa-bolt"></i> Urgency</label>
+<select class="select" id="taskUrgency">
+<option value="3">High</option>
+<option selected="" value="2">Medium</option>
+<option value="1">Low</option>
+</select>
+</div>
+<div class="field">
+<label for="taskEffort"><i class="fas fa-stopwatch"></i> Effort</label>
+<select class="select" id="taskEffort">
+<option selected="" value="1">Small</option>
+<option value="2">Medium</option>
+<option value="3">Large</option>
+</select>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="taskCategory"><i class="fas fa-tags"></i> Category tag</label>
+<select class="select" id="taskCategory">
+<option selected="" value="clarity">Clarity</option>
+<option value="burnout">Burnout</option>
+<option value="manager">Manager</option>
+<option value="politics">Politics</option>
+<option value="hr">HR</option>
+<option value="confidence">Confidence</option>
+<option value="career">Career</option>
+<option value="none">None</option>
+</select>
+</div>
+<div class="field">
+<label for="taskDue"><i class="fas fa-flag-checkered"></i> Due day</label>
+<select class="select" id="taskDue">
+<option selected="" value="none">Not set</option>
+<option value="mon">Monday</option>
+<option value="tue">Tuesday</option>
+<option value="wed">Wednesday</option>
+<option value="thu">Thursday</option>
+<option value="fri">Friday</option>
+<option value="sat">Saturday</option>
+<option value="sun">Sunday</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="taskNotes"><i class="fas fa-note-sticky"></i> Notes (optional)</label>
+<textarea class="textarea" id="taskNotes" placeholder="Dependencies, who you need, what ‘done’ looks like, risks..."></textarea>
+<div class="helper-row">
+<span class="helper">Keep notes short. You want control, not admin.</span>
+</div>
+</div>
+<div class="score-row" id="scoreRow">
+<span class="tiny-pill" id="scorePill"><i class="fas fa-signal"></i> Priority: —</span>
+<span class="tiny-pill" id="tradeoffPill"><i class="fas fa-scale-balanced"></i> Trade-off risk: —</span>
+</div>
+<div class="workspace-actions">
+<button class="btn secondary" id="addTaskBtn"><i class="fas fa-plus"></i> Add task</button>
+<button class="btn secondary" id="autoBuildWeekBtn"><i class="fas fa-wand-magic-sparkles"></i> Auto-build week</button>
+<button class="btn secondary" id="clearWeekBtn"><i class="fas fa-eraser"></i> Clear week</button>
+</div>
+<div aria-label="Insights" class="insights">
+<div class="insight-card">
+<div class="insight-title"><i class="fas fa-eye"></i> Reality check</div>
+<div class="insight-body" id="realityCheck">
+            Add tasks to see priority concentration, overload risk, and whether outcomes are actually protected.
+          </div>
+</div>
+<div class="insight-card">
+<div class="insight-title"><i class="fas fa-shield-halved"></i> Boundary script</div>
+<div class="insight-body" id="boundaryScript">
+            Generate your weekly plan to get a ready-to-send boundary line.
+          </div>
+</div>
+</div>
+</div>
+<div aria-label="Week board" class="panel">
+<div class="panel-head">
+<div class="panel-title">
+<h3>Week board</h3>
+<p>Drag tasks into days. Keep Monday light and protect one mid-week delivery day.</p>
+</div>
+<span class="mini-chip" id="weekChip"><i class="fas fa-calendar-week"></i> Week: —</span>
+</div>
+<div aria-label="Week board" class="week-board">
+<div class="week-board-header">
+<div class="left">
+<div class="title"><i class="fas fa-grip"></i> Drag and place tasks</div>
+<div class="sub" id="boardSub">No tasks yet. Add tasks then place them into days.</div>
+</div>
+<div class="mini-chip" id="countsChip"><i class="fas fa-list-check"></i> 0 tasks</div>
+</div>
+<div class="week-scroll" id="weekScroll">
+</div>
+</div>
+</div>
+</div>
+<div class="panel primary-actions-bottom">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-list-check"></i> Generate Report
+      </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your weekly plan</h2>
+<p class="pack-subtitle">
+      A clean weekly output you can paste into notes or share as a priorities view. Includes outcomes, day-by-day task placement,
+      and a short boundary script to keep expectations clean.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Plan strength</div>
+<div class="metric-score" id="planStrength">—</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Priority signal</div>
+<div class="metric-score" id="prioritySignal">—</div>
+</div>
+</div>
+</div>
+<div class="pack-output">
+<div class="mono" id="planOutput"></div>
+</div>
+</div>
+<div class="print-only">
+<div class="print-snapshot-header">Your Weekly Priority Plan</div>
+<div class="print-snapshot-items" id="printSnapshotItems"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

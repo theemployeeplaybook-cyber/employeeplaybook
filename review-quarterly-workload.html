@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Quarterly Workload Review | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="review-quarterly-workload">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-expectation-burnout-and-capacity.html">Expectation, Burnout &amp; Capacity</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Quarterly Workload Review</span>
+</div>
+<span class="checklist-name">QUARTERLY WORKLOAD REVIEW</span>
+<h1 class="hero-main-heading" data-date="">
+      Audit your workload like a strategist and renegotiate like a professional
+    </h1>
+<div class="hero-subheading">
+      Quantify what’s changed, identify the real drivers (not the noise), and produce a clear “re-scope pack” you can use with your manager. Includes a workload health scorecard, capacity risk signals,
+      priority trade-offs, and ready-to-send scripts that reduce overload without sounding emotional or difficult.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html" title="Clarity, Priorities &amp; Direction">
+<i class="fas fa-bullseye"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This</h3>
+<ul class="bullet-list">
+<li>End of quarter (or after a restructure / scope creep wave).</li>
+<li>When you feel “always busy” but delivery is slipping.</li>
+<li>When your role has quietly expanded (more stakeholders, more admin, more meetings).</li>
+<li>Before performance reviews — so you can show trade-offs, not excuses.</li>
+<li>Before you agree to new commitments or stretch goals.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>Tips &amp; Tricks (premium)</h3>
+<ul class="bullet-list">
+<li><strong>Separate “work” from “workload”.</strong> Workload includes meetings, context-switching, admin, stakeholder churn.</li>
+<li><strong>Quantify with ranges.</strong> “3–5 hrs/week of X” is harder to dismiss than “it’s a lot.”</li>
+<li><strong>Use neutral language.</strong> “Capacity risk” beats “I’m overwhelmed” in most cultures.</li>
+<li><strong>Offer options.</strong> “If we keep A, we drop B or reduce C.” Make the decision easy.</li>
+<li><strong>Protect deep work.</strong> One uninterrupted 90–120 min block/day is a delivery multiplier.</li>
+</ul>
+<div class="micro-tip"><strong>Quick win:</strong> If your week has &gt; 12 hours of meetings, aim to convert 25–40% into async updates.</div>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Quarterly workload audit</h2>
+<p>
+        Capture your quarter context, score workload health, then convert your insights into a manager-ready pack:
+        risks, trade-offs, and a clean ask that protects delivery (and you).
+      </p>
+</div>
+</div>
+<div class="form-grid">
+<div class="form-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">1</div>
+<div class="card-title">
+<h3>Quarter snapshot (context)</h3>
+<p>Set the frame. This prevents “but you used to manage it”.</p>
+</div>
+</div>
+</div>
+<div class="compact-row">
+<div class="field">
+<label for="quarter_label"><i class="fas fa-flag"></i> Quarter</label>
+<select class="select" id="quarter_label">
+<option>Q1 (Jan–Mar)</option>
+<option>Q2 (Apr–Jun)</option>
+<option>Q3 (Jul–Sep)</option>
+<option>Q4 (Oct–Dec)</option>
+</select>
+</div>
+<div class="field">
+<label for="role_scope"><i class="fas fa-id-badge"></i> Role / scope</label>
+<input class="input compact" id="role_scope" placeholder="e.g., People Ops Partnering (EU)" type="text"/>
+</div>
+<div class="field">
+<label for="team_size"><i class="fas fa-users"></i> Team / stakeholders</label>
+<input class="input compact" id="team_size" placeholder="e.g., 1 team + 6 stakeholders" type="text"/>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<label for="review_date"><i class="fas fa-calendar"></i> Review date</label>
+<input class="input" id="review_date" type="date"/>
+</div>
+<div class="field">
+<label for="work_mode"><i class="fas fa-laptop-house"></i> Work mode</label>
+<select class="select" id="work_mode">
+<option>Remote</option>
+<option>Hybrid</option>
+<option>Office-based</option>
+<option>Variable / unstable</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="top_deliverables"><i class="fas fa-bullseye"></i> Top deliverables this quarter (3 bullets)</label>
+<textarea class="textarea" id="top_deliverables" placeholder="• Deliverable 1\n• Deliverable 2\n• Deliverable 3"></textarea>
+</div>
+<div class="micro-tip">
+<strong>Pro move:</strong> Write deliverables as outcomes (“X improved / shipped / reduced”) not activities (“attended / supported / helped”).
+      </div>
+</div>
+<div class="form-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">2</div>
+<div class="card-title">
+<h3>Workload health scorecard</h3>
+<p>Score the drivers. The tool generates your risk signal + negotiation pack.</p>
+</div>
+</div>
+</div>
+<div class="review-block">
+<div class="review-head">
+<div>
+<div class="title"><i class="fas fa-gauge-high"></i> Workload health</div>
+<div class="sub">1 = high risk / unstable. 5 = sustainable. This is about delivery conditions, not toughness.</div>
+</div>
+<div class="review-score" id="reviewScoreLabel">—</div>
+</div>
+<div>
+<div>
+<div>Work volume realism</div>
+<div class="rating-display" id="lbl_r_volume">3/5</div>
+</div>
+<div>Is the total volume realistic inside contracted hours?</div>
+<input class="range" id="r_volume" max="5" min="1" step="1" type="range" value="3"/>
+<div class="scale"><span>1 risky</span><span>3 mixed</span><span>5 stable</span></div>
+</div>
+<div>
+<div>
+<div>Focus time protection</div>
+<div class="rating-display" id="lbl_r_focus">3/5</div>
+</div>
+<div>Do you get uninterrupted blocks to deliver?</div>
+<input class="range" id="r_focus" max="5" min="1" step="1" type="range" value="3"/>
+<div class="scale"><span>1 none</span><span>3 some</span><span>5 protected</span></div>
+</div>
+<div>
+<div>
+<div>Context switching</div>
+<div class="rating-display" id="lbl_r_switch">3/5</div>
+</div>
+<div>How fragmented is your day (tickets, pings, ad hoc)?</div>
+<input class="range" id="r_switch" max="5" min="1" step="1" type="range" value="3"/>
+<div class="scale"><span>1 chaotic</span><span>3 manageable</span><span>5 controlled</span></div>
+</div>
+<div>
+<div>
+<div>Meeting load</div>
+<div class="rating-display" id="lbl_r_meetings">3/5</div>
+</div>
+<div>Are meetings proportionate and decision-led?</div>
+<input class="range" id="r_meetings" max="5" min="1" step="1" type="range" value="3"/>
+<div class="scale"><span>1 heavy</span><span>3 ok</span><span>5 lean</span></div>
+</div>
+<div>
+<div>
+<div>Boundary strength</div>
+<div class="rating-display" id="lbl_r_boundaries">3/5</div>
+</div>
+<div>Can you say no / renegotiate without fallout?</div>
+<input class="range" id="r_boundaries" max="5" min="1" step="1" type="range" value="3"/>
+<div class="scale"><span>1 unsafe</span><span>3 mixed</span><span>5 safe</span></div>
+</div>
+</div>
+<div class="micro-tip">
+<strong>Interpretation:</strong> A “low” score does not mean you’re underperforming. It usually means the system is under-designed.
+      </div>
+</div>
+<div class="form-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">3</div>
+<div class="card-title">
+<h3>Load drivers (what’s really causing it)</h3>
+<p>Turn feelings into root causes you can act on (or escalate).</p>
+</div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<label for="hours_meetings"><i class="fas fa-calendar-days"></i> Meetings per week (hrs)</label>
+<input class="input" id="hours_meetings" min="0" placeholder="e.g., 10" step="0.5" type="number"/>
+</div>
+<div class="field">
+<label for="hours_deepwork"><i class="fas fa-brain"></i> Deep work per week (hrs)</label>
+<input class="input" id="hours_deepwork" min="0" placeholder="e.g., 6" step="0.5" type="number"/>
+</div>
+<div class="field">
+<label for="ad_hoc_rate"><i class="fas fa-bolt"></i> Ad hoc interruptions</label>
+<select class="select" id="ad_hoc_rate">
+<option>Low (1–3/day)</option>
+<option>Medium (4–8/day)</option>
+<option>High (9+/day)</option>
+<option>Unpredictable (waves)</option>
+</select>
+</div>
+<div class="field">
+<label for="stakeholder_churn"><i class="fas fa-shuffle"></i> Stakeholder churn</label>
+<select class="select" id="stakeholder_churn">
+<option>Stable (few changes)</option>
+<option>Moderate (some new asks)</option>
+<option>High (constant new asks)</option>
+<option>Political / unclear ownership</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="new_work_sources"><i class="fas fa-arrow-up-right-dots"></i> What expanded this quarter?</label>
+<textarea class="textarea" id="new_work_sources" placeholder="Examples:\n• New stakeholder / project\n• More reporting / admin\n• Fewer resources / hiring freeze\n• 'Urgent' waves\n• Role creep (work outside remit)"></textarea>
+</div>
+<div class="field">
+<label for="risk_signals"><i class="fas fa-triangle-exclamation"></i> Risk signals you're seeing</label>
+<textarea class="textarea" id="risk_signals" placeholder="Examples:\n• Deadlines slipping\n• Quality/rework increasing\n• Always behind on core work\n• Longer hours becoming normal\n• Recovery time shrinking"></textarea>
+</div>
+</div>
+<div class="form-card">
+<div class="card-top">
+<div class="card-chip">
+<div class="card-num">4</div>
+<div class="card-title">
+<h3>Trade-offs + renegotiation plan</h3>
+<p>Convert the audit into a manager-ready option set.</p>
+</div>
+</div>
+</div>
+<div class="field">
+<label for="keep_drop_defer"><i class="fas fa-layer-group"></i> Keep / drop / defer (be blunt)</label>
+<textarea class="textarea tall" id="keep_drop_defer" placeholder="KEEP (non-negotiable):\n• \n\nDROP (low value / misaligned):\n• \n\nDEFER (next quarter / later):\n• \n\nDELEGATE (if possible):\n• "></textarea>
+</div>
+<div class="field">
+<label for="boundary_changes"><i class="fas fa-shield-halved"></i> Boundary changes you want</label>
+<textarea class="textarea" id="boundary_changes" placeholder="Examples:\n• Reduce recurring meetings by X\n• Convert updates async\n• No new work without deprioritisation\n• Protected deep work blocks\n• Stakeholder intake process"></textarea>
+</div>
+<div class="field">
+<label for="manager_ask"><i class="fas fa-handshake"></i> The manager ask (1–3 lines)</label>
+<textarea class="textarea" id="manager_ask" placeholder="What decision do you need from your manager? (Scope, priorities, resource, meeting changes, stakeholder alignment)"></textarea>
+</div>
+<div class="micro-tip">
+<strong>Script rule:</strong> Ask for a decision (“which do you want me to drop?”) not permission (“is it okay if…”).
+      </div>
+</div>
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+    </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+    </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Quarterly Workload Review Pack</h2>
+<p class="pack-subtitle">
+      A manager-ready pack: workload health score, key drivers, capacity risks, trade-offs, and scripts to renegotiate scope cleanly.
+      Built to protect delivery and reduce the chances you get painted as “negative”.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Workload risk signal</div>
+<div class="metric-score" id="riskSignal">—</div>
+</div>
+</div>
+<div class="pack-actions">
+<button class="btn secondary" data-action="print-page" id="printPackBtn"><i class="fas fa-print"></i> Print</button>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page audit summary</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-screwdriver-wrench"></i> Fix plan (next quarter)</h3>
+<div class="pack-grid" id="fixGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (calm, practical, hard to argue with)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Escalation Documentation Form | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="form-escalation-documentation">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Save</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR Insider</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Escalation Documentation Form</span>
+</div>
+<span class="checklist-name">ESCALATION DOCUMENTATION FORM</span>
+<h1 class="hero-main-heading">
+      Capture facts, evidence, and decisions so your escalation stays calm, credible, and hard to dismiss
+    </h1>
+<div class="hero-subheading">
+      This form is your “case file” for workplace escalations: workload collapse, repeated boundary breaches, unsafe conduct, policy issues, or formal process risks.
+      It helps you separate <strong>facts from feelings</strong>, lock <strong>dates and outcomes</strong>, and produce a clean escalation pack you can use with your manager, HR, or Occupational Health.
+      <br/><br/>
+      Fill in what you know. Generate your pack when you’ve captured enough to be taken seriously without over-explaining.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html" title="Clarity, Priorities &amp; Direction">
+<i class="fas fa-bullseye"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Form</h3>
+<ul class="bullet-list">
+<li>When informal chats have not changed behaviour, expectations, or workload.</li>
+<li>When you need a written record of incidents, decisions, or boundary breaches.</li>
+<li>When the risk is <strong>credibility</strong>, <strong>health</strong>, or <strong>formal process</strong> (performance, conduct, grievance).</li>
+<li>When you want to escalate without sounding dramatic — just accurate.</li>
+<li>When you need a clean timeline that holds up under scrutiny.</li>
+</ul>
+<div class="inline-badge"><i class="fas fa-shield"></i> Bias-resistant documentation beats “passionate” arguments.</div>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Write like you’re preparing for a neutral reviewer: date, quote, outcome, evidence.</li>
+<li>Keep it <strong>specific</strong>: “On Tue 12:40, X said… then Y happened.”</li>
+<li>Always capture your <strong>attempted fixes</strong> (what you tried, who you told, what changed).</li>
+<li>Separate: <strong>incident</strong> → <strong>impact</strong> → <strong>risk</strong> → <strong>ask</strong>.</li>
+<li>Your pack includes scripts that keep tone calm and UK-friendly.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Draft your escalation documentation</h2>
+<p>
+        Four focused sections: (1) what happened, (2) evidence and timeline, (3) impact and risk, (4) your ask and escalation route.
+        Generate your Escalation Pack when the narrative is clear and evidence-led.
+      </p>
+</div>
+</div>
+<div class="form-grid" id="formGrid">
+</div>
+<div class="primary-actions-wrap">
+<div class="primary-actions-bottom">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-list-check"></i> Generate Evidence Report
+      </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+</div>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> —</span>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Escalation Pack</h2>
+<p class="pack-subtitle">
+      A structured output you can use immediately: one-page case summary, timeline entries you can paste into email/HR systems,
+      risk framing (why this is not “just a bad week”), and scripts that keep your tone calm and credible.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Escalation strength</div>
+<div class="metric-score" id="strengthSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page case summary</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Risk framing (what this puts at risk)</h3>
+<div class="pack-grid" id="riskGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (clear, calm, UK-friendly)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

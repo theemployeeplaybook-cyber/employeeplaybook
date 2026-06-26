@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Priority Reset Playbook | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="playbook-priority-reset">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<section class="pb-card" id="c1">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-inbox"></i> Chapter 1) Intake &amp; triage</div>
+<div class="pb-card-sub">
+              Your brain can’t prioritise what it can’t see. This step turns “too much” into an inventory you can control.
+              Don’t make this perfect — make it <b>honest</b>.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Everything currently on your plate</span></div>
+<textarea class="textarea pb-input" id="c1_list" placeholder="List projects, requests, recurring responsibilities, and ‘small’ tasks that are eating time. One per line."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your role’s primary purpose</span></div>
+<input class="input pb-input" id="c1_purpose" placeholder="Example: keep delivery stable / reduce risk / improve customer outcomes / run ops"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Who decides priorities?</span></div>
+<input class="input pb-input" id="c1_decider" placeholder="Example: manager / director / PMO / steering group"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Time leaks (what’s actually stealing capacity)</span></div>
+<textarea class="textarea pb-input" id="c1_leaks" placeholder="Example: meetings with no decisions, interruptions, unclear ownership, rework, urgent Slack, context switching."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your non-negotiables (what you must protect)</span></div>
+<textarea class="textarea pb-input" id="c1_nonneg" placeholder="Example: no weekend work, school pick-up, deep-work blocks, health boundaries, no late-night handovers."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-lightbulb"></i>
+<div>
+<b>Uncommon truth: “busyness” is often un-owned work</b>
+<span>Overload is frequently the absence of a decision-maker saying: <b>this is not yours</b>, <b>this is not now</b>, or <b>this stops</b>.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-user-gear"></i>
+<div>
+<b>Personality / Behaviour lens</b>
+<span><b>High-control manager:</b> bring options + measures. <b>Avoidant manager:</b> propose a plan and ask for a “yes/no by Friday”.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-clipboard-list"></i> Triage snapshot (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_triage">Click Build to generate your triage snapshot.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c1"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c2">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-bullseye"></i> Chapter 2) Must-win outcomes</div>
+<div class="pb-card-sub">
+              “Priority” means <b>something else loses</b>. Choose three must-wins that are easy to defend and hard to misinterpret.
+              You’re aiming for outcomes, not activity.
+            </div>
+</div>
+</div>
+<div aria-label="Must-win tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="mwA" type="button"><i class="fas fa-star"></i> Must-wins</button>
+<button class="pb-tab" data-tab="mwB" type="button"><i class="fas fa-shield"></i> Risks &amp; consequences</button>
+<button class="pb-tab" data-tab="mwC" type="button"><i class="fas fa-filter"></i> Decision filters</button>
+</div>
+<div class="pb-tab-panel active" id="mwA">
+<div class="pb-card-sub">
+<b>Standard worth keeping:</b> if you can’t say it in one sentence, it’s not priority-ready.
+          </div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Must-win #1 (outcome)</span></div>
+<input class="input pb-input" id="c2_mw1" placeholder="Example: Ship X by date / stabilise Y / reduce incidents / close Z gap"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Must-win #2 (outcome)</span></div>
+<input class="input pb-input" id="c2_mw2" placeholder="Example: Deliver agreed milestone / improve SLA / cut backlog by N%"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Must-win #3 (outcome)</span></div>
+<input class="input pb-input" id="c2_mw3" placeholder="Example: Launch / compliance / stakeholder confidence / cost reduction"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What you are explicitly not doing (for now)</span></div>
+<textarea class="textarea pb-input" id="c2_notdoing" placeholder="Example: pause nice-to-haves, stop duplicate reporting, defer non-critical requests, reduce meeting load."></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="mwB">
+<div class="pb-card-sub">
+            The fastest route to clarity is consequences. Leaders decide faster when you show <b>what breaks</b> if priorities stay fuzzy.
+          </div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">If we don’t do the must-wins, what happens?</span></div>
+<textarea class="textarea pb-input" id="c2_risks" placeholder="Example: missed deadlines, customer impact, compliance exposure, churn, reputational hit, team burnout."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What’s the single biggest risk right now?</span></div>
+<input class="input pb-input" id="c2_biggestrisk" placeholder="Example: scope creep / unclear ownership / dependency risk / decision delays"/>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="mwC">
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-check-double"></i>
+<div>
+<b>The “Yes Filter” (accept work only if…)</b>
+<span>It supports a must-win, has an owner, has a decision-maker, and a deadline. If any are missing, it becomes a <b>clarification request</b>, not instant labour.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-ban"></i>
+<div>
+<b>The “No Filter” (polite refusal logic)</b>
+<span>If it’s vague, late, or duplicates existing work, you don’t refuse emotionally — you refuse with <b>trade-offs</b>: “Yes, if we drop X.”</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-layer-group"></i>
+<div>
+<b>The “3 Outcomes Rule”</b>
+<span>If you’re responsible for more than three outcomes at once, you’re not prioritising — you’re <b>spreading risk</b> and guaranteeing slippage.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-stopwatch"></i>
+<div>
+<b>The “48-hour clarity test”</b>
+<span>If a request can’t be clarified within 48 hours, it goes to <b>defer</b>. Otherwise it becomes a quiet drain on your week.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-bullseye"></i> Must-win statement (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_mustwins">Click Build to generate your must-win statement.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c2"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c3">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-gauge-high"></i> Chapter 3) Capacity &amp; constraints</div>
+<div class="pb-card-sub">
+              This is where the reset becomes defensible. You’re not “being difficult” — you’re matching workload to capacity.
+              The trick: translate it into <b>hours, constraints, and sequencing</b>.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Your realistic weekly capacity (hours)</span></div>
+<input class="input pb-input" id="c3_hours" placeholder="Example: 32 / 37.5 / 25"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Meetings you can’t avoid (hours)</span></div>
+<input class="input pb-input" id="c3_meet" placeholder="Example: 12"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Deep work needed (hours)</span></div>
+<input class="input pb-input" id="c3_deep" placeholder="Example: 10"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Context switching penalty</span></div>
+<input class="input pb-input" id="c3_drag" placeholder="Example: high / medium / low"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Constraints (what makes delivery harder)</span></div>
+<textarea class="textarea pb-input" id="c3_constraints" placeholder="Example: dependencies, approvals, unclear scope, missing data, multiple stakeholders, limited access, part-time, health."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What you need to remove to make delivery real</span></div>
+<textarea class="textarea pb-input" id="c3_remove" placeholder="Example: drop weekly report, cut meeting frequency, remove duplicate approvals, reduce stakeholder touchpoints."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-bolt"></i>
+<div>
+<b>Game-changing move: name the “capacity maths” out loud</b>
+<span>Leaders can’t argue with arithmetic. “I have 25 delivery hours after meetings; the asks add up to 40. Which 15 do we drop or delay?”</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-triangle-exclamation"></i>
+<div>
+<b>Watch-out: invisible overtime creates fake capacity</b>
+<span>If you keep rescuing delivery with late nights, you train the system that your workload is fine. The reset ends that pattern.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-gauge"></i> Capacity statement (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_capacity">Click Build to generate your capacity statement.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c3"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c4">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-scale-balanced"></i> Chapter 4) Trade-offs &amp; decision rights</div>
+<div class="pb-card-sub">
+              This chapter is the reset. You stop absorbing conflict and you force choices.
+              The secret: present <b>two options</b> and ask for a decision date.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Current conflict</span></div>
+<input class="input pb-input" id="c4_conflict" placeholder="Example: Stakeholder A wants X now; Stakeholder B wants Y now; both ‘urgent’."/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Option A (what you can deliver)</span></div>
+<input class="input pb-input" id="c4_optA" placeholder="Example: Deliver X by Friday, delay Y to next week."/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Option B (alternative sequence)</span></div>
+<input class="input pb-input" id="c4_optB" placeholder="Example: Deliver Y by Friday, deliver X by next Wednesday."/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Decision-maker</span></div>
+<input class="input pb-input" id="c4_dm" placeholder="Example: Manager / Director / Programme lead"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Decision deadline</span></div>
+<input class="input pb-input" id="c4_deadline" placeholder="Example: today 4pm / by Wednesday"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Decision rights (what you can decide vs what needs approval)</span></div>
+<textarea class="textarea pb-input" id="c4_rights" placeholder="Example: I can decide sequencing within the week; anything affecting external commitments needs approval."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-lock"></i>
+<div>
+<b>Neuro hack: reduce threat cues</b>
+<span>People resist when they feel blamed. Use “alignment language”: <b>clarify</b>, <b>agree</b>, <b>decide</b>, <b>sequence</b>. Keep it clean.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-user-gear"></i>
+<div>
+<b>Personality / Behaviour lens</b>
+<span><b>Defensive stakeholder:</b> “help me understand the priority” (not “you’re wrong”). <b>Dominant stakeholder:</b> put the trade-off in writing and ask for a sponsor decision.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-envelope-open-text"></i> Trade-off message (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_tradeoff">Click Build to generate a trade-off message you can send.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c4"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c5">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-people-group"></i> Chapter 5) Alignment &amp; comms</div>
+<div class="pb-card-sub">
+              Priorities survive when you communicate them consistently. This chapter creates a <b>repeatable cadence</b> that stops constant renegotiation.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Who needs to be aligned (names/roles)</span></div>
+<textarea class="textarea pb-input" id="c5_people" placeholder="Example: Manager, Stakeholder A, Stakeholder B, cross-team lead, PMO."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Update cadence</span></div>
+<input class="input pb-input" id="c5_cadence" placeholder="Example: weekly 6-line update / fortnightly review / daily stand-up"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your “decision channel”</span></div>
+<input class="input pb-input" id="c5_channel" placeholder="Example: email recap / Slack thread / Monday meeting / Jira comment"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">The 3-part update format you will use</span></div>
+<textarea class="textarea pb-input" id="c5_format" placeholder="Example: 1) Progress vs must-wins 2) Risks/blocks 3) Decisions needed + by when."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What you will stop responding to instantly</span></div>
+<textarea class="textarea pb-input" id="c5_stop" placeholder="Example: ad hoc ‘quick asks’, unclear messages, last-minute scope changes without trade-offs."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-eye"></i>
+<div>
+<b>Uncommon insight: repeated framing creates reality</b>
+<span>If you repeat the must-wins and the trade-offs weekly, people stop negotiating from noise and start negotiating from your plan.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-shield"></i>
+<div>
+<b>Quiet power move: written recap</b>
+<span>Verbal agreement evaporates. Written recap locks decisions, reduces rework, and protects you if priorities flip later.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-paper-plane"></i> Alignment broadcast (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_broadcast">Click Build to generate your alignment message.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c5"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c6">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-calendar-check"></i> Chapter 6) Execution cadence</div>
+<div class="pb-card-sub">
+              Priorities fail when you don’t have a delivery rhythm. This creates a simple system: plan, deliver, communicate, repeat.
+              The goal is <b>predictability</b>.
+            </div>
+</div>
+</div>
+<div aria-label="Execution cadence tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="exA" type="button"><i class="fas fa-calendar-week"></i> Weekly rhythm</button>
+<button class="pb-tab" data-tab="exB" type="button"><i class="fas fa-layer-group"></i> Backlog hygiene</button>
+<button class="pb-tab" data-tab="exC" type="button"><i class="fas fa-stopwatch"></i> Meeting surgery</button>
+</div>
+<div class="pb-tab-panel active" id="exA">
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Planning day</span></div>
+<input class="input pb-input" id="c6_plan" placeholder="Example: Monday 09:00"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Update day</span></div>
+<input class="input pb-input" id="c6_update" placeholder="Example: Wednesday 16:00"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your “three blocks” (where delivery actually happens)</span></div>
+<textarea class="textarea pb-input" id="c6_blocks" placeholder="Example: Tue 10–12 deep work; Thu 9–11 deep work; Fri 10–11 admin/close."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your shutdown rule (end of day)</span></div>
+<textarea class="textarea pb-input" id="c6_shutdown" placeholder="Example: capture next actions; set tomorrow’s top 1; stop at time; no late-night ‘catch up’."></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="exB">
+<div class="pb-card-sub">
+            A messy backlog creates emotional overload. A clean backlog creates calm authority.
+          </div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your active list cap (max concurrent items)</span></div>
+<input class="input pb-input" id="c6_cap" placeholder="Example: 5 (anything beyond goes to ‘queue’)"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What goes to the queue (not active)</span></div>
+<textarea class="textarea pb-input" id="c6_queue" placeholder="Example: nice-to-haves, unclear asks, non-urgent improvements, tasks awaiting decisions."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Definition of ‘done’ (to prevent endless loops)</span></div>
+<textarea class="textarea pb-input" id="c6_done" placeholder="Example: accepted by stakeholder; documented; handed over; metric stable for 2 weeks."></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="exC">
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-scissors"></i>
+<div>
+<b>Meeting surgery rule</b>
+<span>No meeting without: <b>purpose</b>, <b>decision</b>, <b>owner</b>, <b>pre-read</b>. Otherwise it’s a time leak in premium packaging.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-bullseye"></i>
+<div>
+<b>The “10-second opener”</b>
+<span>Start with: status, decision needed, next step. This prevents meetings becoming group therapy.</span>
+</div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Meetings you will reduce/cancel</span></div>
+<textarea class="textarea pb-input" id="c6_cut" placeholder="Example: downgrade weekly meeting to fortnightly; replace with written update; decline optional forums."></textarea>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-list-check"></i> Execution plan (copy-ready)</h4>
+</div>
+<div class="output-content" id="out_execution">Click Build to generate your execution plan.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c6"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c7">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-heart-pulse"></i> Chapter 7) Stabilisation &amp; wellbeing</div>
+<div class="pb-card-sub">
+              A priority reset that burns you out is not a reset — it’s a temporary adrenaline spike. This locks in a rhythm that keeps you steady.
+            </div>
+</div>
+</div>
+<div aria-label="Wellbeing tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-action="reset-tool" data-tab="wbA" type="button"><i class="fas fa-calendar-check"></i> 14-day reset plan</button>
+<button class="pb-tab" data-tab="wbB" type="button"><i class="fas fa-brain"></i> Nervous system stability</button>
+<button class="pb-tab" data-tab="wbC" type="button"><i class="fas fa-shield"></i> Boundary anchors</button>
+</div>
+<div class="pb-tab-panel active" id="wbA">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your next 3 actions (tiny but high-leverage)</span></div>
+<textarea class="textarea pb-input" id="c7_next3" placeholder="Example: book a priority reset with manager; send trade-off note; cut one meeting; protect 2 deep work blocks."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your weekly stabiliser</span></div>
+<input class="input pb-input" id="c7_stabiliser" placeholder="Example: Friday 30-min review + Monday 20-min plan"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your visibility touchpoint</span></div>
+<input class="input pb-input" id="c7_touch" placeholder="Example: weekly written update + decision list"/>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="wbB">
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-wind"></i>
+<div><b>Downshift in 90 seconds</b><span>Before difficult conversations: slower inhale, longer exhale. You’re training calm authority.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-circle-check"></i>
+<div><b>Decision fatigue defence</b><span>Make fewer decisions at once. Use “next 2 steps only”. Clarity lowers stress and increases follow-through.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-triangle-exclamation"></i>
+<div><b>Early warning signs</b><span>Sleep drops, irritability, dread, procrastination, late-night work, emotional reactivity. Catch it early — adjust the plan.</span></div>
+</div>
+<div class="insight">
+<i class="fas fa-shield"></i>
+<div><b>One protected block</b><span>Pick one protected block weekly where you do the work that makes the job easier. Treat it as non-negotiable.</span></div>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="wbC">
+<div class="pb-card-sub">
+            Boundaries don’t have to be loud. The best boundaries are <b>procedural</b>: options, trade-offs, written recap.
+          </div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your boundary sentence (copy-ready)</span></div>
+<textarea class="textarea pb-input" id="c7_boundary" placeholder="Example: I can do this if we move X or adjust the deadline. Which do you prefer?"></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your “no drama” rule</span></div>
+<textarea class="textarea pb-input" id="c7_rule" placeholder="Example: I don’t argue. I offer options, trade-offs, and a written recap."></textarea>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-file-lines"></i> Priority reset one-pager (final output)</h4>
+</div>
+<div class="output-content" id="out_onepager">Click Build to generate your priority reset one-pager.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c7"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="scripts">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-comment-dots"></i> Scripts that stop scope creep (without drama)</div>
+<div class="pb-card-sub">
+              These scripts are designed to protect your reputation while forcing clarity. They work because they’re <b>procedural</b>:
+              options, trade-offs, decision dates, written recap.
+            </div>
+</div>
+</div>
+<div class="script-search">
+<input class="input" id="scriptSearch" placeholder="Search scripts (e.g., trade-off, urgent, scope, decision, meeting, recap)"/>
+</div>
+<div class="acc" id="scriptsAcc">
+<div class="acc-item" data-search="trade-off urgent choose A or B decision by when">
+<button class="acc-head" data-acc="s1" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-scale-balanced"></i></div>
+<div>
+<div class="acc-title">The trade-off ask (turn conflict into a decision)</div>
+<div class="acc-meta">Use when: two “urgent” requests collide.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s1">
+<p><b>Positioning:</b> you’re aligning delivery to business priorities — not refusing work.</p>
+<p><b>Tip:</b> keep it brief. Options + decision deadline. Then stop negotiating emotionally.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s1">I can progress both, but not at the same time without impacting quality or timelines. Please choose:
+Option A: deliver &lt;A&gt; by &lt;DATE&gt;, then start &lt;B&gt; on &lt;DATE&gt;.
+Option B: deliver &lt;B&gt; by &lt;DATE&gt;, then start &lt;A&gt; on &lt;DATE&gt;.
+If neither works, we’ll need a sponsor decision on priority by &lt;TIME/DATE&gt;.</div>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="scope creep new request clarify owner deadline definition of done">
+<button class="acc-head" data-acc="s2" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-filter"></i></div>
+<div>
+<div class="acc-title">The clarification gate (stop vague work from entering)</div>
+<div class="acc-meta">Use when: requests arrive fuzzy and urgent-by-vibe.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s2">
+<p><b>Why it works:</b> it turns “instant labour” into “fast clarification”.</p>
+<p><b>Tip:</b> ask for owner + outcome + deadline. If any are missing, it goes to queue.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s2">Happy to look at this — quick clarification so I prioritise it correctly:
+1) What outcome do you need (one sentence)?
+2) What’s the deadline and what happens if it slips?
+3) Who is the owner/decision-maker for sign-off?
+Once I have that, I’ll confirm where it fits against the current must-wins.</div>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="manager priority reset meeting agenda align plan capacity maths">
+<button class="acc-head" data-acc="s3" data-action="reset-tool" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-people-arrows"></i></div>
+<div>
+<div class="acc-title">Book a priority reset meeting (calm, senior tone)</div>
+<div class="acc-meta">Use when: you need authority to choose what loses.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s3">
+<p><b>Positioning:</b> you’re protecting delivery and reducing risk.</p>
+<p><b>Tip:</b> include the “capacity maths” line. It stops moral debates.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s3">Can we do a 20-minute priority reset this week? I want to align on the 3 must-win outcomes and agree what we are explicitly not doing right now.
+I currently have &lt;X&gt; delivery hours after meetings; the incoming asks total roughly &lt;Y&gt;. I’ll bring two sequencing options so we can decide quickly and keep delivery clean.</div>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="recap in writing decisions agreed next steps protect yourself">
+<button class="acc-head" data-acc="s4" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-file-signature"></i></div>
+<div>
+<div class="acc-title">The written recap (lock decisions, stop revisionism)</div>
+<div class="acc-meta">Use when: priorities change and you need protection.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s4">
+<p><b>Why it works:</b> it reduces rework, reduces anxiety, and creates accountability without conflict.</p>
+<p><b>Tip:</b> keep it short. Decisions, trade-offs, next steps, owners.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s4">Quick recap of what we agreed:
+1) Must-wins this week: &lt;MW1&gt;, &lt;MW2&gt;, &lt;MW3&gt;
+2) Trade-offs: we are pausing/deferring &lt;X&gt; to enable the above
+3) Decisions: &lt;DECISION&gt; owned by &lt;NAME/ROLE&gt; by &lt;DATE&gt;
+4) Next update: &lt;CADENCE&gt;
+If anything above is incorrect, please reply today so I can adjust the plan.</div>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

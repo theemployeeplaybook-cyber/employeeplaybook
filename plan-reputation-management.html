@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Reputation Management Plan | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="plan-reputation-management">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-confidence-presence-influence.html">Confidence, Presence &amp; Influence</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Reputation Management Plan</span>
+</div>
+<span class="checklist-name">REPUTATION MANAGEMENT PLAN</span>
+<h1 class="hero-main-heading">Protect your credibility, shape the story, and stay unshakeable — even in messy workplaces</h1>
+<div class="hero-subheading">
+      This plan helps you manage your professional reputation deliberately: what you are known for, how you are perceived, where you are exposed, and how to correct the narrative without becoming reactive.
+      Draft your inputs, then generate a Reputation Pack: a one-page positioning plan, high-risk reputation traps to avoid, and scripts for corrections, clarity, and confidence.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill career" href="category-career-playbook.html" title="Career Playbook">
+<i class="fas fa-route category-icon"></i>
+<span>Career Playbook</span>
+</a>
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html" title="Clarity, Priorities &amp; Direction">
+<i class="fas fa-bullseye category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-handshake category-icon"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Plan</h3>
+<ul class="bullet-list">
+<li>When you suspect your work is being misrepresented or selectively reported.</li>
+<li>When you are in a “high visibility” zone (promotion, restructure, performance noise, leadership change).</li>
+<li>When you are labelled unfairly (difficult, slow, not strategic, too blunt, too quiet) and it is sticking.</li>
+<li>When someone else is taking credit, shifting blame, or controlling the narrative around delivery.</li>
+<li>When you want to build a reputation that travels ahead of you — without self-promotion cringe.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Assume there is always a story running. Your job is to make sure it is accurate and useful.</li>
+<li>Separate <strong>facts</strong> (evidence) from <strong>interpretations</strong> (opinions). You can control facts.</li>
+<li>Use “receipts”: written updates, decision logs, clear ownership, and follow-ups.</li>
+<li>Protect tone. Calm clarity beats heat. A controlled response is a reputation signal.</li>
+<li>This is not about pretending. It is about making your value unmistakable and defensible.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Draft your reputation management plan</h2>
+<p>
+        Eight modules to define your reputation, map risks, control the narrative, and implement “credibility armour” (without politics theatre).
+        Generate your Reputation Pack once you have enough to act on.
+      </p>
+</div>
+</div>
+<div class="modules-grid" id="modulesGrid">
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Reputation Pack</h2>
+<p class="pack-subtitle">
+      A structured output you can use immediately: a one-page positioning plan, reputation risk prompts (so you don’t walk into traps),
+      and scripts for narrative correction, stakeholder updates, and clean escalation — UK-friendly and calm.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Reputation risk signal</div>
+<div class="metric-score" id="riskSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-id-card"></i> One-page reputation plan</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Reputation risk prompts (avoid slow sabotage)</h3>
+<div class="pack-grid" id="riskGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (calm, clear, UK-friendly)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

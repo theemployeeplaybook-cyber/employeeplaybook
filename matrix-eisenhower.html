@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Eisenhower Matrix | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="matrix-eisenhower">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn">
+<i class="far fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Eisenhower Matrix</span>
+</div>
+<span class="checklist-name">EISENHOWER MATRIX TEMPLATE</span>
+<h1 class="hero-main-heading">Sort urgency from importance</h1>
+<div class="hero-subheading">
+      The goal isn’t to “do more”, it’s to stop urgent noise stealing your important work. <br/>This is a fully functional Eisenhower Matrix (urgent vs important). Add tasks, drag them between quadrants, edit details, and copy the whole matrix in one click.
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill decision" href="category-career-playbook.html">
+<i class="fas fa-route category-icon"></i>
+<span>Career Playbook</span>
+</a>
+<a class="category-pill boundaries" href="category-expectation-burnout-and-capacity.html">
+<i class="fas fa-hand category-icon"></i>
+<span>Expectation, Burnout &amp; Capacity</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-bullseye"></i>When to Use the Matrix</h3>
+<ul class="bullet-list">
+<li>You’re overwhelmed and everything feels “urgent”, but your important work is stalling.</li>
+<li>You’re being pulled into constant requests, Slack pings, or last-minute changes.</li>
+<li>You need a calm way to say “not now”, “not me”, or “not necessary” without drama.</li>
+<li>You’re preparing for a 1:1 and want clarity on what you’re doing vs what you’re absorbing.</li>
+<li>You need a visible rationale for re-prioritising (especially in political or high-pressure environments).</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips (Use These Rules)</h3>
+<ul class="bullet-list">
+<li><strong>Urgent</strong> is about time pressure. <strong>Important</strong> is about impact, risk, and outcomes.</li>
+<li>If Q1 is full, your system is broken: you’re either under-resourced, unclear, or absorbing other people’s panic.</li>
+<li>Q2 is where your future stress is prevented. Protect it like a meeting with your reputation.</li>
+<li>Q3 is a boundary tool. If it doesn’t require your unique skill, route it away from your focus.</li>
+<li>Q4 is not “later”. It’s “no”. Delete, decline, minimise, or stop feeding it attention.</li>
+</ul>
+</div>
+</div>
+<div class="matrix-wrap">
+<h2 class="matrix-section-title">Build Your Matrix</h2>
+<div class="builder-bar">
+<div class="builder-left">
+<div class="builder-title-row">
+<div class="builder-title"><i class="fas fa-plus-circle"></i> Add a task</div>
+<div class="builder-hint">Tip: Start with 5–10 tasks. Then sort them honestly.</div>
+</div>
+<div class="task-form">
+<input aria-label="Task title" class="input" id="taskTitle" placeholder="Task title (e.g., Finish exec summary, Book stakeholder sync)" type="text"/>
+<input aria-label="Due date" class="input" id="taskDue" type="date"/>
+<input aria-label="Estimate" class="input" id="taskEstimate" placeholder="Estimate (e.g., 30m, 2h)" type="text"/>
+<select aria-label="Quadrant" class="input select" id="taskQuadrant">
+<option value="q2">Schedule</option>
+<option value="q1">Do now (Urgent + Important)</option>
+<option value="q3">Delegate (Urgent)</option>
+<option value="q4">Eliminate (Neither)</option>
+</select>
+<br/>
+<button class="btn primary" id="addTaskBtn" type="button">
+<i class="fas fa-plus"></i> Add
+        </button>
+</div>
+</div>
+<div class="builder-right">
+<div class="mini-note">
+<strong>Quick tip:</strong> Start with 5–10 tasks. Drag them between quadrants to sort honestly.
+      </div>
+<button class="btn secondary" disabled="" id="tipsBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Get tips
+      </button>
+</div>
+</div>
+<div class="matrix-grid">
+<div class="quadrant">
+<div class="quad-top">
+<div class="quad-title">
+<div class="quad-name">
+<span class="quad-pill q1"><i class="fas fa-bolt"></i> Q1</span>
+            Do now
+          </div>
+<div class="quad-sub">Urgent + important. Protect delivery. Remove blockers fast.</div>
+</div>
+<span class="quad-pill q1" title="Count in this quadrant"><i class="fas fa-hashtag"></i> <span data-qcount="q1">0</span></span>
+</div>
+<div class="quad-body">
+<div aria-label="Do now dropzone" class="dropzone" data-dropzone="q1"></div>
+</div>
+</div>
+<div class="quadrant">
+<div class="quad-top">
+<div class="quad-title">
+<div class="quad-name">
+<span class="quad-pill q2"><i class="fas fa-calendar-check"></i> Q2</span>
+            Schedule
+          </div>
+<div class="quad-sub">Important, not urgent. This is where progress is built.</div>
+</div>
+<span class="quad-pill q2" title="Count in this quadrant"><i class="fas fa-hashtag"></i> <span data-qcount="q2">0</span></span>
+</div>
+<div class="quad-body">
+<div aria-label="Schedule dropzone" class="dropzone" data-dropzone="q2"></div>
+</div>
+</div>
+<div class="quadrant">
+<div class="quad-top">
+<div class="quad-title">
+<div class="quad-name">
+<span class="quad-pill q3"><i class="fas fa-share"></i> Q3</span>
+            Delegate
+          </div>
+<div class="quad-sub">Urgent, not important. Route it away from your focus.</div>
+</div>
+<span class="quad-pill q3" title="Count in this quadrant"><i class="fas fa-hashtag"></i> <span data-qcount="q3">0</span></span>
+</div>
+<div class="quad-body">
+<div aria-label="Delegate dropzone" class="dropzone" data-dropzone="q3"></div>
+</div>
+</div>
+<div class="quadrant">
+<div class="quad-top">
+<div class="quad-title">
+<div class="quad-name">
+<span class="quad-pill q4"><i class="fas fa-ban"></i> Q4</span>
+            Eliminate
+          </div>
+<div class="quad-sub">Neither. Decline, delete, minimise, or stop feeding attention.</div>
+</div>
+<span class="quad-pill q4" title="Count in this quadrant"><i class="fas fa-hashtag"></i> <span data-qcount="q4">0</span></span>
+</div>
+<div class="quad-body">
+<div aria-label="Eliminate dropzone" class="dropzone" data-dropzone="q4"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="snapshot-section">
+<div class="snapshot-card">
+<div class="snapshot-left">
+<div class="snapshot-title-row">
+<div class="snapshot-title"><i class="fas fa-gauge"></i> Focus Snapshot</div>
+<div class="snapshot-score" id="focusScore">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="focusFill"></div>
+</div>
+<div class="progress-labels">
+<span>Firefighting</span>
+<span>Mixed</span>
+<span>Protected focus</span>
+</div>
+<div class="dimension-grid">
+<div class="dimension-pill">
+<span class="label">Q1 Do now</span>
+<span class="value" id="countQ1">0</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Q2 Schedule</span>
+<span class="value" id="countQ2">0</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Q3 Delegate</span>
+<span class="value" id="countQ3">0</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Q4 Eliminate</span>
+<span class="value" id="countQ4">0</span>
+</div>
+</div>
+</div>
+<div class="snapshot-right">
+<button class="btn primary" type="button">
+<i class="fas fa-plus"></i> Add next task
+      </button>
+<button class="btn secondary" type="button">
+<i class="fas fa-arrow-up"></i> Back to top
+      </button>
+</div>
+</div>
+</div>
+<div class="smart-tips" id="smartTips">
+<div class="tips-header">
+<h2 class="tips-title">Smart Tips for Your Current Matrix</h2>
+<p class="tips-subtitle" id="tipsMeta">You have 0 tasks in your matrix.</p>
+<p class="tips-insight">
+      These are practical “matrix moves” — not motivational posters. The objective is to reduce Q1 firefighting, protect Q2 progress, and stop low-value noise turning into political risk.
+    </p>
+</div>
+<div class="tips-grid" id="tipsGrid"></div>
+</div>
+<div class="primary-actions-bottom">
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+    </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+    </button>
+</div>
+<div aria-hidden="true" class="modal-overlay" id="modalOverlay">
+<div aria-label="Edit task" aria-modal="true" class="modal" role="dialog">
+<div class="modal-head">
+<div class="modal-title"><i class="fas fa-pen"></i> Edit task</div>
+<button aria-label="Close edit modal" class="icon-btn" id="modalClose"><i class="fas fa-times"></i></button>
+</div>
+<div class="modal-body">
+<input aria-label="Task title" class="input" id="mTitle" placeholder="Task title" type="text"/>
+<div class="modal-grid">
+<select aria-label="Quadrant" class="input select" id="mQuadrant">
+<option value="q1">Q1 Do now (urgent + important)</option>
+<option value="q2">Q2 Schedule (important)</option>
+<option value="q3">Q3 Delegate (urgent)</option>
+<option value="q4">Q4 Eliminate (neither)</option>
+</select>
+<input aria-label="Due date" class="input" id="mDue" type="date"/>
+<input aria-label="Estimate" class="input" id="mEstimate" placeholder="Estimate (e.g., 45m)" type="text"/>
+<select aria-label="Owner" class="input select" id="mOwner">
+<option value="me">Me</option>
+<option value="delegate">Delegate</option>
+</select>
+</div>
+<div class="modal-row">
+<textarea aria-label="Notes" class="input" id="mNotes" placeholder="Notes (context, constraints, dependencies, definition of done)"></textarea>
+<div class="mini-note">
+<strong>Edit tip:</strong><br/>
+          If you’re delegating, write a clean handover: outcome, deadline, constraints, and what “done” looks like.
+          You’re buying time — not rework.
+        </div>
+</div>
+</div>
+<div class="modal-actions">
+<button class="btn secondary" id="modalCancel" type="button"><i class="fas fa-xmark"></i> Cancel</button>
+<button class="btn primary" data-action="save-tool" id="modalSave" type="button"><i class="fas fa-check"></i> Save changes</button>
+</div>
+</div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Time Blocking Template | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="planner-time-blocking">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Time Blocking Template</span>
+</div>
+<span class="checklist-name">TIME BLOCKING TEMPLATE</span>
+<h1 class="hero-main-heading" data-date="">
+      Build a day that protects your priorities and makes “urgent” compete for space
+    </h1>
+<div class="hero-subheading">
+      Time blocking turns your calendar into a strategy tool. You decide <strong>what wins</strong>, <strong>when you do deep work</strong>,
+      and where you’ll place <strong>admin, meetings, and buffers</strong> so your day doesn’t get hijacked.
+      <br/><br/>
+      Plan your blocks, then generate a clean daily plan and a boundary script you can use to defend it.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html" title="Burnout &amp; Capacity">
+<i class="fas fa-battery-half"></i>
+<span>Expectation, Burnout &amp; Capacity</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This</h3>
+<ul class="bullet-list">
+<li>When your day gets eaten by other people’s urgency.</li>
+<li>When you need protected focus blocks for high-value work.</li>
+<li>When meetings are multiplying and deep work is disappearing.</li>
+<li>When you’re doing “reactive work” all day and pushing priorities to evenings.</li>
+<li>When you want a calmer day without losing output.</li>
+</ul>
+<div class="inline-badge"><i class="fas fa-lock"></i> If it isn’t on the calendar, it gets sacrificed first.</div>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Pick <strong>1–3 real priorities</strong>. Everything else is “fit it in”.</li>
+<li>Place <strong>deep work</strong> blocks first. Guard them like meetings.</li>
+<li>Add <strong>buffers</strong> (15–30 mins) after meetings and before deadlines.</li>
+<li>Batch admin into one block so it doesn’t leak into focus time.</li>
+<li>Use the generated boundary script to push back politely.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Plan your day (time blocks)</h2>
+<p>
+        Build a realistic schedule with protected focus time, buffers, and a clean shutdown. You can add blocks, drag them up/down,
+        and generate a daily plan you can paste into your calendar notes.
+      </p>
+</div>
+</div>
+<div class="planner-grid">
+<div aria-label="Block builder" class="panel">
+<div class="panel-head">
+<div class="panel-title">
+<h3>Block builder</h3>
+<p>Create a block, then add it to your day. Keep blocks clean and outcome-led.</p>
+</div>
+<span class="mini-chip" id="dayScoreChip"><i class="fas fa-gauge"></i> Day quality: —</span>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="planDate"><i class="fas fa-calendar"></i> Date</label>
+<input class="input" id="planDate" type="date"/>
+</div>
+<div class="field">
+<label for="timeWindow"><i class="fas fa-clock"></i> Day window</label>
+<select class="select" id="timeWindow">
+<option value="standard">Standard (08:00–18:00)</option>
+<option value="early">Early (07:00–17:00)</option>
+<option value="late">Late (09:00–19:00)</option>
+<option value="custom">Custom</option>
+</select>
+</div>
+</div>
+<div class="field-row" id="customWindowRow">
+<div class="field">
+<label for="dayStart"><i class="fas fa-hourglass-start"></i> Start</label>
+<input class="input" id="dayStart" type="time" value="08:00"/>
+</div>
+<div class="field">
+<label for="dayEnd"><i class="fas fa-hourglass-end"></i> End</label>
+<input class="input" id="dayEnd" type="time" value="18:00"/>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="blockType"><i class="fas fa-layer-group"></i> Block type</label>
+<select class="select" id="blockType">
+<option value="deep">Deep work</option>
+<option value="meet">Meeting</option>
+<option value="admin">Admin / comms</option>
+<option value="buffer">Buffer</option>
+<option value="break">Break / reset</option>
+</select>
+</div>
+<div class="field">
+<label for="categoryTag"><i class="fas fa-tags"></i> Category tag</label>
+<select class="select" id="categoryTag">
+<option value="clarity">Clarity</option>
+<option value="burnout">Burnout</option>
+<option value="manager">Manager</option>
+<option value="politics">Politics</option>
+<option value="hr">HR</option>
+<option value="confidence">Confidence</option>
+<option value="career">Career</option>
+<option value="none">None</option>
+</select>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="blockStart"><i class="fas fa-play"></i> Start time</label>
+<input class="input" id="blockStart" type="time" value="09:00"/>
+</div>
+<div class="field">
+<label for="blockDuration"><i class="fas fa-stopwatch"></i> Duration</label>
+<select class="select" id="blockDuration">
+<option value="15">15 mins</option>
+<option value="30">30 mins</option>
+<option value="45">45 mins</option>
+<option selected="" value="60">60 mins</option>
+<option value="90">90 mins</option>
+<option value="120">2 hours</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="blockTitle"><i class="fas fa-pen"></i> Block title (outcome-led)</label>
+<input class="input" id="blockTitle" placeholder="e.g., Finish draft — send for review" type="text"/>
+</div>
+<div class="field">
+<label for="blockNotes"><i class="fas fa-note-sticky"></i> Notes (optional)</label>
+<textarea class="textarea" id="blockNotes" placeholder="Constraints, prep items, definition of done, dependencies..."></textarea>
+<div class="helper-row"><span class="count" id="count_blockNotes"></span>
+</div>
+</div>
+<div class="workspace-actions">
+<button class="btn secondary" id="addBlockBtn"><i class="fas fa-plus"></i> Add block</button>
+<button class="btn secondary" id="autoBuildBtn"><i class="fas fa-wand-magic-sparkles"></i> Auto-build day</button>
+<button class="btn secondary" id="clearDayBtn"><i class="fas fa-eraser"></i> Clear day</button>
+</div>
+<div aria-label="Insights" class="insights">
+<div class="insight-card">
+<div class="insight-title"><i class="fas fa-eye"></i> Reality check</div>
+<div class="insight-body" id="realityCheck">
+            Add blocks to see time pressure, focus protection, and buffer coverage.
+          </div>
+</div>
+<div class="insight-card">
+<div class="insight-title"><i class="fas fa-shield-halved"></i> Boundary script</div>
+<div class="insight-body" id="boundaryScript">
+            Generate your plan to get a ready-to-send boundary line.
+          </div>
+</div>
+</div>
+</div>
+<div aria-label="Day timeline" class="panel">
+<div class="panel-head">
+<div class="panel-title">
+<h3>Day timeline</h3>
+<p>Your schedule view. Add blocks, then reorder or delete them.</p>
+</div>
+<span class="mini-chip green" id="savedChip"><i class="fas fa-check"></i> Saved</span>
+</div>
+<div aria-label="Timeline" class="timeline">
+<div class="timeline-header">
+<div class="left">
+<div class="title"><i class="fas fa-list"></i> Blocks for the day</div>
+<div class="sub" id="timelineSub">No blocks yet.</div>
+</div>
+<div class="mini-chip" id="hoursChip"><i class="fas fa-hourglass"></i> 0h planned</div>
+</div>
+<div class="timeline-rows" id="timelineRows">
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+        </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+        </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+        </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+        </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Time Blocking Evidence Report</h2>
+<p class="summary-subtitle">Based on your Plan Quality Score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">
+            Use this report to assess the strength of your daily plan. It highlights scheduling risks
+            that lead to reactive days and gives you practical steps to protect focus time and manage
+            your workload.
+        </p>
+</div>
+<h3 class="section-header red">
+<i class="fas fa-exclamation-triangle"></i> Schedule Weak Spots Identified
+    </h3>
+<div class="red-flags-grid" id="redFlagsGrid"></div>
+<h3 class="section-header purple">
+<i class="fas fa-forward"></i> Strengthening Actions
+    </h3>
+<div class="next-steps-grid" id="nextStepsGrid"></div>
+<h3 class="section-header blue">
+<i class="fas fa-tools"></i> Plan Building Resources
+    </h3>
+<div class="resources-grid" id="resourcesGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

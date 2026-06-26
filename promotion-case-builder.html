@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Promotion Case Builder — translate achievements into business impact, align to priorities, and generate a credible promotion narrative and scripts. Not legal advice." />
+  <title>Promotion Case Builder | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="promotion-case-builder">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-career-playbook.html">Career Playbook</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Promotion Case Builder</span>
+</div>
+<span class="tool-kicker">PROMOTION CASE BUILDER</span>
+<h1 class="hero-main-heading">Turn your work into a credible, business-aligned promotion narrative</h1>
+<div class="hero-subheading">
+          This is not a “brag document”. It’s a structured case that links what you’ve done to what the organisation cares about — with clean language you can use in a promotion conversation.
+        </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill career" href="category-career-playbook.html">
+<i class="fas fa-chart-line category-icon"></i><span>Career Playbook</span>
+</a>
+<a class="category-pill hr" href="category-hr-insider.html">
+<i class="fas fa-scale-balanced category-icon"></i><span>HR Insider</span>
+</a>
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-bullseye category-icon"></i><span>Clarity, Priorities &amp; Direction</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-calendar-check"></i>When to Use This Builder</h3>
+<ul class="bullet-list">
+<li>When you’re doing “next level” work but it isn’t being seen or credited.</li>
+<li>Before performance reviews, calibration, or promotion panels.</li>
+<li>When you need to ask for scope, title, or pay alignment.</li>
+<li>When you’ve been told “not yet” and need a clearer path to “yes”.</li>
+<li>When you want to lead the narrative instead of waiting to be “noticed”.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>What This Builder Does</h3>
+<ul class="bullet-list">
+<li>Helps translate achievements into business impact stories.</li>
+<li>Structures your case around organisational priorities.</li>
+<li>Provides language for discussing growth without sounding entitled.</li>
+<li>Creates a “promotion-ready” summary plus scripts for the conversation.</li>
+<li>Produces an output you can save, print, and refine over time.</li>
+</ul>
+</div>
+</div>
+<div class="tool-body">
+<h2 class="section-h2">Build your case</h2>
+<div class="builder-grid">
+<div aria-label="Promotion case inputs" class="panel">
+<div class="panel-title"><i class="fas fa-pen-to-square"></i>Inputs</div>
+<div class="panel-sub">
+            Keep this real. Use numbers where you can, but don’t stall because you don’t have perfect metrics — you can use credible proxies.
+          </div>
+<div class="field-grid">
+<div class="field">
+<label for="roleCurrent">Current role/title</label>
+<input id="roleCurrent" placeholder="e.g., People Ops Manager" type="text"/>
+</div>
+<div class="field">
+<label for="roleTarget">Target role/title</label>
+<input id="roleTarget" placeholder="e.g., Senior People Ops Manager" type="text"/>
+</div>
+<div aria-hidden="true" class="subsection-divider">
+<span><i class="fas fa-compass"></i> Anchor — your professional identity</span>
+</div>
+<div class="field full">
+<label for="strengths">Strengths people experience when working with you</label>
+<textarea id="strengths" placeholder="Skills + qualities. Examples: calm under pressure, structured thinking, relationship building, simplifying complexity, influencing stakeholders..."></textarea>
+</div>
+<div class="field full">
+<label for="anchorTheme">Your recurring value theme (the pattern you repeat at a high level)</label>
+<textarea id="anchorTheme" placeholder="Example: I turn messy problems into clear plans, then bring people with me."></textarea>
+</div>
+<div class="field">
+<label for="careerAnchor">Career anchor driver (what must stay true at your next level)</label>
+<select id="careerAnchor">
+<option value="">Select (optional)</option>
+<option value="autonomy">Autonomy (freedom + control)</option>
+<option value="mastery">Mastery (deep skill + expertise)</option>
+<option value="impact">Impact (meaning + outcomes)</option>
+<option value="challenge">Challenge (complex problems)</option>
+<option value="leadership">Leadership (leading people/change)</option>
+<option value="service">Service (helping others)</option>
+<option value="stability">Stability (security + predictability)</option>
+<option value="creativity">Creativity (new ideas + building)</option>
+</select>
+</div>
+<div class="field">
+<label for="anchorMotivation">Motivation (what you care about when you’re at your best)</label>
+<textarea id="anchorMotivation" placeholder="Example: autonomy, mastery, impact, learning, leading change, stability..."></textarea>
+</div>
+<div class="field full">
+<label for="anchorProblems">Problems you naturally solve (your default value)</label>
+<textarea id="anchorProblems" placeholder="Example: unblock delivery, reduce risk, improve customer experience, tighten processes, align stakeholders..."></textarea>
+</div>
+<div class="field">
+<label for="timeframe">Timeframe covered</label>
+<input id="timeframe" placeholder="e.g., last 6–12 months" type="text"/>
+</div>
+<div class="field">
+<label for="scopeLevel">Scope level</label>
+<select id="scopeLevel">
+<option value="team">Team-level impact</option>
+<option value="function">Function-level impact</option>
+<option value="org">Org-wide impact</option>
+</select>
+</div>
+<div class="field full">
+<label for="orgPriorities">Top organisational priorities (what leadership cares about)</label>
+<textarea id="orgPriorities" placeholder="List 3–6 priorities. Example: retention, cost control, time-to-hire, revenue enablement, risk reduction, customer impact, delivery speed..."></textarea>
+</div>
+<div class="field full">
+<label for="alignmentPlain">How your work supports these priorities (plain English)</label>
+<textarea id="alignmentPlain" placeholder="Example: My process changes reduced delays, which supports delivery speed and customer satisfaction..."></textarea>
+</div>
+<div class="field full">
+<label for="achievements">Achievements (bullet list)</label>
+<textarea id="achievements" placeholder="One per line. Start with action + outcome. Example: Reduced onboarding time from 14 days to 7 by redesigning workflow..."></textarea>
+</div>
+<div class="field full">
+<label for="metrics">Metrics / evidence (numbers, proxies, proof)</label>
+<textarea id="metrics" placeholder="Examples: saved £, reduced time, improved NPS, reduced errors, increased adoption, audit results, stakeholder feedback, before/after..."></textarea>
+</div>
+<div class="field full">
+<label for="stakeholders">Key stakeholders who benefited</label>
+<textarea id="stakeholders" placeholder="Who can vouch for impact? Leaders, cross-functional partners, customers/internal teams..."></textarea>
+</div>
+<div class="field full">
+<label for="nextLevelBehaviours">“Next level” behaviours you’re already demonstrating</label>
+<textarea id="nextLevelBehaviours" placeholder="Examples: operating autonomously, influencing senior stakeholders, owning ambiguous problems, shaping strategy, mentoring..."></textarea>
+</div>
+<div class="field full">
+<label for="gapsRisks">Known gaps / risks (so you control the narrative)</label>
+<textarea id="gapsRisks" placeholder="Example: limited exposure to X market; promotion cycle timing; need broader stakeholder visibility..."></textarea>
+</div>
+<div class="field full">
+<label for="askType">What are you asking for?</label>
+<select id="askType">
+<option value="promotion">Promotion (title/level change)</option>
+<option value="scope">Scope expansion + path to promotion</option>
+<option value="pay">Pay alignment (same level, higher pay)</option>
+<option value="combo">Promotion + pay alignment</option>
+</select>
+</div>
+</div>
+<div class="hint-row">
+<i class="fas fa-shield-halved"></i>
+<p>
+<strong>Credibility rule:</strong> Don’t compare yourself to colleagues. Compare your output to the expectations of the next level — and anchor to business outcomes.
+            </p>
+</div>
+</div>
+<div class="right-col">
+<div aria-label="Quality checks" class="panel">
+<div class="panel-title"><i class="fas fa-magnifying-glass"></i>Quality checks</div>
+<div class="panel-sub">
+              This keeps your case “adult”, credible, and hard to dismiss.
+            </div>
+<div class="field-grid">
+<div class="field full">
+<label for="tone">Tone preference</label>
+<select id="tone">
+<option value="balanced">Balanced (confident, calm, factual)</option>
+<option value="direct">Direct (short, assertive)</option>
+<option value="collab">Collaborative (growth-focused)</option>
+</select>
+</div>
+<div class="field full">
+<label for="objections">Likely objections you’ll face</label>
+<textarea id="objections" placeholder="Example: 'not enough tenure', 'promotion cycle', 'needs broader impact', 'budget', 'still developing X'..."></textarea>
+</div>
+<div class="field full">
+<label for="evidenceLinks">Evidence links/notes (optional)</label>
+<textarea id="evidenceLinks" placeholder="Optional: doc titles, dashboards, project links (don’t paste sensitive data)"></textarea>
+</div>
+<div aria-hidden="true" class="subsection-divider">
+<span><i class="fas fa-forward"></i> Momentum &amp; positioning</span>
+</div>
+<div class="field full">
+<label for="futureValue">Future value you can deliver at the next level</label>
+<textarea id="futureValue" placeholder="Example: I can own X end-to-end, influence senior stakeholders, and scale the approach across teams..."></textarea>
+</div>
+<div class="field">
+<label for="timing">Planned conversation timing</label>
+<input id="timing" placeholder="e.g., next 1:1, before calibration, next 2 weeks" type="text"/>
+</div>
+<div class="field full">
+<label for="visibility">Visibility actions (next 2–4 weeks)</label>
+<textarea id="visibility" placeholder="One per line. Example: weekly stakeholder update; present results; publish impact summary..."></textarea>
+</div>
+<div class="field full">
+<label for="confidenceBlockers">Confidence blockers (name them so they don’t run you)</label>
+<textarea id="confidenceBlockers" placeholder="Example: fear of sounding entitled, past rejection, unclear expectations, imposter feelings..."></textarea>
+</div>
+</div>
+<div class="hint-row">
+<i class="fas fa-bullseye"></i>
+<p>
+<strong>Alignment rule:</strong> Every achievement should map to at least one organisational priority — that’s how you make it “hard to say no”.
+              </p>
+</div>
+</div>
+<div aria-label="Career psychology lens" class="panel">
+<div class="panel-title"><i class="fas fa-brain"></i>Career psychology lens</div>
+<div class="panel-sub">
+              This reduces “vague” rejection (“not quite ready”) by tightening your signals: trust, risk, status, and who is willing to sponsor you.
+              It also helps you speak to how decisions really get made — not just effort.
+            </div>
+<div class="field-grid">
+<div class="field full">
+<label for="decisionMakerStyle">Decision-maker style (how your leaders are persuaded)</label>
+<select id="decisionMakerStyle">
+<option value="numbers">Numbers-first (ROI, efficiency, metrics)</option>
+<option value="risk">Risk-first (errors, exposure, control, compliance)</option>
+<option value="people">People-first (retention, culture, enablement)</option>
+<option value="strategy">Strategy/status-first (visibility, narrative, competitive edge)</option>
+</select>
+</div>
+<div class="field full">
+<label for="reputationHeadline">Reputation headline you want attached to your name</label>
+<input id="reputationHeadline" placeholder="e.g., Trusted operator who removes friction and reduces risk" type="text"/>
+</div>
+<div class="field full">
+<label for="visibilitySignals">Visibility signals you can strengthen (what gets noticed)</label>
+<textarea id="visibilitySignals" placeholder="Examples: presenting in forums, owning a cross-functional metric, shipping a visible artefact, being the 'go-to' on a key risk, running a cadence, publishing a playbook..."></textarea>
+</div>
+<div class="field full">
+<label for="sponsorMap">Sponsor map (who needs to back you, and why)</label>
+<textarea id="sponsorMap" placeholder="List 2–4 names/roles. Include what they care about + what proof they would respect. (No sensitive details.)"></textarea>
+</div>
+<div class="field full">
+<label for="riskProfile">How you are currently perceived (risk profile)</label>
+<select id="riskProfile">
+<option value="safe">Safe pair of hands (reliable, low drama)</option>
+<option value="high">High potential (fast growth, still evolving)</option>
+<option value="unknown">Under-known (impact exists, visibility low)</option>
+<option value="spiky">Spiky (strong outcomes, inconsistent trust signals)</option>
+</select>
+</div>
+<div class="field full">
+<label for="careerValues">What you optimise for (motivators)</label>
+<textarea id="careerValues" placeholder="Examples: autonomy, mastery, recognition, stability, learning, impact, leadership, problem-solving, variety..."></textarea>
+</div>
+<div class="field full">
+<label for="energyPattern">Energy pattern (what energises you vs drains you)</label>
+<textarea id="energyPattern" placeholder="Energises: ___  |  Drains: ___. Use this to shape the next role so you don’t ‘win’ a promotion and then hate it."></textarea>
+</div>
+<div class="field full">
+<label for="identityShift">Identity shift (who you need to be seen as at the next level)</label>
+<textarea id="identityShift" placeholder="Examples: ‘task doer → owner’, ‘helper → operator’, ‘support → strategist’, ‘quiet expert → visible leader’..."></textarea>
+</div>
+</div>
+<div class="hint-row">
+<i class="fas fa-eye"></i>
+<p>
+<strong>Signal rule:</strong> Promotions often follow a simple question: “Would I trust this person with bigger, messier problems — without supervision?”
+                Your job is to make the answer feel obvious.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="actions-wrap">
+<div class="actions-bar">
+<div class="actions-left">
+<div class="actions-title">
+<h3>Generate your promotion case pack</h3>
+<span class="pill"><i class="fas fa-wand-magic-sparkles"></i> Output pack</span>
+</div>
+<div class="actions-desc">
+            Click <strong>Generate</strong> to produce: (1) a crisp promotion narrative, (2) an impact map, (3) a meeting script,
+            (4) objection-handling lines, and (5) a career psychology lens.
+          </div>
+</div>
+<div class="actions-right">
+<div class="btn-col">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-file-lines"></i> Generate Case Pack
+          </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+          </button>
+<button class="action-btn secondary" data-action="print-page" disabled="" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+          </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+          </button>
+</div>
+<div aria-atomic="true" aria-live="polite" class="btn-meta" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+<div class="save-status-right">
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+<div class="output-wrap" id="outputWrap">
+<div class="output-header">
+<h2 class="output-title">Your Promotion Case Pack</h2>
+<p class="output-sub">
+          Written to sound credible in a real workplace: business-first, calm confidence, and anchored in outcomes — not entitlement.
+        </p>
+</div>
+<div class="output-grid">
+<div class="output-card">
+<h3><i class="fas fa-bullseye"></i> Promotion narrative (copy/paste)</h3>
+<pre id="outNarrative"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-diagram-project"></i> Impact map (achievement → priority → proof)</h3>
+<pre id="outImpactMap"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-comments"></i> Conversation script (meeting-ready)</h3>
+<pre id="outScript"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-brain"></i> Career psychology lens (signals, sponsorship, risk)</h3>
+<pre id="outPsychLens"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-shield-halved"></i> Objection handling (calm, high-trust lines)</h3>
+<pre id="outObjections"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-forward"></i> Momentum plan (what happens next)</h3>
+<pre id="outMomentum"></pre>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

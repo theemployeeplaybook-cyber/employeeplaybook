@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>The Pricing | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="content" data-protected="false">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell content-page">
+<div class="container">
+<div class="content-wrapper">
+<div class="pricing-header">
+<h1 class="pricing-title">Value you can measure. Strategy you can trust.</h1>
+<p class="pricing-subtitle">
+            You get peace of mind from knowing what matters, what to do next, and how to avoid common mistakes<br/>
+            Every tier gives you practical knowledge you can use, and<br/>
+            higher tiers unlock deeper guidance and more strategic tools when you need them
+          </p>
+</div>
+<div aria-label="Billing options" class="billing-toggle-section">
+<h2 class="pricing-controls-title">Compare plans</h2>
+<div class="billing-toggle-container">
+<div aria-label="Billing period" class="billing-toggle" role="tablist">
+<div class="slider" id="billingSlider"></div>
+<button aria-selected="true" data-period="monthly" type="button">Monthly</button>
+<button aria-selected="false" data-period="annual" type="button">Annual</button>
+</div>
+<p class="billing-note" id="billingNote"><strong>2 months free</strong> with annual billing</p>
+</div>
+</div>
+<div class="pricing-controls-section">
+<div class="pricing-cards-row">
+<div class="pricing-card">
+<div class="pricing-card-header">
+<div class="pricing-card-name">Essentials</div>
+<div class="pricing-card-price" data-annual="£0" data-monthly="£0">
+<span class="amt">£0</span><small class="per">/mo</small>
+</div>
+<div aria-live="polite" class="pricing-card-sub"></div>
+</div>
+<button class="pricing-card-button outline" id="btnEssentialsCheckout" type="button">Get started</button>
+</div>
+<div class="pricing-card featured">
+<div class="corner-ribbon">Most Popular</div>
+<div class="pricing-card-header">
+<div class="pricing-card-name">Core</div>
+<div class="pricing-card-price featured" data-annual="£90" data-monthly="£9">
+<span class="amt">£9</span><small class="per">/mo</small>
+</div>
+<div aria-live="polite" class="pricing-card-sub"></div>
+</div>
+<button class="pricing-card-button primary" id="btnCoreCheckout" type="button">Get started</button>
+</div>
+<div class="pricing-card edge">
+<div class="corner-ribbon">Includes AI Coach</div>
+<div class="pricing-card-header">
+<div class="pricing-card-name">Strategic Edge</div>
+<div class="pricing-card-price" data-annual="£160" data-monthly="£16">
+<span class="amt">£16</span><small class="per">/mo</small>
+</div>
+<div aria-live="polite" class="pricing-card-sub"></div>
+</div>
+<button class="pricing-card-button secondary" id="btnEdgeCheckout" type="button">Get started</button>
+</div>
+</div>
+</div>
+<div class="pricing-table-section">
+<div class="pricing-table-scroll">
+<table class="pricing-table">
+<thead>
+<tr>
+<th class="feature-column">Features</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      The Monthly Update
+                      <div class="tooltip-container">
+<button aria-label="Learn more about The Update" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>The Monthly Update</strong>
+                          Monthly strategic insights delivered to keep you ahead of workplace patterns.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Assessments
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Assessments" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Assessments</strong>
+                          Strategic self-evaluations to identify strengths, gaps, and opportunities in your workplace positioning.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><span class="limited">Limited</span></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Checklists
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Checklists" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Checklists</strong>
+                          Step-by-step action lists for critical workplace scenarios to ensure nothing gets missed.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><span class="limited">Limited</span></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Guides
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Guides" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Guides</strong>
+                          Clear, step-by-step guidance for real workplace situations so you can act calmly and avoid costly mistakes.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><span class="limited">Limited</span></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Maps
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Maps" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Maps</strong>
+                          Situation "maps" that show what's happening, what matters, and where the leverage is.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Templates
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Templates" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Templates</strong>
+                          Ready-made formats and structures for documents, plans, and strategic initiatives tailored to workplace scenarios.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Script Library
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Script Library" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Script Library</strong>
+                          Conversation scripts and talking points for high-stakes moments and difficult conversations.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Planners
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Planners" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Planners</strong>
+                          Structured planning tools for negotiations, performance cycles, career moves, and difficult conversations.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Frameworks
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Frameworks" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Frameworks</strong>
+                          Proven mental models and structures for analysing situations and making strategic decisions.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><span class="limited">Limited</span></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Plans
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Plans" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Plans</strong>
+                          Clear action plans for high-stakes moments (performance, conflict, restructures, role changes).
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><span class="limited">Limited</span></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Playbooks
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Playbooks" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Playbooks</strong>
+                          Complete strategic guides for specific workplace challenges and career advancement scenarios.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><span class="limited">Limited</span></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr class="section-row">
+<td class="feature-column">Premium Features</td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      The Coach (AI)
+                      <div class="tooltip-container">
+<button aria-label="Learn more about The Coach" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>The Coach (AI)</strong>
+                          Personal AI coach providing real-time advice, scenario analysis, and strategic guidance tailored to your specific situation.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><span class="limited">Limited</span></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      The Shift
+                      <div class="tooltip-container">
+<button aria-label="Learn more about The Shift" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>The Shift</strong>
+                          Advanced strategy system for navigating major career transitions, role changes, and organisational shifts with maximum advantage.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+<tr>
+<td class="feature-column">
+<span class="feature-name">
+                      Crisis Expert
+                      <div class="tooltip-container">
+<button aria-label="Learn more about Crisis Clarity" class="feature-info-button"><i class="fas fa-circle-info"></i></button>
+<div class="feature-tooltip">
+<strong>Crisis Clarity</strong>
+                          Confidential email guidance from an HR expert to help you navigate grievances, disciplinaries, and HR policies with clarity and confidence.
+                          <button aria-label="Close tooltip" class="tooltip-close">✕</button>
+</div>
+</div>
+</span>
+</td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-times feature-no"></i></span></td>
+<td><span class="feature-value"><i class="fas fa-check feature-ok"></i></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="faq-section">
+<h2 class="faq-title">Frequently Asked Questions</h2>
+<div class="faq-grid">
+<div class="faq-item">
+<h3 class="faq-question"><i class="fas fa-circle-info"></i> Is there a free trial?</h3>
+<p class="faq-answer">No trial. Essentials is free and gives you a starting point; paid tiers unlock the depth and the strategic tools.</p>
+</div>
+<div class="faq-item">
+<h3 class="faq-question"><i class="fas fa-shield-halved"></i> Can I cancel?</h3>
+<p class="faq-answer">Yes — with <strong>30 days' notice</strong>. You keep access during the notice period so you can close loops properly.</p>
+</div>
+<div class="faq-item">
+<h3 class="faq-question"><i class="fas fa-wand-magic-sparkles"></i> Which tier should I choose?</h3>
+<p class="faq-answer"><strong>Core</strong> is the best all-rounder. <strong>Strategic Edge</strong> is for Playbooks and higher-leverage strategy when the stakes rise.</p>
+</div>
+<div class="faq-item">
+<h3 class="faq-question"><i class="fas fa-envelope-open-text"></i> How often is the Edge Briefing?</h3>
+<p class="faq-answer">Monthly — concise, practical, and focused on what changes outcomes fastest.</p>
+</div>
+<div class="faq-item">
+<h3 class="faq-question"><i class="fas fa-credit-card"></i> Do you offer annual billing discounts?</h3>
+<p class="faq-answer">Yes. Switch to annual to lock in the lower rate (£90 for Core, £160 for Strategic Edge).</p>
+</div>
+<div class="faq-item">
+<h3 class="faq-question"><i class="fas fa-scale-balanced"></i> Is this legal advice?</h3>
+<p class="faq-answer">No. It's practical workplace strategy to help you think clearly and act calmly. For legal advice, speak to a qualified professional.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

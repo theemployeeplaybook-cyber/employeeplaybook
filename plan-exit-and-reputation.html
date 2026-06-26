@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Exit &amp; Reputation Plan | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="plan-exit-and-reputation">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-career-playbook.html">Career Playbook</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Exit &amp; Reputation Plan</span>
+</div>
+<span class="checklist-name">EXIT &amp; REPUTATION PLAN</span>
+<h1 class="hero-main-heading">Leave clean, stay powerful, and control the final narrative without burning bridges</h1>
+<div class="hero-subheading">
+      This tool helps you plan your exit like a strategist: protect your reputation, reduce legal/process risk, secure references,
+      and leave with momentum. Draft the modules, then generate an Exit Pack: timeline, risk prompts, and ready-to-send scripts.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill confidence" href="category-confidence-presence-influence.html" title="Confidence, Presence &amp; Influence">
+<i class="fas fa-bolt category-icon"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+<a class="category-pill hr" href="category-hr-insider.html" title="HR Insider">
+<i class="fas fa-gavel category-icon"></i>
+<span>HR Insider</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html" title="Workplace Dynamics &amp; Politics">
+<i class="fas fa-chess category-icon"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Plan</h3>
+<ul class="bullet-list">
+<li>When you’re considering resigning, negotiating an exit, or sensing you may be managed out.</li>
+<li>When restructure, performance noise, or politics are creating reputational risk.</li>
+<li>When you want to leave <strong>cleanly</strong> but still protect yourself (facts, narrative, documentation).</li>
+<li>When you need references, a handover strategy, or a controlled goodbye message.</li>
+<li>When you want your exit to increase leverage — not create vulnerability.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Separate <strong>facts</strong> (what’s documented) from <strong>stories</strong> (what people say).</li>
+<li>Assume your exit creates a “final version” of you in people’s heads — design it.</li>
+<li>Secure your <strong>proof</strong>: decisions, outcomes, ownership, and written updates.</li>
+<li>Keep tone controlled. Calm professionalism is a signal of strength.</li>
+<li>Exit clean, but never naïve: protect your future self.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Draft your exit &amp; reputation plan</h2>
+<p>
+        Eight modules to plan the exit, protect your narrative, reduce HR/process risk, and leave with leverage.
+        Generate your Exit Pack when you have enough to execute.
+      </p>
+</div>
+</div>
+<div class="modules-grid" id="modulesGrid">
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Exit Pack</h2>
+<p class="pack-subtitle">
+      A structured pack you can use immediately: a one-page exit plan, risk prompts to avoid reputation traps,
+      and scripts for resignation/negotiation/handover — UK-friendly and calm.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Exit risk signal</div>
+<div class="metric-score" id="riskSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-flag-checkered"></i> One-page exit plan</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Exit risk prompts (avoid reputation damage)</h3>
+<div class="pack-grid" id="riskGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts (calm, clear, UK-friendly)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

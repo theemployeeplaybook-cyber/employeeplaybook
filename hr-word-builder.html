@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>HR Wording Builder | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="hr-word-builder">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR &amp; Formal Processes</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">HR Wording Builder</span>
+</div>
+<span class="checklist-name">HR WORDING BUILDER</span>
+<h1 class="hero-main-heading">
+      Turn a messy situation into calm, credible wording HR can act on
+    </h1>
+<div class="hero-subheading">
+      This tool helps you write like a professional: <strong>neutral facts</strong>, <strong>clear asks</strong>, and <strong>risk-aware language</strong>
+      without sounding emotional, dramatic, or legally threatening.
+      <br/><br/>
+      Fill in a few inputs. Generate a pack you can paste into an email, HR system, or meeting follow-up.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html" title="Clarity, Priorities &amp; Direction">
+<i class="fas fa-bullseye"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill confidence" href="category-confidence-presence-influence.html" title="Confidence, Presence &amp; Influence">
+<i class="fas fa-bolt"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Builder</h3>
+<ul class="bullet-list">
+<li>When you need to raise an issue without triggering defensiveness or “tone policing”.</li>
+<li>When you want HR to take you seriously: facts, timeline, impact, and a clean ask.</li>
+<li>When you’re sending a follow-up after a tense meeting and need language that holds.</li>
+<li>When you need to request adjustments, support, a case owner, or clarity on process.</li>
+<li>When your emotions are valid — but your wording needs to be strategically neutral.</li>
+</ul>
+<div class="inline-badge"><i class="fas fa-shield"></i> HR responds faster to clarity than intensity.</div>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Write like a neutral reviewer will read it: dates, outcomes, impact, ask.</li>
+<li>Keep claims <strong>observable</strong>. Swap “unfair” for “criteria not communicated”.</li>
+<li>Ask for <strong>process</strong> and <strong>decisions</strong>, not approval or sympathy.</li>
+<li>Use one sentence to signal risk (delivery / health / conduct) then return to facts.</li>
+<li>Always end with: <strong>what you need</strong> + <strong>by when</strong> + <strong>next step</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Build your HR-ready wording</h2>
+<p>
+        Four sections: (1) context and audience, (2) facts and impact, (3) your ask and route, (4) tone controls.
+        Generate your Wording Pack when you have enough anchors to be taken seriously without over-explaining.
+      </p>
+</div>
+</div>
+<div class="form-grid" id="formGrid">
+</div>
+<div aria-label="Draft actions" class="workspace-actions bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+    </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+    </button>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Wording Pack</h2>
+<p class="pack-subtitle">
+      Paste-ready outputs: a manager/HR email, a short message version, meeting script lines, follow-up notes,
+      and subject lines. UK-friendly, calm, and decision-led.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Credibility signal</div>
+<div class="metric-score" id="strengthSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-envelope-open-text"></i> Primary email (paste-ready)</h3>
+<div class="pack-output">
+<div class="mono" id="emailOutput"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-message"></i> Short message version (Teams / Slack)</h3>
+<div class="pack-output">
+<div class="mono" id="shortMsgOutput"></div>
+</div>
+<h3 class="section-header blue"><i class="fas fa-comments"></i> Scripts + follow-up lines</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+<h3 class="section-header purple"><i class="fas fa-list-check"></i> Subject lines + clean asks</h3>
+<div class="pack-grid" id="subjectGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

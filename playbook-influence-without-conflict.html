@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Influence Without Conflict | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="playbook-influence-without-conflict">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<section class="pb-card" id="c1">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-bullseye"></i> Chapter 1) Define the influence target (what you want, precisely)</div>
+<div class="pb-card-sub">
+              Influence fails when the ask is fuzzy. This chapter forces precision: outcome, constraints, what "yes" looks like, and what happens if it doesn't land.
+              Your goal is to make the request <b>easy to understand</b> and <b>safe to approve</b>.
+            </div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What do you want (one sentence, outcome not activity)</span></div>
+<input class="input pb-input" id="c1_target" placeholder="Example: Approve the scope change so we move X to next quarter and protect delivery quality."/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Who must say yes?</span></div>
+<input class="input pb-input" id="c1_decider" placeholder="Example: my manager / programme lead / director / stakeholder"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">What do they care about most?</span></div>
+<input class="input pb-input" id="c1_care" placeholder="Example: speed / risk / cost / reputation / control / certainty"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What’s blocking it right now?</span></div>
+<textarea class="textarea pb-input" id="c1_block" placeholder="Example: they’re risk-averse; they want more detail; they don’t like being challenged; politics; unclear ownership."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Evidence you can use (facts, impact, examples)</span></div>
+<textarea class="textarea pb-input" id="c1_proof" placeholder="Example: metrics, timelines, incidents, customer impact, delivery risk, rework history, dependencies."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Best case “yes”</span></div>
+<input class="input pb-input" id="c1_yes" placeholder="Example: approval today + email confirmation"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Minimum acceptable outcome</span></div>
+<input class="input pb-input" id="c1_min" placeholder="Example: trial for 2 weeks / partial approval / decision by Friday"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What you must avoid (risk to relationships/reputation)</span></div>
+<textarea class="textarea pb-input" id="c1_avoid" placeholder="Example: sounding emotional, sounding accusatory, exposing them publicly, getting labelled ‘difficult’."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-lightbulb"></i>
+<div>
+<b>Uncommon truth: clarity is power</b>
+<span>If your ask is crisp, you look senior. If your ask is vague, you invite delay, debate, and moving goalposts.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-user-gear"></i>
+<div>
+<b>Personality / Behaviour lens</b>
+<span><b>Dominant style:</b> lead with outcome + options. <b>Analytical style:</b> lead with constraints + proof. <b>Avoidant style:</b> lead with a simple plan and a deadline.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-clipboard-list"></i> Influence target snapshot (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_target">Click Build to generate your influence target snapshot.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c1"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c2">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-user-group"></i> Chapter 2) Style &amp; personality decoder (premium diagnostic)</div>
+<div class="pb-card-sub">
+              You don't "influence people". You influence <b>their nervous system</b> and <b>their incentives</b>.
+              This tool helps you choose the right tone, evidence, and structure for the person in front of you.
+            </div>
+</div>
+</div>
+<div aria-label="Style decoder tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="sdA" type="button"><i class="fas fa-gauge-high"></i> Influence readiness score</button>
+<button class="pb-tab" data-tab="sdB" type="button"><i class="fas fa-user-tag"></i> Personality &amp; comms styles</button>
+<button class="pb-tab" data-tab="sdC" type="button"><i class="fas fa-triangle-exclamation"></i> What not to do</button>
+</div>
+<div class="pb-tab-panel active" id="sdA">
+<div class="score-wrap">
+<div class="score-top">
+<div>
+<div class="label-row">
+<span class="label-text">Your Influence Readiness Score</span>
+</div>
+<div aria-label="Influence readiness meter" class="score-meter">
+<div class="score-fill" id="scoreFill"></div>
+</div>
+</div>
+<div>
+<div class="score-pill"><i class="fas fa-chart-simple"></i> <span id="scoreValue">0</span>/100</div>
+<div class="score-badge" id="scoreBadge"><i class="fas fa-circle"></i> Not scored</div>
+</div>
+</div>
+<div class="range-row">
+<div class="range-label"><b>Credibility</b><span>Do they trust your judgement and delivery?</span></div>
+<input class="range pb-input" id="s_cred" max="5" min="1" type="range" value="1"/>
+</div>
+<div class="range-row">
+<div class="range-label"><b>Clarity</b><span>Is your ask and definition of done crisp?</span></div>
+<input class="range pb-input" id="s_clarity" max="5" min="1" type="range" value="1"/>
+</div>
+<div class="range-row">
+<div class="range-label"><b>Relationship</b><span>Is there baseline goodwill / rapport?</span></div>
+<input class="range pb-input" id="s_rel" max="5" min="1" type="range" value="1"/>
+</div>
+<div class="range-row">
+<div class="range-label"><b>Power leverage</b><span>Do you have options, support, or leverage?</span></div>
+<input class="range pb-input" id="s_power" max="5" min="1" type="range" value="1"/>
+</div>
+<div class="range-row">
+<div class="range-label"><b>Risk control</b><span>Can you show risk managed (not ignored)?</span></div>
+<input class="range pb-input" id="s_risk" max="5" min="1" type="range" value="1"/>
+</div>
+<div class="range-row">
+<div class="range-label"><b>Emotional control</b><span>Can you stay calm under pushback?</span></div>
+<input class="range pb-input" id="s_calm" max="5" min="1" type="range" value="1"/>
+</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Two friction points (in your words)</span></div>
+<textarea class="textarea pb-input" id="c2_friction" placeholder="Example: they interrupt and dominate; they avoid decisions; they need data; they worry about blame."></textarea>
+</div>
+</div>
+<div class="score-note" id="scoreInsight">
+              Move the sliders to generate a diagnosis. Your lowest area becomes your first fix before you make the ask.
+            </div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-file-lines"></i> Readiness report (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_readiness">Click Build to generate your readiness report.</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="sdB">
+<div class="pb-card-sub">
+            Pick the other person’s <b>dominant style</b>. You’re not labelling them as a “type”; you’re choosing the safest route to agreement.
+          </div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Stakeholder dominant style</span></div>
+<select class="input pb-input" id="c2_style">
+<option value="">Select…</option>
+<option value="dominant">Dominant / high-control (fast, decisive, status-sensitive)</option>
+<option value="analytical">Analytical / detail-led (risk-aware, evidence-first)</option>
+<option value="agreeable">Agreeable / harmony-led (relationship-first, avoids tension)</option>
+<option value="avoidant">Avoidant / overloaded (delays, vague, non-committal)</option>
+<option value="anxious">Anxious / threat-focused (worst-case, blame-avoidant)</option>
+</select>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Their communication preference</span></div>
+<select class="input pb-input" id="c2_comms">
+<option value="">Select…</option>
+<option value="direct">Direct (short, blunt, outcome-driven)</option>
+<option value="structured">Structured (agenda, logic, written recap)</option>
+<option value="collab">Collaborative (discussion, shared ownership)</option>
+<option value="private">Private (1:1, avoids public exposure)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What triggers them (what to avoid)</span></div>
+<textarea class="textarea pb-input" id="c2_triggers" placeholder="Example: being corrected publicly; long explanations; vague asks; feeling blamed; feeling controlled; surprise."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What calms them (what works)</span></div>
+<textarea class="textarea pb-input" id="c2_calms" placeholder="Example: options; data; time to think; reassurance on risk; a simple plan; written recap; small yes first."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-bolt"></i>
+<div>
+<b>Fast pattern: dominant style</b>
+<span>Open with the outcome, then give two options. Keep it short. Do not narrate your feelings. Close with a decision and a time.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-microscope"></i>
+<div>
+<b>Fast pattern: analytical style</b>
+<span>Open with context and constraints, then evidence. Make risk-control explicit. Give them a clean written summary.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-handshake"></i>
+<div>
+<b>Fast pattern: agreeable style</b>
+<span>Use “help me prioritise” language. Keep tone warm but firm. Don’t overload them; offer a simple next step.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-hourglass-half"></i>
+<div>
+<b>Fast pattern: avoidant style</b>
+<span>Propose a plan, then ask for a yes/no by a date. Remove complexity. If they stall, escalate via process not emotion.</span>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-wand-magic-sparkles"></i> Style adapter (what to say + how to say it)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_style">Click Build to generate your style adapter.</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="sdC">
+<div class="pb-card-sub">
+            These moves look “reasonable” in the moment, but they reliably create resistance, ego reactions, or a quiet reputational hit.
+          </div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-ban"></i>
+<div>
+<b>What not to do</b>
+<span>
+<b>1)</b> Over-explain (it reads as insecurity).<br/>
+<b>2)</b> Use “I feel” as your main evidence (keep feelings private; use facts in the room).<br/>
+<b>3)</b> Corner them publicly (status threat = pushback).<br/>
+<b>4)</b> Ask vague questions (“Any thoughts?”) when you need a decision.<br/>
+<b>5)</b> Threaten escalation early (keep escalation procedural and late).
+                </span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-shield"></i>
+<div>
+<b>Replacement habits (senior moves)</b>
+<span>
+<b>1)</b> Outcome-first opening (“I’m looking for X”).<br/>
+<b>2)</b> Options + trade-offs (“We can do A or B”).<br/>
+<b>3)</b> Risk-control language (“Here’s how we contain risk”).<br/>
+<b>4)</b> Clean close (“Can you confirm yes/no by Thursday?”).<br/>
+<b>5)</b> Written recap (alignment that sticks).
+                </span>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c2"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c3">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-sitemap"></i> Chapter 3) Stakeholder + power map (make decisions predictable)</div>
+<div class="pb-card-sub">
+              You don't need more confidence. You need a better map.
+              This step identifies who influences the decision, what they care about, and where the real choke points sit.
+            </div>
+</div>
+</div>
+<div aria-label="Stakeholder map tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="smA" type="button"><i class="fas fa-users"></i> Stakeholders</button>
+<button class="pb-tab" data-tab="smB" type="button"><i class="fas fa-arrow-right"></i> Decision path</button>
+<button class="pb-tab" data-tab="smC" type="button"><i class="fas fa-chess"></i> Leverage</button>
+</div>
+<div class="pb-tab-panel active" id="smA">
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Primary decider</span></div>
+<input class="input pb-input" id="c3_d1" placeholder="Name/role"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Their priority</span></div>
+<input class="input pb-input" id="c3_d1care" placeholder="Speed / risk / cost / optics / control"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Influencer (strong voice)</span></div>
+<input class="input pb-input" id="c3_i1" placeholder="Name/role"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">What they care about</span></div>
+<input class="input pb-input" id="c3_i1care" placeholder="Example: risk / reputation / workload"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Likely objections (list the top 3)</span></div>
+<textarea class="textarea pb-input" id="c3_obj" placeholder="Example: ‘We can’t change scope’ / ‘We need this now’ / ‘This sets a precedent’ / ‘What if it fails?’"></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Objection answers (short, factual)</span></div>
+<textarea class="textarea pb-input" id="c3_ans" placeholder="Example: ‘Here’s the trade-off’ / ‘Here’s the risk control’ / ‘Here’s the data’ / ‘Here’s the trial plan’"></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="smB">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Where does the decision happen (meeting/channel)?</span></div>
+<input class="input pb-input" id="c3_where" placeholder="Example: weekly leadership sync / Slack thread / steering group / 1:1"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Decision deadline</span></div>
+<input class="input pb-input" id="c3_by" placeholder="Example: Thursday 3pm"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Decision criteria</span></div>
+<input class="input pb-input" id="c3_criteria" placeholder="Example: reduces risk / protects timeline / keeps cost flat"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What needs to be true for them to say yes?</span></div>
+<textarea class="textarea pb-input" id="c3_true" placeholder="Example: risk addressed; owner clear; impacts documented; no surprises; written recap."></textarea>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="smC">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your leverage (what you control)</span></div>
+<textarea class="textarea pb-input" id="c3_lev" placeholder="Example: delivery ownership, specialist knowledge, options, timelines, stakeholder support, alternatives."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Their incentive (why your success helps them)</span></div>
+<textarea class="textarea pb-input" id="c3_inc" placeholder="Example: reduces their risk; protects exec narrative; avoids escalation; keeps team stable."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-key"></i>
+<div>
+<b>Influence shortcut: give them a clean story</b>
+<span>Most leaders decide fast and justify later. Your job is to hand them a short “why this is sensible” story they can repeat.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-eye"></i>
+<div>
+<b>Politics reality: decisions are comparative</b>
+<span>Your ask competes with other priorities. Make the trade-off explicit so you’re not “the difficult one”; you’re the honest one.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-diagram-project"></i> Stakeholder map summary (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_map">Click Build to generate your stakeholder map summary.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c3"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c4">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-pen-to-square"></i> Chapter 4) Message builder (ask + proof + close)</div>
+<div class="pb-card-sub">
+              This is the core mechanism: a short, clean structure that reduces defensiveness and increases agreement.
+              You'll build a message that works in a meeting <b>and</b> in writing.
+            </div>
+</div>
+</div>
+<div aria-label="Message builder tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="mbA" type="button"><i class="fas fa-bullhorn"></i> The ask</button>
+<button class="pb-tab" data-tab="mbB" type="button"><i class="fas fa-shield"></i> Risk-control</button>
+<button class="pb-tab" data-tab="mbC" type="button"><i class="fas fa-flag-checkered"></i> The close</button>
+</div>
+<div class="pb-tab-panel active" id="mbA">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Outcome you want (one line)</span></div>
+<input class="input pb-input" id="c4_outcome" placeholder="Example: I’m asking for approval to change X so we protect Y."/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Your strongest proof</span></div>
+<input class="input pb-input" id="c4_proof1" placeholder="Example: incident rate, timeline, dependency"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Second proof</span></div>
+<input class="input pb-input" id="c4_proof2" placeholder="Example: cost, rework, customer impact"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Options (give them two)</span></div>
+<textarea class="textarea pb-input" id="c4_options" placeholder="Example:
+Option A: do X now, defer Y to next month.
+Option B: keep scope, extend deadline and accept risk Z."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Trade-off statement (the line that prevents “add it anyway”)</span></div>
+<input class="input pb-input" id="c4_trade" placeholder="Example: If we add this, we must drop or move something else to protect quality."/>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="mbB">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Risk they’ll worry about</span></div>
+<textarea class="textarea pb-input" id="c4_risk" placeholder="Example: “If we change this, we’ll miss the deadline / look bad / create precedent.”"></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">How you control that risk (short plan)</span></div>
+<textarea class="textarea pb-input" id="c4_control" placeholder="Example: limited trial, rollback plan, weekly checkpoint, clear owner, written acceptance criteria."></textarea>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-lock"></i>
+<div>
+<b>Risk-control language removes ego reactions</b>
+<span>It signals maturity: “I’m not reckless; I’ve thought it through.” That’s what converts resistance into agreement.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-file-signature"></i>
+<div>
+<b>Write it down</b>
+<span>Verbal alignment evaporates. A short written recap turns influence into a decision that sticks.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="mbC">
+<div class="field-grid">
+<div class="field">
+<div class="label-row"><span class="label-text">Decision ask (yes/no)</span></div>
+<input class="input pb-input" id="c4_close" placeholder="Example: Can you confirm option A or B?"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Decision deadline</span></div>
+<input class="input pb-input" id="c4_deadline" placeholder="Example: by Thursday 3pm"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">If they stall: escalation by process (not emotion)</span></div>
+<textarea class="textarea pb-input" id="c4_stall" placeholder="Example: If we can’t decide in this forum, I’ll capture options in writing and route to the decision owner for sign-off."></textarea>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-envelope-open-text"></i> Your influence message (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_message">Click Build to generate your influence message.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c4"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c5">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-handshake-angle"></i> Chapter 5) Difficult conversations (stay calm, stay firm)</div>
+<div class="pb-card-sub">
+              This chapter is about maintaining control when someone pushes, deflects, dominates, or tries to reframe you as the problem.
+              You'll build a short plan and a set of lines you can repeat without spiralling.
+            </div>
+</div>
+</div>
+<div aria-label="Difficult conversations tabs" class="pb-tabs" role="tablist">
+<button class="pb-tab active" data-tab="dcA" type="button"><i class="fas fa-wind"></i> De-escalation</button>
+<button class="pb-tab" data-tab="dcB" type="button"><i class="fas fa-shield-halved"></i> Boundaries without heat</button>
+<button class="pb-tab" data-tab="dcC" type="button"><i class="fas fa-clipboard-check"></i> Written recap</button>
+</div>
+<div class="pb-tab-panel active" id="dcA">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What do they do when challenged?</span></div>
+<textarea class="textarea pb-input" id="c5_pattern" placeholder="Example: interrupt; dismiss; get sarcastic; go vague; shift blame; bring up unrelated issues."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your calm anchor (what you’ll repeat)</span></div>
+<input class="input pb-input" id="c5_anchor" placeholder="Example: ‘I’m focused on the outcome and the trade-off.’"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Your “return to topic” line</span></div>
+<input class="input pb-input" id="c5_return" placeholder="Example: ‘Let’s park that and come back to the decision we need today.’"/>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-circle-check"></i>
+<div>
+<b>De-escalation is not compliance</b>
+<span>It’s control. You lower emotional temperature so the decision can happen. Calm authority reads as competence.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-crosshairs"></i>
+<div>
+<b>Technique: name the process, not the person</b>
+<span>“We’re mixing topics” is safer than “You’re derailing”. Keep it procedural and you stay unattackable.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="dcB">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">Boundary you need (simple, repeatable)</span></div>
+<input class="input pb-input" id="c5_boundary" placeholder="Example: I can do this if we drop X or move Y. Which do you prefer?"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">What you will not do</span></div>
+<input class="input pb-input" id="c5_no" placeholder="Example: commit without scope/owner/deadline"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">What you will do instead</span></div>
+<input class="input pb-input" id="c5_instead" placeholder="Example: propose options; ask for trade-off decision"/>
+</div>
+<div class="field span-2">
+<div class="label-row"><span class="label-text">If they push: your “broken record” line</span></div>
+<input class="input pb-input" id="c5_repeat" placeholder="Example: To protect delivery, I need a trade-off decision. A or B?"/>
+</div>
+</div>
+</div>
+<div class="pb-tab-panel" id="dcC">
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row"><span class="label-text">What must be captured in writing</span></div>
+<textarea class="textarea pb-input" id="c5_capture" placeholder="Example: the decision, trade-offs, owner, deadline, what’s not happening."></textarea>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Channel</span></div>
+<input class="input pb-input" id="c5_channel" placeholder="Example: email recap / Slack thread"/>
+</div>
+<div class="field">
+<div class="label-row"><span class="label-text">Recap deadline</span></div>
+<input class="input pb-input" id="c5_recapBy" placeholder="Example: same day"/>
+</div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-scroll"></i> Difficult conversation plan (copy-ready)</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_difficult">Click Build to generate your difficult conversation plan.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c5"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c6">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-comment-dots"></i> Chapter 6) Script library (influence lines that work)</div>
+<div class="pb-card-sub">
+              These scripts work because they are <b>structured</b>: outcome, options, trade-offs, deadlines, and written alignment.
+              Use them consistently and people stop "testing" your boundaries.
+            </div>
+</div>
+</div>
+<div class="script-search">
+<input class="input" id="scriptSearch" placeholder="Search scripts (e.g., disagree, push back, options, trade-off, risk, recap, decision)"/>
+</div>
+<div class="acc" id="scriptsAcc">
+<div class="acc-item" data-search="disagree disagreeing respectfully challenge without conflict">
+<button class="acc-head" data-acc="s1" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-scale-balanced"></i></div>
+<div>
+<div class="acc-title">Disagree without conflict (calm + firm)</div>
+<div class="acc-meta">Use when: you need to challenge a direction safely.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s1">
+<p><b>Why it works:</b> it separates intent (“I want the outcome”) from approach (“this route is risky”).</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s1">I’m aligned on the outcome. I’m not confident this approach gets us there safely.
+Here’s the risk I’m seeing: &lt;RISK&gt;.
+Two options that protect the outcome:
+Option A: &lt;OPTION A&gt;
+Option B: &lt;OPTION B&gt;
+Which do you want me to progress?</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="push back workload scope trade-off choose A or B decision">
+<button class="acc-head" data-acc="s2" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-hand"></i></div>
+<div>
+<div class="acc-title">Push back (trade-off ask)</div>
+<div class="acc-meta">Use when: they add more work without removing anything.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s2">
+<p><b>Positioning:</b> you’re protecting quality and outcomes, not refusing to help.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s2">I can take this on, but we’ll need a trade-off to protect delivery.
+Please choose:
+A) I prioritise &lt;NEW&gt; and we move/drop &lt;EXISTING&gt;.
+B) We keep &lt;EXISTING&gt; on track and I start &lt;NEW&gt; on &lt;DATE&gt;.
+Which do you prefer?</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="dominant interrupting control meeting how to handle">
+<button class="acc-head" data-acc="s3" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-gavel"></i></div>
+<div>
+<div class="acc-title">Handle a dominant interrupter (without escalation)</div>
+<div class="acc-meta">Use when: they talk over you or bulldoze the topic.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s3">
+<p><b>Tip:</b> don’t fight. Name the process and return to the decision.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s3">I’m going to pause there so we don’t mix topics.
+The decision we need is: &lt;DECISION&gt;.
+I’ll give two options, then we choose:
+Option A: &lt;A&gt;
+Option B: &lt;B&gt;
+Which do you want me to proceed with?</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="risk anxious stakeholder reassurance risk control plan">
+<button class="acc-head" data-acc="s4" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-shield"></i></div>
+<div>
+<div class="acc-title">Calm an anxious / blame-avoidant stakeholder</div>
+<div class="acc-meta">Use when: they see worst-case and stall.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s4">
+<p><b>Principle:</b> acknowledge risk, then show containment.</p>
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s4">You’re right to focus on risk. Here’s what we’re controlling:
+- Risk: &lt;RISK&gt;
+- Control: &lt;CONTROL&gt;
+- Checkpoint: &lt;WHEN WE REVIEW&gt;
+If any of the red flags appear, we stop and revert. With that in place, can you confirm we proceed with &lt;OPTION&gt;?</div>
+</div>
+</div>
+</div>
+<div class="acc-item" data-search="written recap decisions alignment summary email slack">
+<button class="acc-head" data-acc="s5" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-file-signature"></i></div>
+<div>
+<div class="acc-title">Written recap (lock the decision)</div>
+<div class="acc-meta">Use when: you want agreement to stick.</div>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-body" id="s5">
+<div class="script-box">
+<div class="label"><i class="fas fa-copy"></i> Copy-ready script</div>
+<div class="script-text" id="script_s5">Quick recap of what we agreed:
+1) Outcome: &lt;OUTCOME&gt;
+2) Decision: we’re proceeding with &lt;OPTION&gt;
+3) Trade-offs: we are stopping/deferring &lt;TRADE-OFF&gt;
+4) Owner + deadline: &lt;OWNER&gt; by &lt;DATE&gt;
+If anything above is incorrect, please reply today so I can adjust.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="insight-grid">
+<div class="insight">
+<i class="fas fa-user-gear"></i>
+<div>
+<b>Personality / Behaviour lens</b>
+<span><b>Dominant:</b> keep it short. <b>Analytical:</b> document logic. <b>Agreeable:</b> warm tone, firm boundary. <b>Avoidant:</b> yes/no by a date.</span>
+</div>
+</div>
+<div class="insight">
+<i class="fas fa-bolt"></i>
+<div>
+<b>Micro-skill: pause before you respond</b>
+<span>A 2-second pause reads as control. Fast responses read as reactivity. Influence likes patience.</span>
+</div>
+</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c6"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+<section class="pb-card" id="c7">
+<div class="pb-card-header">
+<div>
+<div class="pb-card-title"><i class="fas fa-file-lines"></i> Chapter 7) Influence one-pager (final output)</div>
+<div class="pb-card-sub">
+              Generate a clean one-pager you can paste into notes, send to yourself, or use as the prep sheet before the conversation.
+            </div>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4><i class="fas fa-file-lines"></i> Influence one-pager</h4>
+<div class="mini-row">
+<button class="pb-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="out_onepager">Click Build to generate your influence one-pager.</div>
+</div>
+<br/>
+<div class="pb-done" data-module="c7"><i class="fas fa-check-circle"></i><span>Mark done</span></div>
+</section>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

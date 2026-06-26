@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Profile | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="account" data-protected="true">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell account-page">
+<div class="container">
+<div class="content-wrapper">
+<div class="profile-header">
+<h1 class="profile-title">Your Profile</h1>
+<p class="profile-subtitle">Manage your personal details, preferences, security, and billing information</p>
+</div>
+<div class="crisis-wrapper">
+<div class="crisis-card">
+<div class="crisis-content">
+<div class="crisis-text">
+<h3>Need urgent strategic support?</h3>
+<p>If something serious is happening at work and you need fast, confidential direction, contact our Crisis Expert.</p>
+</div>
+<button class="crisis-btn" id="openCrisisModal">
+<i class="fas fa-exclamation-circle"></i>
+                            Contact Crisis Expert
+                        </button>
+</div>
+</div>
+</div>
+<div class="profile-container">
+<div class="profile-sidebar">
+<div class="profile-picture">
+<div class="profile-avatar">
+<i class="fas fa-user"></i>
+</div>
+<div class="profile-name" id="profileName"></div>
+<div class="profile-role" id="profileRole"></div>
+<button class="change-photo">Change Photo</button>
+</div>
+<ul class="sidebar-menu">
+<li><a class="active" href="#personal"><i class="fas fa-user"></i> Personal Details</a></li>
+<li><a href="#preferences"><i class="fas fa-cog"></i> Preferences</a></li>
+<li><a href="#security"><i class="fas fa-shield-alt"></i> Security</a></li>
+<li><a href="#billing"><i class="fas fa-credit-card"></i> Billing</a></li>
+</ul>
+</div>
+<div class="profile-content">
+<div class="profile-section" id="personal">
+<h2 class="section-title"><i class="fas fa-user"></i> Personal Details</h2>
+<form class="profile-form">
+<div class="form-grid">
+<div class="form-group">
+<label class="form-label">First Name</label>
+<input class="form-input" id="firstNameInput" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">Last Name</label>
+<input class="form-input" id="lastNameInput" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">Email Address</label>
+<input class="form-input" id="emailInput" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label">Phone Number</label>
+<input class="form-input" id="phoneInput" type="tel"/>
+</div>
+<div class="form-group">
+<label class="form-label">Job Title</label>
+<input class="form-input" id="jobTitleInput" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">Industry</label>
+<select class="form-select" name="profile_field_6">
+<option>Technology</option>
+<option>Healthcare</option>
+<option>Finance</option>
+<option>Education</option>
+<option>Retail</option>
+<option>Manufacturing</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group full-width">
+<label class="form-label">Bio</label>
+<textarea class="form-textarea" name="profile_field_7" placeholder="Tell us a bit about yourself..."></textarea>
+<div class="form-hint">Brief description of your professional background and interests.</div>
+</div>
+</div>
+<div class="form-actions">
+<button class="btn btn-secondary" type="button">Cancel</button>
+<button class="btn btn-primary" data-action="save-tool" type="submit">Save Changes</button>
+</div>
+</form>
+</div>
+<div class="profile-section" id="preferences">
+<h2 class="section-title"><i class="fas fa-cog"></i> Preferences</h2>
+<div class="toggle-group">
+<div>
+<div class="toggle-label">Email Notifications</div>
+<div class="toggle-description">Receive updates about new features and resources</div>
+</div>
+<label class="toggle-switch">
+<input checked="" name="profile_field_8" type="checkbox"/>
+<span class="toggle-slider"></span>
+</label>
+</div>
+<div class="toggle-group">
+<div>
+<div class="toggle-label">Weekly Digest</div>
+<div class="toggle-description">Get a weekly summary of new tools and insights</div>
+</div>
+<label class="toggle-switch">
+<input checked="" name="profile_field_9" type="checkbox"/>
+<span class="toggle-slider"></span>
+</label>
+</div>
+<div class="toggle-group">
+<div>
+<div class="toggle-label">Product Updates</div>
+<div class="toggle-description">Be notified when new features are released</div>
+</div>
+<label class="toggle-switch">
+<input name="profile_field_10" type="checkbox"/>
+<span class="toggle-slider"></span>
+</label>
+</div>
+<div class="form-group">
+<label class="form-label">Preferred Communication Style</label>
+<select class="form-select" name="profile_field_11">
+<option>Strategic &amp; Analytical</option>
+<option>Direct &amp; Action-Oriented</option>
+<option>Empathetic &amp; Supportive</option>
+<option>Balanced Approach</option>
+</select>
+<div class="form-hint">How would you like The Lens to communicate with you?</div>
+</div>
+<div class="form-group">
+<label class="form-label">Workplace Challenge Focus</label>
+<select class="form-select" name="profile_field_12">
+<option>Leadership &amp; Management</option>
+<option>Team Dynamics</option>
+<option>Career Growth</option>
+<option>Work-Life Balance</option>
+<option>All Areas</option>
+</select>
+<div class="form-hint">What types of workplace challenges are most relevant to you?</div>
+</div>
+<div class="form-actions">
+<button class="btn btn-secondary" data-action="reset-tool" type="button">Reset to Defaults</button>
+<button class="btn btn-primary" data-action="save-tool" type="button">Save Preferences</button>
+</div>
+</div>
+<div class="profile-section" id="security">
+<h2 class="section-title"><i class="fas fa-shield-alt"></i> Security</h2>
+<div class="security-grid">
+<div class="security-card">
+<div class="security-title"><i class="fas fa-key"></i> Password</div>
+<div class="security-description">Last changed 3 months ago</div>
+<span class="security-status status-active">Active</span>
+<div>
+<button class="btn btn-secondary">Change Password</button>
+</div>
+</div>
+<div class="security-card">
+<div class="security-title"><i class="fas fa-mobile-alt"></i> Two-Factor Authentication</div>
+<div class="security-description">Add an extra layer of security to your account</div>
+<span class="security-status status-inactive">Not Active</span>
+<div>
+<button class="btn btn-primary">Enable 2FA</button>
+</div>
+</div>
+<div class="security-card">
+<div class="security-title"><i class="fas fa-desktop"></i> Active Sessions</div>
+<div class="security-description">Manage devices where you're logged in</div>
+<div>
+<button class="btn btn-secondary">View Sessions</button>
+</div>
+</div>
+<div class="security-card">
+<div class="security-title"><i class="fas fa-exclamation-triangle"></i> Account Recovery</div>
+<div class="security-description">Set up recovery options in case you lose access</div>
+<div>
+<button class="btn btn-secondary">Set Up Recovery</button>
+</div>
+</div>
+</div>
+<div class="form-actions">
+<button class="btn btn-danger" type="button">Deactivate Account</button>
+</div>
+</div>
+<div class="profile-section" id="billing">
+<h2 class="section-title"><i class="fas fa-credit-card"></i> Billing</h2>
+<div class="billing-card">
+<div class="billing-header">
+<div class="billing-title">Current Plan</div>
+<span class="billing-status status-active">Premium</span>
+</div>
+<div class="billing-details">
+<div class="billing-detail">
+<div class="detail-label">Billing Cycle</div>
+<div class="detail-value">Monthly</div>
+</div>
+<div class="billing-detail">
+<div class="detail-label">Next Billing Date</div>
+<div class="detail-value">March 15, 2025</div>
+</div>
+<div class="billing-detail">
+<div class="detail-label">Payment Method</div>
+<div class="detail-value">Visa ending in 4242</div>
+</div>
+<div class="billing-detail">
+<div class="detail-label">Plan Cost</div>
+<div class="detail-value">£19/month</div>
+</div>
+</div>
+<div class="billing-actions">
+<button class="btn btn-secondary">Update Payment Method</button>
+<button class="btn btn-primary">Change Plan</button>
+</div>
+</div>
+<div class="billing-card">
+<div class="billing-header">
+<div class="billing-title">Billing History</div>
+</div>
+<div>
+<div>
+<div>
+<div>Premium Plan</div>
+<div>February 15, 2025</div>
+</div>
+<div>£19.00</div>
+</div>
+<div>
+<div>
+<div>Premium Plan</div>
+<div>January 15, 2025</div>
+</div>
+<div>£19.00</div>
+</div>
+<div>
+<div>
+<div>Premium Plan</div>
+<div>December 15, 2024</div>
+</div>
+<div>£19.00</div>
+</div>
+</div>
+<div class="billing-actions">
+<button class="btn btn-secondary">Download Invoices</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

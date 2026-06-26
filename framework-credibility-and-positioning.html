@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Credibility and Positioning Framework | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="framework-credibility-and-positioning">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div id="customPrintHeader">
+<div id="customPrintHeaderTitle">Credibility and Positioning Framework</div>
+</div>
+<div id="printOutputsOnly"></div>
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-confidence-presence-influence.html">Confidence, Presence &amp; Influence</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Credibility and Positioning Framework</span>
+</div>
+<span class="checklist-name">CREDIBILITY AND POSITIONING FRAMEWORK</span>
+<h1 class="hero-main-heading" data-date="">Become the obvious safe choice without acting loud</h1>
+<div class="hero-subheading">
+                A practical framework to tighten your credibility story, shape how stakeholders describe you, and build a reusable proof packet for updates, one to ones, and promotion conversations.
+            </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-users"></i>
+<span>Workplace Dynamics and Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Framework</h3>
+<ul class="bullet-list">
+<li>When you are doing good work but it is not landing as strong credibility.</li>
+<li>When stakeholders describe you in a way that is too narrow, too junior, or too tactical.</li>
+<li>When you need to reset perception after a mistake, conflict, or role change.</li>
+<li>When you want to push for scope, visibility, or promotion without sounding political.</li>
+<li>When you want a clean proof packet you can reuse rather than re explain yourself every time.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Credibility is memory. If your work is not remembered, it is treated as optional.</li>
+<li>Positioning is not self promotion. It is helping people place you accurately.</li>
+<li>Use outcomes, risk control, and stakeholder impact. Avoid adjectives about yourself.</li>
+<li>Build proof in small weekly deposits. Do not wait for a big reveal moment.</li>
+<li>Speak like an operator: what changed, what it means, what you did, what is next.</li>
+</ul>
+</div>
+</div>
+<div class="framework-shell" id="frameworkCanvas">
+<div class="framework-header">
+<h2>Credibility and Positioning Canvas</h2>
+<div class="framework-intro">
+<div class="mini-title"><i class="fas fa-bullseye"></i> How to use this</div>
+<ul>
+<li>Start by naming your current role truth and the story others are telling about you.</li>
+<li>Then map the proof: outcomes, signals of trust, and the risks you reduce for others.</li>
+<li>Write stakeholder specific positioning lines that sound calm and factual.</li>
+<li>Turn it into a simple 30 60 90 plan you can execute and report on.</li>
+<li>Generate outputs you can paste into updates, one to ones, and promotion conversations.</li>
+</ul>
+<div class="close-note">Aim for calm clarity, not hype. This framework is designed to make you easy to back.</div>
+</div>
+</div>
+<div class="canvas-grid">
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-crosshairs"></i> 1) Current Position</div>
+</div>
+<div class="panel-sub">Lock the baseline. You are not changing who you are. You are tightening what is understood and remembered.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Your role in one line</span>
+</div>
+<input class="input cp-input" data-dimension="baseline" id="cp_role" placeholder="Example: I lead delivery of X across Y, ensuring Z lands on time and safely."/>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Seniority you want</span>
+</div>
+<select class="select cp-input" data-dimension="baseline" id="cp_level">
+<option selected="" value="">Select</option>
+<option value="Trusted operator">Trusted operator</option>
+<option value="Go to problem solver">Go to problem solver</option>
+<option value="Owner of outcomes">Owner of outcomes</option>
+<option value="Strategic partner">Strategic partner</option>
+<option value="Leader of people or programmes">Leader of people or programmes</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Time focus</span>
+</div>
+<select class="select cp-input" data-dimension="plan" id="cp_horizon">
+<option selected="" value="">Select</option>
+<option value="Next 2 weeks">Next 2 weeks</option>
+<option value="Next month">Next month</option>
+<option value="Next quarter">Next quarter</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">How people describe you now</span>
+</div>
+<textarea class="textarea cp-input" data-dimension="baseline" id="cp_now" placeholder="Example: reliable, helpful, detailed, but not seen as leading."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Credibility gap</span>
+</div>
+<textarea class="textarea cp-input" data-dimension="risks" id="cp_gap" placeholder="Example: impact is not visible, ownership is unclear, decisions look reactive."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">One outcome you must protect</span>
+</div>
+<input class="input cp-input" data-dimension="baseline" id="cp_protect" placeholder="Example: delivery quality and trust with key stakeholders."/>
+</div>
+</div>
+<div class="micro-cards">
+<div class="micro">
+<h4><i class="fas fa-bullseye"></i> The placement rule</h4>
+<p>People place you using the last clear evidence they saw. If you do not supply clean evidence, they fill the gap with assumptions.</p>
+</div>
+<div class="micro">
+<h4><i class="fas fa-volume-low"></i> Quiet strength</h4>
+<p>You do not need louder visibility. You need sharper, easier to repeat clarity about impact and ownership.</p>
+</div>
+</div>
+</div>
+<div class="panel" id="panelProof">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-shield-halved"></i> 2) Proof and Credibility Signals</div>
+</div>
+<div class="panel-sub">This is what makes you the safe choice. Focus on outcomes, risk control, and reliability under pressure.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Top outcomes delivered</span>
+</div>
+<textarea class="textarea cp-input" data-dimension="proof" id="pf_outcomes" placeholder="Example: shipped X, reduced Y incidents, improved Z cycle time, stabilised a process, unblocked a dependency."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Risks you reduce for others</span>
+</div>
+<textarea class="textarea cp-input" data-dimension="proof" id="pf_risk" placeholder="Example: prevent surprises, protect delivery, spot early warning signals, keep stakeholders aligned, reduce rework."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Trust signals you have</span>
+</div>
+<select class="select cp-input boxlike-control" data-dimension="proof" id="pf_trust">
+<option selected="" value="">Select</option>
+<option value="People ask me to lead or own">People ask me to lead or own</option>
+<option value="I handle sensitive work">I handle sensitive work</option>
+<option value="I get pulled into critical moments">I get pulled into critical moments</option>
+<option value="My updates are used as truth">My updates are used as truth</option>
+<option value="I am asked to fix messy situations">I am asked to fix messy situations</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Visibility risk</span>
+</div>
+<select class="select cp-input boxlike-control" data-dimension="risks" id="pf_visibility">
+<option selected="" value="">Select</option>
+<option value="Work is done but not communicated">Work is done but not communicated</option>
+<option value="Credit is captured by louder voices">Credit is captured by louder voices</option>
+<option value="Impact is spread across too many tasks">Impact is spread across too many tasks</option>
+<option value="Stakeholders only see issues">Stakeholders only see issues</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Two proof points with numbers</span>
+</div>
+<textarea class="textarea cp-input" data-dimension="proof" id="pf_numbers" placeholder="Example: reduced cycle time from A to B, avoided C hours of rework, improved reliability by D percent."></textarea>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Crisp credibility statement</h4>
+</div>
+<div class="output-content" id="out_cred">Click Generate to build a clean credibility statement from your proof and role.</div>
+</div>
+</div>
+</div>
+<div class="canvas-grid">
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-users-gear"></i> 3) Stakeholders and Positioning Lines</div>
+</div>
+<div class="panel-sub">Positioning is what you want people to repeat. Keep it calm, factual, and anchored in outcomes.</div>
+<div class="field-grid">
+<div class="field">
+<div class="label-row">
+<span class="label-text">Primary stakeholder</span>
+</div>
+<input class="input cp-input" data-dimension="stakeholders" id="st_primary" placeholder="Example: manager, director, programme lead"/>
+</div>
+<div class="field">
+<div class="label-row">
+<span class="label-text">What they care about</span>
+</div>
+<input class="input cp-input" data-dimension="stakeholders" id="st_care" placeholder="Example: predictable delivery and no surprises"/>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Stakeholders list</span>
+</div>
+<input class="input cp-input" data-dimension="stakeholders" id="st_list" placeholder="Example: Head of X, Product lead, Finance partner, PMO lead"/>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">What each stakeholder needs from you</span>
+</div>
+<textarea class="textarea cp-input" data-dimension="stakeholders" id="st_needs" placeholder="Example: Head of X needs risk control and clear decisions. Product needs speed with guardrails. Finance needs cost clarity."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Your boundary line</span>
+</div>
+<input class="input cp-input" data-dimension="positioning" id="st_boundary" placeholder="Example: I can deliver by Friday if we confirm scope today and prioritise what matters most."/>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Stakeholder specific positioning lines</h4>
+</div>
+<div class="output-content" id="out_position">Click Generate to create positioning lines for your key stakeholders.</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-calendar-check"></i> 4) 30 60 90 Plan</div>
+</div>
+<div class="panel-sub">A simple plan that creates proof. Make it easy to execute and easy to report.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">One strategic focus</span>
+</div>
+<input class="input cp-input" data-dimension="plan" id="pl_focus" placeholder="Example: stabilise delivery and improve predictability across X."/>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Week by week actions</span>
+</div>
+<textarea class="textarea cp-input" data-dimension="plan" id="pl_actions" placeholder="Example: weekly risk review, written recap after decisions, stakeholder pulse check, tighten scope control."></textarea>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Proof you will create</span>
+</div>
+<input class="input cp-input boxlike-control" data-dimension="plan" id="pl_proof" placeholder="Example: weekly update format, delivery dashboard, decision log"/>
+</div>
+<div class="field span-2">
+<div class="label-row">
+<span class="label-text">Success signal</span>
+</div>
+<input class="input cp-input boxlike-control" data-dimension="plan" id="pl_signal" placeholder="Example: I get asked to lead, or my view becomes default"/>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>30 60 90 plan</h4>
+</div>
+<div class="output-content" id="out_plan">Click Generate to create a simple 30 60 90 plan.</div>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-folder-open"></i> Proof Packet Builder</div>
+</div>
+<div class="panel-sub">Collect reusable proof. This becomes your update material, your one to one receipts, and your promotion packet raw material.</div>
+<table class="timeline-table" id="proofTable">
+<thead>
+<tr>
+<th>Date</th>
+<th>Proof item</th>
+<th>Result or metric</th>
+<th>Where it lives</th>
+</tr>
+</thead>
+<tbody id="proofBody">
+<tr>
+<td><input class="input cp-input" data-dimension="proof" name="framework-credibility-and-positioning_field_21" placeholder="DD/MM/YYYY"/></td>
+<td><input class="input cp-input" data-dimension="proof" name="framework-credibility-and-positioning_field_22" placeholder="Example: shipped X, fixed Y, resolved Z"/></td>
+<td><input class="input cp-input" data-dimension="proof" name="framework-credibility-and-positioning_field_23" placeholder="Example: reduced rework, avoided incidents"/></td>
+<td><input class="input cp-input" data-dimension="proof" name="framework-credibility-and-positioning_field_24" placeholder="Link or location"/></td>
+</tr>
+</tbody>
+</table>
+<div>
+<button class="mini-btn"><i class="fas fa-plus"></i> Add row</button>
+<button class="mini-btn"><i class="fas fa-minus"></i> Remove row</button>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Proof packet</h4>
+</div>
+<div class="output-content" id="out_packet">Add proof items, then click Generate.</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-file-lines"></i> Executive Outputs</div>
+</div>
+<div class="panel-sub">Designed to be copied into an update, a one to one agenda, or a promotion conversation note.</div>
+<div class="output-box">
+<div class="output-title">
+<h4>One paragraph positioning summary</h4>
+</div>
+<div class="output-content" id="out_summary">Complete the canvas, then click Generate.</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Update message template</h4>
+</div>
+<div class="output-content" id="out_update">Complete the canvas, then click Generate.</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Promotion conversation opener</h4>
+</div>
+<div class="output-content" id="out_opener">Complete the canvas, then click Generate.</div>
+</div>
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+            </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+            </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+            </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+            </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="checklist-body">
+<h2 class="checklist-section-title"><i class="fas fa-list-check"></i> Quick Coverage Checklist</h2>
+<div class="checklist-intro">
+            The canvas is the framework. This checklist is the final audit to confirm your credibility story is complete, believable, and easy for others to repeat.
+        </div>
+<div class="checklist-grid">
+<div class="checklist-item" data-category="baseline">
+<i class="far fa-square"></i>
+<div class="checklist-text">My role is stated in one clear line that a stakeholder would recognise as true.</div>
+</div>
+<div class="checklist-item" data-category="baseline">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have named how I am seen now and what is missing from that story.</div>
+</div>
+<div class="checklist-item" data-category="proof">
+<i class="far fa-square"></i>
+<div class="checklist-text">I listed outcomes delivered and at least one result with numbers.</div>
+</div>
+<div class="checklist-item" data-category="proof">
+<i class="far fa-square"></i>
+<div class="checklist-text">I can describe the risks I reduce for others in plain language.</div>
+</div>
+<div class="checklist-item" data-category="stakeholders">
+<i class="far fa-square"></i>
+<div class="checklist-text">I mapped the key stakeholders and what each needs from me.</div>
+</div>
+<div class="checklist-item" data-category="positioning">
+<i class="far fa-square"></i>
+<div class="checklist-text">My positioning lines are calm, factual, and anchored to outcomes.</div>
+</div>
+<div class="checklist-item" data-category="plan">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have a 30 60 90 plan with actions I can actually execute.</div>
+</div>
+<div class="checklist-item" data-category="plan">
+<i class="far fa-square"></i>
+<div class="checklist-text">I know what proof I will create and how I will report it.</div>
+</div>
+</div>
+</div>
+<div class="clarity-score-section">
+<div class="presence-snapshot-header">
+<h2>Your Credibility and Positioning Snapshot</h2>
+<p>This score reflects how complete your credibility story is across baseline, proof, stakeholders, and plan. Higher does not mean louder. Higher means clearer and easier to back.</p>
+</div>
+<div class="clarity-score-bar">
+<div class="clarity-progress-container">
+<div class="clarity-header">
+<div class="clarity-title">Readiness Score</div>
+<div class="clarity-percentage" id="clarityPercentage">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Unclear</span><span>Building</span><span>Strong</span>
+</div>
+<div class="presence-dimensions">
+<div class="presence-dimension-pill"><span class="dim-label">Baseline</span><span class="dim-score" id="scoreBaseline">0%</span></div>
+<div class="presence-dimension-pill"><span class="dim-label">Proof</span><span class="dim-score" id="scoreProof">0%</span></div>
+<div class="presence-dimension-pill"><span class="dim-label">Stakeholders</span><span class="dim-score" id="scoreStakeholders">0%</span></div>
+<div class="presence-dimension-pill"><span class="dim-label">Plan</span><span class="dim-score" id="scorePlan">0%</span></div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn2">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+                </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn2">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+                </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn2">
+<i class="fas fa-print"></i> Print / Save PDF
+                </button>
+<button class="action-btn secondary" disabled="" id="clearBtn2">
+<i class="fas fa-eraser"></i> Clear All
+                </button>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Smart Positioning Summary</h2>
+<p class="summary-subtitle">Based on your readiness score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">Highlights what is missing, what is most fragile, and the simplest next steps to tighten your credibility without turning it into a performance.</p>
+</div>
+<h3 class="section-header red"><i class="fas fa-exclamation-triangle"></i> Red Flags</h3>
+<div class="red-flags-grid" id="redFlagsGrid"></div>
+<h3 class="section-header purple"><i class="fas fa-forward"></i> Next Steps</h3>
+<div class="next-steps-grid" id="nextStepsGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-tools"></i> Recommended Tools</h3>
+<div class="resources-grid" id="resourcesGrid"></div>
+</div>
+<div class="close-off">
+<div class="close-card">
+<div class="close-title"><i class="fas fa-check-circle"></i> Close off: how to use this in real life</div>
+<div class="close-grid">
+<div class="close-mini">
+<h4><i class="fas fa-message"></i> Weekly update rhythm</h4>
+<p>Send a short update with three parts: what changed, what you did, what is next. Add one proof item each week. Small deposits compound.</p>
+</div>
+<div class="close-mini">
+<h4><i class="fas fa-user-group"></i> One to one script</h4>
+<p>Use your credibility statement, then ask: what would make my impact more visible to you, and what should I own next to help the team win.</p>
+</div>
+<div class="close-mini">
+<h4><i class="fas fa-star"></i> Promotion readiness</h4>
+<p>Do not wait for the cycle. Build a proof packet now. When the moment arrives, you will be calm, specific, and easy to support.</p>
+</div>
+<div class="close-mini">
+<h4><i class="fas fa-shield"></i> Perception protection</h4>
+<p>Keep language neutral. Anchor on outcomes and risk control. The goal is to be trusted, not to win a debate.</p>
+</div>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

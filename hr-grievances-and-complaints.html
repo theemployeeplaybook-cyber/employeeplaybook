@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="HR Insider — Grievances &amp; Complaints: raise concerns with control, evidence and UK-style scripts. Not legal advice." name="description"/>
+<title>HR Insider | Grievances &amp; Complaints | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="hr-grievances-and-complaints">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<section class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR Insider</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Grievances &amp; Complaints</span>
+</div>
+<span class="hero-kicker">HR INSIDER</span>
+<h1 class="hero-main-heading">Grievances &amp; Complaints</h1>
+<p class="hero-subheading">
+          Raise concerns without blowing up your credibility — with clear options, evidence structure, UK-style scripts,
+          timelines and escalation routes so you stay protected while keeping your career intact.
+        </p>
+<div class="disclaimer">
+<i class="fas fa-triangle-exclamation"></i>
+<p>
+<strong>Important:</strong> This is strategic HR guidance for UK workplaces — not legal advice.
+            If you’re in immediate risk (e.g., safety, discrimination, retaliation, dismissal), consider getting formal advice.
+          </p>
+</div>
+</div>
+</section>
+<div class="page-wrap">
+<div class="value-strip">
+<div class="value-chip">
+<i class="fas fa-chess"></i>
+<div>
+<h4>Protect your position</h4>
+<p>Choose the right route (informal, formal, escalation) without handing your employer an easy counter-move.</p>
+</div>
+</div>
+<div class="value-chip">
+<i class="fas fa-file-signature"></i>
+<div>
+<h4>Make it land</h4>
+<p>Structure your complaint so it’s specific, evidenced, and hard to dismiss as “tone” or “misunderstanding”.</p>
+</div>
+</div>
+<div class="value-chip">
+<i class="fas fa-comments"></i>
+<div>
+<h4>Scripts you can use</h4>
+<p>Wording for emails, meetings, follow-ups, and boundaries — calm, credible, and legally sensible in tone.</p>
+</div>
+</div>
+</div>
+<div class="two-col">
+<div class="panel">
+<h3><i class="fas fa-bolt"></i>Quick moves (when you’re under pressure)</h3>
+<p class="panel-desc">If things are escalating fast, these steps buy you time and control.</p>
+<ul class="bullets">
+<li>Write down a timeline (dates, who, what was said, impact) while it’s fresh.</li>
+<li>Stop verbal-only updates — confirm key points in writing after meetings.</li>
+<li>Ask for the policy and the next step: “Please confirm the process and timescales.”</li>
+<li>Request adjustments if needed (note-taker, break, companion, written questions).</li>
+</ul>
+<div class="panel-actions">
+<button class="btn primary open-guide" data-open="section-write-up"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+<button class="btn secondary open-guide" data-open="section-retaliation"><i class="fas fa-shield-halved"></i> Retaliation &amp; risk</button>
+</div>
+</div>
+<div class="panel">
+<h3><i class="fas fa-folder-open"></i>Evidence kit (what to collect)</h3>
+<p class="panel-desc">You don’t need “everything”. You need <strong>the right</strong> evidence, organised.</p>
+<ul class="bullets">
+<li>2–4 key incidents that show a pattern (not 25 minor annoyances).</li>
+<li>Emails/Slack/Teams screenshots with dates and participants visible.</li>
+<li>Meeting invites, notes, decisions, performance feedback, role scope changes.</li>
+<li>Impact evidence: missed deadlines, health notes, workload, witness corroboration.</li>
+</ul>
+<div class="panel-actions">
+<button class="btn primary open-guide" data-open="section-evidence"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+<button class="btn secondary open-guide" data-open="section-email-templates"><i class="fas fa-pen-to-square"></i> Email templates</button>
+</div>
+</div>
+</div>
+<div class="section-group" id="guidanceTop">
+<div class="section-group-title"><i class="fas fa-layer-group"></i>Guidance (expand what you need)</div>
+<div class="accordion" id="accordion">
+<div class="acc-item" id="section-routes">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-route"></i></div>
+<div class="acc-title">
+<strong>Choose the right route: informal vs formal vs escalation</strong>
+<span>Pick the approach that protects credibility and stops you getting bounced around.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-handshake"></i>Informal resolution (when it’s safe)</h4>
+<p>Use this when the issue is early-stage and you can still work with the person involved.</p>
+<ul class="mini-list">
+<li>Request a structured conversation with a clear agenda.</li>
+<li>Ask for a “what changes next” summary in writing.</li>
+<li>Set a review date (e.g., 2–3 weeks) and define what “better” looks like.</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-email-templates"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-gavel"></i>Formal grievance/complaint</h4>
+<p>Use this if there’s a repeated pattern, serious breach, discrimination/harassment risk, or you’ve tried informal and it failed.</p>
+<ul class="mini-list">
+<li>Keep it specific: incidents, evidence, impact, requested remedy.</li>
+<li>Ask for policy timescales and decision-maker details.</li>
+<li>Do not overload with emotion — lead with facts.</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-write-up"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-arrow-up"></i>Escalation routes</h4>
+<p>If you’re being ignored, bounced between people, or there’s conflict of interest.</p>
+<ul class="mini-list">
+<li>Escalate to HRBP/Head of HR with a one-page summary.</li>
+<li>Ask for an alternative investigator/independent manager.</li>
+<li>Use “risk language”: wellbeing, compliance, fairness, duty of care.</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-escalation"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-ban"></i>When NOT to go formal (yet)</h4>
+<p>Sometimes formal is necessary — but timing matters if you’re vulnerable.</p>
+<ul class="mini-list">
+<li>If you’re on probation / at-risk restructure (higher sensitivity).</li>
+<li>If you have no evidence and the complaint is easily “he said/she said”.</li>
+<li>If you need a stabilisation step first (scope reset, clarity, allies).</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-risk"><i class="fas fa-triangle-exclamation"></i> Risk check</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" id="section-evidence">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-clipboard-list"></i></div>
+<div class="acc-title">
+<strong>Evidence strategy: what matters and how to package it</strong>
+<span>Turn “a mess of messages” into a clean, credible case file.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-layer-group"></i>Build a one-page timeline</h4>
+<p>Timeline first. It stops you rambling and helps investigators see pattern.</p>
+<ul class="mini-list">
+<li>Date + incident + what was said/done.</li>
+<li>Your response + impact.</li>
+<li>Evidence reference (E1, E2, E3…)</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-email-templates"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-filter"></i>Choose 2–4 anchor incidents</h4>
+<p>Anchor incidents demonstrate pattern. Too many weak points looks like noise.</p>
+<ul class="mini-list">
+<li>Pick moments with clear witnesses or written record.</li>
+<li>Include at least one “recent” incident.</li>
+<li>Connect each to a policy principle (respect, fairness, bullying, safety).</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-write-up"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-file-circle-check"></i>What good evidence looks like</h4>
+<p>Short, dated, attributable, and not edited in a way that breaks trust.</p>
+<ul class="mini-list">
+<li>Slack/Teams: screenshot with channel + date visible.</li>
+<li>Email chains: include the thread header.</li>
+<li>Meeting notes: confirm them in writing right after.</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-follow-up"><i class="fas fa-arrow-up-right-from-square"></i> Follow-up scripts</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-circle-xmark"></i>Evidence traps to avoid</h4>
+<p>These weaken credibility or create side-issues that HR can exploit.</p>
+<ul class="mini-list">
+<li>Over-sharing private opinions or venting messages.</li>
+<li>Speculation about motives (stick to impact + facts).</li>
+<li>Editing screenshots or “cleaning” logs in a suspicious way.</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-risk"><i class="fas fa-triangle-exclamation"></i> Risk check</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" id="section-write-up">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-pen-nib"></i></div>
+<div class="acc-title">
+<strong>Write the complaint: structure that gets taken seriously</strong>
+<span>Keep it calm, specific, and decision-ready.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-sitemap"></i>Recommended structure</h4>
+<ul class="mini-list">
+<li><strong>Headline:</strong> what you’re raising (one sentence).</li>
+<li><strong>Summary:</strong> 3–5 bullets of key incidents.</li>
+<li><strong>Details:</strong> anchor incidents with evidence refs.</li>
+<li><strong>Impact:</strong> on work, wellbeing, safety, reputation.</li>
+<li><strong>Outcome:</strong> what you want to happen next.</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-email-templates"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-comment-dots"></i>Language rules that protect you</h4>
+<ul class="mini-list">
+<li>Lead with facts, not labels (“bullying” can come later if appropriate).</li>
+<li>Use “I experienced…” + “The impact was…”</li>
+<li>Ask for clarity: “Please confirm the next step and timescales.”</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-follow-up"><i class="fas fa-arrow-up-right-from-square"></i> Follow-up scripts</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-quote-left"></i>Example wording (safe + credible)</h4>
+<div class="script">I’m raising a formal concern regarding repeated incidents that have affected my ability to work effectively and have created an environment I find difficult to sustain.
+
+I’m requesting a fair review in line with the company’s grievance process, including clarity on the investigator, expected timescales, and how evidence will be handled. I’m also requesting confirmation of any interim measures to prevent further impact while this is reviewed.</div>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-email-templates"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-bullseye"></i>Outcome requests (pick the right ones)</h4>
+<ul class="mini-list">
+<li>Clarification of expectations / role scope / reporting line.</li>
+<li>Behaviour expectations + monitored plan (not “punish them”).</li>
+<li>Work allocation reset / mediation / training / manager change.</li>
+<li>Interim boundary: no 1:1 alone / note-taker / channel rules.</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-escalation"><i class="fas fa-arrow-up-right-from-square"></i> Escalation routes</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" id="section-meetings">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-people-arrows"></i></div>
+<div class="acc-title">
+<strong>Meetings: how to handle the conversation and not get cornered</strong>
+<span>Control the frame, keep notes, and exit cleanly if it derails.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-list-check"></i>Before the meeting</h4>
+<ul class="mini-list">
+<li>Send a short agenda and what you need answered.</li>
+<li>Bring a note-taker or request notes confirmed in writing.</li>
+<li>Bring 3 anchor points only — don’t relive everything.</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-follow-up"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-comments"></i>In the meeting (scripts)</h4>
+<div class="script">To keep this productive, I’d like to focus on the three core incidents and the specific outcomes I’m requesting.
+
+If we can’t resolve the process questions today, please confirm who owns next steps and when I’ll receive an update in writing.</div>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-follow-up"><i class="fas fa-arrow-up-right-from-square"></i> Follow-up scripts</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-triangle-exclamation"></i>If it derails</h4>
+<ul class="mini-list">
+<li>“I don’t think this is constructive — I’d like to pause.”</li>
+<li>“Please confirm the process in writing and we can continue.”</li>
+<li>Take a break. Leave if needed. Follow up in writing same day.</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-retaliation"><i class="fas fa-shield-halved"></i> Risk &amp; retaliation</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-check-double"></i>After the meeting</h4>
+<ul class="mini-list">
+<li>Email a summary: decisions, actions, dates, owner.</li>
+<li>Ask for correction within 48 hours if needed.</li>
+<li>Log it in your timeline as an evidence reference.</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-follow-up"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" id="section-follow-up">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-envelope-circle-check"></i></div>
+<div class="acc-title">
+<strong>Follow-up and “paper trail” scripts</strong>
+<span>Polite, firm follow-ups that lock in clarity and stop drift.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-clock"></i>Chasing an update</h4>
+<div class="script">Hi [Name] — just checking in on the status of my grievance/complaint.
+
+Could you please confirm:
+1) who is leading the review,
+2) the expected timescales, and
+3) when I can expect the next written update?
+
+Thanks,
+[Your name]</div>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-email-templates"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-clipboard"></i>Confirming meeting notes</h4>
+<div class="script">Hi [Name] — thanks for today.
+
+My understanding of the key points is:
+- [Decision / point 1]
+- [Action + owner + date]
+- [Action + owner + date]
+
+If anything above is inaccurate, please reply with corrections by [48 hours].
+
+Regards,
+[Your name]</div>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-evidence"><i class="fas fa-clipboard-list"></i> Evidence strategy</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-ban"></i>Setting an interim boundary</h4>
+<div class="script">To prevent further impact while this is reviewed, I’m requesting interim measures.
+
+For example:
+- meetings with [person] include a note-taker, and
+- key actions are confirmed in writing.
+
+Please confirm what interim measures will be put in place.</div>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-retaliation"><i class="fas fa-shield-halved"></i> Risk &amp; retaliation</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-arrows-turn-right"></i>Redirecting “informal only” pushback</h4>
+<div class="script">I’m open to informal resolution where appropriate.
+
+However, given the pattern and impact, I’m requesting clarity on the formal process and timescales as well, so this doesn’t drift without accountability.</div>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-routes"><i class="fas fa-route"></i> Routes guide</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" id="section-retaliation">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-shield-halved"></i></div>
+<div class="acc-title">
+<strong>Retaliation and risk: what to watch for and how to protect yourself</strong>
+<span>If pressure increases after raising concerns, respond strategically.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-eye"></i>Common retaliation patterns</h4>
+<ul class="mini-list">
+<li>Sudden performance concerns / “tone” complaints.</li>
+<li>Isolation, exclusion, workload manipulation.</li>
+<li>Unreasonable deadlines, access removal, role scope shrink.</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-risk"><i class="fas fa-triangle-exclamation"></i> Risk check</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-file-shield"></i>Protective moves</h4>
+<ul class="mini-list">
+<li>Confirm changes in writing: “Just to confirm the new expectation…”</li>
+<li>Ask for objective criteria + examples (not vague claims).</li>
+<li>Log incidents as E-references in your timeline.</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-follow-up"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-scale-balanced"></i>If you’re threatened with discipline</h4>
+<p>Don’t panic. Switch to “process + evidence + timeline”. Ask for everything in writing.</p>
+<div class="card-actions">
+<a class="btn secondary" href="hr-disciplinary-and-conduct.html"><i class="fas fa-arrow-right"></i> Go to Disciplinary &amp; Conduct</a>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-heart-pulse"></i>Wellbeing and adjustments</h4>
+<ul class="mini-list">
+<li>Request breaks, written questions, a companion if appropriate.</li>
+<li>If health is impacted, document it and request support.</li>
+<li>Don’t let them frame it as “performance only”.</li>
+</ul>
+<div class="card-actions">
+<a class="btn secondary" href="checklist-capacity.html"><i class="fas fa-battery-half"></i> Capacity Checklist</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" id="section-escalation">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-arrow-up"></i></div>
+<div class="acc-title">
+<strong>Escalation: when HR stalls, minimises, or “closes” without resolving</strong>
+<span>Keep it professional, but force clarity and accountability.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-user-tie"></i>Escalate to a senior owner</h4>
+<p>Send a one-page summary: issue, timeline, process gap, what you’re requesting.</p>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-email-templates"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-circle-nodes"></i>Conflict of interest</h4>
+<ul class="mini-list">
+<li>Ask for an alternative investigator or independent manager.</li>
+<li>Request clarity on how impartiality is ensured.</li>
+<li>Ask who reviews the decision.</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-follow-up"><i class="fas fa-arrow-up-right-from-square"></i> Follow-up scripts</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-clipboard-question"></i>Appeal routes</h4>
+<ul class="mini-list">
+<li>Ask for appeal policy and timeframe in writing.</li>
+<li>Appeal with process failings + new evidence + inconsistency.</li>
+<li>Keep it calm — no emotional “closing statement”.</li>
+</ul>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-evidence"><i class="fas fa-clipboard-list"></i> Evidence strategy</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-flag"></i>External routes (high-level)</h4>
+<p>If internal processes fail, you may consider external advice or escalation routes. Keep records clean.</p>
+<div class="card-actions">
+<a class="btn secondary" href="the-lens.html"><i class="fas fa-search"></i> Use The Lens</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" id="section-email-templates">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-envelope-open-text"></i></div>
+<div class="acc-title">
+<strong>Email templates: make it clean and credible</strong>
+<span>Copy/paste wording with the right tone and structure.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-file-signature"></i>Opening a formal grievance</h4>
+<div class="script">Subject: Formal grievance / complaint
+
+Hi [Name],
+
+I’m raising a formal concern under the company’s grievance process.
+
+Summary:
+- [Incident 1 – date – short description – evidence reference]
+- [Incident 2 – date – short description – evidence reference]
+- [Incident 3 – date – short description – evidence reference]
+
+Impact:
+[Briefly explain impact on work / wellbeing / ability to perform.]
+
+Requested outcomes:
+- [Outcome 1]
+- [Outcome 2]
+- [Process request: investigator, timescales, handling of evidence]
+
+Please confirm the next steps and expected timescales.
+
+Regards,
+[Your name]</div>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-evidence"><i class="fas fa-clipboard-list"></i> Evidence guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-handshake-angle"></i>Requesting informal resolution</h4>
+<div class="script">Subject: Request for structured discussion
+
+Hi [Name],
+
+I’d like to request a structured discussion to address a concern early.
+
+To keep it productive, I’d like to cover:
+1) [Issue in one sentence]
+2) Specific examples (2–3)
+3) What “better” looks like going forward
+
+Please confirm a suitable time and whether notes will be captured and shared.
+
+Thanks,
+[Your name]</div>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-meetings"><i class="fas fa-people-arrows"></i> Meeting guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-user-shield"></i>Requesting interim measures</h4>
+<div class="script">Subject: Request for interim measures (while concern is reviewed)
+
+Hi [Name],
+
+To prevent further impact while this is reviewed, I’m requesting interim measures such as:
+- [Measure 1]
+- [Measure 2]
+
+Please confirm what interim measures will be put in place and when they begin.
+
+Regards,
+[Your name]</div>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-retaliation"><i class="fas fa-shield-halved"></i> Risk guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-arrow-up"></i>Escalating a stalled process</h4>
+<div class="script">Subject: Escalation — grievance process update requested
+
+Hi [Name],
+
+I’m requesting an update on my grievance/complaint submitted on [date].
+
+Could you please confirm:
+- who is leading the review,
+- the current status,
+- the expected timescales, and
+- when I will receive the next written update?
+
+I’m keen to resolve this fairly and efficiently.
+
+Regards,
+[Your name]</div>
+<div class="card-actions">
+<button class="btn secondary open-guide" data-open="section-escalation"><i class="fas fa-arrow-up-right-from-square"></i> Escalation guide</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="acc-item" id="section-risk">
+<button aria-expanded="false" class="acc-btn" type="button">
+<div class="acc-left">
+<div class="acc-icon"><i class="fas fa-triangle-exclamation"></i></div>
+<div class="acc-title">
+<strong>Risk check: timing, vulnerability, and strategy</strong>
+<span>Know what you might not see until it’s too late — and protect leverage.</span>
+</div>
+</div>
+<div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+</button>
+<div class="acc-content">
+<div class="content-grid">
+<div class="content-card">
+<h4><i class="fas fa-user-clock"></i>Higher vulnerability moments</h4>
+<ul class="mini-list">
+<li>Probation, recent role change, restructure, redundancy risk.</li>
+<li>Recent performance messaging without documentation.</li>
+<li>Manager already building a narrative (tone, attitude, “not a fit”).</li>
+</ul>
+<div class="card-actions">
+<a class="btn secondary" href="template-decision-record.html"><i class="fas fa-file"></i> Decision Record</a>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-chess-knight"></i>Strategic stabilisers (before formal)</h4>
+<ul class="mini-list">
+<li>Clarify priorities/scope in writing (force trade-offs).</li>
+<li>Secure allies or witnesses (without gossiping).</li>
+<li>Build evidence base for 2–3 weeks if safe to do so.</li>
+</ul>
+<div class="card-actions">
+<a class="btn secondary" href="planner-weekly-priority.html"><i class="fas fa-calendar"></i> Weekly Priority</a>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-circle-check"></i>Signals it’s time to go formal</h4>
+<ul class="mini-list">
+<li>Safety risk, discrimination/harassment indicators.</li>
+<li>Repeated behaviour despite clear requests.</li>
+<li>HR/manager minimises or refuses clarity in writing.</li>
+</ul>
+<div class="card-actions">
+<button class="btn primary open-guide" data-open="section-write-up"><i class="fas fa-arrow-up-right-from-square"></i> Open guide</button>
+</div>
+</div>
+<div class="content-card">
+<h4><i class="fas fa-flag-checkered"></i>Exit strategy (if needed)</h4>
+<p>If the environment is structurally unsafe, you may need parallel planning while you raise concerns.</p>
+<div class="card-actions">
+<a class="btn secondary" href="plan-exit-and-reputation.html"><i class="fas fa-door-open"></i> Exit &amp; Reputation Plan</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

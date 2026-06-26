@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Shift #1: From Silent Burnout and Over-Giving → Reset load, rebuild energy, and protect performance. Self-diagnostic + decision tree + premium scripts. Not legal advice." />
+  <title>The Shift | Shift #1 — Silent Burnout Reset | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="shift-burnout-and-capacity">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="the-shift.html">The Shift</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Shift #1</span>
+</div>
+<div class="pill-label">
+<span class="dot"></span>
+<span>Shift #1 — Burnout &amp; Capacity</span>
+</div>
+<h1 class="hero-main-heading">The Quiet Drain: reset load without getting quietly managed out</h1>
+<div class="hero-subheading">
+          This Shift is for talented UK professionals stuck in <strong>silent burnout + chronic over-giving</strong> — solid reviews, hidden cost.
+          You’ll diagnose what’s actually happening, pick the safest decision path, and apply precise scripts that protect performance without turning you into “a problem”.
+        </div>
+<div class="hero-mantra">
+<div class="icon"><i class="fas fa-bullseye"></i></div>
+<div>
+<h4>Shift mantra</h4>
+<p><strong>“My value is not proven by what I absorb, but by how precisely I deploy my energy.”</strong></p>
+</div>
+</div>
+<div class="hero-value-row">
+<div class="hero-value-card">
+<div class="hero-value-icon"><i class="fas fa-stethoscope"></i></div>
+<div>
+<h4>Self-diagnostic (10 minutes)</h4>
+<p>Score the real pattern: workload, hidden emotional labour, and “quiet firing” anxiety signals.</p>
+</div>
+</div>
+<div class="hero-value-card">
+<div class="hero-value-icon"><i class="fas fa-sitemap"></i></div>
+<div>
+<h4>Decision tree + scripts</h4>
+<p>Choose the safest path: recalibrate, renegotiate, escalate, or quietly de-risk — with credible language.</p>
+</div>
+</div>
+</div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related categories</span>
+<div class="category-pills-grid">
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html">
+<i class="fas fa-fire-flame-curved category-icon"></i><span>Burnout &amp; Capacity</span>
+</a>
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-bullseye category-icon"></i><span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-people-arrows category-icon"></i><span>Manager Relationship</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-users category-icon"></i><span>Workplace Dynamics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="content-shell">
+<div class="content-grid">
+<aside aria-label="Contents" class="sidebar">
+<div class="sidebar-title"><i class="fas fa-list"></i> Contents</div>
+<ul class="toc" id="tocList">
+<li><a class="toc-link active" href="#overview"><i class="fas fa-circle-info"></i> Overview</a></li>
+<li><a class="toc-link" href="#diagnostic"><i class="fas fa-clipboard-check"></i> Self-diagnostic</a></li>
+<li><a class="toc-link" href="#decision-tree"><i class="fas fa-sitemap"></i> Decision tree</a></li>
+<li><a class="toc-link" href="#micro-actions"><i class="fas fa-bolt"></i> Micro-actions</a></li>
+<li><a class="toc-link" href="#scripts"><i class="fas fa-quote-left"></i> Scripts library</a></li>
+<li><a class="toc-link" href="#non-negotiable"><i class="fas fa-shield-halved"></i> Non-negotiable</a></li>
+<li><a class="toc-link" href="#wins"><i class="fas fa-chart-line"></i> Early wins</a></li>
+<li><a class="toc-link" href="#identity"><i class="fas fa-user-check"></i> Identity upgrade</a></li>
+<li><a class="toc-link" href="#lens"><i class="fas fa-user-shield"></i> Personality / Behaviour Lens</a></li>
+</ul>
+<div class="sidebar-cta">
+<div class="mini">
+              Tick your diagnostic, add notes, then generate your plan. Save progress once generated.
+            </div>
+<div class="sidebar-actions">
+<button class="pill-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Generate My Shift Plan
+              </button>
+<button class="pill-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+              </button>
+<button class="pill-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+              </button>
+<button class="pill-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+              </button>
+</div>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</aside>
+<section class="main">
+<div class="content-card" id="overview">
+<div class="card-title"><i class="fas fa-circle-info"></i> Shift #1 — what changes</div>
+<p class="muted">
+              Silent burnout is rarely about laziness, weakness, or “time management”. It’s usually a <strong>threat-based strategy</strong>:
+              you buy safety by absorbing overflow, smoothing tension, and delivering despite ambiguity. It works — until it doesn’t.
+            </p>
+<div class="callout">
+<h4><i class="fas fa-triangle-exclamation"></i> The invisible cost you’re paying</h4>
+<p>
+                You’re spending your future cognitive capacity to buy short-term safety today. Your output stays “solid” while
+                your nervous system quietly takes the damage: low-grade exhaustion, resentment, and that Sunday dread you can’t explain in a performance review.
+              </p>
+</div>
+<div class="grid-2">
+<div class="mini-card">
+<h4><i class="fas fa-shield"></i> The high-leverage shift</h4>
+<p>
+                  You stop managing “how much you do” and start managing <strong>what you signal</strong>.
+                  Not less commitment — more precision: clear trade-offs, contained availability, and credibility-led boundaries.
+                </p>
+</div>
+<div class="mini-card">
+<h4><i class="fas fa-eye"></i> The UK reality (quiet risk)</h4>
+<p>
+                  UK workplaces often do not say “do more” directly — they reward the people who quietly make messes disappear.
+                  This tool helps you recalibrate without triggering the “difficult” label or stepping into performance management traps.
+                </p>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="acc0" type="button">
+<span class="left"><i class="fas fa-lightbulb"></i> One subtle truth most people miss</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="acc0">
+<p class="muted">
+                  Over-giving doesn’t make you indispensable. It often makes you <strong>invisible</strong>: your effort hides broken systems.
+                  Promotions tend to go to people whose judgement is legible — they force prioritisation, create clarity, and protect capacity.
+                </p>
+</div>
+</div>
+</div>
+<div class="content-card" id="diagnostic">
+<div class="card-title"><i class="fas fa-clipboard-check"></i> Self-diagnostic (tick what’s true)</div>
+<p class="muted">
+              Tick honestly. This isn’t a moral score — it’s a signal map. Your plan will be generated from the pattern, not one dramatic symptom.
+            </p>
+<div class="checklist-grid" id="checklistGrid">
+<div aria-checked="false" class="checklist-item" data-key="afterHoursDefault" data-weight="3" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">After-hours work is my default (evenings/weekends/early mornings), not an exception.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="neverFeelsDone" data-weight="2" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">Work rarely feels “done”. I stop because I’m exhausted, not because the day is complete.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="absorbOtherWork" data-weight="3" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I absorb other people’s work (or fix their mess) without being asked — because I can’t watch it fail.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="emotionalLoad" data-weight="2" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I carry emotional load: calming others, translating tension, absorbing panic, smoothing conflicts.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="quietFiringAnxiety" data-weight="3" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I fear that slowing down even slightly will lead to being quietly managed out / passed over.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="vagueExpectations" data-weight="2" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">Expectations are vague, shifting, or contradictory — and I compensate by working harder.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="rewardedForResponsiveness" data-weight="2" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I’m praised for being “responsive” / “reliable” more than for strategic judgement or outcomes.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="interruptDriven" data-weight="2" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">My day is interruption-driven (Slack/Teams/email). Deep work is squeezed into nights/weekends.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="mondayDread" data-weight="2" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I feel low-grade dread about Monday mornings (not panic — a heavy resistance).</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="resentmentLeak" data-weight="2" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">Resentment is creeping in (snappier tone, less patience, irritation at “small” requests).</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="performanceSignals" data-weight="3" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I’ve noticed subtle performance signals: more scrutiny, sudden “alignment” meetings, or goal shifting.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="noSlackInSystem" data-weight="2" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">There’s no slack in the system: every week is “urgent”, and capacity planning feels fictional.</div>
+</div>
+</div>
+<div class="notes">
+<label for="notesBox">Your notes (what’s draining you most right now)</label>
+<textarea id="notesBox" placeholder="Be specific. What are you over-carrying? Who benefits from your over-giving? What’s the fear underneath it?"></textarea>
+</div>
+<div class="callout">
+<h4><i class="fas fa-stethoscope"></i> How to interpret the score</h4>
+<p>
+                This tool will generate two scores:
+                <strong>Burnout Load</strong> (how depleted your system is) and <strong>Exposure Risk</strong> (how safe it is to change your behaviour right now).
+                You’ll then get a decision path and scripts that match your risk level — not generic “just set boundaries” advice.
+              </p>
+</div>
+</div>
+<div class="content-card" id="decision-tree">
+<div class="card-title"><i class="fas fa-sitemap"></i> Decision tree (what you do next)</div>
+<p class="muted">
+              The aim is not “doing less”. The aim is <strong>protecting performance</strong> by making trade-offs explicit and stopping silent leakage.
+              The decision tree is about choosing the safest route depending on your load + risk signals.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="accTree1" type="button">
+<span class="left"><i class="fas fa-route"></i> The four routes (you’ll be placed into one)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accTree1">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-bolt"></i> Route A — Stabilise first (high load, high risk)</h5>
+<p>
+                      You reduce immediate depletion without making visible waves. This is about <strong>containment</strong>: protecting evenings,
+                      stopping emotional spillover, and using safe scripts that do not trigger defensiveness.
+                    </p>
+</div>
+<div class="step">
+<h5><i class="fas fa-sliders"></i> Route B — Rebalance (high load, lower risk)</h5>
+<p>
+                      You rebalance workload through trade-offs, meeting compression, and ownership return. You keep output strong
+                      while making “hidden work” visible in a controlled way.
+                    </p>
+</div>
+<div class="step">
+<h5><i class="fas fa-shield-halved"></i> Route C — Protect position (risk signals present)</h5>
+<p>
+                      You combine workload reset with strategic protection: documenting, clarifying expectations, and reducing exposure to “vibe-based” performance narratives.
+                    </p>
+</div>
+<div class="step">
+<h5><i class="fas fa-compass"></i> Route D — Strategic pivot (persistent mismatch)</h5>
+<p>
+                      If the system is structurally broken (or rewards burnout), you quietly build options: internal move, external search,
+                      and reputation protection — without broadcasting panic.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-2">
+<div class="mini-card">
+<h4><i class="fas fa-scale-balanced"></i> UK note (practical, not paranoid)</h4>
+<p>
+                  If you’ve seen subtle scrutiny or goal shifting, don’t “fight feelings” — improve evidence, clarify expectations, and keep records tidy.
+                  You’re not trying to “win an argument”. You’re protecting your position.
+                </p>
+</div>
+<div class="mini-card">
+<h4><i class="fas fa-masks-theater"></i> What not to do</h4>
+<p>
+                  Don’t go from 110% to 60% overnight with no narrative. That reads as disengagement.
+                  We’re aiming for <strong>credible containment</strong>: same commitment, cleaner signals.
+                </p>
+</div>
+</div>
+</div>
+<div class="content-card" id="micro-actions">
+<div class="card-title"><i class="fas fa-bolt"></i> Micro-actions (fastest impact)</div>
+<p class="muted">
+              These are designed for UK corporate reality: understated, credible, and hard to argue with. They shift your signal without drama.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="accMicro" type="button">
+<span class="left"><i class="fas fa-list-ol"></i> The six moves (use tomorrow morning)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accMicro">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-bullseye"></i> 1) Capacity reframe (trade-off prompt)</h5>
+<p><strong>“I can take this on, but it would mean deprioritising X. Which matters more?”</strong></p>
+<ul>
+<li>Forces prioritisation upwards.</li>
+<li>Signals judgement, not refusal.</li>
+<li>Stops silent absorption.</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-rotate-left"></i> 2) Ownership return</h5>
+<p><strong>“Happy to support — can you confirm who owns the final decision and timeline?”</strong></p>
+<ul>
+<li>Prevents you inheriting accountability by default.</li>
+<li>Protects you from scope creep.</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-clock"></i> 3) End-of-day containment (quiet boundary)</h5>
+<p><strong>Do not announce it.</strong> Choose a consistent cut-off time and reply the next morning:</p>
+<p><strong>“Saw this after hours — picked it up first thing.”</strong></p>
+</div>
+<div class="step">
+<h5><i class="fas fa-compress"></i> 4) Meeting compression</h5>
+<p><strong>“What decision do we need by the end of this?”</strong></p>
+<ul>
+<li>Stops meetings becoming anxiety-sharing sessions.</li>
+<li>Signals seniority through outcome focus.</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-hand-holding-heart"></i> 5) Emotional load deflector</h5>
+<p><strong>“What would be most useful from me here — thinking partner, decision, or action?”</strong></p>
+<ul>
+<li>Prevents you absorbing other people’s feelings as work.</li>
+<li>Turns vagueness into a clean request.</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-clipboard"></i> 6) Friday 10-minute energy audit</h5>
+<ul>
+<li>What drained me disproportionately?</li>
+<li>What did I silently accept that I shouldn’t?</li>
+<li>What signal did I accidentally send?</li>
+</ul>
+<p>This turns “burnout fog” into pattern recognition.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="scripts">
+<div class="card-title"><i class="fas fa-quote-left"></i> Scripts library (premium, UK-safe)</div>
+<p class="muted">
+              These scripts are designed to keep you credible. Short. Calm. Hard to argue with.
+              Use them like seatbelts: not because you’re dramatic — because you’re realistic.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="accS1" type="button">
+<span class="left"><i class="fas fa-layer-group"></i> Trade-off and prioritisation</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accS1">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-comment-dots"></i> In a chat / meeting</div>
+<div class="script-text">I can do this, but I’ll need to deprioritise [X] to protect timelines. 
+Which should take priority?</div>
+</div>
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> In writing</div>
+<div class="script-text">Happy to pick this up. To do it properly, I’ll need to pause [X] or push [Y] to next week.
+Please confirm what you’d like prioritised.</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accS2" type="button">
+<span class="left"><i class="fas fa-people-arrows"></i> Returning ownership (without being prickly)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accS2">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-comment-dots"></i> Script</div>
+<div class="script-text">I can support, yes. Just to be clear — who owns the final decision and timeline on this?
+I want to make sure we don’t lose accountability in the handover.</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accS3" type="button">
+<span class="left"><i class="fas fa-clock"></i> After-hours containment</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accS3">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope-open-text"></i> Next-morning reply</div>
+<div class="script-text">Saw this after hours — I’ve picked it up this morning and will come back by [time].</div>
+</div>
+<div class="callout">
+<h4><i class="fas fa-shield"></i> Why this works</h4>
+<p>
+                    You’re not refusing. You’re setting a norm: your availability is professional, not unlimited.
+                    Over time, the system adapts — because your behaviour stops training it to dump on you.
+                  </p>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accS4" type="button">
+<span class="left"><i class="fas fa-triangle-exclamation"></i> If you’re seeing “quiet firing” signals</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accS4">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Expectation clarity (protective)</div>
+<div class="script-text">To make sure I’m aligned, could we confirm the priority outcomes for the next [4–6] weeks and what “good” looks like?
+I’d like to anchor my time to the highest-impact deliverables.</div>
+</div>
+<div class="script-block">
+<div class="script-label"><i class="fas fa-note-sticky"></i> Meeting close (record keeping)</div>
+<div class="script-text">Thanks — I’ll summarise the agreed priorities and timelines in a quick note so we’re aligned.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="non-negotiable">
+<div class="card-title"><i class="fas fa-shield-halved"></i> The non-negotiable boundary</div>
+<p class="muted">
+              This is the sentence that protects the whole system. You don’t announce it. You embody it.
+            </p>
+<div class="hero-mantra">
+<div class="icon"><i class="fas fa-lock"></i></div>
+<div>
+<h4>Non-negotiable rule</h4>
+<p><strong>“I do not compensate for poor prioritisation with personal exhaustion.”</strong></p>
+</div>
+</div>
+<div class="callout">
+<h4><i class="fas fa-wand-magic-sparkles"></i> The subtle upgrade</h4>
+<p>
+                This isn’t a “boundary”. It’s a <strong>professional operating standard</strong>.
+                Senior people don’t “cope harder” — they force clarity and trade-offs.
+              </p>
+</div>
+</div>
+<div class="content-card" id="wins">
+<div class="card-title"><i class="fas fa-chart-line"></i> Early wins you should expect</div>
+<p class="muted">
+              Progress here is not a dramatic epiphany. It’s a behavioural recalibration. Mild discomfort early on is normal — that’s the old pattern losing its grip.
+            </p>
+<div class="grid-2">
+<div class="mini-card">
+<h4><i class="fas fa-calendar-week"></i> Weeks 1–2</h4>
+<p>
+                  You feel slightly “guilty” replying less after hours. That’s conditioning, not danger.
+                  You’ll see fewer last-minute dumps if you hold the line consistently.
+                </p>
+</div>
+<div class="mini-card">
+<h4><i class="fas fa-calendar-check"></i> Weeks 3–6</h4>
+<p>
+                  Your energy improves without your output collapsing. Your manager starts hearing trade-offs
+                  instead of silent heroics — which is how seniority becomes visible.
+                </p>
+</div>
+</div>
+<div class="callout">
+<h4><i class="fas fa-check"></i> The clearest “it’s working” signal</h4>
+<p>
+                People start asking <strong>before</strong> assuming you’ll absorb. Your capacity becomes part of the system’s thinking —
+                rather than a free dumping ground.
+              </p>
+</div>
+</div>
+<div class="content-card" id="identity">
+<div class="card-title"><i class="fas fa-user-check"></i> The long-term identity upgrade (9–18 months)</div>
+<p class="muted">
+              You become the person who is trusted for judgement — not just effort.
+              Calm under pressure, without being depleted. Reliable, without being a sponge.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="accId" type="button">
+<span class="left"><i class="fas fa-star"></i> Who you become (the expensive version of you)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accId">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-brain"></i> You have more cognitive bandwidth</h5>
+<p>Your thinking sharpens because your nervous system stops living in permanent “catch up”.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-bullseye"></i> Your value becomes legible</h5>
+<p>Trade-offs, clarity, and outcomes make you look senior — even if your title hasn’t changed yet.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-shield"></i> Your work stops bleeding into your life</h5>
+<p>You don’t need Sunday dread as a motivational tool. You operate with sustainable pace and strategic force.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="lens">
+<div class="card-title"><i class="fas fa-user-shield"></i> Personality / Behaviour Lens</div>
+<p class="muted">
+              Your safest route depends on who you’re dealing with. Same script, different emphasis.
+            </p>
+<div class="output-grid">
+<div class="out-card">
+<h4><i class="fas fa-bullhorn"></i> The Driver</h4>
+<p>Pushes urgency and speed. Your move: trade-offs and timeboxes. Calmly repeat: “Which priority should shift?”</p>
+</div>
+<div class="out-card">
+<h4><i class="fas fa-masks-theater"></i> The Performer</h4>
+<p>Polished, vague, narrative-led. Your move: confirm priorities in writing, document decisions, avoid “friendly admissions”.</p>
+</div>
+<div class="out-card">
+<h4><i class="fas fa-heart"></i> The Anxious Avoider</h4>
+<p>Wants quick relief; offloads emotion. Your move: “thinking partner / decision / action?” then propose one clear next step.</p>
+</div>
+</div>
+<div class="callout">
+<h4><i class="fas fa-comment-dots"></i> Tiny but important</h4>
+<p>
+                In the UK, tone is half the battle. You can be firm without being “difficult” by anchoring your language to
+                <strong>fairness, priorities, and outcomes</strong> — not feelings.
+              </p>
+</div>
+</div>
+<div class="content-card output print-keep" id="outputBox">
+<div class="card-title"><i class="fas fa-wand-magic-sparkles"></i> Your generated Shift #1 plan</div>
+<p class="muted">Generated from your diagnostic + notes. Save it after generating.</p>
+<div class="badge-row" id="scoreBadges"></div>
+<div class="output-grid" id="outputGrid"></div>
+</div>
+</section>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

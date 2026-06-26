@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Create Account | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="auth" data-protected="false">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell auth-page">
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<div class="auth-container">
+<div class="left-column">
+<h1>Join The Employee Playbook</h1>
+<p>Create your account and start making smarter moves in your career</p>
+<ul class="benefits-list">
+<li><i class="fas fa-check-circle"></i> Access to The Coach for private strategic guidance</li>
+<li><i class="fas fa-check-circle"></i> Instant clarity tools for high-stakes conversations</li>
+<li><i class="fas fa-check-circle"></i> A confidential space to think before you respond</li>
+<li><i class="fas fa-check-circle"></i> Smart scripts and tactical wording, tailored to your situation</li>
+<li><i class="fas fa-check-circle"></i> Strategic frameworks for complex workplace dynamics</li>
+<li><i class="fas fa-check-circle"></i> Guidance aligned with UK workplace standards (not legal advice)</li>
+<li><i class="fas fa-check-circle"></i> Input from a system built for professionals who make decisive moves</li>
+</ul>
+</div>
+<div class="right-column">
+<div class="brand-row">
+<img alt="The Employee Playbook" class="logo-img" id="logo" src="assets/img/logo.png"/>
+<div class="logo-fallback" id="logo-fallback">THE EMPLOYEE PLAYBOOK</div>
+</div>
+<div class="form-header">
+<h2>Create your account<br/></h2>
+</div>
+<form class="auth-form" id="createAccountForm">
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="firstName">First Name</label>
+<input class="form-input" id="firstName" placeholder="First name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="lastName">Last Name</label>
+<input class="form-input" id="lastName" placeholder="Last name" required="" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label" for="email">Email Address</label>
+<input class="form-input" id="email" placeholder="your.email@example.com" required="" type="email"/>
+</div>
+<div class="form-group password-wrap">
+<div class="inline-pw-row">
+<label class="inline-pw-label" for="password">
+<span class="pw-title">Password</span>
+<span class="pw-min">Minimum 8 characters</span>
+</label>
+<input class="reveal-toggle" id="pwReveal" type="checkbox"/>
+<div class="password-row">
+<input autocomplete="new-password" class="form-input secure-input" id="password" maxlength="72" minlength="8" placeholder="Create a secure password" required="" type="text"/>
+<label aria-label="Toggle password visibility" class="toggle-label" for="pwReveal" title="Show/hide password">
+<i class="fa-solid fa-eye icon-eye"></i>
+<i class="fa-solid fa-eye-slash icon-eye-slash"></i>
+</label>
+</div>
+</div>
+<div aria-live="polite" class="pw-strength">
+<div class="pw-strength-row">
+<span>Password strength</span>
+<span class="pw-strength-pill weak" id="pwStrengthPill">Weak</span>
+</div>
+<div aria-hidden="true" class="pw-meter">
+<div class="pw-meter-fill" id="pwMeterFill"></div>
+</div>
+<div class="pw-hint" id="pwStrengthHint">
+</div>
+<div class="pw-strong-note" id="pwStrongNote">
+</div>
+</div>
+</div>
+<div class="form-group password-wrap">
+<div class="inline-pw-row">
+<label class="inline-pw-label" for="confirmPassword">
+<span class="pw-title">Confirm Password</span>
+<span class="pw-min"> </span>
+</label>
+<input class="reveal-toggle" id="cpwReveal" type="checkbox"/>
+<div class="password-row">
+<input autocomplete="new-password" class="form-input secure-input" id="confirmPassword" maxlength="72" minlength="8" placeholder="Confirm your password" required="" type="text"/>
+<label aria-label="Toggle confirm password visibility" class="toggle-label" for="cpwReveal" title="Show/hide password">
+<i class="fa-solid fa-eye icon-eye"></i>
+<i class="fa-solid fa-eye-slash icon-eye-slash"></i>
+</label>
+</div>
+</div>
+</div>
+<div class="form-checkbox">
+<input class="checkbox-input" id="terms" required="" type="checkbox"/>
+<label class="checkbox-label" for="terms">
+            I agree to the
+            <a href="#" id="openTermsLink">Terms of Service</a>
+            and
+            <a href="#" id="openPrivacyLink">Privacy Policy</a>
+</label>
+</div>
+<div class="form-checkbox">
+<input class="checkbox-input" id="newsletter" type="checkbox"/>
+<label class="checkbox-label" for="newsletter">
+            Send me Strategic Insights and Career Development tips
+          </label>
+</div>
+<button class="submit-button" id="submitBtn" type="submit">
+<span id="submitText">Create Account</span>
+<i aria-hidden="true" class="fas fa-arrow-right" id="submitIcon"></i>
+</button>
+<div class="auth-footer">
+<p>Already have an account? <a href="sign-in.html">Sign in</a></p>
+</div>
+</form>
+</div>
+</div>
+<div aria-hidden="true" class="modal-overlay" id="nextModal">
+<div aria-label="What happens next" aria-modal="true" class="modal-card" role="dialog">
+<div class="modal-head">
+<div class="modal-title">
+<i aria-hidden="true" class="fa-solid fa-envelope-open-text"></i>
+          What happens next
+        </div>
+<button aria-label="Close" class="modal-close" id="closeNextModal" type="button">
+<i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+<div class="modal-body">
+<ol>
+<li>We’ll email a secure verification link to confirm it’s really you.</li>
+<li>Open the link, then come back and click <strong>Sign in</strong>.</li>
+</ol>
+<div class="modal-note" id="modalEmailNote">
+          We’ve sent a verification link to <strong>your email</strong>. If you don’t see it within a few minutes, check spam/junk.
+        </div>
+<div class="modal-actions">
+<a class="primary-link" href="sign-in.html" id="modalGoSignIn">
+            Go to Sign In <i class="fa-solid fa-arrow-right"></i>
+</a>
+<button class="secondary-btn" id="modalNoEmail" type="button">Didn’t get the email?</button>
+</div>
+<div class="micro-help" id="modalHelpBox">
+          If the email hasn’t arrived:
+          <br/><strong>1)</strong> Check spam/junk
+          <br/><strong>2)</strong> Wait 2–3 minutes
+          <br/><strong>3)</strong> Try signing in (you may be prompted to confirm your email)
+          <br/>If it still doesn’t arrive, use a different email or contact support.
+        </div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal-overlay" id="policyModal">
+<div aria-label="Policy" aria-modal="true" class="modal-card" role="dialog">
+<div class="modal-head">
+<div class="modal-title" id="policyTitle">
+<i aria-hidden="true" class="fa-solid fa-file-signature"></i>
+          Policy
+        </div>
+<button aria-label="Close" class="modal-close" id="closePolicyModal" type="button">
+<i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+<div class="modal-body">
+<div class="policy-meta" id="policyMeta">
+          Please read and approve to continue.
+        </div>
+<div class="policy-scroll" id="policyContent" tabindex="0"></div>
+<div class="policy-actions">
+<button class="policy-btn ghost" id="policyDeclineBtn" type="button">Not now</button>
+<button class="policy-btn primary" id="policyApproveBtn" type="button">
+            I accept <i class="fa-solid fa-check"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Private strategic clarity for workplace decisions. Smart scripts, frameworks and guidance for when moments matter. Not legal advice." />
+  <title>The Employee Playbook | Strategic Clarity for Critical Moments | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="home" data-protected="false">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell home-page">
+<div class="create-account-form" id="createAccountForm">
+<button class="form-close" id="formClose">
+<i class="fas fa-times"></i>
+</button>
+<h2 class="form-title">Create Your Account</h2>
+<form>
+<div class="form-group">
+<label class="form-label">Full Name</label>
+<input class="form-input" name="index_field_1" placeholder="Enter your full name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">Email Address</label>
+<input class="form-input" name="index_field_2" placeholder="Enter your email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label">Password</label>
+<input class="form-input" name="index_field_3" placeholder="Create a password" required="" type="password"/>
+</div>
+<button class="form-submit" type="submit">Create Account</button>
+</form>
+</div>
+<section class="hero">
+<div class="hero-content">
+<h1 class="hero-headline">Are you feeling</h1>
+<div class="flashing-words">
+<div class="flashing-word">Stressed?</div>
+<div class="flashing-word">Burned out?</div>
+<div class="flashing-word">Frustrated?</div>
+<div class="flashing-word">Excluded?</div>
+<div class="flashing-word">Overwhelmed?</div>
+<div class="flashing-word">Unsupported?</div>
+<div class="flashing-word">Undervalued?</div>
+</div>
+<p class="hero-subhead">
+            Don't react. Respond with intent, using guidance, tools and <br/>real-time support from The Coach to put you back in control
+            <span class="hero-note">Not legal advice. Just the clarity you wish you'd had sooner</span>
+</p>
+</div>
+<div class="search-banner">
+<div class="search-banner-content">
+            "How do I ask for a promotion without sounding entitled?"     •     
+            "What do I say when my work is being overlooked?"     •     
+            "How do I push back without damaging the relationship?"     •     
+            "How do I ask for a pay rise?"     •     
+            "How can I be more confident?"     •     
+            "How do I navigate office politics without compromising my values?"     •     
+            "What do I do when my manager takes credit for my work?"     •     
+            "How do I handle a difficult coworker without escalating the situation?"     •     
+            "What should I do if I'm being micromanaged?"     •     
+            "How do I negotiate better work-life balance?"     •     
+            <span class="highlight">The Employee Playbook. Strategy when it matters most.</span>
+                •     
+            "How do I ask for a promotion without sounding entitled?"     •     
+            "What do I say when my work is being overlooked?"     •     
+            "How do I push back without damaging the relationship?"     •     
+            "How do I ask for a pay rise?"     •     
+            "How can I be more confident?"     •     
+            "How do I navigate office politics without compromising my values?"     •     
+            "What do I do when my manager takes credit for my work?"     •     
+            "How do I handle a difficult coworker without escalating the situation?"     •     
+            "What should I do if I'm being micromanaged?"     •     
+            "How do I negotiate better work-life balance?"     •     
+            <span class="highlight">The Employee Playbook. Strategy when it matters most.</span>
+</div>
+</div>
+</section>
+<section class="statistics" id="statistics">
+<div class="container">
+<div class="stats-container">
+<div class="stats-content">
+<h2 class="stats-title">The hidden costs of workplace stress</h2>
+<p class="stats-description">Data reveals the silent toll that workplace dynamics take on professionals' wellbeing, performance, and career trajectory</p>
+</div>
+<div class="stats-interactive-container">
+<div class="stats-cards-column">
+<div class="stat-card" data-target="personal-expansion" id="personal-impact">
+<div class="stat-card-header">
+<div class="icon-container">
+<div class="icon-circle">
+<i class="fas fa-heartbeat"></i>
+</div>
+</div>
+<div class="stat-card-content">
+<div class="stat-title">Personal Impact</div>
+<div class="stat-subtitle">How work affects health, sleep and wellbeing</div>
+</div>
+</div>
+</div>
+<div class="stat-card" data-target="career-expansion" id="career-impact">
+<div class="stat-card-header">
+<div class="icon-container">
+<div class="icon-circle">
+<i class="fas fa-chart-line"></i>
+</div>
+</div>
+<div class="stat-card-content">
+<div class="stat-title">Career Impact</div>
+<div class="stat-subtitle">Barriers to progression and professional growth</div>
+</div>
+</div>
+</div>
+<div class="stat-card" data-target="knowledge-expansion" id="knowledge-impact">
+<div class="stat-card-header">
+<div class="icon-container">
+<div class="icon-circle">
+<i class="fas fa-lightbulb"></i>
+</div>
+</div>
+<div class="stat-card-content">
+<div class="stat-title">Knowledge Gaps</div>
+<div class="stat-subtitle">Understanding policies, rights and expectations</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-display-area">
+<div class="stats-placeholder" id="stats-placeholder">
+<div class="stats-placeholder-title">The Ripple Effect of Workplace Stress</div>
+<div class="stats-placeholder-text">
+<p>When work starts to take over, it doesn't just drain us during office hours — it seeps into everything.</p>
+<p>It unsettles our sleep, shortens our patience with the people we care about, and slowly erodes how capable we believe we are.</p>
+<p>Stress doesn't clock out when we do. It comes home with us, sits at the dinner table, and whispers at night when we should be resting.</p>
+<p>But it doesn't have to stay that way. The moment we recognise the true impact is the moment we start taking back control.</p>
+</div>
+<div class="stats-placeholder-cta">← Click on a category to explore the impact</div>
+</div>
+<div class="stats-expansion-bar" id="personal-expansion">
+<button class="close-expansion">×</button>
+<div class="stats-expansion-header">
+<h3 class="stats-expansion-title">Personal Impact</h3>
+<p class="stats-expansion-subtitle">How work stress affects your health and wellbeing</p>
+</div>
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-value">43%</div>
+<div class="stat-explanation">of UK employees reported experiencing sleep problems in the past year, with work being a contributing factor.</div>
+<div class="stat-source">CIPD – Health &amp; Well-being at Work Report (2024)</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">79%</div>
+<div class="stat-explanation">of UK workers are experiencing moderate-to-high stress levels in the workplace.</div>
+<div class="stat-source">MHFA England – Workplace Mental Health Statistics (2024)</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">63%</div>
+<div class="stat-explanation">of UK employees are now showing signs of burnout (exhaustion, disengagement, mental fatigue), up from 51% two years earlier.</div>
+<div class="stat-source">MHFA England (2024)</div>
+</div>
+</div>
+</div>
+<div class="stats-expansion-bar" id="career-expansion">
+<button class="close-expansion">×</button>
+<div class="stats-expansion-header">
+<h3 class="stats-expansion-title">Career Impact</h3>
+<p class="stats-expansion-subtitle">How workplace barriers hold back your professional growth</p>
+</div>
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-value">33%</div>
+<div class="stat-explanation">of UK employees say their career progression has not met expectations, and 39% attribute this to poor line management.</div>
+<div class="stat-source">Workplace Insight (UK)</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">48%</div>
+<div class="stat-explanation">of UK employees say being micromanaged is one of the main reasons they feel unhappy at work.</div>
+<div class="stat-source">Drewberry Workplace Satisfaction Survey (2024)</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">50%</div>
+<div class="stat-explanation">of UK employees feel workplace favouritism is holding back their career development, and 47% say not everyone is given a fair opportunity to grow.</div>
+<div class="stat-source">O.C. Tanner – HRReview, 2021</div>
+</div>
+</div>
+</div>
+<div class="stats-expansion-bar" id="knowledge-expansion">
+<button class="close-expansion">×</button>
+<div class="stats-expansion-header">
+<h3 class="stats-expansion-title">Knowledge &amp; Clarity Gaps</h3>
+<p class="stats-expansion-subtitle">How lack of information creates workplace uncertainty</p>
+</div>
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-value">21%</div>
+<div class="stat-explanation">of UK employees fully understand how their performance is evaluated by their employer.</div>
+<div class="stat-source">Personnel Today – Lattice Survey (2024)</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">53%</div>
+<div class="stat-explanation">of UK workers know their employer's HR policies, and just 43% understand their procedural rights.</div>
+<div class="stat-source">People Management (2024)</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">25%</div>
+<div class="stat-explanation">of UK employees feel they do not have a voice in their organisation – they do not believe feedback is genuinely listened to or acted upon.</div>
+<div class="stat-source">CIPHR Research (2024)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-mobile-container">
+<div class="stats-mobile-category">
+<div class="stats-mobile-header">
+<div class="icon-container">
+<div class="icon-circle">
+<i class="fas fa-heartbeat"></i>
+</div>
+</div>
+<h3 class="stats-mobile-title">Personal Impact</h3>
+</div>
+<div class="stats-mobile-grid">
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">43%</div>
+<div class="stats-mobile-explanation">of UK employees reported experiencing sleep problems in the past year, with work being a contributing factor.</div>
+<div class="stats-mobile-source">CIPD – Health &amp; Well-being at Work Report (2024)</div>
+</div>
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">79%</div>
+<div class="stats-mobile-explanation">of UK workers are experiencing moderate-to-high stress levels in the workplace.</div>
+<div class="stats-mobile-source">MHFA England – Workplace Mental Health Statistics (2024)</div>
+</div>
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">63%</div>
+<div class="stats-mobile-explanation">of UK employees are now showing signs of burnout (exhaustion, disengagement, mental fatigue), up from 51% two years earlier.</div>
+<div class="stats-mobile-source">MHFA England (2024)</div>
+</div>
+</div>
+</div>
+<div class="stats-mobile-category">
+<div class="stats-mobile-header">
+<div class="icon-container">
+<div class="icon-circle">
+<i class="fas fa-chart-line"></i>
+</div>
+</div>
+<h3 class="stats-mobile-title">Career Impact</h3>
+</div>
+<div class="stats-mobile-grid">
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">33%</div>
+<div class="stats-mobile-explanation">of UK employees say their career progression has not met expectations, and 39% attribute this to poor line management.</div>
+<div class="stats-mobile-source">Workplace Insight (UK)</div>
+</div>
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">48%</div>
+<div class="stats-mobile-explanation">of UK employees say being micromanaged is one of the main reasons they feel unhappy at work.</div>
+<div class="stats-mobile-source">Drewberry Workplace Satisfaction Survey (2024)</div>
+</div>
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">50%</div>
+<div class="stats-mobile-explanation">of UK employees feel workplace favouritism is holding back their career development, and 47% say not everyone is given a fair opportunity to grow.</div>
+<div class="stats-mobile-source">O.C. Tanner – HRReview, 2021</div>
+</div>
+</div>
+</div>
+<div class="stats-mobile-category">
+<div class="stats-mobile-header">
+<div class="icon-container">
+<div class="icon-circle">
+<i class="fas fa-lightbulb"></i>
+</div>
+</div>
+<h3 class="stats-mobile-title">Knowledge Gaps</h3>
+</div>
+<div class="stats-mobile-grid">
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">21%</div>
+<div class="stats-mobile-explanation">of UK employees fully understand how their performance is evaluated by their employer.</div>
+<div class="stats-mobile-source">Personnel Today – Lattice Survey (2024)</div>
+</div>
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">53%</div>
+<div class="stats-mobile-explanation">of UK workers know their employer's HR policies, and just 43% understand their procedural rights.</div>
+<div class="stats-mobile-source">People Management (2024)</div>
+</div>
+<div class="stats-mobile-item">
+<div class="stats-mobile-value">25%</div>
+<div class="stats-mobile-explanation">of UK employees feel they do not have a voice in their organisation. They do not believe feedback is genuinely listened to or acted upon.</div>
+<div class="stats-mobile-source">CIPHR Research (2024)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="start-here-home">
+<div class="container container-inner">
+<h2 class="stats-title">Start Here</h2><br/>
+<section class="start-here" id="startHere">
+<div class="start-top">
+<div>
+<p class="intro measure">
+                        Most people only realise they needed structure after things have started to change. 
+                        <br/>When something shifts at work, your brain tries to protect you… and that's exactly when it can spiral:
+                        re-reading messages, guessing motives, replaying conversations you can't prove.
+                        <strong>The Employee Playbook exists for that exact moment.</strong>
+<br/>You don't need more opinions. You need a calm read on what's happening, what matters, and what to do next, without losing credibility.
+                    </p>
+<div aria-label="Core principles" class="value-pills">
+<div class="value-pill"><i class="fa-solid fa-lock"></i> Private by design</div>
+<div class="value-pill"><i class="fa-solid fa-language"></i> Plain-English guidance</div>
+<div class="value-pill"><i class="fa-solid fa-map"></i> Scripts, plans &amp; playbooks</div>
+<div class="value-pill"><i class="fa-solid fa-scale-balanced"></i> Not legal advice</div>
+</div>
+<div aria-label="Reality check stats" class="stats">
+<div class="stat">
+<div class="stat-top">
+<span class="badge"><i class="fa-solid fa-brain"></i> wellbeing</span>
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div class="big">8.5 million</div>
+<div class="small">UK workers say their job negatively affects their mental health (around a quarter of employees).</div>
+</div>
+<div class="stat">
+<div class="stat-top">
+<span class="badge"><i class="fa-solid fa-building"></i> hybrid</span>
+<i class="fa-solid fa-arrow-right-arrow-left"></i>
+</div>
+<div class="big">49%</div>
+<div class="small">Graduates say they wouldn't apply for roles requiring 4+ days a week in the office.</div>
+</div>
+<div class="stat">
+<div class="stat-top">
+<span class="badge"><i class="fa-solid fa-route"></i> rto pressure</span>
+<i class="fa-solid fa-person-walking"></i>
+</div>
+<div class="big">9%</div>
+<div class="small">London workers say they'd start looking for a new job if asked to increase office attendance.</div>
+</div>
+<div class="stat">
+<div class="stat-top">
+<span class="badge"><i class="fa-solid fa-people-arrows"></i> conflict</span>
+<i class="fa-solid fa-bolt"></i>
+</div>
+<div class="big">36%</div>
+<div class="small">Only this share say workplace conflict is resolved quickly and fairly in their organisation.</div>
+</div>
+<div class="stat">
+<div class="stat-top">
+<span class="badge"><i class="fa-solid fa-user-tie"></i> managers</span>
+<i class="fa-solid fa-triangle-exclamation"></i>
+</div>
+<div class="big">74%</div>
+<div class="small">Organisations report they don't train line managers on how to handle redundancies well.</div>
+</div>
+<div class="stat">
+<div class="stat-top">
+<span class="badge"><i class="fa-solid fa-sterling-sign"></i> cost</span>
+<i class="fa-solid fa-signal"></i>
+</div>
+<div class="big">£28.5bn</div>
+<div class="small">Estimated annual cost of workplace conflict to UK organisations.</div>
+</div>
+</div>
+<div class="sources measure">
+                        Sources (linked):
+                        <a href="https://www.cipd.org/globalassets/media/knowledge/knowledge-hub/reports/2025-pdfs/8868-good-work-index-2025-report-web1.pdf" rel="noopener noreferrer" target="_blank">CIPD Good Work Index 2025</a>
+                         · 
+                        <a href="https://www.personneltoday.com/hr/graduates-office-attendance-hybrid-work/" rel="noopener noreferrer" target="_blank">Personnel Today</a>
+                         · 
+                        <a href="https://www.personneltoday.com/hr/office-return-commuting-weak-effect/" rel="noopener noreferrer" target="_blank">Personnel Today</a>
+                         · 
+                        <a href="https://www.peoplemanagement.co.uk/article/1881261/organisations-failing-manage-workplace-conflict-cipd-report" rel="noopener noreferrer" target="_blank">People Management</a>
+                         · 
+                        <a href="https://www.peoplemanagement.co.uk/article/1885211/organisations-failing-train-line-managers-handle-redundancies-cipd-report" rel="noopener noreferrer" target="_blank">People Management</a>
+                         · 
+                        <a href="https://www.acas.org.uk/the-business-and-human-cost-of-conflict-at-work" rel="noopener noreferrer" target="_blank">Acas</a>
+</div>
+</div>
+</div>
+<div class="issues-wrap">
+<div class="issues-head">
+<div class="measure">
+<h3>The pressing issues that we're built for</h3>
+<div class="sub">
+                            Time after time, these are the most prevalent pressure-points, the ones that quietly change careers, health, confidence, and choices.
+                            These aren't "work problems". They're <strong>risk moments</strong>: where stress makes people over-explain, under-document and send the wrong message.
+                            <strong>It's time for change.</strong><br/>
+</div>
+</div>
+</div>
+<div class="grid">
+<article class="issue">
+<div class="quote"><span>"They're pushing us, it's too much… and it's getting 'quietly' intense."</span></div>
+<div class="desc">
+                            It starts as "one more day" or "just for visibility". Then it becomes a loyalty test. You can feel the consequences before anyone admits them.
+                        </div>
+<div class="help">
+<div class="chip"><i class="fa-solid fa-toolbox"></i> Use The Toolkit for boundary scripts that keep<br/> your status intact</div>
+</div>
+<div class="pill-row">
+<div class="pill politics"><i class="fa-solid fa-users"></i> Workplace Dynamics &amp; Politics</div>
+</div>
+</article>
+<article class="issue">
+<div class="quote"><span>"Something's off. I'm not sure but I think I'm being managed out."</span></div>
+<div class="desc">
+                            The vibe changes: fewer invites, strange feedback, "process" language. You can't prove it yet but your nervous system knows.
+                        </div>
+<div class="help">
+<div class="chip"><i class="fa-solid fa-magnifying-glass"></i> Use The Lens to name the pattern, spot the <br/>risk, choose your next move</div>
+</div>
+<div class="pill-row">
+<div class="pill hr"><i class="fa-solid fa-file-contract"></i> HR &amp; Formal Processes</div>
+</div>
+</article>
+<article class="issue">
+<div class="quote"><span>"Rules are changing… and I don't want to say the wrong thing."</span></div>
+<div class="desc">
+                            Policy shifts create confusion. Confusion creates mistakes: messy emails, premature admissions, or agreements you didn't fully understand.
+                        </div>
+<div class="help">
+<div class="chip"><i class="fa-solid fa-file-lines"></i> Use The Toolkit to get wording + decision <br/>checklists or process moments</div>
+</div>
+<div class="pill-row">
+<div class="pill hr"><i class="fa-solid fa-scale-balanced"></i> HR &amp; Formal Processes</div>
+</div>
+</article>
+<article class="issue">
+<div class="quote"><span>"I'm at capacity but I don't know how to reset it safely."</span></div>
+<div class="desc">
+                            You keep pushing because you're responsible… until your body forces the decision your calendar refused to make.
+                        </div>
+<div class="help">
+<div class="chip"><i class="fa-solid fa-user-shield"></i> Use The Coach for a calm capacity reset plan<br/> you can hold to</div>
+</div>
+<div class="pill-row">
+<div class="pill burnout"><i class="fa-solid fa-battery-half"></i> Expectations, Burnout &amp; Capacity</div>
+</div>
+</article>
+<article class="issue">
+<div class="quote"><span>"The culture is toxic. Everything feels heavy and unpredictable."</span></div>
+<div class="desc">
+                            People document more. Small disagreements become identity battles. You're trying to stay steady inside something unstable.
+                        </div>
+<div class="help">
+<div class="chip"><i class="fa-solid fa-comment-dots"></i> Use the Script Library for de-escalation <br/>language that keeps you credible</div>
+</div>
+<div class="pill-row">
+<div class="pill politics"><i class="fa-solid fa-users"></i> Workplace Dynamics &amp; Politics</div>
+</div>
+</article>
+<article class="issue">
+<div class="quote"><span>"I'm doing the work… but I'm not progressing. I feel stuck."</span></div>
+<div class="desc">
+                            Progress is getting jammed. You're delivering — but the system isn't rewarding it. You need strategy, not more effort.
+                        </div>
+<div class="help">
+<div class="chip"><i class="fa-solid fa-map"></i> Use the Toolkit for visibility, sponsorship, <br/>and a move plan for 7–30 days</div>
+</div>
+<div class="pill-row">
+<div class="pill career"><i class="fa-solid fa-arrow-trend-up"></i> Career Playbook</div>
+</div>
+</article>
+</div>
+<div aria-label="What you'll use inside" class="inside">
+<div class="icon"><i class="fa-solid fa-toolbox"></i></div>
+<div class="copy">
+<div class="title">What you actually get (and why it works when you're under pressure)</div>
+<p>
+                            The Employee Playbook is a private system for moments that feel unclear, political, or quietly high-risk.
+                            Use it to decode what's happening, choose a safer next move, and communicate clearly without weakening your position.
+                        </p>
+<div aria-label="Inside the Playbook" class="bullets">
+<div class="b"><i class="fa-solid fa-magnifying-glass"></i> The Lens (90-second chaos-to-clarity)</div>
+<div class="b"><i class="fa-solid fa-comment-dots"></i> Script Library (wording that holds up)</div>
+<div class="b"><i class="fa-solid fa-shield"></i> Boundaries &amp; risk control (without drama)</div>
+<div class="b"><i class="fa-solid fa-pen-to-square"></i> Hard conversations made simple (what to say, what not to say)</div>
+<div class="b"><i class="fa-solid fa-circle-nodes"></i> Clarity maps (who holds power, what changes the game)</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="Journey and offering hint" class="journey">
+<div class="copy">
+<span class="note">This is not legal advice. It's structured clarity for real workplace moments.</span>
+</div>
+<div class="cta">
+<a class="btn primary" href="the-lens.html"><i class="fa-solid fa-magnifying-glass"></i> Use The Lens</a>
+<a class="btn ghost" href="the-pricing.html"><i class="fa-solid fa-tags"></i> View pricing</a>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section class="pillars">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Your framework for decisive action</h2>
+<p class="section-subtitle">Stop guessing in high-stakes moments. Start executing with precision. <strong>Select to see more</strong></p>
+</div>
+<div class="pillars-grid">
+<div class="pillar-card">
+<div class="pillar-card-inner">
+<div class="pillar-card-front">
+<div class="pillar-icon">
+<i class="fas fa-binoculars"></i>
+</div>
+<h3 class="pillar-title">The Lens</h3>
+<p class="pillar-description">See beyond surface dynamics to understand what's truly happening in any situation.</p>
+</div>
+<div class="pillar-card-back">
+<div class="pillar-back-content">
+<div class="pillar-back-heading">
+<span>Before reacting, run it through The Lens.</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-search"></i></span>
+<span>What's really happening?</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-question-circle"></i></span>
+<span>What's actually being challenged on?</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-shield-alt"></i></span>
+<span>What response strengthens your position?</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pillar-card">
+<div class="pillar-card-inner">
+<div class="pillar-card-front">
+<div class="pillar-icon">
+<i class="fas fa-tools"></i>
+</div>
+<h3 class="pillar-title">The Toolkit</h3>
+<p class="pillar-description">Precision instruments for communication, negotiation, and strategic positioning.</p>
+</div>
+<div class="pillar-card-back">
+<div class="pillar-back-content">
+<div class="pillar-back-heading">
+                                Before speaking, run it through The Toolkit.
+                            </div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-bullseye"></i></span>
+<span>What outcome do you want?</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-comments"></i></span>
+<span>Which words shift the dynamic?</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-balance-scale"></i></span>
+<span>How do you say it without weakening your position?</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pillar-card">
+<div class="pillar-card-inner">
+<div class="pillar-card-front">
+<div class="pillar-icon">
+<i class="fas fa-comments"></i>
+</div>
+<h3 class="pillar-title">The Coach</h3>
+<p class="pillar-description">Strategic guidance translated into actionable language for your specific situation.</p>
+</div>
+<div class="pillar-card-back">
+<div class="pillar-back-content">
+<div class="pillar-back-heading">
+                                Before deciding, run it past The Coach.
+                            </div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-lightbulb"></i></span>
+<span>What would a mentor or friend advise?</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-exclamation-triangle"></i></span>
+<span>What risk are you not seeing?</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-user-shield"></i></span>
+<span>What action preserves credibility?</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pillar-card">
+<div class="pillar-card-inner">
+<div class="pillar-card-front">
+<div class="pillar-icon">
+<i class="fas fa-arrow-trend-up"></i>
+</div>
+<h3 class="pillar-title">The Shift</h3>
+<p class="pillar-description">Transform how you're perceived and how you operate in your organization.</p>
+</div>
+<div class="pillar-card-back">
+<div class="pillar-back-content">
+<div class="pillar-back-heading">
+                                Before moving forward, run it through The Shift.
+                            </div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-user"></i></span>
+<span>Who do you need to be in this moment?</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-bolt"></i></span>
+<span>What would signal confidence, not reaction?</span>
+</div>
+<div class="pillar-back-point">
+<span class="pillar-back-icon"><i class="fas fa-arrows-alt"></i></span>
+<span>How do you move so others shift around you?</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="usage">
+<div class="container">
+<h2 class="usage-statement">This isn't about working harder.<br/>It's about making every move count.</h2>
+<p class="usage-subtitle">We're proud to share with you the impact we've made together with our community</p>
+<div class="impact-metrics">
+<div class="metrics-grid">
+<div class="metric-card">
+<div class="metric-icon-container">
+<i class="fas fa-book-open metric-icon policy-icon"></i>
+</div>
+<div class="metric-value">83%</div>
+<div class="metric-label">Understanding Policies<br/>&amp; Rights</div>
+<div class="metric-description">Employees gain clarity on workplace guidelines and their entitlements with our AI-powered guidance</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon-container">
+<i class="fas fa-comments metric-icon confidence-icon"></i>
+</div>
+<div class="metric-value">76%</div>
+<div class="metric-label">Confidence in Difficult Conversations</div>
+<div class="metric-description">Feel more prepared to handle challenging workplace discussions with our frameworks and scripts</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon-container">
+<i class="fas fa-shield-alt metric-icon boundaries-icon"></i>
+</div>
+<div class="metric-value">68%</div>
+<div class="metric-label">Equipped to Set Boundaries</div>
+<div class="metric-description">Better able to establish work-life boundaries to prevent burnout with personalised coaching</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon-container">
+<i class="fas fa-hands-helping metric-icon support-icon"></i>
+</div>
+<div class="metric-value">72%</div>
+<div class="metric-label">Feel Supported &amp; Less Alone</div>
+<div class="metric-description">Access to 24/7 AI support means you're never alone in tough moments. Our AI coach is always there when you need backup.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="trusted">
+<div class="container">
+<div class="trusted-header">
+<h2 class="trusted-title">Trusted by professionals seeking clarity</h2>
+</div>
+<div class="testimonials-carousel">
+<div class="testimonials-track" id="testimonialsTrack">
+<div class="testimonial">
+<div class="testimonial-content">
+<p class="testimonial-text">"The free tier gave me exactly what I needed to navigate my first promotion conversation. I used the 'Words That Change the Outcome' tool and got a 15% raise. I've since upgraded to Core and it's been worth every penny."</p>
+<div class="testimonial-author">
+<div class="author-avatar">JS</div>
+<div class="author-info">
+<div class="author-name">Jamie Sullivan</div>
+<div class="author-role">Marketing Coordinator</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="testimonial-content">
+<p class="testimonial-text">"As someone who's always avoided difficult conversations, The Employee Playbook has been transformative. The Core tier gives me the confidence to handle situations I would have previously panicked about. The 30-second strategy resets are genius."</p>
+<div class="testimonial-author">
+<div class="author-avatar">MR</div>
+<div class="author-info">
+<div class="author-name">Maya Rodriguez</div>
+<div class="author-role">Content Writer</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="testimonial-content">
+<p class="testimonial-text">"I started with the free version to test the waters, and within a month I knew I needed Core Strategy. The unlimited plays and priority coaching have helped me navigate three major organizational changes without losing my footing."</p>
+<div class="testimonial-author">
+<div class="author-avatar">TC</div>
+<div class="author-info">
+<div class="author-name">Thomas Chen</div>
+<div class="author-role">Software Developer</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="testimonial-content">
+<p class="testimonial-text">"The free tier's Conversation Matrix helped me prepare for a crucial meeting with my director. I felt so prepared that the conversation went better than I could have imagined. I'm now using Core and it's become my secret weapon."</p>
+<div class="testimonial-author">
+<div class="author-avatar">SP</div>
+<div class="author-info">
+<div class="author-name">Sarah Patel</div>
+<div class="author-role">Customer Support Specialist</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="testimonial-content">
+<p class="testimonial-text">"Core Strategy has paid for itself ten times over. The advanced frameworks helped me negotiate a package that was 30% higher than their initial offer. The Follow-up Dynamics tool alone is worth the subscription."</p>
+<div class="testimonial-author">
+<div class="author-avatar">DW</div>
+<div class="author-info">
+<div class="author-name">David Wilson</div>
+<div class="author-role">Account Manager</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="testimonial-content">
+<p class="testimonial-text">"I was skeptical about paying for something like this, but the free tier convinced me. The two monthly coach queries helped me navigate office politics that had been stressing me out for months. Upgraded to Core and haven't looked back."</p>
+<div class="testimonial-author">
+<div class="author-avatar">EG</div>
+<div class="author-info">
+<div class="author-name">Elena Gomez</div>
+<div class="author-role">Project Coordinator</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="testimonial-content">
+<p class="testimonial-text">"The Core tier has been invaluable for my professional development. I use the tools to prepare for client negotiations and internal strategy sessions. The Immediate Action Plays have saved me in last-minute meeting prep more times than I can count."</p>
+<div class="testimonial-author">
+<div class="author-avatar">RK</div>
+<div class="author-info">
+<div class="author-name">Ryan Kim</div>
+<div class="author-role">Team Lead</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-nav" id="carouselNav">
+<div class="carousel-dot active" data-index="0"></div>
+<div class="carousel-dot" data-index="1"></div>
+<div class="carousel-dot" data-index="2"></div>
+<div class="carousel-dot" data-index="3"></div>
+<div class="carousel-dot" data-index="4"></div>
+<div class="carousel-dot" data-index="5"></div>
+<div class="carousel-dot" data-index="6"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="final-cta">
+<div class="container">
+<h2 class="final-statement">Your career shouldn't be left to chance. <br/>Shape it by the choices you make deliberately.</h2>
+<a class="cta-button" href="create-account.html">Start making intentional moves today</a>
+</div>
+</section>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

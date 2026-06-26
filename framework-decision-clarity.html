@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Decision Clarity Framework | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="framework-decision-clarity">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Decision Clarity Framework</span>
+</div>
+<span class="checklist-name">DECISION CLARITY FRAMEWORK</span>
+<h1 class="hero-main-heading">Make a clear decision you can defend (and act on)</h1>
+<div class="hero-subheading">
+      Turn mental churn into a defensible decision brief: options, trade-offs, risk, and a commitment you can stand behind.
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill confidence" href="category-confidence-presence-influence.html">
+<i class="fas fa-bolt category-icon"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="playbook-wrap">
+<div class="intro-grid">
+<div class="card">
+<div class="card-title"><i class="fas fa-bullseye"></i>How to use this framework</div>
+<p class="mini">
+<strong>Decision clarity</strong> is not certainty. It's getting to a choice you can explain, commit to, and execute — without reopening it every day.
+<br/><br/>
+Use this when you're stuck between options, waiting for "more information", or looping in over-analysis. You'll make the options explicit, surface the real trade-offs, stress-test risk, and finish with a commitment statement + next action.
+<br/><br/>
+If a decision cannot survive honest trade-offs, it isn't a decision — it's a wish.
+      </p>
+<div></div>
+<div class="pill-grid">
+<div class="micro-pill"><span class="label">Time</span><span class="value">20–30 mins</span></div>
+<div class="micro-pill"><span class="label">Output</span><span class="value">1 decision brief</span></div>
+<div class="micro-pill"><span class="label">Depth</span><span class="value">Strategic</span></div>
+<div class="micro-pill"><span class="label">Best use</span><span class="value">When stuck</span></div>
+</div>
+</div>
+<div class="card">
+<div class="card-title"><i class="fas fa-gauge-high"></i>Decision clarity score</div>
+<p class="mini">
+        This isn't a performance score. It's a clarity signal — so you leave with a decision you can defend, not a half-formed debate.
+      </p>
+<div></div>
+<div class="score-row">
+<span class="score-label">Completed</span>
+<span class="score-value" id="overallScore">0%</span>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="overallFill"></div>
+</div>
+<div class="pill-grid">
+<div class="micro-pill"><span class="label">Define</span><span class="value" id="scoreDefine">0%</span></div>
+<div class="micro-pill"><span class="label">Options</span><span class="value" id="scoreOptions">0%</span></div>
+<div class="micro-pill"><span class="label">Trade-offs</span><span class="value" id="scoreTradeoffs">0%</span></div>
+<div class="micro-pill"><span class="label">Commit</span><span class="value" id="scoreCommit">0%</span></div>
+</div>
+</div>
+</div>
+<div class="anchor-profiles-insight">
+<div class="card-title"><i class="fas fa-brain"></i>Decision friction patterns</div>
+<p class="mini">
+    Most “hard decisions” are not a lack of intelligence — they’re a clash of incentives.
+    Use this as a mirror: name the pattern, then build the decision around it.
+  </p>
+<div class="anchor-profiles-grid">
+<div class="anchor-profile-card">
+<div class="ap-title"><i class="fas fa-repeat"></i> Perfection loop</div>
+<div class="ap-desc">You keep refining because choosing means closing doors. Fix: define “good enough” and set a deadline.</div>
+</div>
+<div class="anchor-profile-card">
+<div class="ap-title"><i class="fas fa-mask"></i> Conflict avoidance</div>
+<div class="ap-desc">You delay because the decision creates a difficult conversation. Fix: write the conversation first.</div>
+</div>
+<div class="anchor-profile-card">
+<div class="ap-title"><i class="fas fa-magnifying-glass"></i> Info addiction</div>
+<div class="ap-desc">You’re waiting for “one more data point”. Fix: decide what evidence would actually change your mind.</div>
+</div>
+<div class="anchor-profile-card">
+<div class="ap-title"><i class="fas fa-user-shield"></i> Identity fear</div>
+<div class="ap-desc">You’re protecting an image of yourself. Fix: choose the option that protects long-term integrity, not short-term comfort.</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="define">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">1</div>
+<div class="section-title">
+<strong>Define the decision</strong>
+<span>Strip it down to what is actually being decided — and by when.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-define">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-pen-nib"></i>
+<strong>What is the decision? (one sentence)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="define" name="framework-decision-clarity_field_1" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_2" placeholder="Example: Do I accept the new role offer, or stay where I am for another 6 months?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-circle-xmark"></i>
+<strong>What is NOT being decided here?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="define" name="framework-decision-clarity_field_3" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_4" placeholder="Name the distractions: identity questions, side issues, other people’s expectations, etc."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-hourglass-half"></i>
+<strong>What happens if you do nothing?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="define" name="framework-decision-clarity_field_5" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_6" placeholder="Be specific: consequences, opportunity cost, stress, drift, relationship impact."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-calendar-check"></i>
+<strong>When does this decision realistically need to be made?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="define" name="framework-decision-clarity_field_7" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_8" placeholder="A real date/time window. Not 'soon'."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-lightbulb"></i>
+<div>
+<strong>Rule:</strong> if you cannot state the decision clearly, you are not ready to decide.
+            Clarity starts with a clean problem statement.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="options">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">2</div>
+<div class="section-title">
+<strong>Options on the table</strong>
+<span>Make the real options explicit — including the uncomfortable one.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-options">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-a"></i>
+<strong>Option A (plain description)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="options" name="framework-decision-clarity_field_9" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_10" placeholder="State the option without justification. What would you do?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-b"></i>
+<strong>Option B (plain description)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="options" name="framework-decision-clarity_field_11" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_12" placeholder="State the alternative without arguing against it."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-route"></i>
+<strong>Option C (walk away / delay / redesign)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="options" name="framework-decision-clarity_field_13" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_14" placeholder="Include the option you avoid saying out loud (e.g. leave, decline, pause, renegotiate)."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-compass"></i>
+<strong>Which option are you already leaning toward?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="options" name="framework-decision-clarity_field_15" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_16" placeholder="Name it. Then name why (even if the reason is emotional)."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-shield"></i>
+<div>
+<strong>Reality check:</strong> avoid fake options you would never choose.
+            They inflate fear and reduce honesty.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="tradeoffs">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">3</div>
+<div class="section-title">
+<strong>Trade-offs &amp; costs</strong>
+<span>Replace vague fear with concrete consequences.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-tradeoffs">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-plus"></i>
+<strong>What do you gain with your preferred option?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="tradeoffs" name="framework-decision-clarity_field_17" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_18" placeholder="Name the tangible and intangible gains: time, energy, money, status, learning, peace."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-minus"></i>
+<strong>What do you lose with your preferred option?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="tradeoffs" name="framework-decision-clarity_field_19" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_20" placeholder="Losses are the hidden cost. Be honest: what are you giving up?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-battery-half"></i>
+<strong>What will it cost you in energy / reputation / time?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="tradeoffs" name="framework-decision-clarity_field_21" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_22" placeholder="Practical load: commute, politics, learning curve, conflict, stress."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-triangle-exclamation"></i>
+<strong>What problem does your preferred option create?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="tradeoffs" name="framework-decision-clarity_field_23" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_24" placeholder="Every decision solves one problem and creates another. Name the new problem."></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-scale-balanced"></i>
+<div>
+<strong>Lens:</strong> clarity comes from choosing which problem you are willing to live with.
+            Trade-offs are the truth of the decision.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" data-section="commit">
+<div class="section-header" role="button" tabindex="0">
+<div class="section-left">
+<div class="section-badge">4</div>
+<div class="section-title">
+<strong>Risk &amp; commitment</strong>
+<span>Stress-test reversibility, then lock the choice with a commitment statement.</span>
+</div>
+</div>
+<div class="section-right">
+<div class="section-status" id="status-commit">0/4 complete</div>
+<div class="chev"><i class="fas fa-chevron-down"></i></div>
+</div>
+</div>
+<div class="section-body">
+<div class="q-grid">
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-skull-crossbones"></i>
+<strong>What is the worst realistic outcome?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="commit" name="framework-decision-clarity_field_25" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_26" placeholder="Not the apocalypse. The real downside if it goes wrong."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-rotate-left"></i>
+<strong>Is this reversible — and what is your recovery plan?</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="commit" name="framework-decision-clarity_field_27" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_28" placeholder="If it fails, what would you do within 30–60 days? What’s the exit route?"></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-handshake"></i>
+<strong>Commitment statement (fill the sentence)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="commit" name="framework-decision-clarity_field_29" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_30" placeholder="I am choosing ____ because ____. I accept ____ as the cost."></textarea>
+</div>
+<div class="q">
+<div class="q-top">
+<div class="q-title">
+<i class="fas fa-bolt"></i>
+<strong>First concrete action (and when)</strong>
+</div>
+<label class="q-done"><input class="done" data-dim="commit" name="framework-decision-clarity_field_31" type="checkbox"/> Done</label>
+</div>
+<textarea class="field" name="framework-decision-clarity_field_32" placeholder="What will you do in the next 24–72 hours to make this real?"></textarea>
+</div>
+</div>
+<div class="section-foot">
+<div class="tip-box">
+<i class="fas fa-anchor"></i>
+<div>
+<strong>Reframe:</strong> irreversible decisions require caution.
+            Reversible decisions require action. Either way, finish with a commitment you can execute.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<div class="anchor-output-card" id="anchorOutputCard">
+<div class="card">
+<div class="card-title"><i class="fas fa-sparkles"></i>Your Decision Clarity Output</div>
+<div id="outputEmptyState">
+<p>
+          Fill in the sections above, then generate your structured decision brief.<br/>
+<span>The output will summarise your anchor, infer your profile, and recommend next steps.</span>
+</p>
+</div>
+<div id="outputContent"></div>
+<div id="outputQualityCheck"></div>
+</div>
+</div>
+<div>
+<button class="mini-btn primary" id="generateOutputBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="mini-btn secondary" id="collapseAll"><i class="fas fa-compress"></i> Collapse all</button>
+<button class="mini-btn primary" id="expandAll"><i class="fas fa-expand"></i> Expand all</button>
+<button class="mini-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="mini-btn secondary" data-action="print-page" id="printBtn"><i class="fas fa-print"></i> Print / Save PDF</button>
+<button class="mini-btn secondary" disabled="" id="clearBtn"><i class="fas fa-eraser"></i> Clear All</button>
+</div>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

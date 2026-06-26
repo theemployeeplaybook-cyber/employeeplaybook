@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Personal Action Plan | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="plan-personal-action">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-clarity-priorities-and-direction.html">Clarity, Priorities &amp; Direction</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Personal Action Plan</span>
+</div>
+<span class="checklist-name">PERSONAL ACTION PLAN</span>
+<h1 class="hero-main-heading">
+      Turn intent into outcomes — with clear actions, timelines, and the leverage to follow through
+    </h1>
+<div class="hero-subheading">
+      Choose the reason you are making a plan (it changes the prompts, scripts, and what “good” looks like).
+      Then draft the modules below and generate your Action Pack.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill confidence" href="category-confidence-presence-influence.html" title="Confidence &amp; Influence">
+<i class="fas fa-bolt category-icon"></i>
+<span>Confidence &amp; Influence</span>
+</a>
+<a class="category-pill career" href="category-career-playbook.html" title="Career Playbook">
+<i class="fas fa-compass category-icon"></i>
+<span>Career Playbook</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This</h3>
+<ul class="bullet-list">
+<li>When you need a plan that can survive real workloads and workplace politics.</li>
+<li>When you feel stuck: overthinking, delay, or “I’ll do it next week”.</li>
+<li>When you need to make a decision and then follow through without wobbling.</li>
+<li>When you need clarity, evidence, and clean scripts — not emotional improvisation.</li>
+<li>When you need a weekly rhythm for execution and review (not a one-off burst).</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Select your reason first. The prompts and scripts will re-tune automatically.</li>
+<li>Define a measurable target (not a vibe like “better” or “less stressed”).</li>
+<li>Choose actions that change reality — not endless prep.</li>
+<li>Lock decisions in writing. That’s how you beat drift and shifting goalposts.</li>
+<li>Review weekly. Keep the plan alive without turning it into a drama series.</li>
+</ul>
+</div>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Draft your personal action plan</h2>
+<p id="reasonSubtext">
+        Eight modules to define your outcome, choose the right moves, and build follow-through.
+        Generate your Action Pack once you have at least two modules completed.
+      </p>
+</div>
+</div>
+<div aria-label="Reason toggle" class="reason-panel">
+<div class="reason-left">
+<div class="reason-label"><i class="fas fa-sliders"></i> Reason for this plan</div>
+<div class="reason-help" id="reasonHelp">
+        Select the reason. The tool will adjust prompts, scripts, and blocker assumptions accordingly.
+      </div>
+</div>
+<div aria-label="Plan reason" class="segmented" role="tablist">
+<button aria-selected="true" class="seg-btn active" data-reason="delivery" role="tab">
+<i class="fas fa-clipboard-check"></i> Delivery &amp; Clarity
+      </button>
+<button aria-selected="false" class="seg-btn" data-reason="visibility" role="tab">
+<i class="fas fa-bullhorn"></i> Visibility &amp; Positioning
+      </button>
+<button aria-selected="false" class="seg-btn" data-reason="conflict" role="tab">
+<i class="fas fa-handshake-slash"></i> Conflict &amp; Boundaries
+      </button>
+<button aria-selected="false" class="seg-btn" data-reason="wellbeing" role="tab">
+<i class="fas fa-heart-pulse"></i> Wellbeing &amp; Capacity
+      </button>
+</div>
+</div>
+<div class="modules-grid" id="modulesGrid"></div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Action Pack</h2>
+<p class="pack-subtitle" id="packSubtitle">
+      A structured output you can execute immediately: a one-page plan, next-7-days checklist,
+      blocker plan, and scripts that create accountability without drama.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Execution readiness</div>
+<div class="metric-score" id="readinessLabel">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page action plan</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header green"><i class="fas fa-list-check"></i> Next 7 days checklist</h3>
+<div class="pack-output">
+<div class="mono" id="next7Output"></div>
+</div>
+<h3 class="section-header orange"><i class="fas fa-triangle-exclamation"></i> Blockers &amp; counter-moves</h3>
+<div class="pack-grid" id="blockersGrid"></div>
+<h3 class="section-header purple"><i class="fas fa-comments"></i> Scripts (calm, clear, UK-friendly)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Toolkit: frameworks, guides, planners, assessments, checklists, playbooks, scripts, templates and maps for high-stakes workplace moments. Not legal advice." name="description"/>
+<title>The Toolkit | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="library" data-protected="false">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell library-page" id="main">
+<section aria-label="Hero" class="hero">
+<div class="hero-content">
+<h1 aria-label="Find the right response with our tools" class="hero-headline">
+<span class="hero-line top">From Insight to Impact:<br/>Your Complete Toolkit</span>
+<span class="hero-line bottom"></span>
+</h1>
+<p class="hero-subhead">
+        Practical outcomes in plain language when the stakes are high. Access the tools to choose your wording, protect your position, and decide your next move.
+      </p>
+<div class="hero-note">Not legal advice. Just the clarity you wish you had sooner.</div>
+</div>
+<div aria-label="Tool types banner" class="tool-types-banner">
+<div class="tool-types-banner-content">
+        Frameworks   •   Guides   •   Planners   •   Assessments   •   Checklists   •   Playbooks   •   Scripts   •   Templates   •   Maps
+           •   
+        <span class="banner-highlight">Built for real workplace dynamics</span>
+           •   
+        Frameworks   •   Guides   •   Planners   •   Assessments   •   Checklists   •   Playbooks   •   Scripts   •   Templates   •   Maps
+      </div>
+</div>
+</section>
+<section aria-label="Quick find" class="quick-find">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Find what you need, fast</h2>
+<p class="section-subtitle">Search the Toolkit, or click the tool types to narrow suggestions instantly.</p>
+</div>
+<div class="quick-find-wrap">
+<div aria-label="Category pills" class="cat-chip-row">
+<button aria-pressed="false" class="cat-chip cat-career" data-cat="career" data-full="Career Playbook">
+<i class="fas fa-briefcase"></i> Career Playbook
+          </button>
+<button aria-pressed="false" class="cat-chip cat-clarity" data-cat="clarity" data-full="Clarity, Priorities &amp; Direction">
+<i class="fas fa-bullseye category-icon"></i> Clarity &amp; Priorities
+          </button>
+<button aria-pressed="false" class="cat-chip cat-confidence" data-cat="confidence" data-full="Confidence, Presence &amp; Influence">
+<i class="fas fa-chart-line category-icon"></i> Confidence &amp; Influence
+          </button>
+<button aria-pressed="false" class="cat-chip cat-burnout" data-cat="burnout" data-full="Expectation, Burnout &amp; Capacity">
+<i class="fas fa-battery-half category-icon"></i> Expectation &amp; Burnout
+          </button>
+<button aria-pressed="false" class="cat-chip cat-hr" data-cat="hr" data-full="HR Insider">
+<i class="fas fa-file-contract"></i> HR Insider
+          </button>
+<button aria-pressed="false" class="cat-chip cat-manager" data-cat="manager" data-full="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows category-icon"></i> Manager Relationship
+          </button>
+<button aria-pressed="false" class="cat-chip cat-politics" data-cat="politics" data-full="Workplace Dynamics &amp; Politics">
+<i class="fas fa-users category-icon"></i> Politics
+          </button>
+</div>
+<div class="quick-find-top">
+<div class="search-icon"><i class="fas fa-search"></i></div>
+<input class="search-input" id="toolSearch" placeholder="Try: “micromanagement”, “burnout”, “follow up”, “documentation”, “boundary”" type="text"/>
+</div>
+<div aria-label="Tool type chips" class="chip-row">
+<button class="chip" data-filter="Assessment"><i class="fas fa-clipboard-list"></i> Assessments</button>
+<button class="chip" data-filter="Checklist"><i class="fas fa-check-double"></i> Checklists</button>
+<button class="chip" data-filter="Framework"><i class="fas fa-diagram-project"></i> Frameworks</button>
+<button class="chip" data-filter="Guide"><i class="fas fa-compass"></i> Guides</button>
+<button class="chip" data-filter="Map"><i class="fas fa-map"></i> Maps</button>
+<button class="chip" data-filter="Plan"><i class="fas fa-route"></i> Plans</button>
+<button class="chip" data-filter="Planner"><i class="fas fa-calendar-check"></i> Planners</button>
+<button class="chip" data-filter="Playbook"><i class="fas fa-book-open"></i> Playbooks</button>
+<button class="chip" data-filter="Script"><i class="fas fa-comment-dots"></i> Scripts</button>
+<button class="chip" data-filter="Template"><i class="fas fa-file-lines"></i> Templates</button>
+</div>
+<div class="quick-results" id="quickResults">
+<div class="results-title" id="resultsTitle">Suggestions</div>
+<div class="results-grid" id="resultsGrid"></div>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="What the Toolkit helps you do" class="helps">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">What the Toolkit helps you do</h2>
+<p class="section-subtitle">When work gets political, vague, or intense, you get a safer, clearer way through.</p>
+</div>
+<div class="helps-grid">
+<div class="helps-card">
+<div class="helps-head">
+<div class="helps-ic"><i class="fas fa-compass"></i></div>
+<div class="helps-title">Turn “I’m not sure” into a plan</div>
+</div>
+<div class="helps-desc">
+            Get a clear sequence: what to ask, what to document, and what to do next, without guessing.
+          </div>
+<div class="helps-extra">
+<div><i class="fas fa-check"></i> A clean next step (not ten options).</div>
+<div><i class="fas fa-check"></i> Language you can actually use today.</div>
+</div>
+</div>
+<div class="helps-card">
+<div class="helps-head">
+<div class="helps-ic"><i class="fas fa-shield-halved"></i></div>
+<div class="helps-title">Stay protected and credible</div>
+</div>
+<div class="helps-desc">
+            Use wording and structures that are calm, manager-safe, and hard to twist later.
+          </div>
+<div class="helps-extra">
+<div><i class="fas fa-check"></i> Strong follow-ups that don’t sound defensive.</div>
+<div><i class="fas fa-check"></i> Evidence habits that hold up under scrutiny.</div>
+</div>
+</div>
+<div class="helps-card">
+<div class="helps-head">
+<div class="helps-ic"><i class="fas fa-network-wired"></i></div>
+<div class="helps-title">Spot patterns before they bite</div>
+</div>
+<div class="helps-desc">
+            Frameworks reveal what’s really happening underneath the noise, so you respond to the pattern, not the mood.
+          </div>
+<div class="helps-extra">
+<div><i class="fas fa-check"></i> See power moves early.</div>
+<div><i class="fas fa-check"></i> Choose a response that protects leverage.</div>
+</div>
+</div>
+<div class="helps-card">
+<div class="helps-head">
+<div class="helps-ic"><i class="fas fa-chess"></i></div>
+<div class="helps-title">Respond strategically, not emotionally</div>
+</div>
+<div class="helps-desc">
+            Take action that protects your wellbeing and your reputation at the same time, without overreacting.
+          </div>
+<div class="helps-extra">
+<div><i class="fas fa-check"></i> Keep your tone steady.</div>
+<div><i class="fas fa-check"></i> Keep your position intact.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Featured tools" class="featured" id="featured-tools">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Tools you can rely on when it matters</h2>
+<p class="section-subtitle">Four examples of the Toolkit experience: structured, practical, ready to use.</p>
+</div>
+<div class="featured-grid">
+<div class="tool-card" data-cat="burnout" data-link="planner-overload-and-capacity.html" data-tags="burnout capacity workload renegotiate triage" data-title="Overload &amp; Capacity Planner" data-type="Planner">
+<div class="tool-top">
+<div class="tool-category-label">Expectation, Burnout &amp; Capacity</div>
+<div class="tool-name">Overload &amp; Capacity Planner</div>
+</div>
+<div class="tool-desc">Turn “too much” into a rational plan: what to pause, what to renegotiate, and how to phrase it safely.</div>
+<div aria-label="User review" class="tool-review">
+<div aria-label="Five stars" class="stars">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<div class="review-text">“This helped me reduce my workload without sounding defensive. The plan structure is excellent.”</div>
+<div class="review-meta">Aisha, Technology</div>
+</div>
+<div class="tool-footer">
+<div class="tool-buttons"><a class="btn-primary" href="plan-sustainable-pace.html">Open</a></div>
+<div aria-label="Viewed and saved" class="tool-stats">
+<div class="tool-stat"><i class="fas fa-eye"></i> 3.4k</div>
+<div class="tool-stat"><i class="fas fa-bookmark"></i> 612</div>
+</div>
+</div>
+</div>
+<div class="tool-card" data-cat="burnout" data-link="assessment-burnout-and-capacity.html" data-tags="burnout signals risk snapshot capacity stress fatigue" data-title="Burnout &amp; Capacity Assessment" data-type="Assessment">
+<div class="tool-top">
+<div class="tool-category-label">Expectation, Burnout &amp; Capacity</div>
+<div class="tool-name">Burnout &amp; Capacity Assessment</div>
+</div>
+<div class="tool-desc">A fast signal check to quantify risk, pinpoint what is driving it, and decide the safest next step.</div>
+<div aria-label="User review" class="tool-review">
+<div aria-label="Five stars" class="stars">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<div class="review-text">“It gave me a clear risk score and the exact next step. No waffle. Very grounding.”</div>
+<div class="review-meta">James, Public Services</div>
+</div>
+<div class="tool-footer">
+<div class="tool-buttons"><a class="btn-primary" href="assessment-burnout-and-capacity.html">Open</a></div>
+<div aria-label="Viewed and saved" class="tool-stats">
+<div class="tool-stat"><i class="fas fa-eye"></i> 2.8k</div>
+<div class="tool-stat"><i class="fas fa-bookmark"></i> 487</div>
+</div>
+</div>
+</div>
+<div class="tool-card" data-cat="manager" data-link="framework-leadership-style-decoder.html" data-tags="manager communication tone feedback patterns leadership" data-title="Leadership Style Decoder" data-type="Framework">
+<div class="tool-top">
+<div class="tool-category-label">Manager Relationship &amp; Leadership Style</div>
+<div class="tool-name">Leadership Style Decoder</div>
+</div>
+<div class="tool-desc">Identify how your manager processes information and power, then adapt your language so it lands cleanly.</div>
+<div aria-label="User review" class="tool-review">
+<div aria-label="Five stars" class="stars">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<div class="review-text">“The messaging examples instantly changed how I frame updates. My manager finally listened.”</div>
+<div class="review-meta">Priya, Finance</div>
+</div>
+<div class="tool-footer">
+<div class="tool-buttons"><a class="btn-primary" href="category-manager-relationship-and-leadership-style.html">Open</a></div>
+<div aria-label="Viewed and saved" class="tool-stats">
+<div class="tool-stat"><i class="fas fa-eye"></i> 4.1k</div>
+<div class="tool-stat"><i class="fas fa-bookmark"></i> 903</div>
+</div>
+</div>
+</div>
+<div class="tool-card" data-cat="clarity" data-link="framework-negotiation.html" data-tags="workload negotiate boundaries email meeting priorities" data-title="Negotiation Framework" data-type="Framework">
+<div class="tool-top">
+<div class="tool-category-label">Clarity, Priorities &amp; Direction</div>
+<div class="tool-name">Negotiation Framework</div>
+</div>
+<div class="tool-desc">A structured way to renegotiate load and scope without triggering defensiveness, with language options for email and meetings.</div>
+<div aria-label="User review" class="tool-review">
+<div aria-label="Five stars" class="stars">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<div class="review-text">“I copied it, sent it, and got agreement on priority changes the same day. Huge relief.”</div>
+<div class="review-meta">Tom, Professional Services</div>
+</div>
+<div class="tool-footer">
+<div class="tool-buttons"><a class="btn-primary" href="framework-negotiation.html">Open</a></div>
+<div aria-label="Viewed and saved" class="tool-stats">
+<div class="tool-stat"><i class="fas fa-eye"></i> 5.7k</div>
+<div class="tool-stat"><i class="fas fa-bookmark"></i> 1.3k</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Toolkit categories" class="categories" id="categories">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Browse by category</h2>
+<p class="section-subtitle">Choose your lane, then pick the exact tool.</p>
+</div>
+<div class="category-grid">
+<div class="category-card cat-clarity">
+<div class="category-head">
+<div class="category-left">
+<div class="category-ic"><i class="fas fa-bullseye"></i></div>
+<div>
+<div class="category-title">Clarity, Priorities &amp; Direction</div>
+<div class="category-mini">Decisions • Scope • Priorities</div>
+</div>
+</div>
+</div>
+<div class="category-desc">When everything is urgent, structure the work, expose constraints, and get decisions on record.</div>
+<div class="category-action"><a href="category-clarity-priorities-and-direction.html"><i class="fas fa-arrow-right"></i> Explore tools</a></div>
+</div>
+<div class="category-card cat-burnout">
+<div class="category-head">
+<div class="category-left">
+<div class="category-ic"><i class="fas fa-fire"></i></div>
+<div>
+<div class="category-title">Expectation, Burnout &amp; Capacity</div>
+<div class="category-mini">Load • Limits • Recovery</div>
+</div>
+</div>
+</div>
+<div class="category-desc">Capacity plans, overload reduction, early warning signals, and recovery prioritisation.</div>
+<div class="category-action"><a href="category-expectation-burnout-and-capacity.html"><i class="fas fa-arrow-right"></i> Explore tools</a></div>
+</div>
+<div class="category-card cat-manager">
+<div class="category-head">
+<div class="category-left">
+<div class="category-ic"><i class="fas fa-handshake"></i></div>
+<div>
+<div class="category-title">Manager Relationship &amp; Leadership Style</div>
+<div class="category-mini">Patterns • Leverage • Boundaries</div>
+</div>
+</div>
+</div>
+<div class="category-desc">Decode manager patterns, respond strategically, and protect your position without unnecessary friction.</div>
+<div class="category-action"><a href="category-manager-relationship-and-leadership-style.html"><i class="fas fa-arrow-right"></i> Explore tools</a></div>
+</div>
+<div class="category-card cat-politics">
+<div class="category-head">
+<div class="category-left">
+<div class="category-ic"><i class="fas fa-users"></i></div>
+<div>
+<div class="category-title">Workplace Dynamics and Politics</div>
+<div class="category-mini">Stakeholders • Power • Perception</div>
+</div>
+</div>
+</div>
+<div class="category-desc">Map influence, read incentives, and position yourself clearly in complex organisational dynamics.</div>
+<div class="category-action"><a href="category-workplace-dynamics-and-politics.html"><i class="fas fa-arrow-right"></i> Explore tools</a></div>
+</div>
+<div class="category-card cat-hr">
+<div class="category-head">
+<div class="category-left">
+<div class="category-ic"><i class="fas fa-file-contract"></i></div>
+<div>
+<div class="category-title">HR Insider</div>
+<div class="category-mini">Evidence • Process • Protection</div>
+</div>
+</div>
+</div>
+<div class="category-desc">Procedural checklists, documentation structure, and escalation pathways that stand up under scrutiny.</div>
+<div class="category-action"><a href="category-hr-insider.html"><i class="fas fa-arrow-right"></i> Explore tools</a></div>
+</div>
+<div class="category-card cat-confidence">
+<div class="category-head">
+<div class="category-left">
+<div class="category-ic"><i class="fas fa-chart-line"></i></div>
+<div>
+<div class="category-title">Confidence, Presence &amp; Influence</div>
+<div class="category-mini">Messaging • Credibility • Impact</div>
+</div>
+</div>
+</div>
+<div class="category-desc">Build authority signals, sharpen your delivery, and use language that holds its shape.</div>
+<div class="category-action"><a href="category-confidence-presence-influence.html"><i class="fas fa-arrow-right"></i> Explore tools</a></div>
+</div>
+<div class="category-card cat-career">
+<div class="category-head">
+<div class="category-left">
+<div class="category-ic"><i class="fas fa-briefcase"></i></div>
+<div>
+<div class="category-title">Career Playbook</div>
+<div class="category-mini">Moves • Momentum • Positioning</div>
+</div>
+</div>
+</div>
+<div class="category-desc">Career strategy tools: positioning, options, decision-making, and smart next moves.</div>
+<div class="category-action"><a href="category-career-playbook.html"><i class="fas fa-arrow-right"></i> Explore tools</a></div>
+</div>
+<div class="category-card cat-sos">
+<div class="category-head">
+<div class="category-left">
+<div class="category-ic"><i class="fas fa-triangle-exclamation"></i></div>
+<div>
+<div class="category-title">SOS</div>
+<div class="category-mini">Urgent scripts • Stabilise fast</div>
+</div>
+</div>
+</div>
+<div class="category-desc">When it is escalating quickly: immediate actions, wording, and documentation essentials.</div>
+<div class="category-action"><a href="category-sos.html"><i class="fas fa-arrow-right"></i> Open SOS</a></div>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Sign up CTA" class="signup-cta">
+<div class="container">
+<div class="signup-cta-card">
+<div class="signup-cta-inner">
+<div>
+<div class="signup-cta-title">Get the full Toolkit, and save what matters.</div>
+<div class="signup-cta-sub">Create an account to unlock saved tools, faster navigation, and a cleaner path back to the exact resources you used.</div>
+</div>
+<div>
+<a class="cta-button" href="create-account.html"><i class="fas fa-user-plus"></i> Create account</a>
+<a class="secondary-button" href="sign-in.html"><i class="fas fa-right-to-bracket"></i> Sign in</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

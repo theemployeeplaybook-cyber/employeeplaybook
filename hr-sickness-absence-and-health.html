@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="HR Insider — Sickness, Absence &amp; Health: high-value UK guidance on absence processes, fit notes, occupational health, reasonable adjustments, capability risk and protecting your position. Not legal advice." name="description"/>
+<title>HR Insider | Sickness, Absence &amp; Health | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="hr-sickness-absence-and-health">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR Insider</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Sickness, Absence &amp; Health</span>
+</div>
+<div class="pill-label"><span class="dot"></span><span>HR Insider</span></div>
+<h1 class="hero-main-heading">Sickness, Absence &amp; Health: protect your position before “support” quietly turns into capability risk</h1>
+<div class="hero-subheading">
+<strong>Subscribers get a UK-style high-stakes playbook</strong> for sickness absence and health-related workplace risk: what absence reviews are really doing,
+          how fit notes and occupational health should be used, when reasonable adjustments become critical, what can push a case towards capability,
+          and how to stay credible without drifting into self-sabotage.
+        </div>
+<div class="hero-value-row">
+<div class="hero-value-card">
+<div class="hero-value-icon"><i class="fas fa-heart-pulse"></i></div>
+<div>
+<h4>Health + strategy together</h4>
+<p>Not just “cope better” advice — practical moves that protect your wellbeing and your employment position at the same time.</p>
+</div>
+</div>
+<div class="hero-value-card">
+<div class="hero-value-icon"><i class="fas fa-file-medical"></i></div>
+<div>
+<h4>Fit note, OH and adjustment leverage</h4>
+<p>Know what to request, what to confirm in writing, and where employers often cut corners or move too fast.</p>
+</div>
+</div>
+</div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill hr" href="category-hr-insider.html"><i class="fas fa-scale-balanced category-icon"></i><span>HR Insider</span></a>
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html"><i class="fas fa-battery-half category-icon"></i><span>Burnout &amp; Capacity</span></a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html"><i class="fas fa-people-arrows category-icon"></i><span>Manager Relationship &amp; Leadership Style</span></a>
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html"><i class="fas fa-bullseye category-icon"></i><span>Clarity, Priorities &amp; Direction</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="content-shell">
+<div class="content-grid">
+<aside aria-label="Contents" class="sidebar">
+<div class="sidebar-title"><i class="fas fa-list"></i> Contents</div>
+<ul class="toc" id="tocList">
+<li><a class="toc-link active" href="#read-first"><i class="fas fa-circle-info"></i> Read this first</a></li>
+<li><a class="toc-link" href="#fast-triage"><i class="fas fa-bolt"></i> Fast triage</a></li>
+<li><a class="toc-link" href="#signals"><i class="fas fa-radar"></i> Hidden signals &amp; dynamics</a></li>
+<li><a class="toc-link" href="#evidence"><i class="fas fa-folder-open"></i> Evidence &amp; documents</a></li>
+<li><a class="toc-link" href="#process"><i class="fas fa-route"></i> The UK process</a></li>
+<li><a class="toc-link" href="#adjustments"><i class="fas fa-universal-access"></i> Adjustments &amp; OH</a></li>
+<li><a class="toc-link" href="#capability"><i class="fas fa-triangle-exclamation"></i> Capability risk</a></li>
+<li><a class="toc-link" href="#scripts"><i class="fas fa-quote-left"></i> Scripts &amp; email templates</a></li>
+<li><a class="toc-link" href="#signposting"><i class="fas fa-signs-post"></i> ACAS &amp; support</a></li>
+<li><a class="toc-link" href="#lens"><i class="fas fa-user-shield"></i> Personality / Behaviour Lens</a></li>
+</ul>
+<div class="sidebar-cta">
+<div class="mini">Tick what’s true, add notes, then generate your action summary. Save once it reflects your situation.</div>
+<div class="sidebar-actions">
+<button class="pill-btn" disabled="" id="generateBtn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Generate Summary</button>
+<button class="pill-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button"><i class="fas fa-cloud-arrow-up"></i> Save Progress</button>
+<button class="pill-btn secondary" data-action="print-page" id="printBtn" type="button"><i class="fas fa-print"></i> Print / Save PDF</button>
+<button class="pill-btn secondary" disabled="" id="clearBtn" type="button"><i class="fas fa-eraser"></i> Clear All</button>
+</div>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</aside>
+<section class="main">
+<div class="content-card" id="read-first">
+<div class="card-title"><i class="fas fa-circle-info"></i> Read this first</div>
+<p class="muted">
+              This is strategic HR guidance for UK sickness absence, health-related absence, adjustments and capability risk. It is <strong>not legal advice</strong>.
+              The trap in these cases is that they are often presented as “supportive”, while in the background the organisation is also assessing reliability,
+              cost, operational pressure, and whether your situation can be “managed”. The smartest posture is <strong>calm, evidence-led and medically anchored</strong>.
+            </p>
+<div class="callout">
+<h4><i class="fas fa-triangle-exclamation"></i> The biggest mistakes people make</h4>
+<p>
+                (1) giving only vague verbal updates, (2) assuming HR or a manager will spot adjustment needs without being told, (3) treating occupational health as “against them” rather than a source of evidence,
+                (4) letting absence meetings focus only on attendance numbers instead of cause, prognosis and support, and (5) resigning or returning too early because they feel guilty.
+              </p>
+</div>
+<div class="grid-2">
+<div class="mini-card">
+<h4><i class="fas fa-brain"></i> If your head is foggy</h4>
+<p>
+                  That matters. Health-related situations distort memory, energy and confidence. Use short written updates, keep a timeline, and do not rely on stressed verbal conversations alone.
+                </p>
+</div>
+<div class="mini-card">
+<h4><i class="fas fa-compass"></i> The long-game mindset</h4>
+<p>
+                  Your goal is not just to “get through the meeting”. It is to protect income, credibility, adjustments, and a clean record if the case later turns into formal capability or exit pressure.
+                </p>
+</div>
+</div>
+<div class="callout success">
+<h4><i class="fas fa-shield-halved"></i> Your anchor line</h4>
+<p>“I want to engage constructively. To do that, I need the process, the concerns, the medical basis and any support options clearly set out in writing.”</p>
+</div>
+</div>
+<div class="content-card" id="fast-triage">
+<div class="card-title"><i class="fas fa-bolt"></i> Fast triage checklist (tick what’s true)</div>
+<p class="muted">These flags change your leverage, your wording and the level of capability risk.</p>
+<div class="checklist-grid" id="checklistGrid">
+<div aria-checked="false" class="checklist-item" data-key="shortTermPattern" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I’m having repeated short-term absences and it has started triggering manager concern or review meetings.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="longTermAbsence" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I’m on a longer period of sickness absence or may need more time off.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="fitNoteIssue" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">There is confusion or tension about fit notes, “might be fit for work”, or return-to-work expectations.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="ohMentioned" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">Occupational health has been suggested, arranged, or used already.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="adjustmentsNeeded" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I need adjustments, a phased return, changed duties, flexible hours, or a reduced trigger approach.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="disabilityPossible" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">My condition may amount to a disability or has a substantial ongoing impact.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="attendanceFocusOnly" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">The organisation seems focused only on my attendance numbers, not causes, support or prognosis.</div>
+</div>
+<div aria-checked="false" class="checklist-item" data-key="capabilityRisk" role="checkbox" tabindex="0">
+<i aria-hidden="true" class="fa-regular fa-square"></i>
+<div class="checklist-text">I’m worried this is moving towards formal action, capability, or being managed out.</div>
+</div>
+</div>
+<div class="notes">
+<label for="notesBox">Your notes (facts only — dates, absence pattern, what was said, what support was or was not offered)</label>
+<textarea id="notesBox" placeholder="Example: '12 Feb: return-to-work meeting. Manager said absences are becoming unsustainable. 18 Feb: fit note says may be fit with reduced hours. No OH referral yet. 26 Feb: HR mentioned attendance trigger.'"></textarea>
+</div>
+</div>
+<div class="content-card" id="signals">
+<div class="card-title"><i class="fas fa-radar"></i> Hidden signals &amp; dynamics: what is really happening underneath</div>
+<p class="muted">
+              Sickness and health cases often split into two stories: the supportive one on the surface, and the operational one underneath.
+              You do not need to be cynical. You do need to be alert.
+            </p>
+<div class="grid-2">
+<div class="mini-card">
+<h4><i class="fas fa-hand-holding-heart"></i> Support can be genuine — and still carry risk</h4>
+<p>
+                  A caring tone does not automatically mean the process is safe. If absence levels are affecting operations, the business may quietly start tracking whether they can sustain the arrangement.
+                </p>
+</div>
+<div class="mini-card">
+<h4><i class="fas fa-stopwatch"></i> Delay hurts you more than them</h4>
+<p>
+                  If causes, prognosis and adjustments stay vague for too long, employers default back to attendance management. Paper, clarity and medical evidence stop drift.
+                </p>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accSig1" type="button">
+<span class="left"><i class="fas fa-magnifying-glass"></i> Signals a case may be hardening</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accSig1">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-check"></i> Common signs</h5>
+<ul>
+<li>More formal language about attendance, reliability, impact or sustainability</li>
+<li>HR appearing earlier or more often in absence meetings</li>
+<li>Questions shifting from “how are you?” to “when exactly can you fully return?”</li>
+<li>Repeated references to trigger points, policy, or business impact</li>
+<li>Pressure to confirm a return date before medical advice is clear</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-shield"></i> Your move</h5>
+<p>Pull the case back onto process, medical evidence, adjustments and documented next steps. Vague optimism is not a strategy.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accSig2" type="button">
+<span class="left"><i class="fas fa-scale-balanced"></i> The real fork in the road</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accSig2">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-road"></i> Two outcomes employers tend to move towards</h5>
+<ul>
+<li><strong>Supported return model:</strong> clear evidence, agreed adjustments, reviews, staged rebuild</li>
+<li><strong>Capability risk model:</strong> unclear prognosis, repeated absence, limited support, increasing operational frustration</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-lightbulb"></i> Quiet truth</h5>
+<p>The earlier you anchor the case in fit note recommendations, OH evidence and adjustment conversations, the harder it is for the organisation to reduce it to “poor attendance”.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="evidence">
+<div class="card-title"><i class="fas fa-folder-open"></i> Evidence &amp; documents: what to request</div>
+<p class="muted">
+              Your aim is to turn ambiguity into paper. Absence cases go wrong when concern is verbal, medical advice is partial, and no one can later prove what support or review steps were actually offered.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="accE1" type="button">
+<span class="left"><i class="fas fa-file-lines"></i> Core document request (copy / paste)</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accE1">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Email script</div>
+<div class="script-text">Hi [Name],
+
+Thank you for the update. I want to engage constructively with the sickness absence / health process.
+
+To help me prepare properly, please could you share in writing:
+• The stage of the process I am currently in
+• Any attendance concerns being raised and the basis for them
+• The relevant sickness absence / attendance / capability policy
+• Any trigger points or thresholds being relied upon
+• Any notes from previous absence or return-to-work meetings
+• Any proposed support options, reasonable adjustments, phased return arrangements or occupational health steps
+• Any timescales, review dates and decision-maker(s)
+
+I would also like meeting notes shared after each discussion so I can correct any inaccuracies quickly.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accE2" type="button">
+<span class="left"><i class="fas fa-file-medical"></i> Fit note, medical evidence and prognosis</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accE2">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-check"></i> What good looks like</h5>
+<ul>
+<li>The organisation reads the actual fit note recommendations</li>
+<li>“Might be fit for work” prompts discussion, not pressure</li>
+<li>Any return plan is specific on hours, duties, duration and review points</li>
+<li>If more evidence is needed, they explain why and how it will be used</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-triangle-exclamation"></i> Weak process signals</h5>
+<ul>
+<li>“We need you back full time” despite fit note recommendations</li>
+<li>Assuming no adjustment is needed because you look “better” on a call</li>
+<li>Using medical uncertainty as a reason to push you, rather than to seek OH input</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accE3" type="button">
+<span class="left"><i class="fas fa-stethoscope"></i> Occupational health: use it strategically</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accE3">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-bullseye"></i> Your objective</h5>
+<p>Make OH answer the questions that actually matter: fitness for role, adjustments, likely timescale, phased return, trigger modification and any ongoing review needs.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-list"></i> What to ask before referral</h5>
+<ul>
+<li>What questions are being put to OH</li>
+<li>Who will see the report</li>
+<li>How the report will inform decisions</li>
+<li>Whether you can see the referral questions before the appointment</li>
+</ul>
+</div>
+</div>
+<div class="script-block">
+<div class="script-label"><i class="fas fa-comment-dots"></i> Useful line</div>
+<div class="script-text">I’m open to occupational health. To make it useful, I’d like the referral questions to cover likely adjustments, phased return options, trigger considerations and whether my condition has any longer-term implications for work.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="process">
+<div class="card-title"><i class="fas fa-route"></i> The UK process: what this should look like when handled properly</div>
+<p class="muted">
+              UK employers commonly frame these cases around sickness absence policy, fit note evidence, return-to-work meetings, occupational health input, reasonable adjustments and—if problems persist—capability.
+              Your job is to stop it becoming a vague attendance narrative.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="accP1" type="button">
+<span class="left"><i class="fas fa-phone-volume"></i> 1) Notification and early absence stage</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accP1">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-bullseye"></i> Your objective</h5>
+<p>Keep updates factual, consistent and documented. Early contradictions create later credibility problems.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-list-check"></i> What to do</h5>
+<ul>
+<li>Follow reporting rules where you can</li>
+<li>Keep a timeline of symptoms, absence dates and contact</li>
+<li>Where appropriate, confirm key phone discussions by email</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accP2" type="button">
+<span class="left"><i class="fas fa-notes-medical"></i> 2) Fit notes, self-certification and medical updates</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accP2">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-check"></i> Strong approach</h5>
+<p>Use medical evidence to create clarity, not just to “prove you’re ill”. The key question is what work is possible, on what basis, and with what support.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-ban"></i> Avoid the trap</h5>
+<p>Do not promise full return dates to reduce pressure if the evidence is not there. That usually backfires.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accP3" type="button">
+<span class="left"><i class="fas fa-comments"></i> 3) Return-to-work and absence review meetings</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accP3">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-shield"></i> Your posture</h5>
+<p>Co-operative, but precise. Return the conversation to support needs, medical evidence, triggers, impact and workable next steps.</p>
+</div>
+<div class="step">
+<h5><i class="fas fa-file-lines"></i> Ask for notes</h5>
+<p>Meeting notes matter. If they say they are “just supportive chats”, that is exactly when inaccurate narratives can form.</p>
+</div>
+</div>
+<div class="script-block">
+<div class="script-label"><i class="fas fa-quote-left"></i> Opening line</div>
+<div class="script-text">Thanks for meeting. I want to engage constructively. Before we discuss expectations, could we confirm the concerns being raised, the stage of process, any medical evidence being relied upon, and what support or adjustments are genuinely on the table?</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accP4" type="button">
+<span class="left"><i class="fas fa-person-walking-arrow-right"></i> 4) Phased return or supported return</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accP4">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-list"></i> Make it specific</h5>
+<ul>
+<li>Hours or days per week</li>
+<li>Duties you can and cannot do</li>
+<li>How long the arrangement lasts</li>
+<li>Review dates and success measures</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-triangle-exclamation"></i> Hidden risk</h5>
+<p>An undefined phased return can quickly become “we tried support and it didn’t work”. Define the plan.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="adjustments">
+<div class="card-title"><i class="fas fa-universal-access"></i> Adjustments &amp; occupational health: where leverage often sits</div>
+<p class="muted">
+              This is often the turning point. If your situation may amount to a disability, or the condition is having a substantial ongoing impact,
+              adjustment conversations are not optional background noise — they can become central to whether the process is fair.
+            </p>
+<div class="grid-2">
+<div class="mini-card">
+<h4><i class="fas fa-sliders"></i> Examples of practical adjustments</h4>
+<p>Phased return, temporary duty changes, altered hours, home working, quieter space, reduced travel, trigger point adjustment, time off for treatment, or a different meeting format.</p>
+</div>
+<div class="mini-card">
+<h4><i class="fas fa-scale-balanced"></i> Adjustments for absence itself</h4>
+<p>Where absence is disability-related, the issue is not only “how to work” but also whether absence triggers or review thresholds should be handled differently.</p>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accA1" type="button">
+<span class="left"><i class="fas fa-handshake"></i> How to raise adjustments without sounding adversarial</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accA1">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Email script</div>
+<div class="script-text">Hi [Name],
+
+Given the impact of my health condition, I would like us to discuss reasonable adjustments / support options as part of this process.
+
+To help me engage properly, please can we review:
+• What adjustments may help me remain in work or return safely
+• Whether any absence triggers need to be considered in light of my condition
+• Whether occupational health input would help shape the next steps
+
+I’m keen to work constructively on a workable plan.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+<div class="callout info">
+<h4><i class="fas fa-lightbulb"></i> Quiet but powerful point</h4>
+<p>If meetings keep discussing attendance, but nobody is properly discussing adjustments, prognosis and support, the process can look more managerial than supportive. That matters later.</p>
+</div>
+</div>
+<div class="content-card" id="capability">
+<div class="card-title"><i class="fas fa-triangle-exclamation"></i> Capability risk: when absence management turns formal</div>
+<p class="muted">
+              Not every sickness absence case becomes capability. But when employers start doubting return prospects, sustainability, or whether enough improvement is possible,
+              they may move towards a more formal capability route. Your protection is documentation, medical clarity and visible engagement.
+            </p>
+<div class="acc">
+<button class="acc-btn" data-acc="accC1" type="button">
+<span class="left"><i class="fas fa-gavel"></i> Signs you may be moving into capability territory</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accC1">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-check"></i> Watch for</h5>
+<ul>
+<li>Formal invites referencing attendance, capability or policy stages</li>
+<li>Repeated emphasis on business impact rather than support</li>
+<li>Questions about whether a full return is realistically possible</li>
+<li>Language about “all support having been considered”</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-shield"></i> Your move</h5>
+<p>Ask what support has been considered, what alternatives exist, what medical evidence is missing, and whether further OH input or review could materially change the outcome.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accC2" type="button">
+<span class="left"><i class="fas fa-chess"></i> What to protect if risk is rising</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accC2">
+<div class="steps">
+<div class="step">
+<h5><i class="fas fa-file-signature"></i> The record</h5>
+<ul>
+<li>Every support request you made</li>
+<li>Every medical recommendation provided</li>
+<li>Any delay in OH, reviews or decisions not caused by you</li>
+<li>Any adjustment discussion that was skipped or brushed aside</li>
+</ul>
+</div>
+<div class="step">
+<h5><i class="fas fa-arrow-trend-up"></i> Long-term leverage</h5>
+<p>If the organisation later moves towards exit, a calm documented record increases your credibility and reduces their room to rewrite the story.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="scripts">
+<div class="card-title"><i class="fas fa-quote-left"></i> Scripts &amp; email templates</div>
+<p class="muted">These scripts keep you clear, credible and difficult to misrepresent under pressure.</p>
+<div class="acc">
+<button class="acc-btn" data-acc="accS1" type="button">
+<span class="left"><i class="fas fa-envelope-open-text"></i> Confirming you’ll engage, but asking for clarity</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accS1">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Email script</div>
+<div class="script-text">Hi [Name],
+
+Thank you for the update. I want to engage constructively with the sickness absence / health process.
+
+To help me prepare properly, please confirm the current stage, the concerns being raised, the policy being followed, and any support or adjustment options under consideration. I would also appreciate any meeting notes and timescales in writing.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accS2" type="button">
+<span class="left"><i class="fas fa-stethoscope"></i> Requesting OH or better referral questions</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accS2">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Email script</div>
+<div class="script-text">Hi [Name],
+
+I think occupational health input would help create a clearer and more workable plan.
+
+If a referral is made, please could the questions cover likely adjustments, any phased return options, whether my condition has longer-term workplace implications, and whether any absence trigger modification should be considered.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accS3" type="button">
+<span class="left"><i class="fas fa-person-walking-arrow-right"></i> Asking for a clearer phased return</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accS3">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-envelope"></i> Email script</div>
+<div class="script-text">Hi [Name],
+
+To make a return sustainable, I think we need a more specific phased return plan.
+
+Could we confirm in writing:
+• Hours / days for the first stage
+• Any duties to be reduced or avoided initially
+• How long the arrangement will last
+• When we will review progress and what success looks like
+
+That will help me engage with the plan properly.
+
+Kind regards,
+[Your name]</div>
+</div>
+</div>
+</div>
+<div class="acc">
+<button class="acc-btn" data-acc="accS4" type="button">
+<span class="left"><i class="fas fa-file-circle-check"></i> Closing line for a review meeting</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="acc-panel" id="accS4">
+<div class="script-block">
+<div class="script-label"><i class="fas fa-quote-left"></i> Script</div>
+<div class="script-text">Thank you. Please share the meeting notes, the stage of process, and any medical or policy basis being relied upon, and give me the opportunity to respond to any new information before decisions are made.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-card" id="signposting">
+<div class="card-title"><i class="fas fa-signs-post"></i> ACAS &amp; support signposting</div>
+<p class="muted">
+              This section is here so the page feels grounded, credible and genuinely useful. These are the external reference points most likely to strengthen the user’s position.
+            </p>
+<div class="output-grid">
+<div class="out-card">
+<h4><i class="fas fa-file-medical"></i> Fit notes</h4>
+<p>Use ACAS guidance on self-certification, fit notes, and what “might be fit for work” should mean in practice. This is especially useful where employers ignore recommended changes.</p>
+</div>
+<div class="out-card">
+<h4><i class="fas fa-briefcase-medical"></i> Occupational health</h4>
+<p>ACAS guidance is useful where OH is being used vaguely, delayed, or treated as a tick-box. It helps frame why OH should inform decisions, not just justify them afterwards.</p>
+</div>
+<div class="out-card">
+<h4><i class="fas fa-wheelchair-move"></i> Reasonable adjustments</h4>
+<p>ACAS guidance on adjustments and disability-related absence is particularly valuable where trigger points, attendance reviews or work expectations may need modification.</p>
+</div>
+</div>
+<div class="callout success">
+<h4><i class="fas fa-phone"></i> When to signpost harder</h4>
+<p>If the case is escalating, health is deteriorating, or the user thinks disability discrimination / failure to make adjustments may be in play, point them towards ACAS guidance and the ACAS helpline as an immediate external anchor.</p>
+</div>
+</div>
+<div class="content-card" id="lens">
+<div class="card-title"><i class="fas fa-user-shield"></i> Personality / Behaviour Lens</div>
+<p class="muted">Different managers and HR teams create different risk patterns. Tailor the response style, not the facts.</p>
+<div class="output-grid">
+<div class="out-card">
+<h4><i class="fas fa-gavel"></i> The Policy Reader</h4>
+<p>Likes process and thresholds. Your move: refer to evidence, stages, OH, review dates and what support has been considered.</p>
+</div>
+<div class="out-card">
+<h4><i class="fas fa-face-smile"></i> The Friendly Minimiser</h4>
+<p>Warm tone, but vague. Your move: appreciate the support, then ask for clear written next steps so the record stays accurate.</p>
+</div>
+<div class="out-card">
+<h4><i class="fas fa-bullhorn"></i> The Operational Pressurer</h4>
+<p>Focused on staffing, reliability and deadlines. Your move: stay calm, avoid guilt, and keep returning to medical basis, sustainability and workable support.</p>
+</div>
+</div>
+</div>
+<div class="content-card output print-keep" id="outputBox">
+<div class="card-title"><i class="fas fa-wand-magic-sparkles"></i> Your generated summary</div>
+<p class="muted">This is your “do next” summary based on what you ticked + your notes. Save it after generating.</p>
+<div class="output-grid" id="outputGrid"></div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Pay Increase Negotiation Planner | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="planner-pay-increase-negotiation">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="far fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="hr-performance-and-capability.html">HR &amp; Formal Processes</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Pay Increase Negotiation Planner</span>
+</div>
+<span class="checklist-name">PAY INCREASE NEGOTIATION PLANNER</span>
+<h1 class="hero-main-heading">Build a calm, evidence-led pay case, then negotiate without burning political capital</h1>
+<div class="hero-subheading">
+        Use this to prepare an off-cycle ask, a pay-review ask, a promotion-linked adjustment, or a retention conversation (including modern realities like RTO pressure, scope creep, and pay compression).
+        <strong>Output:</strong> a clean negotiation brief + copy-ready scripts + next-step email.
+      </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill confidence" href="category-confidence-presence-influence.html">
+<i class="fas fa-bolt category-icon"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+<a class="category-pill career" href="category-career-playbook.html">
+<i class="fas fa-compass category-icon"></i>
+<span>Career Playbook</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="page-wrap">
+<div class="shell">
+<div class="shell-head">
+<div class="shell-title">
+<span class="icon-bubble"><i class="fas fa-hand-holding-dollar"></i></span>
+<span>Negotiation Brief Builder</span>
+</div>
+<div class="head-actions">
+<button class="pill-btn" id="loadExamplesBtn"><i class="fas fa-bolt"></i> Load examples</button>
+<button class="pill-btn" data-action="reset-tool" id="resetPlannerBtn"><i class="fas fa-rotate-left"></i> Reset planner</button>
+</div>
+</div>
+<div class="shell-body">
+<div class="grid-2">
+<div class="card">
+<div class="card-head">
+<div class="card-title">
+<span class="bubble"><i class="fas fa-layer-group"></i></span>
+<span>Build your case</span>
+</div>
+</div>
+<div aria-label="Planner tabs" class="tabs" role="tablist">
+<button class="tab active" data-tab="tab-prep"><i class="fas fa-clipboard-check"></i> Preparation</button>
+<button class="tab" data-tab="tab-meeting"><i class="fas fa-comments"></i> Meeting flow</button>
+<button class="tab" data-tab="tab-scripts"><i class="fas fa-pen-nib"></i> Scripts</button>
+<button class="tab" data-tab="tab-objections"><i class="fas fa-shield"></i> Objections</button>
+</div>
+<div class="section active" id="tab-prep">
+<div class="field">
+<div class="label">Scenario <span class="mini">Pick the “story” you’re negotiating inside</span></div>
+<select id="scenarioSelect">
+<option selected="" value="review">Annual pay review</option>
+<option value="offcycle">Off-cycle ask (new scope / performance)</option>
+<option value="promotion">Promotion-linked adjustment</option>
+<option value="compression">Pay compression (new joiners close to / above)</option>
+<option value="retention">Retention risk (credible external pull)</option>
+<option value="rto">RTO / hybrid change (role sustainability)</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Role reality <span class="mini">What changed — or what’s now true?</span></div>
+<textarea id="roleReality" placeholder="Example: Scope expanded (two streams), stakeholder load increased, higher-risk decisions, mentoring, owning delivery..."></textarea>
+</div>
+<div class="field">
+<div class="label">Your ask</div>
+<div class="row-2">
+<div>
+<div class="label">Current pay (annual) <span class="mini">£</span></div>
+<input id="currentPay" min="0" placeholder="e.g. 52000" step="500" type="number"/>
+</div>
+<div>
+<div class="label">Target pay (annual) <span class="mini">£</span></div>
+<input id="targetPay" min="0" placeholder="e.g. 60000" step="500" type="number"/>
+</div>
+</div>
+<div></div>
+<div class="row-2">
+<div>
+<div class="label">Your range (low) <span class="mini">£ practical floor</span></div>
+<input id="rangeLow" min="0" placeholder="e.g. 58000" step="500" type="number"/>
+</div>
+<div>
+<div class="label">Your range (high) <span class="mini">£ confident anchor</span></div>
+<input id="rangeHigh" min="0" placeholder="e.g. 64000" step="500" type="number"/>
+</div>
+</div>
+<div class="hint" id="calcHint">
+                  Tip: A pay rise is usually a <strong>contract change</strong> — if agreed, confirm the new terms in writing so it’s unambiguous.
+                </div>
+</div>
+<div class="field">
+<div class="label">Market reality</div>
+<div class="row-2">
+<div>
+<div class="label">Market median <span class="mini">£</span></div>
+<input id="marketMedian" min="0" placeholder="e.g. 61000" step="500" type="number"/>
+</div>
+<div>
+<div class="label">Market high <span class="mini">£</span></div>
+<input id="marketHigh" min="0" placeholder="e.g. 68000" step="500" type="number"/>
+</div>
+</div>
+<div></div>
+<div class="label">Internal alignment <span class="mini">What you can safely reference</span></div>
+<textarea id="internalAlign" placeholder="Example: Role level expectations, expanded responsibilities, acting-up work, comparable scope..."></textarea>
+</div>
+<div class="field">
+<div class="label">Negotiation levers <span class="mini">If base pay is constrained</span></div>
+<textarea id="levers" placeholder="Examples: bonus, title/level change, training budget, extra leave, flexible pattern, remote/hybrid stability, review date, retention bonus..."></textarea>
+</div>
+<div class="field">
+<div class="label">Evidence Vault</div>
+<div class="row-2">
+<div>
+<div class="label">Evidence type</div>
+<select id="evType">
+<option selected="" value="impact">Impact delivered</option>
+<option value="scope">Scope / responsibility expansion</option>
+<option value="risk">Risk reduced / quality raised</option>
+<option value="speed">Speed / throughput improved</option>
+<option value="stakeholders">Stakeholder value / trust</option>
+<option value="market">Market benchmark</option>
+</select>
+</div>
+<div>
+<div class="label">Strength </div>
+<select id="evStrength">
+<option selected="" value="strong">Strong (measurable / evidenced)</option>
+<option value="medium">Medium (clear examples)</option>
+<option value="soft">Soft (qualitative only)</option>
+</select>
+</div>
+</div>
+<div></div>
+<div class="label">Evidence statement <span class="mini">1–2 lines, crisp</span></div>
+<input id="evText" placeholder="Example: Led X, delivered Y, saved Z, reduced risk by..., unblocked..." type="text"/>
+<div></div>
+<button class="pill-btn" id="addEvidenceBtn"><i class="fas fa-plus"></i> Add evidence</button>
+<div></div>
+<div class="evidence-list" id="evidenceList"></div>
+</div>
+<div class="field">
+<div class="label">Risks &amp; constraints <span class="mini">Be realistic without self-sabotage</span></div>
+<div class="check">
+<input id="flagFreeze" type="checkbox"/>
+<div class="txt"><strong>Pay freeze / headcount controls</strong> are in play (budget constraint likely)</div>
+</div>
+<div class="check">
+<input id="flagRestructure" type="checkbox"/>
+<div class="txt"><strong>Restructure / redundancy risk</strong> is present (timing &amp; tone matters)</div>
+</div>
+<div class="check">
+<input id="flagPerf" type="checkbox"/>
+<div class="txt"><strong>Performance narrative is mixed</strong> (you must “re-write” the storyline first)</div>
+</div>
+<div class="check">
+<input id="flagProbation" type="checkbox"/>
+<div class="txt"><strong>Probation / very new in role</strong> (consider a defined review date ask)</div>
+</div>
+<div class="hint" id="riskHint">
+                  Premium move: if constraints are real, don’t “argue budget”. Negotiate <strong>pathway</strong> (scope + outcomes + date) and leave with a written review commitment.
+                </div>
+</div>
+</div>
+<div class="section" id="tab-meeting">
+<div class="field">
+<div class="label">Meeting setup <span class="mini">Reduce defensiveness before you enter</span></div>
+<ul class="checklist" id="setupChecklist">
+<li class="check">
+<input data-check="setup_ask_meeting" name="planner-pay-increase-negotiation_field_18" type="checkbox"/>
+<div class="txt"><strong>Book a dedicated meeting</strong> (don’t ambush) and name the topic neutrally: “compensation review”.</div>
+</li>
+<li class="check">
+<input data-check="setup_manager_ok" name="planner-pay-increase-negotiation_field_19" type="checkbox"/>
+<div class="txt"><strong>Map the approval path</strong>: who decides, who influences, who blocks (so you aim correctly).</div>
+</li>
+<li class="check">
+<input data-check="setup_onepager" name="planner-pay-increase-negotiation_field_20" type="checkbox"/>
+<div class="txt"><strong>Create a one-page summary</strong> (scope → impact → ask → options). Keep it manager-safe.</div>
+</li>
+<li class="check">
+<input data-check="setup_timing" name="planner-pay-increase-negotiation_field_21" type="checkbox"/>
+<div class="txt"><strong>Time it well</strong>: link to review cycles, new responsibilities, delivered milestones, or retention need.</div>
+</li>
+</ul>
+</div>
+<div class="field">
+<div class="label">The flow <span class="mini">A clean conversation structure</span></div>
+<ul class="checklist" id="flowChecklist">
+<li class="check">
+<input data-check="flow_open" name="planner-pay-increase-negotiation_field_22" type="checkbox"/>
+<div class="txt"><strong>Open calmly</strong>: commitment + purpose + agenda (no apology language).</div>
+</li>
+<li class="check">
+<input data-check="flow_case" name="planner-pay-increase-negotiation_field_23" type="checkbox"/>
+<div class="txt"><strong>State your case</strong>: role reality + top evidence (3 points max) + market anchor if strong.</div>
+</li>
+<li class="check">
+<input data-check="flow_ask" name="planner-pay-increase-negotiation_field_24" type="checkbox"/>
+<div class="txt"><strong>Make the ask</strong>: target + effective date + range (if needed). Then pause.</div>
+</li>
+<li class="check">
+<input data-check="flow_problem_solve" name="planner-pay-increase-negotiation_field_25" type="checkbox"/>
+<div class="txt"><strong>Problem-solve constraints</strong>: “What would make this approvable?” and offer options (phased / bonus / review date).</div>
+</li>
+<li class="check">
+<input data-check="flow_close" name="planner-pay-increase-negotiation_field_26" type="checkbox"/>
+<div class="txt"><strong>Close tightly</strong>: recap, decision owner, timeline, next touchpoint, and written follow-up.</div>
+</li>
+</ul>
+</div>
+<div class="field">
+<div class="label">Follow-up discipline <span class="mini">Where most people leak leverage</span></div>
+<ul class="checklist" id="followChecklist">
+<li class="check">
+<input data-check="follow_email" name="planner-pay-increase-negotiation_field_27" type="checkbox"/>
+<div class="txt"><strong>Send a recap email</strong> the same day: what was discussed, any agreed figures, and next steps.</div>
+</li>
+<li class="check">
+<input data-check="follow_targets" name="planner-pay-increase-negotiation_field_28" type="checkbox"/>
+<div class="txt"><strong>If “not now”</strong>: leave with measurable targets + date (“If I deliver X by Y, can we move to Z?”).</div>
+</li>
+<li class="check">
+<input data-check="follow_contract" name="planner-pay-increase-negotiation_field_29" type="checkbox"/>
+<div class="txt"><strong>If agreed</strong>: ask when the contract / system will reflect it and from what effective date.</div>
+</li>
+<li class="check">
+<input data-check="follow_keep_output" name="planner-pay-increase-negotiation_field_30" type="checkbox"/>
+<div class="txt"><strong>Keep artefacts</strong>: summary, outcomes, and evidence list (you will need it again).</div>
+</li>
+</ul>
+</div>
+<div class="hint">
+                Modern reality: a lot of pay conversations are now tied to <strong>scope creep</strong>, <strong>RTO pressure</strong>, and <strong>retention</strong>. Your best angle is still the same:
+                <strong>value delivered</strong> + <strong>role level reality</strong> + a <strong>manager-defensible</strong> ask.
+              </div>
+</div>
+<div class="section" id="tab-scripts">
+<div class="field">
+<div class="label">Tone <span class="mini">Choose the posture that fits the room</span></div>
+<select id="toneSelect">
+<option selected="" value="balanced">Balanced (firm + collaborative)</option>
+<option value="direct">Direct (clear + outcome-led)</option>
+<option value="soft">Soft (relationship-first)</option>
+</select>
+</div>
+<div class="script-box">
+<div class="script-head">
+<h4><i class="fas fa-play"></i> Opening (meeting)</h4>
+<button aria-label="Copy opening" class="copy-btn" data-copy="scriptOpening"><i class="far fa-copy"></i></button>
+</div>
+<div class="script-text" id="scriptOpening"></div>
+</div>
+<div class="script-box">
+<div class="script-head">
+<h4><i class="fas fa-bullseye"></i> The ask (clean + specific)</h4>
+<button aria-label="Copy ask" class="copy-btn" data-copy="scriptAsk"><i class="far fa-copy"></i></button>
+</div>
+<div class="script-text" id="scriptAsk"></div>
+</div>
+<div class="script-box">
+<div class="script-head">
+<h4><i class="fas fa-shuffle"></i> If budget is tight (options)</h4>
+<button aria-label="Copy options" class="copy-btn" data-copy="scriptOptions"><i class="far fa-copy"></i></button>
+</div>
+<div class="script-text" id="scriptOptions"></div>
+</div>
+<div class="script-box">
+<div class="script-head">
+<h4><i class="fas fa-envelope"></i> Follow-up email (recap)</h4>
+<button aria-label="Copy follow-up" class="copy-btn" data-copy="scriptEmail"><i class="far fa-copy"></i></button>
+</div>
+<div class="script-text" id="scriptEmail"></div>
+</div>
+<div class="hint">
+                Ultra-practical rule: don’t “sell yourself” for 20 minutes. Give <strong>three proof points</strong>, make the ask, then pause.
+                Over-talking looks like uncertainty.
+              </div>
+</div>
+<div class="section" id="tab-objections">
+<div class="accordion" id="objectionAccordion"></div>
+<div class="hint">
+                Objection decoding: most pushback is not personal. It’s either <strong>budget</strong>, <strong>precedent</strong>, <strong>process</strong>, or <strong>risk to the manager</strong>.
+                Your job is to turn “no” into: <strong>criteria + pathway + date</strong>.
+              </div>
+</div>
+</div>
+<div class="card">
+<div class="card-head">
+<div class="card-title">
+<span class="bubble"><i class="fas fa-file-lines"></i></span>
+<span>Your brief</span>
+</div>
+<span class="tag" id="briefTag">LIVE</span>
+</div>
+<div class="metric-grid">
+<div class="metric">
+<div>
+<div class="k">Increase</div>
+<div class="v" id="mIncrease">—</div>
+<div class="s" id="mIncreaseSub">Set current + target pay</div>
+</div>
+<div class="ico"><i class="fas fa-arrow-trend-up"></i></div>
+</div>
+<div class="metric">
+<div>
+<div class="k">Monthly delta</div>
+<div class="v" id="mMonthly">—</div>
+<div class="s">Approx. annual/12</div>
+</div>
+<div class="ico"><i class="fas fa-calendar"></i></div>
+</div>
+<div class="metric">
+<div>
+<div class="k">Market position</div>
+<div class="v" id="mMarket">—</div>
+<div class="s" id="mMarketSub">Optional</div>
+</div>
+<div class="ico"><i class="fas fa-chart-line"></i></div>
+</div>
+<div class="metric">
+<div>
+<div class="k">Evidence count</div>
+<div class="v" id="mEvidence">0</div>
+<div class="s">Aim: 3–6 strong points</div>
+</div>
+<div class="ico"><i class="fas fa-list-check"></i></div>
+</div>
+</div>
+<div class="readiness">
+<div class="readiness-top">
+<div class="t"><i class="fas fa-signal"></i> Readiness</div>
+</div>
+<div class="bar"><span id="readinessBar"></span></div>
+<div></div>
+<div class="row-2">
+<div>
+<div class="label">Evidence strength <span class="mini">1–5</span></div>
+<input id="rEvidence" max="5" min="1" step="1" type="number" value="3"/>
+</div>
+<div>
+<div class="label">Leverage <span class="mini">1–5</span></div>
+<input id="rLeverage" max="5" min="1" step="1" type="number" value="3"/>
+</div>
+</div>
+<div></div>
+<div class="row-2">
+<div>
+<div class="label">Timing <span class="mini">1–5</span></div>
+<input id="rTiming" max="5" min="1" step="1" type="number" value="3"/>
+</div>
+<div>
+<div class="label">Manager cover <span class="mini">1–5</span></div>
+<input id="rCover" max="5" min="1" step="1" type="number" value="3"/>
+</div>
+</div>
+<div class="hint" id="readinessHint">
+                Target state: your manager can defend your ask using <strong>role level + evidence + options</strong>.
+              </div>
+</div>
+<div class="field">
+<div class="label">Your one-page summary <span class="mini">This is what you’ll copy</span></div>
+<textarea id="briefPreview" readonly=""></textarea>
+</div>
+<div class="field">
+<div class="label">Additional negotiation topics <span class="mini">Common “extras” beyond base pay</span></div>
+<div class="ev-desc">
+                Use this list to keep optional asks clean (choose <strong>1–2</strong>, not seven).
+              </div>
+<div class="ev-meta">
+<span class="mini-pill"><i class="fas fa-trophy"></i> Title / level</span>
+<span class="mini-pill"><i class="fas fa-gift"></i> Bonus</span>
+<span class="mini-pill"><i class="fas fa-graduation-cap"></i> Training budget</span>
+<span class="mini-pill"><i class="fas fa-clock"></i> Flexible pattern</span>
+<span class="mini-pill"><i class="fas fa-house"></i> Hybrid stability</span>
+<span class="mini-pill"><i class="fas fa-calendar-check"></i> Review date</span>
+</div>
+<div class="hint">
+                If you’re under RTO pressure, separate the issues: <strong>pay is value</strong> — <strong>work pattern is sustainability</strong>. Keep each request defensible.
+              </div>
+</div>
+<div class="field">
+<div class="label">Percentage calculator <span class="mini">Current gross → desired gross</span></div>
+<div class="row-2">
+<div>
+<div class="label">Current gross <span class="mini">£</span></div>
+<input id="grossCurrent" min="0" placeholder="e.g. 52000" step="500" type="number"/>
+</div>
+<div>
+<div class="label">Desired gross <span class="mini">£</span></div>
+<input id="grossDesired" min="0" placeholder="e.g. 60000" step="500" type="number"/>
+</div>
+</div>
+<div class="label">% change <span class="mini" id="grossPct">—</span></div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-head">
+<div class="card-title">
+<span class="bubble"><i class="fas fa-chess"></i></span>
+<span>Premium</span>
+</div>
+</div>
+<div class="row-2">
+<div class="script-box">
+<div class="script-head">
+<h4><i class="fas fa-lightbulb"></i> What works reliably</h4>
+<button aria-label="Copy" class="copy-btn" data-copy="worksReliably"><i class="far fa-copy"></i></button>
+</div>
+<div class="script-text" id="worksReliably"></div>
+</div>
+<div class="script-box">
+<div class="script-head">
+<h4><i class="fas fa-ban"></i> What to avoid</h4>
+<button aria-label="Copy" class="copy-btn" data-copy="avoidBox"><i class="far fa-copy"></i></button>
+</div>
+<div class="script-text" id="avoidBox"></div>
+</div>
+</div>
+<div class="hint">
+            UK reality check: there’s typically <strong>no automatic right</strong> to a pay rise unless it’s contractually agreed — but you can always propose a change.
+            The win is to leave with either <strong>an agreed change</strong> or a <strong>written pathway</strong> to one.
+          </div>
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn secondary" data-action="save-tool" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="print-only">
+<div class="print-snapshot-header">Your Pay Increase Negotiation Plan</div>
+<div class="print-snapshot-items" id="printSnapshotItems"></div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<h2 class="summary-title"><i class="fas fa-wand-magic-sparkles"></i> Your Generated Summary</h2>
+<div class="summary-block">
+<div class="summary-block-title"><i class="fas fa-file-lines"></i> Your Negotiation Brief</div>
+<div class="summary-block-content" id="summaryBrief"></div>
+</div>
+<div class="summary-block">
+<div class="summary-block-title"><i class="fas fa-play"></i> Opening Script</div>
+<div class="summary-block-content" id="summaryOpening"></div>
+</div>
+<div class="summary-block">
+<div class="summary-block-title"><i class="fas fa-bullseye"></i> The Ask</div>
+<div class="summary-block-content" id="summaryAsk"></div>
+</div>
+<div class="summary-block">
+<div class="summary-block-title"><i class="fas fa-envelope"></i> Follow-up Email</div>
+<div class="summary-block-content" id="summaryEmail"></div>
+</div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

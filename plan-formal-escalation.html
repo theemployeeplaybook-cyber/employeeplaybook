@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Formal Escalation Plan | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="plan-formal-escalation">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">The Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR Insider</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Formal Escalation Plan</span>
+</div>
+<span class="checklist-name">FORMAL ESCALATION PLAN</span>
+<h1 class="hero-main-heading">
+      Escalate with precision — protect your income, your reputation, and your position while the facts do the talking
+    </h1>
+<div class="hero-subheading">
+      This plan helps you move from “this feels wrong” to a structured escalation path that is calm, credible, and hard to dismiss.
+      It keeps you operational (still delivering where sensible), protects your narrative, and prevents unforced errors that can weaken your position.
+      <br/><br/>
+      Draft the modules below, then generate your Escalation Pack: a one-page case brief, evidence log structure, risk and income-protection checklist, and UK-friendly scripts for line management, HR, grievance, and occupational health routes.
+    </div>
+<div aria-label="Related categories" class="related-row">
+<span class="related-label">Related categories</span>
+<div class="related-pills">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html" title="Clarity, Priorities &amp; Direction">
+<i class="fas fa-bullseye category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html" title="Manager Relationship &amp; Leadership Style">
+<i class="fas fa-people-arrows"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html" title="Workplace Dynamics &amp; Politics">
+<i class="fas fa-chess category-icon"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Plan</h3>
+<ul class="bullet-list">
+<li>When a problem has become persistent (or repeated) and “informal” handling isn’t changing behaviour or outcomes.</li>
+<li>When your manager is the problem — or your manager is unable/unwilling to fix it.</li>
+<li>When there is performance, safety, wellbeing, discrimination, bullying, retaliation, pay, or contractual risk.</li>
+<li>When you need to protect your income and employability while challenging something you should not have to tolerate.</li>
+<li>When you want a structured path that prevents escalation by emotion, impulse, or “prove it” debates.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-bolt"></i>How to Use It (fast)</h3>
+<ul class="bullet-list">
+<li>Write like you’re preparing a clear brief: <strong>facts, dates, impacts, evidence</strong>. Avoid labels and mind-reading.</li>
+<li>Separate: <strong>what happened</strong> vs <strong>what it caused</strong> vs <strong>what you need</strong> to make it stop.</li>
+<li>Choose the minimum effective route first — but set a firm <strong>threshold</strong> for moving formal.</li>
+<li>Protect your delivery and boundaries: if you “break” during escalation, you hand over narrative control.</li>
+<li>Lock key points in writing (brief follow-ups). Verbal only = easily rewritten later.</li>
+</ul>
+</div>
+</div>
+<div aria-label="Pressure Mode" class="pressure-toggle-row">
+<button class="pressure-toggle" id="pressureModeBtn" title="Open a faster escalation view for high-pressure situations" type="button">
+<span aria-hidden="true" class="dot"></span>
+    Pressure Mode (fast + protective)
+    <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+<div class="workspace-wrap" id="workspace">
+<div class="workspace-header">
+<div class="workspace-title">
+<h2>Draft your formal escalation plan</h2>
+<p>
+        Eight modules to clarify the issue, build a credible evidence trail, reduce retaliation risk, and choose the right escalation route.
+        Generate your Escalation Pack when you’ve captured enough detail to act calmly and consistently.
+      </p>
+</div>
+</div>
+<div class="modules-grid" id="modulesGrid">
+</div>
+<div class="primary-actions-wrap">
+<div class="primary-actions-bottom">
+<button class="action-btn primary" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn secondary" data-action="save-tool" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+</div>
+<div class="save-status" id="saveProgressStatus">
+<span id="unsavedText"><strong>Status:</strong> —</span>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+<div class="pack-section" id="packSection">
+<div class="pack-header">
+<h2 class="pack-title">Your Escalation Pack</h2>
+<p class="pack-subtitle">
+      A structured output you can use immediately: a one-page case brief, a clean chronology, an evidence pack structure, a risk and income-protection checklist, and scripts for each escalation step.
+      This is designed to keep your tone calm, your narrative tight, and your next move deliberate.
+    </p>
+</div>
+<div class="pack-bar">
+<div class="pack-metrics">
+<div class="metric-row">
+<div class="metric-title">Draft completeness</div>
+<div class="metric-score" id="completenessScore">0%</div>
+</div>
+<div class="mini-progress"><div class="mini-fill" id="miniFill"></div></div>
+<div class="metric-row">
+<div class="metric-title">Escalation readiness</div>
+<div class="metric-score" id="readinessSignal">—</div>
+</div>
+</div>
+</div>
+<h3 class="section-header purple"><i class="fas fa-file-lines"></i> One-page case brief (paste-ready)</h3>
+<div class="pack-output">
+<div class="mono" id="onePageOutput"></div>
+</div>
+<h3 class="section-header blue"><i class="fas fa-route"></i> Escalation route map (minimum effective path)</h3>
+<div class="pack-grid" id="routeGrid"></div>
+<h3 class="section-header orange"><i class="fas fa-shield-halved"></i> Risk &amp; income protection (do not skip)</h3>
+<div class="pack-grid" id="protectionGrid"></div>
+<h3 class="section-header red"><i class="fas fa-folder-open"></i> Evidence pack structure (simple + credible)</h3>
+<div class="pack-grid" id="evidenceGrid"></div>
+<h3 class="section-header purple"><i class="fas fa-comments"></i> Scripts (calm, precise, UK-friendly)</h3>
+<div class="pack-grid" id="scriptsGrid"></div>
+</div>
+<div aria-hidden="true" class="pressure-overlay" id="pressureOverlay">
+<div aria-label="Pressure Mode" aria-modal="true" class="pressure-panel" role="dialog">
+<div class="pressure-header">
+<div class="pressure-title">
+<h3><i class="fas fa-triangle-exclamation"></i> Pressure Mode: fast, protective escalation</h3>
+<p>
+          Use this when you’re under time pressure, emotional load, or you suspect politics/retaliation risk.
+          This view keeps you safe: facts-first, minimal exposure, and clear written follow-ups.
+        </p>
+</div>
+<button aria-label="Close Pressure Mode" class="pressure-close" id="pressureCloseBtn"><i class="fas fa-times"></i></button>
+</div>
+<div class="pressure-body">
+<div class="pressure-card">
+<h4><i class="fas fa-bullseye"></i> Your only objective</h4>
+<div class="txt">Secure a credible record, a clear ask, and a defined route — without losing composure or leverage.</div>
+</div>
+<div class="pressure-card">
+<h4><i class="fas fa-pen-to-square"></i> The “written lock” rule</h4>
+<div class="txt">After any verbal conversation, send a short follow-up confirming what was agreed. If it is not written, it can be rewritten later.</div>
+</div>
+<div class="pressure-card">
+<h4><i class="fas fa-shield"></i> Minimise retaliation surface</h4>
+<div class="txt">Keep your tone neutral. Keep your output steady where reasonable. Do not threaten or “warn”. Ask for process and resolution.</div>
+</div>
+<div class="pressure-card">
+<h4><i class="fas fa-stairs"></i> The shortest safe route</h4>
+<div class="txt">1) Document → 2) Clear ask → 3) Manager/HR route → 4) Formal grievance if no change → 5) Occupational health if health impact / capacity risk.</div>
+</div>
+</div>
+<div class="pressure-actions">
+<button class="btn secondary" id="pressureCopyOnePageBtn"><i class="far fa-copy"></i> Copy one-page brief</button>
+<button class="btn danger" id="pressureOpenEvidenceBtn"><i class="fas fa-folder-open"></i> Jump to evidence module</button>
+<button class="btn primary" id="pressureOpenScriptsBtn"><i class="fas fa-comment-dots"></i> Jump to scripts module</button>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

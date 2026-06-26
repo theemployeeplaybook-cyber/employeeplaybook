@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Strategic Conversations Guide | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="guide-strategic-conversations">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-confidence-presence-influence.html">Confidence, Presence &amp; Influence</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Strategic Conversations Guide</span>
+</div>
+<span class="checklist-name">STRATEGIC CONVERSATIONS GUIDE</span>
+<h1 class="hero-main-heading" data-date="">
+<i class="fas fa-comments"></i>
+      Make important conversations work for you and your career
+    </h1>
+<div class="hero-subheading">
+      A high-leverage, outcome-led guide for the moments that quietly decide careers: scope resets, pushback, performance tension, stakeholder conflict, promotion conversations, and “we need to talk” meetings.
+      Build your frame, control the questions, and land a clean decision — with minimal drama and maximum credibility.
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill" href="category-career-playbook.html">
+<i class="fas fa-chess"></i>
+<span>Career Playbook</span>
+</a>
+<a class="category-pill" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-user-shield"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-people-group"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+<div class="hero-disclaimer">
+<strong>Disclaimer:</strong> This guide is for practical conversation planning and workplace positioning. It does not replace your employer’s policies, HR support, union/representative advice, or tailored legal advice. If there are harassment/discrimination concerns or you feel unsafe, seek appropriate support promptly.
+    </div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>When to Use This Guide</h3>
+<ul class="bullet-list">
+<li>When you need a decision, not a “nice chat” that later gets reinterpreted.</li>
+<li>When someone is vague, slippery, or keeps moving the goalposts.</li>
+<li>When you’re about to push back on workload, scope, deadlines, or responsibility.</li>
+<li>When a stakeholder is blocking, stalling, or quietly undermining your work.</li>
+<li>When a performance conversation is brewing and you want facts, not vibes.</li>
+<li>When you need to ask for something senior people hate giving: time, headcount, budget, or a clear call.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Underrated Conversation Hacks</h3>
+<div class="tip-badges">
+<span class="tip-badge">Decision framing</span>
+<span class="tip-badge">Silence leverage</span>
+<span class="tip-badge">The recap trap</span>
+</div>
+<ul class="bullet-list">
+<li><strong>Ask for the decision type first:</strong> “Is this a decision, a discussion, or an update?” It stops time-wasting and forces clarity.</li>
+<li><strong>Pre-wire beats persuasion:</strong> the meeting is rarely where influence happens — it’s where it becomes official.</li>
+<li><strong>Use “two-lane options”:</strong> present two clean paths (both acceptable). People feel in control, and you avoid begging.</li>
+<li><strong>Use silence as a tool:</strong> ask a precise question, then stop talking. Most people fill silence with the truth.</li>
+<li><strong>Win with the recap:</strong> if you do nothing else, write a calm recap that fixes the facts. That’s how careers stay clean.</li>
+</ul>
+</div>
+</div>
+<div class="framework-shell" id="frameworkBlueprint">
+<div class="framework-header">
+<h2>Conversation Blueprint</h2>
+<p>Complete the blueprint to generate: a crisp opening frame, a question ladder, a decision request, and a follow-up recap that’s hard to misread.</p>
+</div>
+<div class="canvas-grid">
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-bullseye"></i> 1) Target the Conversation</div>
+</div>
+<div class="panel-sub">Make it specific: who owns the decision, what “done” looks like, and what happens if this stays fuzzy.</div>
+<div class="field-grid">
+<div class="field">
+<div class="label">Who is the decision owner?</div>
+<input class="input sa-input" data-dimension="read" id="x_who" placeholder="E.g., Line manager / Director / Key stakeholder"/>
+</div>
+<div class="field">
+<div class="label">Relationship type</div>
+<select class="select sa-input" data-dimension="read" id="x_reltype">
+<option selected="" value="">Select…</option>
+<option value="Manager (direct line)">Manager (direct line)</option>
+<option value="Senior leader (skip-level)">Senior leader (skip-level)</option>
+<option value="Peer / colleague">Peer / colleague</option>
+<option value="Cross-functional partner">Cross-functional partner</option>
+<option value="Direct report">Direct report</option>
+<option value="Client / external stakeholder">Client / external stakeholder</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Conversation setting</div>
+<select class="select sa-input" data-dimension="read" id="x_where">
+<option selected="" value="">Select…</option>
+<option value="1:1 (private)">1:1 (private)</option>
+<option value="Meeting (multiple people)">Meeting (multiple people)</option>
+<option value="Skip-level / senior forum">Skip-level / senior forum</option>
+<option value="Message (Teams/Slack)">Message (Teams/Slack)</option>
+<option value="Email (evidence-friendly)">Email (evidence-friendly)</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Timing pressure</div>
+<select class="select sa-input" data-dimension="impact" id="x_freq">
+<option selected="" value="">Select…</option>
+<option value="Low (can wait)">Low (can wait)</option>
+<option value="Medium (this week)">Medium (this week)</option>
+<option value="High (next 48 hours)">High (next 48 hours)</option>
+<option value="Critical (today)">Critical (today)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Current reality (facts)</div>
+<textarea class="textarea sa-input reduced-textarea" data-dimension="read" id="x_facts" placeholder="E.g.,Scope has expanded without deadline move.Feedback is broad but not tied to examples.A stakeholder is blocking sign-off without stating criteria."></textarea>
+</div>
+<div class="field span-2">
+<div class="label">What’s at stake?</div>
+<textarea class="textarea sa-input reduced-textarea" data-dimension="impact" id="x_impact" placeholder="E.g., Missed deadlines, reputational risk, burnout, a narrative that you're 'not delivering', or work becoming unmanageable."></textarea>
+</div>
+<div class="field">
+<div class="label">Priority outcome</div>
+<select class="select sa-input" data-dimension="impact" id="x_protect">
+<option selected="" value="">Select…</option>
+<option value="Role security / performance standing">Role security / performance standing</option>
+<option value="Reputation / credibility">Reputation / credibility</option>
+<option value="Workload sustainability">Workload sustainability</option>
+<option value="Progression / visibility">Progression / visibility</option>
+<option value="Delivery quality / team stability">Delivery quality / team stability</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Conversation aim</div>
+<select class="select sa-input" data-dimension="read" id="x_goal">
+<option selected="" value="">Select…</option>
+<option value="Get a decision (yes/no/criteria)">Get a decision (yes/no/criteria)</option>
+<option value="Reset scope / expectations">Reset scope / expectations</option>
+<option value="Push back (time/capacity)">Push back (time/capacity)</option>
+<option value="Clarify performance concerns">Clarify performance concerns</option>
+<option value="Negotiate (trade-offs)">Negotiate (trade-offs)</option>
+<option value="Escalate (formal route / HR)">Escalate (formal route / HR)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Success definition</div>
+<input class="input sa-input" data-dimension="read" id="x_better" placeholder="E.g., Clear decision + criteria, owners and deadlines written, scope trade-off agreed, or a formal next step confirmed."/>
+</div>
+</div>
+<div class="micro-cards">
+<div class="micro">
+<h4><i class="fas fa-sitemap"></i> The “decision type” question</h4>
+<p>Start with: <strong>“Before we get into details — is this a decision, a discussion, or an update?”</strong> It quietly forces structure and exposes avoidance.</p>
+</div>
+<div class="micro">
+<h4><i class="fas fa-pen-to-square"></i> The recap trap (your safety net)</h4>
+<p>If someone later rewrites the conversation, your calm recap becomes reality. Keep it boring: <code>decision • criteria • owner • deadline</code>.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-chess"></i> 2) Power &amp; Obstacle Diagnostic</div>
+</div>
+<div class="panel-sub">Identify what’s really happening. Then pick a move that creates a decision without creating a fight.</div>
+<div class="field-grid">
+<div class="field">
+<div class="label">Obstacle pattern</div>
+<select class="select sa-input" data-dimension="impact" id="p_pattern">
+<option selected="" value="">Select…</option>
+<option value="Vagueness (no criteria, no specifics)">Vagueness (no criteria, no specifics)</option>
+<option value="Stalling (delays, ‘let’s see’, no timeline)">Stalling (delays, ‘let’s see’, no timeline)</option>
+<option value="Scope creep (more asks, same deadline)">Scope creep (more asks, same deadline)</option>
+<option value="Goalpost shifting (criteria keeps changing)">Goalpost shifting (criteria keeps changing)</option>
+<option value="Political veto (unspoken objections)">Political veto (unspoken objections)</option>
+<option value="Blame drift (positioning you as the issue)">Blame drift (positioning you as the issue)</option>
+<option value="Control play (micromanage / gatekeep)">Control play (micromanage / gatekeep)</option>
+<option value="Performance fog (vibes, not evidence)">Performance fog (vibes, not evidence)</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Their power source</div>
+<select class="select sa-input" data-dimension="impact" id="p_power">
+<option selected="" value="">Select…</option>
+<option value="Performance narrative / ratings">Performance narrative / ratings</option>
+<option value="Work allocation / scope">Work allocation / scope</option>
+<option value="Budget / headcount">Budget / headcount</option>
+<option value="Stakeholder influence">Stakeholder influence</option>
+<option value="Gatekeeping (approval / sign-off)">Gatekeeping (approval / sign-off)</option>
+<option value="Expertise / authority">Expertise / authority</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Blowback risk</div>
+<select class="select sa-input" data-dimension="safeguards" id="p_retaliation">
+<option selected="" value="">Select…</option>
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Stakes level</div>
+<select class="select sa-input" data-dimension="impact" id="p_severity">
+<option selected="" value="">Select…</option>
+<option value="1 - Low (mostly alignment)">1 - Low (mostly alignment)</option>
+<option value="2 - Medium (delivery risk)">2 - Medium (delivery risk)</option>
+<option value="3 - High (credibility risk)">3 - High (credibility risk)</option>
+<option value="4 - Critical (performance / exit risk)">4 - Critical (performance / exit risk)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Your typical mistake under pressure</div>
+<input class="input sa-input" data-dimension="read" id="p_trigger" placeholder="E.g., Over-explain, apologise too early, argue details, get emotional, chase approval, go vague back."/>
+</div>
+<div class="field span-2">
+<div class="label">Your strategic one-liner</div>
+<input class="input sa-input" data-dimension="behaviours" id="p_counter" placeholder="E.g., ‘Happy to adjust — we’ll need to choose the trade-off: scope, timeline, or resources.’"/>
+</div>
+<div class="field span-2">
+<div class="label">Question ladder (3–5)</div>
+<textarea class="textarea sa-input expanded-textarea" data-dimension="behaviours" id="p_questions" placeholder="E.g., ‘What does good look like, specifically?’ ‘What’s the decision needed today?’ ‘What criteria would change your mind?’ ‘Who else needs to be comfortable with this?’"></textarea>
+</div>
+</div>
+<div class="output-box expanded-output">
+<div class="output-title">
+<h4>Opening frame (auto)</h4>
+<div>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="resp_line_out">Click “Build” to generate a crisp opening frame you can say out loud — without sounding defensive.</div>
+</div>
+</div>
+</div>
+<div class="canvas-grid">
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-route"></i> 3) Script &amp; Move Plan</div>
+</div>
+<div class="panel-sub">The goal is not to “win”. It’s to land a clean decision while staying credible.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label">Your ask / boundary</div>
+<input class="input sa-input" data-dimension="behaviours" id="r_boundary" placeholder="E.g., ‘I can deliver A by Friday. If you want B as well, we’ll need to move the date or drop C.’"/>
+</div>
+<div class="field span-2">
+<div class="label">Your fallback (if they refuse)</div>
+<input class="input sa-input" data-dimension="behaviours" id="r_consequence" placeholder="E.g., ‘If we can’t agree criteria today, I’ll send two options with trade-offs and ask you to choose by tomorrow.’"/>
+</div>
+<div class="field">
+<div class="label">Preferred channel</div>
+<select class="select sa-input" data-dimension="behaviours" id="r_channel">
+<option selected="" value="">Select…</option>
+<option value="Live (meeting)">Live (meeting)</option>
+<option value="1:1 (private)">1:1 (private)</option>
+<option value="Message (Teams/Slack)">Message (Teams/Slack)</option>
+<option value="Email (evidence-friendly)">Email (evidence-friendly)</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Tone target</div>
+<select class="select sa-input" data-dimension="behaviours" id="r_tone">
+<option selected="" value="">Select…</option>
+<option value="Neutral (facts only)">Neutral (facts only)</option>
+<option value="Warm-firm (respect + line)">Warm-firm (respect + line)</option>
+<option value="Formal (policy-safe)">Formal (policy-safe)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Your pre-wire move (before the meeting)</div>
+<input class="input sa-input" data-dimension="behaviours" id="r_first" placeholder="E.g., Send a one-page options note; align with a friendly stakeholder; confirm decision criteria; share evidence examples upfront."/>
+</div>
+<div class="field span-2">
+<div class="label">What you will stop doing</div>
+<textarea class="textarea sa-input reduced-textarea" data-dimension="behaviours" id="r_stop" placeholder="E.g., Stop defending every detail, stop over-talking, stop reacting to tone, stop agreeing to fuzzy work, stop leaving decisions unwritten."></textarea>
+</div>
+</div>
+<div class="micro-cards">
+<div class="micro">
+<h4><i class="fas fa-arrows-left-right"></i> Two-lane options (quiet power move)</h4>
+<p>Offer <strong>two workable paths</strong> (both acceptable). Example: “Option A meets quality and date. Option B meets date but reduces scope.” You’re not asking — you’re structuring.</p>
+</div>
+<div class="micro">
+<h4><i class="fas fa-pause"></i> The five-second rule</h4>
+<p>After your key question, pause. If you fill the silence, you often negotiate against yourself.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-shield-halved"></i> 4) Evidence &amp; Follow-through Guardrails (UK)</div>
+</div>
+<div class="panel-sub">If things turn political, your protection is a clean record and a clean recap.</div>
+<div class="field-grid">
+<div class="field span-2">
+<div class="label">Your proof points</div>
+<textarea class="textarea sa-input" data-dimension="safeguards" id="e_document" placeholder="E.g., Delivered X on date; stakeholder feedback; data; email trails; agreed requirements; risk log; decisions already made."></textarea>
+</div>
+<div class="field">
+<div class="label">Formal route (if needed)</div>
+<select class="select sa-input" data-dimension="safeguards" id="e_policy">
+<option selected="" value="">Select…</option>
+<option value="Informal resolution / manager conversation">Informal resolution / manager conversation</option>
+<option value="HR advice (confidential guidance)">HR advice (confidential guidance)</option>
+<option value="Grievance process">Grievance process</option>
+<option value="Performance process (if initiated)">Performance process (if initiated)</option>
+<option value="Union / employee representative">Union / employee representative</option>
+</select>
+</div>
+<div class="field">
+<div class="label">Ally / sponsor</div>
+<select class="select sa-input" data-dimension="safeguards" id="e_support">
+<option selected="" value="">Select…</option>
+<option value="Trusted senior sponsor">Trusted senior sponsor</option>
+<option value="Peer ally (influential)">Peer ally (influential)</option>
+<option value="Union rep / companion">Union rep / companion</option>
+<option value="HR business partner">HR business partner</option>
+<option value="Occupational Health (if relevant)">Occupational Health (if relevant)</option>
+</select>
+</div>
+<div class="field span-2">
+<div class="label">Your red lines</div>
+<textarea class="textarea sa-input" data-dimension="safeguards" id="e_redlines" placeholder="E.g., Vague performance criticism without examples; repeated goalpost shifts; public undermining; threats; decisions being rewritten after the fact."></textarea>
+</div>
+<div class="field span-2">
+<div class="label">Escalation trigger</div>
+<input class="input sa-input" data-dimension="safeguards" id="e_trigger" placeholder="E.g., If criteria stay vague after two attempts OR scope increases again without trade-off, I escalate with options + impact + proposed decision."/>
+</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>14-day momentum plan (auto)</h4>
+<div>
+<button class="mini-btn"><i class="fas fa-bolt"></i> Build</button>
+</div>
+</div>
+<div class="output-content" id="stabilise14_out">Click “Build” to generate a 14-day sequence: pre-wire → run the conversation → recap → follow-through.</div>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-clipboard-list"></i> Conversation Log (optional, but powerful)</div>
+</div>
+<div class="panel-sub">This is the quietly elite move: date, decision, criteria, next step. You’re building a clean record — not a diary.</div>
+<table class="timeline-table" id="timelineTable">
+<thead>
+<tr>
+<th>Date</th>
+<th>What was discussed (fact)</th>
+<th>Decision / criteria</th>
+<th>Attendees</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody id="timelineBody">
+<tr>
+<td><input class="input sa-input" data-dimension="safeguards" name="guide-strategic-conversations_field_28" placeholder="DD/MM/YYYY"/></td>
+<td><input class="input sa-input" data-dimension="read" name="guide-strategic-conversations_field_29" placeholder="Key points only"/></td>
+<td><input class="input sa-input" data-dimension="impact" name="guide-strategic-conversations_field_30" placeholder="Decision, criteria, or next step"/></td>
+<td><input class="input sa-input" data-dimension="safeguards" name="guide-strategic-conversations_field_31" placeholder="Names"/></td>
+<td>
+<select class="select sa-input" data-dimension="safeguards" name="guide-strategic-conversations_field_32">
+<option selected="" value="">Select…</option>
+<option value="Email / message">Email / message</option>
+<option value="Meeting notes">Meeting notes</option>
+<option value="Ticket / system log">Ticket / system log</option>
+<option value="Document / deck">Document / deck</option>
+<option value="Other">Other</option>
+</select>
+</td>
+</tr>
+</tbody>
+</table>
+<div>
+<button class="mini-btn"><i class="fas fa-plus"></i> Add row</button>
+<button class="mini-btn"><i class="fas fa-minus"></i> Remove row</button>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title-row">
+<div class="panel-title"><i class="fas fa-file-lines"></i> Executive Outputs</div>
+</div>
+<div class="panel-sub">Copy/paste ready: a one-paragraph brief, a meeting opener, and a recap email that pins the facts without sounding petty.</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Conversation brief (one paragraph)</h4>
+</div>
+<div class="output-content" id="out_summary">Complete the blueprint, then click "Generate outputs".</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Power &amp; risk snapshot</h4>
+</div>
+<div class="output-content" id="out_risk">—</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Meeting opener + question ladder</h4>
+</div>
+<div class="output-content" id="out_opener">—</div>
+</div>
+<div class="output-box">
+<div class="output-title">
+<h4>Follow-up recap email (hard to misread)</h4>
+</div>
+<div class="output-content" id="out_followup">—</div>
+</div>
+</div>
+<div class="primary-actions-bottom">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+    </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+    </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+    </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+    </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title"><i class="fas fa-list-check"></i> Quick Coverage Checklist</h2>
+<div class="checklist-intro">Final audit: if you tick these, you’re walking in calm, clear, and hard to shake.</div>
+<div class="checklist-grid">
+<div class="checklist-item" data-category="read">
+<i class="far fa-square"></i>
+<div class="checklist-text">I can state the current reality in facts (not tone, blame, or guessing motives).</div>
+</div>
+<div class="checklist-item" data-category="read">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve defined the decision I need (or the criteria I need) in one sentence.</div>
+</div>
+<div class="checklist-item" data-category="impact">
+<i class="far fa-square"></i>
+<div class="checklist-text">I know what’s at stake and can explain impact clearly (delivery / credibility / workload).</div>
+</div>
+<div class="checklist-item" data-category="impact">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’ve identified the obstacle pattern (vagueness, stalling, scope creep, political veto, etc.).</div>
+</div>
+<div class="checklist-item" data-category="behaviours">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have an opening frame that sets structure without sounding defensive.</div>
+</div>
+<div class="checklist-item" data-category="behaviours">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have a short question ladder that forces clarity and exposes avoidance.</div>
+</div>
+<div class="checklist-item" data-category="behaviours">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’m using trade-offs (two-lane options) rather than asking for permission.</div>
+</div>
+<div class="checklist-item" data-category="safeguards">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have proof points ready (examples/evidence) in case this gets political.</div>
+</div>
+<div class="checklist-item" data-category="safeguards">
+<i class="far fa-square"></i>
+<div class="checklist-text">I know my red lines and what would trigger escalation (objective criteria).</div>
+</div>
+<div class="checklist-item" data-category="behaviours">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have a pre-wire move to reduce surprises before the meeting.</div>
+</div>
+<div class="checklist-item" data-category="safeguards">
+<i class="far fa-square"></i>
+<div class="checklist-text">I will send a calm recap that locks decision/criteria/owners/deadlines in writing.</div>
+</div>
+<div class="checklist-item" data-category="impact">
+<i class="far fa-square"></i>
+<div class="checklist-text">I’m protecting a priority outcome (role security, reputation, workload, progression).</div>
+</div>
+</div>
+</div>
+<div class="clarity-score-section">
+<div class="presence-snapshot-header">
+<h2>Your Strategic Conversation Snapshot</h2>
+<p>This score reflects your <strong>checklist completion only</strong> — a simple coverage gauge you control. (The blueprint still powers the outputs below.)</p>
+</div>
+<div class="clarity-score-bar">
+<div class="clarity-progress-container">
+<div class="clarity-header">
+<div class="clarity-title">Conversation Readiness Score</div>
+<div class="clarity-percentage" id="clarityPercentage">0%</div>
+</div>
+<div class="progress-container">
+<div class="mini-fill low" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Loose</span><span>Developing</span><span>Solid</span>
+</div>
+<div class="presence-dimensions">
+<div class="presence-dimension-pill"><span class="label">Objective &amp; Context</span><span class="score" id="scoreVoice">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Power &amp; Stakes</span><span class="score" id="scoreStructure">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Script &amp; Questions</span><span class="score" id="scoreChallenge">0%</span></div>
+<div class="presence-dimension-pill"><span class="label">Follow-through</span><span class="score" id="scoreNonverbal">0%</span></div>
+</div>
+</div>
+<div class="primary-actions-bottom1">
+<button class="action-btn primary" disabled="" id="generateOutputsBtnBottom">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtnBottom">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtnBottom">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtnBottom">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-status" id="saveStatusBottom">
+<span id="unsavedTextBottom"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedTextBottom"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Smart Conversation Summary</h2>
+<p class="summary-subtitle">Based on your readiness score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">Highlights what’s missing, what’s risky, and the cleanest next move — so you walk in calm and walk out with something written.</p>
+</div>
+<h3 class="section-header red"><i class="fas fa-exclamation-triangle"></i> Red Flags in Your Plan</h3>
+<div class="red-flags-grid" id="redFlagsGrid"></div>
+<h3 class="section-header purple"><i class="fas fa-forward"></i> Next Moves (Controlled + Effective)</h3>
+<div class="next-steps-grid" id="nextStepsGrid"></div>
+<h3 class="section-header blue"><i class="fas fa-tools"></i> Recommended Tools to Support You</h3>
+<div class="resources-grid" id="resourcesGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>

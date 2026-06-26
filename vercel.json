@@ -1,0 +1,68 @@
+{
+  "cleanUrls": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy-and-security.html",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms-and-conditions.html",
+      "permanent": true
+    },
+    {
+      "source": "/dashboard.html",
+      "destination": "/the-toolkit.html",
+      "permanent": true
+    },
+    {
+      "source": "/category-expectation-burnout-and-boundary.html",
+      "destination": "/category-expectation-burnout-and-capacity.html",
+      "permanent": true
+    },
+    {
+      "source": "/category-confidence-presence-and-influence.html",
+      "destination": "/category-confidence-presence-influence.html",
+      "permanent": true
+    },
+    {
+      "source": "/category-hr-and-formal-processes.html",
+      "destination": "/category-hr-insider.html",
+      "permanent": true
+    },
+    {
+      "source": "/planner-overload-and-capacity.html",
+      "destination": "/plan-sustainable-pace.html",
+      "permanent": true
+    },
+    {
+      "source": "/checklist-hr-performance-review.htm",
+      "destination": "/checklist-hr-performance-review.html",
+      "permanent": true
+    }
+  ]
+}
