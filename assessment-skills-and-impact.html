@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Skills &amp; Impact Assessment | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="assessment-skills-and-impact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<a class="mobile-cta-tab" href="#" id="mobileMyPlaybookTab">My Playbook</a>
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-career-playbook.html">Career Playbook</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Skills &amp; Impact Assessment</span>
+</div>
+<span class="checklist-name">SKILLS &amp; IMPACT ASSESSMENT</span>
+<h1 class="hero-main-heading">Find the skill moves that actually change your leverage and proves your impact</h1>
+<div class="hero-subheading">
+        Assess your <strong>strength</strong> and <strong>visibility</strong>. Rate the dimensions below, then generate a premium read:
+        your high-leverage upgrades, your credibility story (what others can <em>repeat</em> about you), and the quickest proof you can build in 14 days.
+      </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Related Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-compass category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill confidence" href="category-confidence-presence-influence.html">
+<i class="fas fa-chart-line category-icon"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-crosshairs"></i>When to Use This</h3>
+<ul class="bullet-list">
+<li>When you work hard but your name doesn't come up when promotions or top projects are discussed.</li>
+<li>When you want to grow income, influence, or options without burning more hours.</li>
+<li>When feedback feels vague ("be more strategic") and you want something you can act on.</li>
+<li>When you're changing roles or recovering from a reputational wobble and need a clean narrative.</li>
+<li>When you want a 14-day proof plan that creates undeniable signal.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Rate based on what you can do <strong>under pressure</strong>, not on a good day.</li>
+<li>Impact is not effort — it's <strong>change</strong>: decisions made, risk reduced, time saved, revenue protected.</li>
+<li>"Visibility" isn't performative. It's <strong>traceability</strong>: can others cite your decisions and outcomes?</li>
+<li>Focus your upgrades on the dimensions that unlock leverage: <strong>clarity, influence, prioritisation, and proof</strong>.</li>
+<li>Use the skills sidebar for "micro-moves" that raise signal without inviting politics.</li>
+</ul>
+</div>
+</div>
+<div class="checklist-body" id="assessmentBody">
+<h2 class="checklist-section-title">Rate Your Skills &amp; Impact</h2>
+<div class="subsection-row">
+<div class="subsection-note">
+        Slide each dimension from 0–10. Click a card to open the left panel for deeper interpretation, traps, and micro-moves.
+        This tool is built to surface what changes your positioning fastest.
+      </div>
+<div class="subsection-tools">
+<button class="mini-pill secondary" data-action="reset-tool" type="button"><i class="fas fa-rotate-left"></i> Reset</button>
+<button class="mini-pill" type="button"><i class="fas fa-user"></i> Individual Contributor</button>
+<button class="mini-pill" type="button"><i class="fas fa-people-group"></i> Manager</button>
+</div>
+</div>
+<div class="dims-grid" id="dimsGrid">
+</div>
+</div>
+<section class="manager-profile-section" id="insightEngine">
+<div class="manager-profile-card">
+<div class="profile-header-row">
+<div class="profile-title-wrap">
+<div class="profile-title"><i class="fas fa-sparkles"></i> Your Skill Signal Read (Live)</div>
+<div class="profile-sub">
+            This is the "so what?" layer: where your leverage is, where your positioning leaks, and what to do next.
+            Use the tabs to switch the lens — it updates instantly.
+          </div>
+<div aria-label="Insight tabs" class="insight-tabs" role="tablist">
+<button aria-selected="true" class="tab-btn active" id="tabSnapshot" type="button">Snapshot</button>
+<button aria-selected="false" class="tab-btn" id="tabLeverage" type="button">Leverage Upgrades</button>
+<button aria-selected="false" class="tab-btn" id="tabProof" type="button">Proof Plan</button>
+<button aria-selected="false" class="tab-btn" id="tabRisk" type="button">Positioning Risks</button>
+</div>
+</div>
+<div class="profile-meta">
+<div class="risk-chip medium" id="riskChip">
+<span class="risk-dot"></span>
+<span id="riskLabel">Impact: building signal</span>
+</div>
+</div>
+</div>
+<div class="profile-grid">
+<div class="profile-panel">
+<div class="panel-title"><i class="fas fa-compass"></i> What your scores say</div>
+<div class="panel-body" id="insightMain">
+            Move a slider to generate your read. The goal is not perfection — it's where you can change leverage fastest.
+          </div>
+<ul class="micro-list" id="insightBullets"></ul>
+</div>
+<div class="profile-panel">
+<div class="panel-title"><i class="fas fa-shield-halved"></i> Next best moves</div>
+<div class="panel-body" id="insightMoves">
+            Your next moves will appear here: practical actions that increase signal without increasing drama.
+          </div>
+<div class="profile-note" id="insightNote">
+<i class="fas fa-circle-info"></i>
+<div>
+<strong>Signal beats intention.</strong> Most careers stall because impact exists but isn't legible. Your job is to make outcomes easy to repeat.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="clarity-score-section">
+<div class="presence-snapshot-header">
+<h2>Your Overall Skill Signal</h2>
+<p>
+        This is a weighted read of how "promotable and referenceable" your impact looks on paper.
+        It rewards decision quality, visibility, and outcomes — not just effort.
+      </p>
+</div>
+<div class="clarity-score-bar">
+<div class="clarity-progress-container">
+<div class="clarity-header">
+<div class="clarity-title">Overall Signal Score</div>
+<div class="clarity-percentage" id="overallScore">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Low visibility</span>
+<span>Mixed signal</span>
+<span>High leverage</span>
+</div>
+<div class="impact-grid">
+<div class="impact-pill">
+<span class="label">Impact</span>
+<span class="score" id="scoreImpact">0%</span>
+</div>
+<div class="impact-pill">
+<span class="label">Visibility</span>
+<span class="score" id="scoreVisibility">0%</span>
+</div>
+<div class="impact-pill">
+<span class="label">Credibility</span>
+<span class="score" id="scoreCredibility">0%</span>
+</div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+        </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+        </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+        </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+        </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="print-only" id="printSnapshotBlock">
+<div class="print-snapshot-header">Your Skills &amp; Impact Assessment</div>
+<div class="print-snapshot-items" id="printSnapshotItems"></div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Skills &amp; Impact Summary</h2>
+<p class="summary-subtitle">Overall Signal Score: <span id="summaryScore">0%</span></p>
+<p class="summary-insight" id="summaryInsight">
+        This is a positioning read: what's working, what's missing, and the quickest upgrades to improve leverage and options.
+      </p>
+</div>
+<h3 class="section-header red">
+<i class="fas fa-triangle-exclamation"></i> Positioning Leaks (What can quietly limit you)
+    </h3>
+<div class="red-flags-grid" id="redFlagsGrid"></div>
+<h3 class="section-header purple">
+<i class="fas fa-forward"></i> 14-Day Leverage Plan (Ordered)
+    </h3>
+<div class="next-steps-grid" id="nextStepsGrid"></div>
+<h3 class="section-header blue">
+<i class="fas fa-toolbox"></i> Recommended Tools to Support You
+    </h3>
+<div class="resources-grid" id="resourcesGrid"></div>
+</div>
+<div aria-hidden="true" class="step-sidebar-overlay" id="stepOverlay">
+<aside aria-label="Skill details panel" class="step-sidebar" id="stepSidebar">
+<div class="step-sidebar-topbar">
+<div class="step-top-row">
+<div class="step-chip">
+<div class="step-badge" id="stepBadge">1</div>
+<div class="step-chip-text">
+<div class="step-chip-title" id="stepTitle">Skill</div>
+<div class="step-chip-sub" id="stepSubtitle">Interpretation • traps • micro-moves</div>
+</div>
+</div>
+<button aria-label="Close skill panel" class="step-close-btn" id="closeStepSidebar">
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
+<div class="step-sidebar-body">
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-bullseye"></i>What strong looks like</div>
+<p id="stepStrongDef"></p>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-eye"></i>How it shows up (what others notice)</div>
+<ul class="step-mini-list" id="stepSignals"></ul>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-triangle-exclamation"></i>Common trap</div>
+<p id="stepTrap"></p>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-bolt"></i>Micro-move (low drama, high signal)</div>
+<p id="stepMicro"></p>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-quote-right"></i>Try this line</div>
+<p id="stepLine"></p>
+</div>
+<div class="step-card">
+<div class="step-card-title"><i class="fas fa-file-lines"></i>Proof you can build in 14 days</div>
+<p id="stepProof"></p>
+</div>
+</div>
+<div class="step-sidebar-footer">
+<button class="step-footer-btn secondary" id="prevStepBtn"><i class="fas fa-arrow-left"></i> Previous</button>
+<button class="step-footer-btn secondary" id="nextStepBtn">Next <i class="fas fa-arrow-right"></i></button>
+<button class="step-footer-btn primary" id="focusSkillBtn">
+<i class="fas fa-crosshairs"></i> Make this a focus
+        </button>
+</div>
+</aside>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

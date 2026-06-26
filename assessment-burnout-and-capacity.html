@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Burnout Warning Assessment — spot warning signs early, generate a protection plan, and save your progress." />
+  <title>Burnout Warning Assessment | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="assessment-burnout-and-capacity">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="planner-shell">
+<div aria-labelledby="tabAssessment" class="planner-panel active" id="panelAssessment" role="tabpanel">
+<div class="planner-title-row">
+<div>
+<div class="planner-h2">Burnout Warning Assessment</div>
+<div class="planner-lede">
+            Slide each item from <strong>0–10</strong> based on the last 10–14 days.
+            This gives you a clear level and shows which domain is driving the risk.
+          </div>
+</div>
+<div class="micro-badges">
+<span class="badge"><i class="fa-solid fa-radar"></i> Spot early signals</span>
+<span class="badge"><i class="fa-solid fa-umbrella"></i> Build protection</span>
+</div>
+</div>
+<div class="assessment-body" id="assessmentBody"></div>
+<div class="score-section">
+<div class="score-bar">
+<div class="score-progress">
+<div class="score-header">
+<div class="score-title"><i class="fa-solid fa-fire"></i> Burnout Warning Level</div>
+<div class="score-value" id="burnoutPct">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill stable" id="burnoutFill"></div>
+</div>
+<div class="progress-labels">
+<span>Stable</span>
+<span>Strained</span>
+<span>High Risk</span>
+<span>Critical</span>
+</div>
+<div aria-label="Domain breakdown" class="dimension-pills">
+<div class="dimension-pill"><span class="label">Energy</span><span class="score" id="dim_energy">0%</span></div>
+<div class="dimension-pill"><span class="label">Cognition</span><span class="score" id="dim_cognitive">0%</span></div>
+<div class="dimension-pill"><span class="label">Emotional</span><span class="score" id="dim_emotional">0%</span></div>
+<div class="dimension-pill"><span class="label">Recovery</span><span class="score" id="dim_recovery">0%</span></div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+            </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+            </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+            </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+            </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="summary-section" id="summarySection">
+<div class="summary-header">
+<h2 class="summary-title">Your Burnout Warning Summary</h2>
+<p class="summary-subtitle">Based on your sliders (last 10–14 days).</p>
+<div class="risk-pill" id="riskPill">
+<span class="dot"></span>
+<span id="riskLabel">Stable</span>
+<span>•</span>
+<span><strong id="riskPctInline">0%</strong></span>
+</div>
+</div>
+<div class="mini-breakdown">
+<div class="break-card">
+<div class="break-title"><i class="fa-solid fa-chart-simple"></i>What’s driving your score</div>
+<div class="break-sub">Highest domain = your fastest intervention lever.</div>
+<div class="bars" id="domainBars"></div>
+</div>
+<div class="break-card">
+<div class="break-title"><i class="fa-solid fa-bullseye"></i>What this means in real life</div>
+<div class="break-sub" id="meaningText">Answer at least one item to generate your interpretation.</div>
+<div class="break-sub" id="protectText">
+<strong>Next:</strong> Use the <em>Protection Plan Builder</em> tab to turn this into one boundary + one recovery rule you can actually keep.
+            </div>
+</div>
+</div>
+<h3 class="section-header"><i class="fa-solid fa-triangle-exclamation"></i> The Red Flags to Take Seriously</h3>
+<div class="grid-3" id="redFlagsGrid"></div>
+<h3 class="section-header"><i class="fa-solid fa-forward"></i> The Moves That Reduce Risk Fast</h3>
+<div class="grid-3" id="nextMovesGrid"></div>
+<h3 class="section-header"><i class="fa-solid fa-toolbox"></i> Recommended Tools (High Impact)</h3>
+<div class="grid-3" id="toolsGrid"></div>
+</div>
+</div>
+<div aria-labelledby="tabPlan" class="planner-panel" id="panelPlan" role="tabpanel">
+<div class="planner-title-row">
+<div>
+<div class="planner-h2">Protection Plan Builder</div>
+<div class="planner-lede">
+            Turn awareness into action. Identify the <strong>drivers</strong>, choose a <strong>non-negotiable protection move</strong>,
+            and write a <strong>short operating rule</strong> that stops burnout quietly returning.
+          </div>
+</div>
+<div class="micro-badges">
+<span class="badge"><i class="fa-solid fa-shield-heart"></i> Reduce strain</span>
+<span class="badge"><i class="fa-solid fa-comment-dots"></i> Prepare a conversation</span>
+<span class="badge"><i class="fa-solid fa-calendar-days"></i> Lock a 2-week reset</span>
+</div>
+</div>
+<div class="worksheet-grid">
+<div class="worksheet-card full">
+<div class="field-title">
+<h4><i class="fa-solid fa-pen-nib"></i> Your situation in one sentence</h4>
+<span class="hint">Clarity beats chaos</span>
+</div>
+<input class="input" id="sitSentence" placeholder="Example: 'I’m delivering, but I’m constantly reactive and exhausted by midweek.'"/>
+</div>
+<div class="worksheet-card full">
+<div class="field-title">
+<h4><i class="fa-solid fa-bolt"></i> Top 3 drivers (what’s actually draining you)</h4>
+<span class="hint">Be specific</span>
+</div>
+<textarea class="textarea" id="drivers" placeholder="Example: 1) constant 'urgent' messages 2) unclear success criteria 3) emotional load from a stakeholder..."></textarea>
+</div>
+<div class="worksheet-card">
+<div class="field-title">
+<h4><i class="fa-solid fa-bed"></i> Sleep debt</h4>
+<span class="hint">1 = none, 10 = heavy</span>
+</div>
+<div class="slider-row">
+<div class="slider-top">
+<div class="label">How depleted are you?</div>
+<div class="value"><span id="sleepDebtVal">5</span>/10</div>
+</div>
+<input class="range" id="sleepDebt" max="10" min="1" type="range" value="5"/>
+</div>
+</div>
+<div class="worksheet-card">
+<div class="field-title">
+<h4><i class="fa-solid fa-heart-crack"></i> Emotional load</h4>
+<span class="hint">1 = light, 10 = heavy</span>
+</div>
+<div class="slider-row">
+<div class="slider-top">
+<div class="label">How much emotional weight?</div>
+<div class="value"><span id="emoLoadVal">5</span>/10</div>
+</div>
+<input class="range" id="emoLoad" max="10" min="1" type="range" value="5"/>
+</div>
+</div>
+<div class="worksheet-card">
+<div class="field-title">
+<h4><i class="fa-solid fa-hand"></i> One protection move</h4>
+<span class="hint">Non-negotiable</span>
+</div>
+<input class="input" id="protectionMove" placeholder="Example: 'No meetings 09:00–11:00 Tue/Thu' or 'Daily 45-min focus block'"/>
+</div>
+<div class="worksheet-card">
+<div class="field-title">
+<h4><i class="fa-solid fa-signal"></i> One recovery rule</h4>
+<span class="hint">Keep it realistic</span>
+</div>
+<input class="input" id="recoveryRule" placeholder="Example: 'Hard stop 18:00 + 20-min walk' or 'Lunch away from screen'"/>
+</div>
+<div class="worksheet-card full">
+<div class="field-title">
+<h4><i class="fa-solid fa-comments"></i> If you need a conversation, who is it with?</h4>
+<span class="hint">Pick the channel</span>
+</div>
+<select class="select" id="whoWith">
+<option value="My manager">My manager</option>
+<option value="A project lead / stakeholder">A project lead / stakeholder</option>
+<option value="HR / People team">HR / People team</option>
+<option value="My team">My team</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="worksheet-card full">
+<div class="field-title">
+<h4><i class="fa-solid fa-microphone-lines"></i> Draft a 3-line opener (calm, factual, outcome-led)</h4>
+<span class="hint">No over-explaining</span>
+</div>
+<textarea class="textarea" id="opener" placeholder="Example:
+1) 'I want to align on priorities for the next two weeks.'
+2) 'Right now the workload is exceeding capacity and it’s creating risk.'
+3) 'I need to agree what we pause/de-scope, and what “good” looks like for the top deliverable.'"></textarea>
+</div>
+<div class="worksheet-card full">
+<div class="field-title">
+<h4><i class="fa-solid fa-calendar-check"></i> Your 2-week reset plan (simple)</h4>
+<span class="hint">Focus + recovery</span>
+</div>
+<textarea class="textarea" id="twoWeekPlan" placeholder="Example: Week 1: reduce meetings, deliver 1 must-win output, schedule recovery. Week 2: stabilise, tighten boundaries, prevent rework..."></textarea>
+</div>
+</div>
+<div class="plan-actions">
+<button class="action-btn" id="planGenerateBtn">
+<i class="fa-solid fa-wand-magic"></i> Generate Plan Output
+        </button>
+<button class="action-btn secondary" id="planCopyBtn">
+<i class="fa-regular fa-copy"></i> Copy Plan
+        </button>
+<button class="action-btn ghost" data-action="reset-tool" id="planResetBtn">
+<i class="fa-solid fa-rotate-left"></i> Reset
+        </button>
+</div>
+<div class="plan-output" id="planOutput">
+<h3><i class="fa-solid fa-file-lines"></i> Your Burnout Protection Plan Output</h3>
+<div class="summary-box" id="planBox"></div>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Choose your Employee Playbook plan." />
+  <title>Checkout | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="account" data-protected="true">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell account-page">
+    <section class="hero compact">
+      <p class="eyebrow">Checkout</p>
+      <h1>Choose your plan</h1>
+      <p>Pick the level you need. Checkout is handled securely through Stripe.</p>
+    </section>
+    <section class="pricing-grid">
+      <article class="pricing-card">
+        <p class="eyebrow">Core</p>
+        <h2>Core</h2>
+        <p>Tool library, saved progress and My Playbook.</p>
+        <div class="cluster">
+          <button class="btn" data-checkout-tier="core" data-period="monthly" type="button">Core monthly</button>
+          <button class="btn secondary" data-checkout-tier="core" data-period="annual" type="button">Core annual</button>
+        </div>
+      </article>
+      <article class="pricing-card">
+        <p class="eyebrow">Advanced</p>
+        <h2>Strategic Edge</h2>
+        <p>Everything in Core plus advanced coach-led guidance and strategic tools.</p>
+        <div class="cluster">
+          <button class="btn" data-checkout-tier="edge" data-period="monthly" type="button">Edge monthly</button>
+          <button class="btn secondary" data-checkout-tier="edge" data-period="annual" type="button">Edge annual</button>
+        </div>
+      </article>
+    </section>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

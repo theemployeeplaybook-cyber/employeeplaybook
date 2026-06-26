@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Burnout Detection Checklist — spot the warning signs early. Track burnout signals, generate a report, and save progress to your account." />
+  <title>Burnout Detection Checklist | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="checklist-burnout-detection">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<span>Expectations, Burnout &amp; Capacity</span>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Burnout Detection Checklist</span>
+</div>
+<span class="checklist-name">BURNOUT DETECTION CHECKLIST</span>
+<h1 class="hero-main-heading">Spot the Warning Signs Before It's Too Late</h1>
+<div class="hero-subheading">
+          Burnout doesn't happen overnight. Use this checklist to identify early warning signs, assess your burnout risk level,
+          and create a personalised recovery plan before you hit crisis point.
+        </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Category</span>
+<div class="category-pills-grid">
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html">
+<i class="fas fa-battery-half category-icon"></i>
+<span>Expectations, Burnout &amp; Capacity</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-calendar-check"></i>When to Use This Checklist</h3>
+<ul class="bullet-list">
+<li>When you're feeling constantly exhausted despite adequate sleep</li>
+<li>When work no longer feels meaningful or rewarding</li>
+<li>When you're increasingly cynical or detached from your work</li>
+<li>When your performance is declining despite working harder</li>
+<li>When stress is affecting your physical or mental health</li>
+<li>As a regular quarterly check-in on your wellbeing</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Be honest with yourself — denial delays recovery</li>
+<li>Track your score over time to spot trends early</li>
+<li>Share your results with someone you trust for external perspective</li>
+<li>Don't wait for "permission" to take action — burnout is a serious health risk</li>
+<li>Recovery takes time — small consistent changes work better than dramatic fixes</li>
+<li>Professional support (GP, counsellor, coach) can accelerate recovery significantly</li>
+</ul>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title">Your Burnout Detection Checklist</h2>
+<div class="checklist-grid" id="checklistGrid">
+<div class="checklist-item" data-category="exhaustion">
+<i class="far fa-square"></i>
+<div class="checklist-text">I feel physically and emotionally drained most of the time, even after rest or holidays.</div>
+</div>
+<div class="checklist-item" data-category="exhaustion">
+<i class="far fa-square"></i>
+<div class="checklist-text">I struggle to find energy for work, and simple tasks feel overwhelming.</div>
+</div>
+<div class="checklist-item" data-category="cynicism">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've become cynical or critical about my work and the people I work with.</div>
+</div>
+<div class="checklist-item" data-category="cynicism">
+<i class="far fa-square"></i>
+<div class="checklist-text">I feel detached, numb, or indifferent about work that used to matter to me.</div>
+</div>
+<div class="checklist-item" data-category="efficacy">
+<i class="far fa-square"></i>
+<div class="checklist-text">I doubt my abilities and question whether I'm good at my job.</div>
+</div>
+<div class="checklist-item" data-category="efficacy">
+<i class="far fa-square"></i>
+<div class="checklist-text">My performance has declined and I'm making more mistakes than usual.</div>
+</div>
+<div class="checklist-item" data-category="cognitive">
+<i class="far fa-square"></i>
+<div class="checklist-text">I have trouble concentrating, remembering things, or making decisions.</div>
+</div>
+<div class="checklist-item" data-category="physical">
+<i class="far fa-square"></i>
+<div class="checklist-text">I'm experiencing physical symptoms (headaches, stomach issues, tension, sleep problems).</div>
+</div>
+<div class="checklist-item" data-category="emotional">
+<i class="far fa-square"></i>
+<div class="checklist-text">I feel irritable, anxious, or depressed more often than usual.</div>
+</div>
+<div class="checklist-item" data-category="isolation">
+<i class="far fa-square"></i>
+<div class="checklist-text">I'm withdrawing from colleagues, friends, or family.</div>
+</div>
+<div class="checklist-item" data-category="coping">
+<i class="far fa-square"></i>
+<div class="checklist-text">I'm relying more on unhealthy coping mechanisms (alcohol, food, avoiding people).</div>
+</div>
+<div class="checklist-item" data-category="meaning">
+<i class="far fa-square"></i>
+<div class="checklist-text">Work feels meaningless and I can't see a way forward that feels sustainable.</div>
+</div>
+</div>
+</div>
+<div class="burnout-score-section">
+<div class="burnout-snapshot-header">
+<h2>Your Burnout Risk Assessment</h2>
+<p>
+          Your Burnout Risk Score reflects how many burnout warning signs you're experiencing across key dimensions.
+          This isn't a clinical diagnosis, but a practical self-assessment tool to help you recognise when intervention is needed.
+        </p>
+</div>
+<div class="burnout-score-bar">
+<div class="burnout-progress-container">
+<div class="burnout-title-row">
+<div class="burnout-title">Burnout Risk Score</div>
+<div class="burnout-status" id="burnoutStatus">Low Risk</div>
+</div>
+<div class="burnout-meter">
+<div class="meter-fill" id="meterFill"></div>
+</div>
+<div class="meter-labels">
+<span>Low Risk</span>
+<span>Moderate Risk</span>
+<span>High Risk</span>
+</div>
+<div class="burnout-dimensions">
+<div class="burnout-dimension-pill">
+<span class="label">Exhaustion</span>
+<span class="score" id="scoreExhaustion">0%</span>
+</div>
+<div class="burnout-dimension-pill">
+<span class="label">Detachment</span>
+<span class="score" id="scoreDetachment">0%</span>
+</div>
+<div class="burnout-dimension-pill">
+<span class="label">Effectiveness</span>
+<span class="score" id="scoreEffectiveness">0%</span>
+</div>
+<div class="burnout-dimension-pill">
+<span class="label">Wellbeing</span>
+<span class="score" id="scoreWellbeing">0%</span>
+</div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+          </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+          </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+          </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+          </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="recovery-section" id="recoveryPlan">
+<div class="recovery-header">
+<h2 class="recovery-title">Your Personalised Recovery Plan</h2>
+<p class="recovery-subtitle">
+          Based on your Burnout Risk Score of <span id="summaryScore">0%</span> • Risk Level: <span id="summaryStatus">Low Risk</span>
+</p>
+<p class="recovery-insight">
+          This plan is tailored to your specific burnout profile. Focus on the immediate actions first,
+          then work through the strategies systematically.
+        </p>
+</div>
+<h3 class="section-header red">
+<i class="fas fa-triangle-exclamation"></i> Warning Signs to Monitor
+      </h3>
+<div class="warning-grid" id="warningGrid"></div>
+<h3 class="section-header purple">
+<i class="fas fa-first-aid"></i> Immediate Recovery Actions
+      </h3>
+<div class="action-grid" id="actionGrid"></div>
+<h3 class="section-header blue">
+<i class="fas fa-book-medical"></i> Recovery Resources
+      </h3>
+<div class="resource-grid" id="resourceGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

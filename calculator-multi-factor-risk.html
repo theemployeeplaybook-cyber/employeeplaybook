@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Multi-Factor Risk Calculator | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="calculator-multi-factor-risk">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div id="appRoot">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span id="saveBtnText">Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+<i class="fa-solid fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fa-solid fa-chevron-right"></i>
+<a href="category-hr-insider.html">HR Insider</a>
+<i class="fa-solid fa-chevron-right"></i>
+<span class="current">Multi-Factor Risk Calculator</span>
+</div>
+<span class="checklist-name">MULTI-FACTOR RISK CALCULATOR</span>
+<h1 class="hero-main-heading">Quantify your exposure — then choose the right move</h1>
+<div class="hero-subheading">
+        When things feel "off", your brain fills gaps with fear. This tool forces clarity.
+        Rate the real signals across <strong>six risk drivers</strong>. You'll get a single <strong>Risk Exposure Index</strong>, a shape map of what's driving it,
+        and a practical plan that protects <strong>income stability, reputation, and options</strong>.
+      </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fa-solid fa-bullseye category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fa-solid fa-users category-icon"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fa-solid fa-shield-halved"></i>When to Use This Calculator</h3>
+<ul class="bullet-list">
+<li>When you suspect a <strong>PIP / restructure / managed-out</strong> pattern but it's still deniable</li>
+<li>When your manager's tone has shifted and you want to separate <strong>noise vs signal</strong></li>
+<li>Before you escalate, raise a grievance, or involve HR — so you do it from a position of <strong>strength</strong></li>
+<li>When you need to decide: <strong>stabilise, document, escalate, or exit</strong></li>
+<li>When you want a risk view that includes <strong>politics, process, and personal bandwidth</strong></li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fa-solid fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Rate <strong>observable patterns</strong>, not your worst-case imagination</li>
+<li>High risk doesn't mean panic — it means <strong>tighten evidence + options</strong></li>
+<li>Look for <strong>clusters</strong>: one spike is manageable; 3–4 spikes is a forecast</li>
+<li>Re-run after any: <strong>org change, missed deadline, HR meeting, or new manager</strong></li>
+<li>Use the output as your private plan — not something to "prove" to other people</li>
+</ul>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title">Rate the Signals Across Six Risk Drivers</h2>
+<div class="checklist-section-subtitle">
+<strong>1</strong> = Low/contained   ·   <strong>3</strong> = Noticeable/unstable   ·   <strong>5</strong> = High/active risk
+    </div>
+<div class="checklist-grid" id="assessmentGrid">
+</div>
+</div>
+<div class="risk-dashboard-section">
+<div class="risk-snapshot-header">
+<h2>Your Risk Exposure Snapshot</h2>
+<p>
+        The <strong>Risk Exposure Index</strong> is a directional read of how exposed you are to negative outcomes
+        (scope reduction, credibility erosion, HR formalisation, or exit pressure).
+        The radar shows what's driving exposure — so you can pull the right lever, fast.
+      </p>
+</div>
+<div class="risk-dashboard">
+<div class="risk-card">
+<div class="risk-card-header">
+<div>
+<div class="risk-card-title"><i class="fa-solid fa-chart-area"></i> Exposure Shape (Live)</div>
+<div class="risk-card-sub">Your profile updates instantly. Wide spikes = predictable failure points if unaddressed.</div>
+</div>
+<div class="risk-score-pill medium" id="riskLevelPill">
+<span class="dot"></span>
+<span id="riskLevelLabel">Not rated</span>
+</div>
+</div>
+<div class="radar-wrap">
+<div class="radar-canvas-wrap">
+<canvas aria-label="Multi-factor risk radar chart" height="550" id="radarCanvas" width="800"></canvas>
+</div>
+<div class="radar-legend">
+<span class="legend-chip"><span class="legend-swatch"></span> Risk intensity across 6 drivers</span>
+<span id="answeredCount">0/18 rated</span>
+</div>
+</div>
+</div>
+<div class="risk-card">
+<div class="risk-card-header">
+<div>
+<div class="risk-card-title"><i class="fa-solid fa-triangle-exclamation"></i> Risk Exposure Index</div>
+<div class="risk-card-sub">Higher score = higher chance of formalisation/escalation without a strategy.</div>
+</div>
+<div class="risk-score-pill medium" id="heatPill">
+<span class="dot"></span>
+<span id="heatLabel">Not rated</span>
+</div>
+</div>
+<div class="heat-index-row">
+<div class="heat-index-title">Exposure Index</div>
+<div class="heat-index-value" id="heatValue">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill low" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Stable</span>
+<span>Watch</span>
+<span>High</span>
+</div>
+<div class="dimension-pills">
+<div class="dimension-pill">
+<span class="label">Manager Intent</span>
+<span class="score" id="scoreManager">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">HR / Process</span>
+<span class="score" id="scoreHr">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Performance Narrative</span>
+<span class="score" id="scorePerf">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Stakeholders &amp; Politics</span>
+<span class="score" id="scorePolitics">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Evidence &amp; Documentation</span>
+<span class="score" id="scoreEvidence">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Options &amp; Leverage</span>
+<span class="score" id="scoreOptions">0%</span>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+          </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+          </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+          </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+          </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Saved to My Playbook</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Risk Brief</h2>
+<p class="summary-subtitle">Based on a Risk Exposure Index of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">
+        This is a control plan, not a panic plan. The goal: reduce downside probability while protecting credibility, delivery, and income stability.
+      </p>
+</div>
+<div class="lens-card" id="lensCard">
+<div class="lens-header">
+<div class="lens-title"><i class="fa-solid fa-user-shield"></i> Personality / Behaviour Lens</div>
+<div class="risk-score-pill medium" id="lensPill"><span class="dot"></span><span id="lensLabel">Adaptive read</span></div>
+</div>
+<div class="lens-body">
+<div class="lens-block">
+<h4><i class="fa-solid fa-bolt"></i>What's likely happening underneath</h4>
+<p id="lensUnderText">
+            Rate at least 6 items to generate a precise lens read. This section will adapt to your biggest risk drivers.
+          </p>
+<div class="mini-pills" id="lensUnderPills"></div>
+</div>
+<div class="lens-block">
+<h4><i class="fa-solid fa-shield-heart"></i>Best move that lowers risk</h4>
+<p id="lensDoText">
+            You'll get a "best next move" that fits the psychology of the situation (and avoids feeding the drama loop).
+          </p>
+<div class="mini-pills" id="lensDoPills"></div>
+</div>
+</div>
+</div>
+<h3 class="section-header"><i class="fa-solid fa-check"></i>Stabilisers to Protect This Week</h3>
+<div class="summary-grid" id="stabiliserGrid"></div>
+<h3 class="section-header"><i class="fa-solid fa-circle-exclamation"></i>Primary Downside Risks</h3>
+<div class="summary-grid" id="riskGrid"></div>
+<h3 class="section-header"><i class="fa-solid fa-forward"></i>Scripts &amp; Next Moves</h3>
+<div class="summary-grid" id="nextGrid"></div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Team Dysfunction Checklist | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="checklist-team-dysfunction">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-workplace-dynamics-and-politics.html">
+                Workplace Dynamics and Politics
+            </a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Team Dysfunction Checklist</span>
+</div>
+<span class="checklist-name">
+            TEAM DYSFUNCTION CHECKLIST
+        </span>
+<h1 class="hero-main-heading">Identify and address common team dysfunctions</h1>
+<div class="hero-subheading">
+            When collaboration feels strained, trust is low, or progress is stuck, use this checklist to diagnose issues and implement practical fixes that restore team effectiveness.
+        </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill confidence" href="category-confidence-presence-influence.html">
+<i class="fas fa-chart-line category-icon"></i>
+<span>Confidence, Presence &amp; Influence</span>
+</a>
+<a class="category-pill burnout" href="category-expectation-burnout-and-capacity.html">
+<i class="fas fa-battery-three-quarters"></i>
+<span>Expectations, Burnout &amp; Capacity</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-people-arrows category-icon"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-calendar-check"></i>When to Use This Checklist</h3>
+<ul class="bullet-list">
+<li>When team meetings feel unproductive or tense</li>
+<li>When collaboration is breaking down or silos are forming</li>
+<li>When trust seems low and political behavior is increasing</li>
+<li>When deadlines are consistently missed despite individual effort</li>
+<li>When you're leading a new team or inheriting an existing one</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Be objective - assess behaviors, not personalities</li>
+<li>Use this as a conversation starter, not a weapon</li>
+<li>Focus on the most critical 2-3 issues first</li>
+<li>Involve the team in creating solutions together</li>
+<li>Revisit quarterly to track progress and identify new issues</li>
+</ul>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title">Team Health Assessment</h2>
+<div class="checklist-grid">
+<div class="checklist-item" data-category="trust">
+<i class="far fa-square"></i>
+<div class="checklist-text">Team members feel psychologically safe to share ideas, admit mistakes, and ask for help.</div>
+</div>
+<div class="checklist-item" data-category="clarity">
+<i class="far fa-square"></i>
+<div class="checklist-text">Everyone understands team goals, priorities, and their individual roles clearly.</div>
+</div>
+<div class="checklist-item" data-category="conflict">
+<i class="far fa-square"></i>
+<div class="checklist-text">Disagreements are addressed constructively, not avoided or escalated personally.</div>
+</div>
+<div class="checklist-item" data-category="accountability">
+<i class="far fa-square"></i>
+<div class="checklist-text">Team members hold each other accountable for commitments and quality standards.</div>
+</div>
+<div class="checklist-item" data-category="engagement">
+<i class="far fa-square"></i>
+<div class="checklist-text">All team members are actively engaged in meetings and collaborative work.</div>
+</div>
+<div class="checklist-item" data-category="trust">
+<i class="far fa-square"></i>
+<div class="checklist-text">Team members give each other the benefit of the doubt before jumping to negative conclusions.</div>
+</div>
+<div class="checklist-item" data-category="clarity">
+<i class="far fa-square"></i>
+<div class="checklist-text">Decision-making processes are clear, and everyone understands how decisions are made.</div>
+</div>
+<div class="checklist-item" data-category="communication">
+<i class="far fa-square"></i>
+<div class="checklist-text">Communication is open, transparent, and includes all relevant stakeholders.</div>
+</div>
+<div class="checklist-item" data-category="engagement">
+<i class="far fa-square"></i>
+<div class="checklist-text">Team members proactively support each other during workload spikes or challenges.</div>
+</div>
+<div class="checklist-item" data-category="accountability">
+<i class="far fa-square"></i>
+<div class="checklist-text">When commitments are missed, the focus is on problem-solving, not blame.</div>
+</div>
+<div class="checklist-item" data-category="trust">
+<i class="far fa-square"></i>
+<div class="checklist-text">Feedback is given and received regularly in a constructive, non-defensive manner.</div>
+</div>
+<div class="checklist-item" data-category="conflict">
+<i class="far fa-square"></i>
+<div class="checklist-text">Unresolved tensions or interpersonal issues don't linger and poison team dynamics.</div>
+</div>
+<div class="checklist-item" data-category="clarity">
+<i class="far fa-square"></i>
+<div class="checklist-text">Team meetings have clear agendas, stay focused, and result in actionable next steps.</div>
+</div>
+<div class="checklist-item" data-category="communication">
+<i class="far fa-square"></i>
+<div class="checklist-text">Information flows freely across the team without gatekeeping or information hoarding.</div>
+</div>
+<div class="checklist-item" data-category="engagement">
+<i class="far fa-square"></i>
+<div class="checklist-text">Team members celebrate each other's successes and recognize collective achievements.</div>
+</div>
+<div class="checklist-item" data-category="accountability">
+<i class="far fa-square"></i>
+<div class="checklist-text">Performance standards are consistently applied across all team members.</div>
+</div>
+</div>
+</div>
+<div class="clarity-score-section">
+<div class="presence-snapshot-header">
+<h2>Your Team Health Snapshot</h2>
+<p>
+            Your Team Health Score measures the functional effectiveness of your team. High scores indicate strong collaboration, trust, and accountability. Low or mixed scores highlight specific dysfunctions that, if addressed, can dramatically improve team performance and satisfaction.
+        </p>
+</div>
+<div class="clarity-score-bar">
+<div class="clarity-progress-container">
+<div class="clarity-header">
+<div class="clarity-title">Team Health Score</div>
+<div class="clarity-percentage" id="clarityPercentage">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Dysfunctional</span>
+<span>Needs Improvement</span>
+<span>High Performing</span>
+</div>
+<div class="presence-dimensions">
+<div class="presence-dimension-pill">
+<span class="label">Trust &amp; Psychological Safety</span>
+<span class="score" id="scorePriorities">0%</span>
+</div>
+<div class="presence-dimension-pill">
+<span class="label">Clarity &amp; Alignment</span>
+<span class="score" id="scoreDeadlines">0%</span>
+</div>
+<div class="presence-dimension-pill">
+<span class="label">Accountability &amp; Standards</span>
+<span class="score" id="scoreResources">0%</span>
+</div>
+<div class="presence-dimension-pill">
+<span class="label">Conflict &amp; Communication</span>
+<span class="score" id="scoreExpectations">0%</span>
+</div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+            </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+            </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+            </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+            </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Team Dysfunction Analysis</h2>
+<p class="summary-subtitle">Based on your Team Health Score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">
+            Team dysfunctions are often interconnected. Addressing one area frequently improves others. Focus on the highest-impact issues first.
+        </p>
+</div>
+<h3 class="section-header red">
+<i class="fas fa-exclamation-triangle"></i> Critical Dysfunctions Identified
+    </h3>
+<div class="red-flags-grid" id="redFlagsGrid">
+</div>
+<h3 class="section-header purple">
+<i class="fas fa-forward"></i> Repair Strategies
+    </h3>
+<div class="next-steps-grid" id="nextStepsGrid">
+</div>
+<h3 class="section-header blue">
+<i class="fas fa-tools"></i> Team Repair Resources
+    </h3>
+<div class="resources-grid" id="resourcesGrid">
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

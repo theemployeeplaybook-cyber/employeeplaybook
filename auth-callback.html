@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Signing you in… | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="auth" data-protected="false">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell auth-page">
+<div class="wrap">
+<div class="card">
+<div class="top">
+<div class="badge"><i class="fa-solid fa-shield-halved"></i></div>
+<div>
+<h1 id="title">Signing you in…</h1>
+<p id="subtitle">Just a moment — we’re securely confirming your link.</p>
+</div>
+</div>
+<div class="status" id="statusBox">
+<div class="dot" id="dot"></div>
+<div>
+<div id="statusLine">Working…</div>
+<div id="statusHint">Do not close this tab.</div>
+</div>
+</div>
+<div class="mono hidden" id="debugBox"></div>
+<div class="btnRow hidden" id="btnRow">
+<button class="btn" id="goBtn">Continue</button>
+<button class="btn secondary" id="signInBtn">Go to Sign In</button>
+</div>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

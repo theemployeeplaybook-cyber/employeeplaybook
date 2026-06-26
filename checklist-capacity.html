@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Capacity Checklist — turn overwhelm into evidence. Track workload reality, generate a report, and save progress to your account." />
+  <title>Capacity Checklist | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="checklist-capacity">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<span>Expectation, Burnout &amp; Capacity</span>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Capacity Checklist</span>
+</div>
+<span class="checklist-name">CAPACITY CHECKLIST</span>
+<h1 class="hero-main-heading">Facts Over Feelings → Workload Evidence</h1>
+<div class="hero-subheading">
+          When you're overwhelmed or feel at capacity, use this tool to move from subjective feelings to objective evidence.
+          Collect concrete data about your actual workload to have better conversations about priorities, deadlines, and what’s truly possible.
+        </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Category</span>
+<div class="category-pills-grid">
+<a class="category-pill expectations" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-bullseye category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-calendar-check"></i>When to Use This Checklist</h3>
+<ul class="bullet-list">
+<li>When you feel constantly overwhelmed or at capacity</li>
+<li>Before having a conversation with your manager about workload</li>
+<li>When you're being asked to take on additional responsibilities</li>
+<li>When you need to push back on unrealistic deadlines or expectations</li>
+<li>When you suspect your actual workload doesn't match your role or level</li>
+<li>When planning for the next quarter or performance review</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Track your actual time for 1–2 weeks for the most accurate data</li>
+<li>Include meetings, email, and “invisible work” in your calculations</li>
+<li>Be specific with your evidence — numbers are more persuasive than feelings</li>
+<li>Use this as a collaborative tool, not a weapon against your manager</li>
+<li>Focus on solutions, not just problems — bring options to the conversation</li>
+<li>Update this regularly as your role and responsibilities evolve</li>
+</ul>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title">Your Capacity Checklist</h2>
+<div class="checklist-grid" id="checklistGrid">
+<div class="checklist-item" data-category="tracking">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've tracked my actual time spent on different types of work for at least one full week.</div>
+</div>
+<div class="checklist-item" data-category="hours">
+<i class="far fa-square"></i>
+<div class="checklist-text">I know how many hours I'm actually working each week (not just “feels like” a lot).</div>
+</div>
+<div class="checklist-item" data-category="meetings">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've calculated what percentage of my week is spent in meetings versus focused work.</div>
+</div>
+<div class="checklist-item" data-category="invisible">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've accounted for “invisible work” — emails, quick questions, administrative tasks, context switching.</div>
+</div>
+<div class="checklist-item" data-category="scope">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've documented all my current responsibilities and projects with estimated time requirements.</div>
+</div>
+<div class="checklist-item" data-category="comparison">
+<i class="far fa-square"></i>
+<div class="checklist-text">I can compare my current workload to my job description or role expectations.</div>
+</div>
+<div class="checklist-item" data-category="sustainability">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've assessed whether my current workload is sustainable long-term without burnout.</div>
+</div>
+<div class="checklist-item" data-category="growth">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've identified what percentage of my time is spent on growth vs maintenance work.</div>
+</div>
+<div class="checklist-item" data-category="priority-time">
+<i class="far fa-square"></i>
+<div class="checklist-text">I know how much time I actually have for priority work versus reactive work.</div>
+</div>
+<div class="checklist-item" data-category="buffer">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've calculated what buffer I have for unexpected work or emergencies.</div>
+</div>
+<div class="checklist-item" data-category="data-visual">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've created a visual (chart, graph, or simple summary) of my workload distribution.</div>
+</div>
+<div class="checklist-item" data-category="options">
+<i class="far fa-square"></i>
+<div class="checklist-text">I've identified what could be deprioritised, delegated, or done differently to create capacity.</div>
+</div>
+</div>
+</div>
+<div class="capacity-meter-section">
+<div class="capacity-header">
+<h2>Your Capacity Scorer</h2>
+<p>
+          Your Capacity Score shows how well you understand your actual workload versus perceived workload.
+          High scores mean you have strong evidence about your capacity; low scores indicate you're operating
+          on feelings rather than facts. Use this to build evidence for workload conversations.
+        </p>
+</div>
+<div class="capacity-meter-container">
+<div class="capacity-progress-container">
+<div class="capacity-title-row">
+<div class="capacity-title">Capacity Evidence Score</div>
+<div class="capacity-status" id="capacityStatus">Gathering Data</div>
+</div>
+<div class="capacity-meter">
+<div class="meter-fill" id="meterFill"></div>
+</div>
+<div class="meter-labels">
+<span>Operating on Feelings</span>
+<span>Some Evidence</span>
+<span>Strong Evidence Base</span>
+</div>
+<div class="capacity-dimensions">
+<div class="capacity-dimension-pill">
+<span class="label">Time Tracking</span>
+<span class="score" id="scoreTracking">0%</span>
+</div>
+<div class="capacity-dimension-pill">
+<span class="label">Workload Analysis</span>
+<span class="score" id="scoreAnalysis">0%</span>
+</div>
+<div class="capacity-dimension-pill">
+<span class="label">Evidence Quality</span>
+<span class="score" id="scoreEvidence">0%</span>
+</div>
+<div class="capacity-dimension-pill">
+<span class="label">Solution Thinking</span>
+<span class="score" id="scoreSolutions">0%</span>
+</div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+          </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+          </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+          </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+          </button>
+<div class="save-progress-status" id="saveProgressStatus"></div>
+<div class="save-status" id="saveStatus">
+<span id="lastSavedText">Last saved: <span id="lastSavedTime"></span></span>
+</div>
+</div>
+</div>
+</div>
+<div class="evidence-section" id="evidenceSummary">
+<div class="evidence-header">
+<h2 class="evidence-title">Your Workload Evidence Report</h2>
+<p class="evidence-subtitle">
+          Based on your Capacity Evidence Score of <span id="summaryScore">0%</span> • Status: <span id="summaryStatus">Gathering Data</span>
+</p>
+<p class="evidence-insight">
+          This report transforms feelings into facts. Use it to have evidence-based conversations about workload,
+          priorities, and realistic expectations.
+        </p>
+</div>
+<h3 class="section-header purple">
+<i class="fas fa-chart-pie"></i> Key Workload Evidence
+      </h3>
+<div class="evidence-facts-grid" id="evidenceFactsGrid"></div>
+<h3 class="section-header blue">
+<i class="fas fa-comments"></i> Conversation Starters
+      </h3>
+<div class="conversation-grid" id="conversationGrid"></div>
+<h3 class="section-header purple">
+<i class="fas fa-tools"></i> Capacity Building Strategies
+      </h3>
+<div class="boundary-grid" id="boundaryGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

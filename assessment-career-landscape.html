@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Career Landscape Assessment — understand your internal and external landscape, leverage, risk, and next best moves. UK-focused. Not legal advice." />
+  <title>Career Landscape Assessment | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="assessment-career-landscape">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Bookmark</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-career-playbook.html">Career Playbook</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Career Landscape Assessment</span>
+</div>
+<span class="tool-kicker">CAREER LANDSCAPE ASSESSMENT</span>
+<h1 class="hero-main-heading">Know the real terrain: leverage, risk, options, and your next best move</h1>
+<div class="hero-subheading">
+          This assessment helps you separate <strong>feelings</strong> from <strong>facts</strong> — and build a plan that makes sense in the UK workplace:
+          internal politics, pay bands, job market friction, redundancy risk, and what actually moves decisions.
+        </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-bullseye category-icon"></i><span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-people-arrows category-icon"></i><span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-map"></i>When to Use This</h3>
+<ul class="bullet-list">
+<li>You feel “stuck”, underpaid, or under-recognised and need a grounded route out.</li>
+<li>You suspect you’re being managed out, reorganised, or quietly sidelined.</li>
+<li>You’re considering a move, but you don’t trust your read of the market.</li>
+<li>You want a raise or promotion and need leverage, not hope.</li>
+<li>You need clarity on whether to <strong>stabilise</strong>, <strong>push internally</strong>, or <strong>exit strategically</strong>.</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-compass"></i>What You’ll Get</h3>
+<ul class="bullet-list">
+<li>A clear read on your <strong>internal leverage</strong> and <strong>external leverage</strong>.</li>
+<li>A realistic <strong>risk signal</strong> (not paranoia — indicators).</li>
+<li>A set of <strong>recommended moves</strong> based on your scores.</li>
+<li>Scripts for conversations that sound professional (not emotional or entitled).</li>
+<li>A 30-day plan to improve your position, whichever direction you choose.</li>
+</ul>
+</div>
+</div>
+<div class="tool-body">
+<h2 class="section-h2">Complete the assessment</h2>
+<p class="subtle">
+        Score honestly. This tool isn’t judging you — it’s helping you see patterns that are easy to miss when you’re stressed, annoyed, or hopeful.
+      </p>
+<div class="panel">
+<div class="panel-title"><i class="fas fa-building"></i> A) Your current role &amp; context</div>
+<div class="panel-sub">Set the scene — this improves the precision of your report.</div>
+<div class="grid-2">
+<div class="field">
+<label for="roleTitle">Role/title</label>
+<input id="roleTitle" placeholder="e.g., Operations Manager" type="text"/>
+</div>
+<div class="field">
+<label for="industry">Industry</label>
+<input id="industry" placeholder="e.g., SaaS, Retail, Healthcare" type="text"/>
+</div>
+<div class="field">
+<label for="tenure">Tenure in role</label>
+<select id="tenure">
+<option value="0">Select…</option>
+<option value="1">0–6 months</option>
+<option value="2">6–12 months</option>
+<option value="3">1–2 years</option>
+<option value="4">2–4 years</option>
+<option value="5">4+ years</option>
+</select>
+</div>
+<div class="field">
+<label for="contractType">Contract type</label>
+<select id="contractType">
+<option value="perm">Permanent</option>
+<option value="fixed">Fixed-term</option>
+<option value="contractor">Contractor</option>
+<option value="probation">In probation</option>
+</select>
+</div>
+<div class="field full">
+<label for="goals">What do you want most right now?</label>
+<textarea id="goals" placeholder="Examples: pay alignment, stability, promotion, remote/hybrid protection, better manager, exit plan, skill pivot…"></textarea>
+</div>
+</div>
+<div class="hint-row">
+<i class="fas fa-shield-halved"></i>
+<p><strong>UK reality check:</strong> promotions and pay are often gated by banding, headcount plans, and internal sponsorship. Your plan should address how decisions are actually made — not just performance.</p>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title"><i class="fas fa-handshake"></i> B) Internal landscape (how safe and supported are you?)</div>
+<div class="panel-sub">Use the sliders. 0 = weak/negative, 10 = strong/positive.</div>
+<div class="grid-2">
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="name">Manager support &amp; trust</div>
+<div class="value"><span class="dot"></span><span id="v_mgr">5</span>/10</div>
+</div>
+<input id="mgr" max="10" min="0" type="range" value="5"/>
+</div>
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="name">Visibility to decision-makers</div>
+<div class="value"><span class="dot"></span><span id="v_vis">5</span>/10</div>
+</div>
+<input id="vis" max="10" min="0" type="range" value="5"/>
+</div>
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="name">Role clarity (expectations, priorities)</div>
+<div class="value"><span class="dot"></span><span id="v_clar">5</span>/10</div>
+</div>
+<input id="clar" max="10" min="0" type="range" value="5"/>
+</div>
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="name">Political safety (backing, not a target)</div>
+<div class="value"><span class="dot"></span><span id="v_pol">5</span>/10</div>
+</div>
+<input id="pol" max="10" min="0" type="range" value="5"/>
+</div>
+</div>
+<div class="hint-row">
+<i class="fas fa-eye"></i>
+<p><strong>Watch this:</strong> In many workplaces, visibility beats quality. If your work isn’t attached to a leader’s priorities (or a leader’s story), it can be treated as “nice” rather than “valuable”.</p>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title"><i class="fas fa-briefcase"></i> C) External landscape (how strong is your market position?)</div>
+<div class="panel-sub">We’re not predicting the market — we’re assessing your readiness to move if you had to.</div>
+<div class="grid-2">
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="name">Role demand (your skillset is hiring-relevant)</div>
+<div class="value"><span class="dot"></span><span id="v_dem">5</span>/10</div>
+</div>
+<input id="dem" max="10" min="0" type="range" value="5"/>
+</div>
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="name">CV/LinkedIn readiness (credible, recent, sharp)</div>
+<div class="value"><span class="dot"></span><span id="v_cv">5</span>/10</div>
+</div>
+<input id="cv" max="10" min="0" type="range" value="5"/>
+</div>
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="name">Interview strength &amp; story (impact, clarity)</div>
+<div class="value"><span class="dot"></span><span id="v_int">5</span>/10</div>
+</div>
+<input id="intv" max="10" min="0" type="range" value="5"/>
+</div>
+<div class="slider-wrap">
+<div class="slider-top">
+<div class="name">Network access (referrals, warm intros)</div>
+<div class="value"><span class="dot"></span><span id="v_net">5</span>/10</div>
+</div>
+<input id="net" max="10" min="0" type="range" value="5"/>
+</div>
+</div>
+<div class="hint-row">
+<i class="fas fa-road"></i>
+<p><strong>UK friction factor:</strong> hiring cycles can be slow. “I can leave” only becomes leverage if you’ve removed friction: CV story, evidence, references, and a realistic pipeline.</p>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title"><i class="fas fa-triangle-exclamation"></i> D) Risk indicators (choose what applies)</div>
+<div class="panel-sub">Tick anything that’s been true in the last 60–90 days. These don’t guarantee a bad outcome — they’re signals.</div>
+<div class="choice-row" id="riskChips">
+<label class="chip"><input name="assessment-career-landscape_field_14" type="checkbox" value="pip"/> Mentions of performance concerns / capability language</label>
+<label class="chip"><input name="assessment-career-landscape_field_15" type="checkbox" value="scope"/> Scope reduced / key work reassigned</label>
+<label class="chip"><input name="assessment-career-landscape_field_16" type="checkbox" value="meetings"/> Excluded from meetings you used to attend</label>
+<label class="chip"><input name="assessment-career-landscape_field_17" type="checkbox" value="managercold"/> Manager tone changed / less supportive</label>
+<label class="chip"><input name="assessment-career-landscape_field_18" type="checkbox" value="reorg"/> Reorg / restructure rumours in your area</label>
+<label class="chip"><input name="assessment-career-landscape_field_19" type="checkbox" value="budget"/> Hiring freeze / cost-cutting emphasis</label>
+<label class="chip"><input name="assessment-career-landscape_field_20" type="checkbox" value="hr"/> HR suddenly involved / “process” talk</label>
+<label class="chip"><input name="assessment-career-landscape_field_21" type="checkbox" value="papertrail"/> Requests for lots of “evidence” or documentation</label>
+<label class="chip"><input name="assessment-career-landscape_field_22" type="checkbox" value="informal"/> “Informal chats” that feel like pre-process steps</label>
+<label class="chip"><input name="assessment-career-landscape_field_23" type="checkbox" value="bully"/> Bullying / intimidation / hostile behaviour</label>
+</div>
+<div class="field full">
+<label for="riskNotes">Any specific details worth noting (optional)</label>
+<textarea id="riskNotes" placeholder="Keep it factual: dates, what was said, who was present. (Don’t paste sensitive personal data.)"></textarea>
+</div>
+</div>
+<div class="panel">
+<div class="panel-title"><i class="fas fa-people-arrows"></i> E) Your next move preference</div>
+<div class="panel-sub">This doesn’t lock you in — it helps shape the report.</div>
+<div class="grid-3">
+<div class="field">
+<label for="movePref">Preferred direction</label>
+<select id="movePref">
+<option value="internal">Push internally (promotion/raise/scope)</option>
+<option value="stabilise">Stabilise (reduce risk, protect position)</option>
+<option value="exit">Exit strategically (new role)</option>
+<option value="unsure">Not sure yet</option>
+</select>
+</div>
+<div class="field">
+<label for="timeline">Decision timeline</label>
+<select id="timeline">
+<option value="30">30 days</option>
+<option value="60">60 days</option>
+<option value="90">90 days</option>
+<option value="180">3–6 months</option>
+</select>
+</div>
+<div class="field">
+<label for="energy">Capacity right now</label>
+<select id="energy">
+<option value="low">Low (stressed, drained)</option>
+<option value="mid">Medium (can focus with structure)</option>
+<option value="high">High (ready to push)</option>
+</select>
+</div>
+<div class="field full">
+<label for="constraints">Constraints to factor in</label>
+<textarea id="constraints" placeholder="Examples: childcare, commuting, health, visa, mortgage, remote/hybrid needs, notice period, financial runway…"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="actions-wrap">
+<div class="actions-bar">
+<div class="actions-left">
+<div class="actions-title">
+<h3>Generate your landscape report</h3>
+<span class="pill"><i class="fas fa-route"></i> Tailored plan</span>
+</div>
+<div class="actions-desc">
+            Click <strong>Generate</strong> to get: a score summary, your likely “mode” (Stabilise / Internal Push / Exit), what to do next, and UK-ready scripts.
+          </div>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+<div class="btn-col">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-file-lines"></i> Generate Report
+          </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+          </button>
+<button class="action-btn secondary" data-action="print-page" disabled="" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+          </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+          </button>
+</div>
+</div>
+</div>
+<div class="output-wrap" id="outputWrap">
+<div class="output-header">
+<h2 class="output-title">Your Career Landscape Report</h2>
+<p class="output-sub">This report is designed to be calm, practical, and UK-realistic: it tells you what to do next, and how to speak like a professional — not like you’re pleading.</p>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-gauge-high"></i> Score summary</h3>
+<div class="score-row" id="scoreRow"></div>
+<pre id="outSummary"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-compass"></i> Your recommended mode</h3>
+<pre id="outMode"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-list-check"></i> Your 30-day plan</h3>
+<pre id="outPlan"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-comments"></i> UK-ready scripts (manager / HR / stakeholder)</h3>
+<pre id="outScripts"></pre>
+</div>
+<div class="output-card">
+<h3><i class="fas fa-shield-halved"></i> Personality / Behaviour Lens</h3>
+<pre id="outLens"></pre>
+</div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

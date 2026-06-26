@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." />
+  <title>Conflict Risk Radar | The Employee Playbook</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="assessment-conflict-risk-radar">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-shared-header></div>
+  <main id="main" class="page-shell tool-page">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-workplace-dynamics-and-politics.html">Workplace Dynamics &amp; Politics</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Conflict Risk Radar</span>
+</div>
+<span class="checklist-name">CONFLICT RISK RADAR</span>
+<h1 class="hero-main-heading">See conflict building before it costs you</h1>
+<div class="hero-subheading">
+      Conflict rarely “starts” in the meeting. It accumulates in blind spots: misaligned incentives, unresolved history, pressure spikes, and communication drift.
+      Use this to spot the conditions, quantify the risk, and choose the right level of response.
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-bullseye category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-people-arrows category-icon"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-radar"></i>When to Use This Radar</h3>
+<ul class="bullet-list">
+<li>When a relationship feels “off” but you can’t prove anything yet</li>
+<li>Before a difficult conversation (feedback, boundaries, delivery risk, performance)</li>
+<li>When stakeholders are split and you’re being pulled into the middle</li>
+<li>When pressure, ambiguity, or politics are making people sharp</li>
+<li>When you need to protect your reputation while still delivering outcomes</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Rate <strong>the environment</strong> (conditions), not who you wish people were</li>
+<li>High risk doesn’t mean “fight” — it means <strong>choose the right containment</strong></li>
+<li>Look for <strong>clusters</strong>: one high spike is manageable; a pattern is a forecast</li>
+<li>Re-run after any deadline change, leadership shift, or public disagreement</li>
+<li>Use the output as a private plan — not something to argue with the other person about</li>
+</ul>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title">Rate the Conditions Driving Conflict Risk</h2>
+<div class="checklist-section-subtitle">
+<strong>0</strong> = Minimal risk   ·   <strong>3</strong> = Noticeable risk   ·   <strong>5</strong> = High risk / escalating
+  </div>
+<div class="checklist-grid" id="assessmentGrid">
+</div>
+</div>
+<div class="risk-dashboard-section">
+<div class="risk-snapshot-header">
+<h2>Your Conflict Risk Snapshot</h2>
+<p>
+      The <strong>Conflict Heat Index</strong> is a directional forecast of whether tension is likely to turn into escalation.
+      The radar shows where your risk is coming from — so you can fix the right lever, not just “communicate better”.
+    </p>
+</div>
+<div class="risk-dashboard">
+<div class="risk-card">
+<div class="risk-card-header">
+<div>
+<div class="risk-card-title"><i class="fas fa-chart-area"></i> Risk Shape (Live)</div>
+<div class="risk-card-sub">Your profile updates instantly as you rate. Wide spikes = predictable flashpoints.</div>
+</div>
+<div class="risk-score-pill medium" id="riskLevelPill">
+<span class="dot"></span>
+<span id="riskLevelLabel">Not rated</span>
+</div>
+</div>
+<div class="radar-wrap">
+<div class="radar-canvas-wrap">
+<canvas aria-label="Conflict risk radar chart" height="550" id="radarCanvas" width="800"></canvas>
+</div>
+<div class="radar-legend">
+<span class="legend-chip"><span class="legend-swatch"></span> Risk intensity across 6 drivers</span>
+<span id="answeredCount">0/18 rated</span>
+</div>
+</div>
+</div>
+<div class="risk-card">
+<div class="risk-card-header">
+<div>
+<div class="risk-card-title"><i class="fas fa-temperature-high"></i> Conflict Heat Index</div>
+<div class="risk-card-sub">Higher score = higher chance of escalation without deliberate containment.</div>
+</div>
+<div class="risk-score-pill medium" id="heatPill">
+<span class="dot"></span>
+<span id="heatLabel">Not rated</span>
+</div>
+</div>
+<div class="heat-index-row">
+<div class="heat-index-title">Heat Index</div>
+<div class="heat-index-value" id="heatValue">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill low" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Stable</span>
+<span>Explore</span>
+<span>Escalating</span>
+</div>
+<div class="dimension-pills">
+<div class="dimension-pill">
+<span class="label">Pressure &amp; Resources</span>
+<span class="score" id="scorePressure">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Power &amp; Status</span>
+<span class="score" id="scorePower">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Comms Breakdown</span>
+<span class="score" id="scoreComms">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Stakeholder Alignment</span>
+<span class="score" id="scoreAlignment">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">History &amp; Trust</span>
+<span class="score" id="scoreTrust">0%</span>
+</div>
+<div class="dimension-pill">
+<span class="label">Triggers &amp; Threats</span>
+<span class="score" id="scoreTriggers">0%</span>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn primary" disabled="" id="generateOutputsBtn">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+        </button>
+<button class="action-btn secondary" data-action="save-tool" disabled="" id="saveProgressBtn">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+        </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn">
+<i class="fas fa-print"></i> Print / Save PDF
+        </button>
+<button class="action-btn secondary" disabled="" id="clearBtn">
+<i class="fas fa-eraser"></i> Clear All
+        </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Conflict Risk Summary</h2>
+<p class="summary-subtitle">Based on a Heat Index of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">
+      This is a containment plan, not a personality judgement. The goal: reduce escalation probability while protecting credibility, delivery, and income stability.
+    </p>
+</div>
+<div class="lens-card" id="lensCard">
+<div class="lens-header">
+<div class="lens-title"><i class="fas fa-user-shield"></i> Personality / Behaviour Lens</div>
+<div class="risk-score-pill medium" id="lensPill"><span class="dot"></span><span id="lensLabel">Adaptive read</span></div>
+</div>
+<div class="lens-body">
+<div class="lens-block">
+<h4><i class="fas fa-bolt"></i>What’s likely happening underneath</h4>
+<p id="lensUnderText">
+          Rate at least 1 item to generate a precise lens read. This section will adapt to your biggest risk drivers.
+        </p>
+<div class="mini-pills" id="lensUnderPills"></div>
+</div>
+<div class="lens-block">
+<h4><i class="fas fa-shield-heart"></i>De-escalation move that works best</h4>
+<p id="lensDoText">
+          You’ll get a “best next move” that fits the psychology of the situation (and avoids feeding the drama loop).
+        </p>
+<div class="mini-pills" id="lensDoPills"></div>
+</div>
+</div>
+</div>
+<h3 class="section-header"><i class="fas fa-check"></i>Stabilisers to Protect This Week</h3>
+<div class="summary-grid" id="stabiliserGrid"></div>
+<h3 class="section-header"><i class="fas fa-exclamation-circle"></i>Primary Escalation Risks</h3>
+<div class="summary-grid" id="riskGrid"></div>
+<h3 class="section-header"><i class="fas fa-forward"></i>Scripts &amp; Next Moves</h3>
+<div class="summary-grid" id="nextGrid"></div>
+</div>
+  </main>
+  <div data-shared-footer></div>
+</body>
+</html>

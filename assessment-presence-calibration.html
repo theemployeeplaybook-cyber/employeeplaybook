@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Employee Playbook: practical workplace clarity, tools and scripts. Not legal advice." name="description"/>
+<title>Presence Calibration Assessment | The Employee Playbook</title>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/app.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/app.js" type="module"></script>
+</head>
+<body data-page="tool" data-protected="true" data-tool-id="assessment-presence-calibration">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-shared-header=""></div>
+<main class="page-shell tool-page" id="main">
+<div class="tool-hero-section">
+<button class="save-btn" data-action="save-tool" id="saveBtn" type="button">
+<i class="fa-regular fa-bookmark"></i>
+<span>Save item</span>
+</button>
+<div class="tool-hero-content">
+<div class="breadcrumb">
+<a href="index.html"><i class="fas fa-house"></i> Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="the-toolkit.html">Toolkit</a>
+<i class="fas fa-chevron-right"></i>
+<a href="category-confidence-presence-influence.html">Confidence, Presence &amp; Influence</a>
+<i class="fas fa-chevron-right"></i>
+<span class="current">Presence Calibration Assessment</span>
+</div>
+<span class="checklist-name">PRESENCE CALIBRATION ASSESSMENT</span>
+<h1 class="hero-main-heading">Calibrate your response when the stakes rise</h1>
+<div class="hero-subheading">
+      Presence isn’t your personality. It’s the sum of how you communicate, hold your space, and signal authority under pressure.
+    </div>
+<div class="category-pills-container">
+<span class="category-pills-title">Explore Categories</span>
+<div class="category-pills-grid">
+<a class="category-pill clarity" href="category-clarity-priorities-and-direction.html">
+<i class="fas fa-bullseye category-icon"></i>
+<span>Clarity, Priorities &amp; Direction</span>
+</a>
+<a class="category-pill manager" href="category-manager-relationship-and-leadership-style.html">
+<i class="fas fa-people-group category-icon"></i>
+<span>Manager Relationship &amp; Leadership Style</span>
+</a>
+<a class="category-pill politics" href="category-workplace-dynamics-and-politics.html">
+<i class="fas fa-users category-icon"></i>
+<span>Workplace Dynamics &amp; Politics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="context-tips-grid">
+<div class="context-card">
+<h3 class="section-title"><i class="fas fa-calendar-check"></i>When to Use This Assessment</h3>
+<ul class="bullet-list">
+<li>Before a high-stakes meeting, interview, or performance conversation</li>
+<li>When you feel “competent” but not taken as seriously as you should be</li>
+<li>When you’re being interrupted, second-guessed, or talked over more than usual</li>
+<li>When pressure makes you rush, over-explain, or lose your centre</li>
+<li>When you want a practical baseline to track presence improvements over time</li>
+</ul>
+</div>
+<div class="tips-card">
+<h3 class="section-title"><i class="fas fa-lightbulb"></i>Pro Tips</h3>
+<ul class="bullet-list">
+<li>Rate your <strong>default under pressure</strong>, not your best day</li>
+<li>Look for clusters: the pattern matters more than a single low score</li>
+<li>Low scores aren’t “bad” — they’re precise targets for upgrades</li>
+<li>Re-run monthly, or after any major role/manager change</li>
+<li>Use the summary as a private plan — not something you need to “prove” to anyone</li>
+</ul>
+</div>
+</div>
+<div class="checklist-body" id="checklistText">
+<h2 class="checklist-section-title">Rate Your Presence Under Pressure</h2>
+<div class="checklist-section-subtitle">
+<strong>1</strong> = Rarely true   ·   <strong>3</strong> = Sometimes true   ·   <strong>5</strong> = Consistently true
+  </div>
+<div class="checklist-grid" id="assessmentGrid">
+</div>
+</div>
+<div class="burnout-score-section">
+<div class="burnout-snapshot-header">
+<h2>Your Presence Calibration Snapshot</h2>
+<p>
+      This score is a directional read on how consistently your confidence signals, clarity, and authority hold when pressure rises.
+      Use it to identify where your presence is strong — and where it leaks.
+    </p>
+</div>
+<div class="burnout-score-bar">
+<div class="burnout-progress-container">
+<div class="burnout-header">
+<div class="burnout-title">Presence Calibration Score</div>
+<div class="burnout-percentage" id="presencePercentage">0%</div>
+</div>
+<div class="progress-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="progress-labels">
+<span>Needs stabilising</span>
+<span>Solid baseline</span>
+<span>Executive-grade</span>
+</div>
+<div class="burnout-dimensions">
+<div class="burnout-dimension-pill">
+<span class="label">Composure</span>
+<span class="score" id="scoreComposure">0%</span>
+</div>
+<div class="burnout-dimension-pill">
+<span class="label">Clarity</span>
+<span class="score" id="scoreClarity">0%</span>
+</div>
+<div class="burnout-dimension-pill">
+<span class="label">Authority</span>
+<span class="score" id="scoreAuthority">0%</span>
+</div>
+<div class="burnout-dimension-pill">
+<span class="label">Connection</span>
+<span class="score" id="scoreConnection">0%</span>
+</div>
+</div>
+</div>
+<div class="actions-container">
+<button class="action-btn" disabled="" id="generateBtn" type="button">
+<i class="fas fa-wand-magic-sparkles"></i> Generate
+      </button>
+<button class="action-btn" data-action="save-tool" disabled="" id="saveProgressBtn" type="button">
+<i class="fas fa-cloud-arrow-up"></i> Save Progress
+      </button>
+<button class="action-btn secondary" data-action="print-page" id="printBtn" type="button">
+<i class="fas fa-print"></i> Print / Save PDF
+      </button>
+<button class="action-btn secondary" disabled="" id="clearBtn" type="button">
+<i class="fas fa-eraser"></i> Clear All
+      </button>
+<div class="save-status" id="saveStatus">
+<span id="unsavedText"><strong>Status:</strong> Not started</span><br/>
+<span id="lastSavedText"><strong>Last saved:</strong> —</span>
+</div>
+</div>
+</div>
+</div>
+<div class="smart-summary-section" id="smartSummary">
+<div class="summary-header">
+<h2 class="summary-title">Your Presence Calibration Summary</h2>
+<p class="summary-subtitle">Based on your score of <span id="summaryScore">0%</span></p>
+<p class="summary-insight">
+      This isn’t a label — it’s a map. The cards below show what you already do well, where pressure distorts your signal,
+      and what to tighten next.
+    </p>
+</div>
+<h3 class="section-header"><i class="fas fa-check"></i>What’s Working</h3>
+<div class="summary-grid" id="strengthGrid"></div>
+<h3 class="section-header"><i class="fas fa-exclamation-circle"></i>Where Your Signal Leaks</h3>
+<div class="summary-grid" id="leakGrid"></div>
+<h3 class="section-header"><i class="fas fa-forward"></i>Next Moves This Week</h3>
+<div class="summary-grid" id="nextGrid"></div>
+</div>
+</main>
+<div data-shared-footer=""></div>
+</body>
+</html>
